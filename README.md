@@ -3,11 +3,11 @@
 Powered by [Gatsby](https://www.gatsbyjs.org/).
 Inspired from [Gatsby Starter Portfolio: Cara](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
 
-Checkout --> [navin-navi@github.io](navin-navi@github.io)
+Checkout --> [navin-navi@github.io](https://navin-navi@github.io)
 
-[![Build Status](https://travis-ci.org/navin-navi/navin-navi.github.io.svg?branch=dev)](https://travis-ci.org/navin-navi/navin-navi.github.io)
+Travic CI [![Build Status](https://travis-ci.org/navin-navi/navin-navi.github.io.svg?branch=dev)](https://travis-ci.org/navin-navi/navin-navi.github.io)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/navin-navi/navin-navi.github.io) [![Edit this Site in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/navin-navi/navin-navi.github.io/tree/dev/)
+[![Edit this Site in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/navin-navi/navin-navi.github.io/tree/dev/)
 
 - TailwindCSS & styled-components
 - React Spring
