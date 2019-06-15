@@ -13,5 +13,9 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
   keep_history: true
+  target_branch: master
+  verbose: true
+  committer_from_gh: true
+  local_dir: "public"
   on:
-    branch: master
+    branch: dev
