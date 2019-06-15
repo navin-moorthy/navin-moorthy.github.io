@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import tw from "tailwind.macro";
 import { Parallax } from "react-spring/renderprops-addons.cjs";
@@ -86,22 +87,24 @@ const Index = () => (
       <Projects offset={1}>
         <Title>Writings</Title>
         <ProjectsWrapper>
-          <ProjectCard
-            title="Blog"
-            link="#"
-            bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
-          >
-            Here you can find my updated colleciton of tips and tutorials which
-            I am learning daily.
-          </ProjectCard>
-          <ProjectCard
-            title="Today I Learned"
-            link="#"
-            bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
-          >
-            Here you store the Timeline of my daily logs through which I publish
-            my learning to Coding Communities via Twitter.
-          </ProjectCard>
+          <Link to="/blog">
+            <ProjectCard
+              title="Blog"
+              bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
+            >
+              Here you can find my updated colleciton of tips and tutorials
+              which I am learning daily.
+            </ProjectCard>
+          </Link>
+          <Link to="/blog">
+            <ProjectCard
+              title="Today I Learned"
+              bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
+            >
+              Here you store the Timeline of my daily logs through which I
+              publish my learning to Coding Communities via Twitter.
+            </ProjectCard>
+          </Link>
         </ProjectsWrapper>
       </Projects>
       <About offset={3}>
