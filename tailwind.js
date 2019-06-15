@@ -31,6 +31,8 @@ View the full documentation at https://tailwindcss.com.
 const colors = {
   transparent: "transparent",
 
+  rose: "#ff1744",
+
   "blue-black": "#161719",
   "blue-grey": "#23262b",
 

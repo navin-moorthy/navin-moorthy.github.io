@@ -18,6 +18,7 @@ import About from "../views/About";
 import Contact from "../views/Contact";
 
 import avatar from "../images/avatar.jpg";
+import heart from "../images/heart.svg";
 
 const ProjectsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8`};
@@ -54,8 +55,20 @@ const ContactText = styled.p`
 `;
 
 const Footer = styled.footer`
-  ${tw`text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg`};
+  ${tw`text-center text-grey absolute font-sans text-xs md:text-sm lg:text-base`};
+  bottom: 50px;
 `;
+
+const FooterIcon = styled.img`
+  display: inline;
+`;
+
+const FooterCredits = styled.footer`
+  ${tw`text-center text-grey absolute font-sans text-xs md:text-sm lg:text-base`};
+  bottom: 10px;
+`;
+
+const footerYear = new Date().getFullYear();
 
 const Index = () => (
   <>
@@ -122,12 +135,35 @@ const Index = () => (
           </ContactText>
         </Inner>
         <Footer>
-          &copy; 2019 by Gatsby Starter Portfolio Cara.{" "}
-          <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">
-            Github Repository
-          </a>
-          . Designed by <a href="https://www.lekoarts.de">LekoArts</a>.
+          &copy; {footerYear} - Made with{" "}
+          <FooterIcon src={heart} alt="love icon" /> by Navin from{" "}
+          <a href="https://github.com/navin-navi/navin-navi.github.io">
+            Github
+          </a>{" "}
+          <br /> Original design by{" "}
+          <a href="https://www.lekoarts.de">LekoArts</a>.
         </Footer>
+        <FooterCredits>
+          <div>
+            Icons made by{" "}
+            <a href="https://www.flaticon.com/authors/google" title="Google">
+              Google
+            </a>{" "}
+            from{" "}
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>{" "}
+            is licensed by{" "}
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              title="Creative Commons BY 3.0"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              CC 3.0 BY
+            </a>
+          </div>
+        </FooterCredits>
       </Contact>
     </Parallax>
   </>
