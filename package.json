@@ -1,9 +1,20 @@
 {
-  "name": "gatsby-starter-portfolio-cara",
-  "description": "Playful & Colorful One-Page website with Parallax effect powered by react-spring, TailwindCSS.",
-  "version": "3.0.0",
-  "author": "LekoArts <hello@lekoarts.de> (https://www.lekoarts.de)",
+  "name": "navin-navi.github.io",
+  "private": true,
+  "version": "2.0.0",
+  "author": "Navin <navin007.a@gmail.com>  (https://navin-navi.github.io)",
   "license": "MIT",
+  "description": "",
+  "keywords": [
+    "gatsby",
+    "website",
+    "tailwind",
+    "portfolio"
+  ],
+  "scripts": {
+    "dev": "gatsby develop -H '0.0.0.0' -p 8080",
+    "build": "gatsby build"
+  },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.8.6",
@@ -28,19 +39,6 @@
     "typeface-cantata-one": "^0.0.72",
     "typeface-open-sans": "^0.0.54"
   },
-  "keywords": [
-    "gatsby",
-    "starter",
-    "portfolio"
-  ],
-  "scripts": {
-    "dev": "gatsby develop -o",
-    "develop": "gatsby develop",
-    "build": "gatsby build",
-    "lint": "eslint . --ext .js,.jsx --ignore-path .gitignore",
-    "lint:fix": "eslint . --ext .js,.jsx --fix --ignore-path .gitignore",
-    "lint:ci": "yarn lint --format junit -o results/eslint/result.xml"
-  },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
@@ -53,11 +51,11 @@
     "prettier": "^1.18.2"
   },
   "repository": {
-    "url": "https://github.com/LekoArts/gatsby-starter-portfolio-cara",
-    "type": "git"
+    "type": "git",
+    "url": "git+https://github.com/navin-navi/navin-navi.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/LekoArts/gatsby-starter-portfolio-cara/issues"
+    "url": "https://github.com/navin-navi/navin-navi.github.io/issues"
   },
-  "homepage": "https://cara.lekoarts.de"
+  "homepage": "https://github.com/navin-navi/navin-navi.github.io#readme"
 }

@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
-sitemap: https://cara.lekoarts.de/sitemap.xml
+sitemap: https://navin-navi.github.io/sitemap.xml
