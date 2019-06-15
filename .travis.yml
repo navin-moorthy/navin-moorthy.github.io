@@ -1,0 +1,10 @@
+language: node_js
+os:
+  - linux
+
+node_js:
+  - stable
+
+script:
+  - npm run build
+  - bash ./scripts/deploy-github.sh
