@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
 import tw from "tailwind.macro";
 import { Parallax } from "react-spring/renderprops-addons.cjs";
@@ -22,7 +21,7 @@ import avatar from "../images/avatar.jpg";
 import heart from "../images/heart.svg";
 
 const ProjectsWrapper = styled.div`
-  ${tw`flex flex-wrap justify-between mt-8`};
+  ${tw`flex flex-wrap justify-between mt-8 w-full`};
   display: grid;
   grid-gap: 4rem;
   grid-template-columns: repeat(2, 1fr);
@@ -35,28 +34,18 @@ const ProjectsWrapper = styled.div`
   }
 `;
 
-const AboutHero = styled.div`
-  ${tw`flex flex-col lg:flex-row items-center mt-8`};
-`;
+const AboutHero = tw.div`flex flex-col lg:flex-row items-center mt-8`;
 
-const Avatar = styled.img`
-  ${tw`rounded-full w-32 xl:w-48 shadow-lg h-auto`};
-`;
+const Avatar = tw.img`rounded-full w-32 xl:w-48 shadow-lg h-auto`;
 
-const AboutSub = styled.span`
-  ${tw`text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`};
-`;
+const AboutSub = tw.span`text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`;
 
-const AboutDesc = styled.p`
-  ${tw`text-grey-light text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify`};
-`;
+const AboutDesc = tw.p`text-gray-400 text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify`;
 
-const ContactText = styled.p`
-  ${tw`text-grey-light font-sans text-xl md:text-2xl lg:text-3xl`};
-`;
+const ContactText = tw.p`text-gray-400 font-sans text-xl md:text-2xl lg:text-3xl`;
 
 const Footer = styled.footer`
-  ${tw`text-center text-grey absolute font-sans text-xs md:text-sm lg:text-base`};
+  ${tw`text-center text-gray-500 absolute font-sans text-xs md:text-sm lg:text-base`};
   bottom: 50px;
 `;
 
@@ -64,10 +53,7 @@ const FooterIcon = styled.img`
   display: inline;
 `;
 
-const FooterCredits = styled.footer`
-  ${tw`text-center text-grey absolute font-sans text-xs md:text-sm lg:text-base`};
-  bottom: 10px;
-`;
+const FooterCredits = tw.footer`text-center text-gray-500 absolute bottom-0 font-sans text-xs md:text-sm lg:text-base`;
 
 const footerYear = new Date().getFullYear();
 
@@ -87,24 +73,22 @@ const Index = () => (
       <Projects offset={1}>
         <Title>Writings</Title>
         <ProjectsWrapper>
-          <Link to="/blog">
-            <ProjectCard
-              title="Blog"
-              bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
-            >
-              Here you can find my updated colleciton of tips and tutorials
-              which I am learning daily.
-            </ProjectCard>
-          </Link>
-          <Link to="/blog">
-            <ProjectCard
-              title="Today I Learned"
-              bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
-            >
-              Here you store the Timeline of my daily logs through which I
-              publish my learning to Coding Communities via Twitter.
-            </ProjectCard>
-          </Link>
+          <ProjectCard
+            title="Blog"
+            bg="linear-gradient(to right, #fc4a1a, #f7b733)"
+            linkTo="/blog/"
+          >
+            Here you can find my updated colleciton of tips and tutorials which
+            I am learning daily.
+          </ProjectCard>
+          <ProjectCard
+            title="Today I Learned"
+            bg="linear-gradient(to top, #30cfd0 0%, #330867 100%)"
+            linkTo="/blog/"
+          >
+            Here you store the Timeline of my daily logs through which I publish
+            my learning to Coding Communities via Twitter.
+          </ProjectCard>
         </ProjectsWrapper>
       </Projects>
       <About offset={3}>
