@@ -4,7 +4,8 @@ import { Link } from "gatsby";
 // Components
 import Layout from "../components/Layout";
 
-const NotFoundPage = () => {
+const NotFoundPage = ({ location }) => {
+  // console.log(__PATH_PREFIX__);
   return (
     <>
       <Layout siteTitle="404: Not Found" />

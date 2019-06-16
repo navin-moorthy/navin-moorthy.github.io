@@ -16,9 +16,9 @@ import Hero from "../views/Hero";
 import Writings from "../views/Writings";
 import About from "../views/About";
 import Contact from "../views/Contact";
+import Footer from "../views/Footer";
 
 import avatar from "../images/avatar.jpg";
-import heart from "../images/heart.svg";
 
 const WritingsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8 w-full`};
@@ -30,7 +30,6 @@ const WritingsWrapper = styled.div`
   }
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
-    grid-gap: 2rem;
   }
 `;
 
@@ -43,19 +42,6 @@ const AboutSub = tw.span`text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl 
 const AboutDesc = tw.p`text-gray-400 text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify`;
 
 const ContactText = tw.p`text-gray-400 font-sans text-xl md:text-2xl lg:text-3xl`;
-
-const Footer = styled.footer`
-  ${tw`text-center text-gray-500 absolute font-sans text-xs md:text-sm lg:text-base`};
-  bottom: 50px;
-`;
-
-const FooterIcon = styled.img`
-  display: inline;
-`;
-
-const FooterCredits = tw.footer`text-center text-gray-500 absolute bottom-0 font-sans text-xs md:text-sm lg:text-base`;
-
-const footerYear = new Date().getFullYear();
 
 const Index = () => (
   <>
@@ -121,36 +107,7 @@ const Index = () => (
             <a href="https://github.com/navin-navi">Github</a>
           </ContactText>
         </Inner>
-        <Footer>
-          &copy; {footerYear} - Made with{" "}
-          <FooterIcon src={heart} alt="love icon" /> by Navin from{" "}
-          <a href="https://github.com/navin-navi/navin-navi.github.io">
-            Github
-          </a>{" "}
-          <br /> Original design by{" "}
-          <a href="https://www.lekoarts.de">LekoArts</a>.
-        </Footer>
-        <FooterCredits>
-          <div>
-            Icons made by{" "}
-            <a href="https://www.flaticon.com/authors/google" title="Google">
-              Google
-            </a>{" "}
-            from{" "}
-            <a href="https://www.flaticon.com/" title="Flaticon">
-              www.flaticon.com
-            </a>{" "}
-            is licensed by{" "}
-            <a
-              href="http://creativecommons.org/licenses/by/3.0/"
-              title="Creative Commons BY 3.0"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              CC 3.0 BY
-            </a>
-          </div>
-        </FooterCredits>
+        <Footer />
       </Contact>
     </Parallax>
   </>
