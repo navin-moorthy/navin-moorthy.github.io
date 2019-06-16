@@ -1,21 +1,23 @@
-# Personal Website: Navin Navi
+<p align="center">
+  <a href="https://www.gatsbyjs.org">
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby powered blog
+</h1>
 
-Powered by [Gatsby](https://www.gatsbyjs.org/).
-Inspired from [Gatsby Starter Portfolio: Cara](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
+Playful & Colorful website with Parallax effect. Inspired from [Gatsby Starter Portfolio: Cara](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
 
-Checkout --> [navin-navi@github.io](https://navin-navi@github.io)
+Checkout my site @ [navin-navi@github.io](https://navin-navi@github.io)
 
-Travic CI [![Build Status](https://travis-ci.org/navin-navi/navin-navi.github.io.svg?branch=dev)](https://travis-ci.org/navin-navi/navin-navi.github.io)
+#### Travic CI
+
+[![Build Status](https://travis-ci.org/navin-navi/navin-navi.github.io.svg?branch=dev)](https://travis-ci.org/navin-navi/navin-navi.github.io)
 
 [![Edit this Site in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/navin-navi/navin-navi.github.io/tree/dev/)
 
-- TailwindCSS & styled-components
-- React Spring
-- Playful & Colorful One-Page website with Parallax effect
-
-Thanks to [@bradlc](https://github.com/bradlc)’s work on [babel-plugin-tailwind-components](https://github.com/bradlc/babel-plugin-tailwind-components), we can easily get the power of Tailwind without the stylesheet bloat by passing Tailwind classes into styled-components with **Babel macros** 🎉.
-
-## Features
+## 🧐 Features
 
 - [React Spring](https://github.com/drcmda/react-spring) (Used for Parallax effect)
 - [TailwindCSS](https://tailwindcss.com/) & [styled-components](https://www.styled-components.com/) for styling
@@ -32,10 +34,13 @@ Thanks to [@bradlc](https://github.com/bradlc)’s work on [babel-plugin-tailwin
   - The right image size for every screen size
   - Traced SVG Loading (Lazy-Loading)
   - WebP Support
+-
+
+Thanks to [@bradlc](https://github.com/bradlc)’s work on [babel-plugin-tailwind-components](https://github.com/bradlc/babel-plugin-tailwind-components), we can easily get the power of Tailwind without the stylesheet bloat by passing Tailwind classes into styled-components with **Babel macros** 🎉.
 
 **Please note:** The parallax effect can be quite heavy for some older CPUs and the site uses some newer CSS features which will result in incompatibility with older browsers.
 
-## Getting Started
+## 🚀 Quick start
 
 Check your development environment! You'll need [Node.js](https://nodejs.org/en/), the [Gatsby CLI](https://www.gatsbyjs.org/docs/) and [node-gyp](https://github.com/nodejs/node-gyp#installation) installed. The official Gatsby website also lists two articles regarding this topic:
 
@@ -44,11 +49,19 @@ Check your development environment! You'll need [Node.js](https://nodejs.org/en/
 
 To copy and install this starter run this command (with "project-name" being the name of your folder you wish to install it in):
 
-```
+Use the Gatsby CLI to create a new site, specifying the blog starter.
+
+```sh
 gatsby new project-name https://github.com/LekoArts/gatsby-starter-portfolio-cara
 cd project-name
 npm run dev
 ```
+
+Your site is now running at `http://0.0.0.0:8080`!
+
+_Note: You'll also see a second link: _`http://0.0.0.0:8080/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+
+Edit `src/pages/index.js`, save your changes and the browser will update in real time!
 
 ### Adding new features/plugins
 
@@ -56,13 +69,13 @@ You can add other features by having a look at the official [plugins page](https
 
 ### Building your site
 
-```
+```sh
 npm run build
 ```
 
 Copy the content of the `public` folder to your webhost or use a website like Netlify which automates that for you.
 
-## Configuration
+## 🎓 Configuration
 
 You have multiple options to configure this project.
 
@@ -103,7 +116,7 @@ This starter uses [typefaces](https://github.com/KyleAMathews/typefaces) by Kyle
 
 You'll also need to configure `fonts` in `tailwind.js` to reflect the changes. You then can use the fonts with `font-sans` and `font-serif`.
 
-## Thanks and Support
+## 💫 Thanks and Support
 
 ### [LekoArts](https://www.lekoarts.de)
 
