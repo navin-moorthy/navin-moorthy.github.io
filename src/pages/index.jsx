@@ -37,11 +37,11 @@ const AboutHero = tw.div`flex flex-col lg:flex-row items-center mt-8`;
 
 const Avatar = tw.img`rounded-full w-32 xl:w-48 shadow-lg h-auto`;
 
-const AboutSub = tw.span`text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`;
+const AboutSub = tw.span`text-gray-200 pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`;
 
 const AboutDesc = tw.p`text-gray-400 text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify`;
 
-const ContactText = tw.p`text-gray-400 font-sans text-xl md:text-2xl lg:text-3xl`;
+const ContactText = tw.p`text-gray-400 font-sans font-semibold text-xl md:text-2xl lg:text-3xl`;
 
 const Index = () => (
   <>
