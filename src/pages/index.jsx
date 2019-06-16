@@ -5,7 +5,7 @@ import { Parallax } from "react-spring/renderprops-addons.cjs";
 
 // Components
 import Layout from "../components/Layout";
-import ProjectCard from "../components/ProjectCard";
+import WritingCard from "../components/WritingCard";
 
 // Elements
 import Inner from "../elements/Inner";
@@ -13,14 +13,14 @@ import { Title, BigTitle, Subtitle } from "../elements/Titles";
 
 // Views
 import Hero from "../views/Hero";
-import Projects from "../views/Projects";
+import Writings from "../views/Writings";
 import About from "../views/About";
 import Contact from "../views/Contact";
 
 import avatar from "../images/avatar.jpg";
 import heart from "../images/heart.svg";
 
-const ProjectsWrapper = styled.div`
+const WritingsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8 w-full`};
   display: grid;
   grid-gap: 4rem;
@@ -70,27 +70,27 @@ const Index = () => (
           fulltime as a Cyber Security Analyst
         </Subtitle>
       </Hero>
-      <Projects offset={1}>
+      <Writings offset={1}>
         <Title>Writings</Title>
-        <ProjectsWrapper>
-          <ProjectCard
+        <WritingsWrapper>
+          <WritingCard
             title="Blog"
             bg="linear-gradient(to right, #fc4a1a, #f7b733)"
             linkTo="/blog/"
           >
             Here you can find my updated colleciton of tips and tutorials which
             I am learning daily.
-          </ProjectCard>
-          <ProjectCard
+          </WritingCard>
+          <WritingCard
             title="Today I Learned"
             bg="linear-gradient(to top, #30cfd0 0%, #330867 100%)"
             linkTo="/blog/"
           >
             Here you store the Timeline of my daily logs through which I publish
             my learning to Coding Communities via Twitter.
-          </ProjectCard>
-        </ProjectsWrapper>
-      </Projects>
+          </WritingCard>
+        </WritingsWrapper>
+      </Writings>
       <About offset={3}>
         <Title>About</Title>
         <AboutHero>

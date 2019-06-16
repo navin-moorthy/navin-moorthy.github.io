@@ -63,7 +63,7 @@ const Hero = ({ children, offset }) => (
           icon="cross"
           width={16}
           stroke={colors.pink["300"]}
-          left="28%"
+          left="58%"
           top="15%"
         />
         <SVG icon="circle" width={6} fill={grayDarkest} left="75%" top="10%" />
@@ -85,8 +85,6 @@ const Hero = ({ children, offset }) => (
         top="70%"
       />
       <SVG icon="circle" width={6} fill={grayDarkest} left="4%" top="20%" />
-      <SVG icon="circle" width={12} fill={grayDarkest} left="50%" top="60%" />
-      <SVG icon="upDown" width={8} fill={grayDarkest} left="95%" top="90%" />
       <SVG
         icon="upDown"
         hiddenMobile

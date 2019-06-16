@@ -23,7 +23,7 @@ const Title = styled.div`
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 `;
 
-const ProjectCard = ({ title, children, bg, linkTo }) => (
+const WritingCard = ({ title, children, bg, linkTo }) => (
   <Wrapper bg={bg}>
     <Link to={linkTo}>
       <Text>{children}</Text>
@@ -32,9 +32,9 @@ const ProjectCard = ({ title, children, bg, linkTo }) => (
   </Wrapper>
 );
 
-export default ProjectCard;
+export default WritingCard;
 
-ProjectCard.propTypes = {
+WritingCard.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
     .isRequired,
