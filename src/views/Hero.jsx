@@ -1,16 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import tw from "tailwind.macro";
-import { colors } from "../../tailwind";
+import theme from "tailwindcss/defaultTheme";
 import { Divider } from "../elements/Dividers";
 import Content from "../elements/Content";
 import { UpDown, UpDownWide } from "../styles/animations";
 import SVG from "../components/SVG";
 
-const Wrapper = styled.div`
-  ${tw`w-full xl:w-2/3`};
-`;
+const { colors } = theme;
+
+const grayDarkest = colors.gray["800"];
+const grayDarker = colors.gray["700"];
+
+const Wrapper = tw.div`w-full xl:w-2/3`;
 
 const Hero = ({ children, offset }) => (
   <>
@@ -20,25 +22,25 @@ const Hero = ({ children, offset }) => (
           icon="triangle"
           hiddenMobile
           width={48}
-          stroke={colors.orange}
+          stroke={colors.orange["500"]}
           left="10%"
           top="20%"
         />
-        <SVG icon="hexa" width={48} stroke={colors.red} left="60%" top="70%" />
         <SVG
-          icon="box"
-          width={6}
-          fill={colors["grey-darker"]}
+          icon="hexa"
+          width={48}
+          stroke={colors.red["500"]}
           left="60%"
-          top="15%"
+          top="70%"
         />
+        <SVG icon="box" width={6} fill={grayDarker} left="60%" top="15%" />
       </UpDown>
       <UpDownWide>
         <SVG
           icon="arrowUp"
           hiddenMobile
           width={16}
-          fill={colors["blue-dark"]}
+          fill={colors.blue["500"]}
           left="80%"
           top="10%"
         />
@@ -49,39 +51,27 @@ const Hero = ({ children, offset }) => (
           left="90%"
           top="50%"
         />
-        <SVG
-          icon="circle"
-          width={16}
-          fill={colors["grey-darker"]}
-          left="70%"
-          top="90%"
-        />
+        <SVG icon="circle" width={16} fill={grayDarker} left="70%" top="90%" />
         <SVG
           icon="triangle"
           width={16}
-          stroke={colors["grey-darkest"]}
+          stroke={grayDarkest}
           left="30%"
           top="65%"
         />
         <SVG
           icon="cross"
           width={16}
-          stroke={colors["pink-light"]}
-          left="28%"
+          stroke={colors.pink["300"]}
+          left="58%"
           top="15%"
         />
-        <SVG
-          icon="circle"
-          width={6}
-          fill={colors["grey-darkest"]}
-          left="75%"
-          top="10%"
-        />
+        <SVG icon="circle" width={6} fill={grayDarkest} left="75%" top="10%" />
         <SVG
           icon="upDown"
           hiddenMobile
           width={8}
-          fill={colors["grey-darkest"]}
+          fill={grayDarkest}
           left="45%"
           top="10%"
         />
@@ -90,83 +80,39 @@ const Hero = ({ children, offset }) => (
         icon="circle"
         hiddenMobile
         width={24}
-        fill={colors["grey-darker"]}
+        fill={grayDarker}
         left="5%"
         top="70%"
       />
-      <SVG
-        icon="circle"
-        width={6}
-        fill={colors["grey-darkest"]}
-        left="4%"
-        top="20%"
-      />
-      <SVG
-        icon="circle"
-        width={12}
-        fill={colors["grey-darkest"]}
-        left="50%"
-        top="60%"
-      />
-      <SVG
-        icon="upDown"
-        width={8}
-        fill={colors["grey-darkest"]}
-        left="95%"
-        top="90%"
-      />
+      <SVG icon="circle" width={6} fill={grayDarkest} left="4%" top="20%" />
       <SVG
         icon="upDown"
         hiddenMobile
         width={24}
-        fill={colors["grey-darker"]}
+        fill={grayDarker}
         left="40%"
         top="80%"
       />
+      <SVG icon="triangle" width={8} stroke={grayDarker} left="25%" top="5%" />
       <SVG
-        icon="triangle"
-        width={8}
-        stroke={colors["grey-darker"]}
-        left="25%"
+        icon="circle"
+        width={64}
+        fill={colors.green["500"]}
+        left="95%"
         top="5%"
       />
-      <SVG icon="circle" width={64} fill={colors.green} left="95%" top="5%" />
       <SVG
         icon="box"
         hiddenMobile
         width={64}
-        fill={colors.purple}
+        fill={colors.purple["500"]}
         left="5%"
         top="90%"
       />
-      <SVG
-        icon="box"
-        width={6}
-        fill={colors["grey-darkest"]}
-        left="10%"
-        top="10%"
-      />
-      <SVG
-        icon="box"
-        width={12}
-        fill={colors["grey-darkest"]}
-        left="40%"
-        top="30%"
-      />
-      <SVG
-        icon="hexa"
-        width={16}
-        stroke={colors["grey-darker"]}
-        left="10%"
-        top="50%"
-      />
-      <SVG
-        icon="hexa"
-        width={8}
-        stroke={colors["grey-darker"]}
-        left="80%"
-        top="70%"
-      />
+      <SVG icon="box" width={6} fill={grayDarkest} left="10%" top="10%" />
+      <SVG icon="box" width={12} fill={grayDarkest} left="40%" top="30%" />
+      <SVG icon="hexa" width={16} stroke={grayDarker} left="10%" top="50%" />
+      <SVG icon="hexa" width={8} stroke={grayDarker} left="80%" top="70%" />
     </Divider>
     <Content speed={0.4} offset={offset}>
       <Wrapper>{children}</Wrapper>

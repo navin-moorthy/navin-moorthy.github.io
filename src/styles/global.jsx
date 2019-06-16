@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     margin: 0;
     padding: 0;
+    color: white;
   }
   a {
     color: #ff1744;

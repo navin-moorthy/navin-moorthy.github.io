@@ -1,20 +1,20 @@
 import React from "react";
+import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import tw from "tailwind.macro";
 
 const Wrapper = styled.div`
-  width: 100%;
   ${tw`shadow-lg relative no-underline rounded-lg px-8 py-8 md:py-24 text-white`};
   background: ${props => props.bg};
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
   }
 `;
 
 const Text = styled.div`
-  ${tw`opacity-75 font-sans text-sm md:text-base`};
+  ${tw`opacity-75 font-sans text-sm md:text-base text-white`};
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 `;
 
@@ -23,18 +23,21 @@ const Title = styled.div`
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 `;
 
-const ProjectCard = ({ title, children, bg }) => (
+const WritingCard = ({ title, children, bg, linkTo }) => (
   <Wrapper bg={bg}>
-    <Text>{children}</Text>
-    <Title>{title}</Title>
+    <Link to={linkTo}>
+      <Text>{children}</Text>
+      <Title>{title}</Title>
+    </Link>
   </Wrapper>
 );
 
-export default ProjectCard;
+export default WritingCard;
 
-ProjectCard.propTypes = {
+WritingCard.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
     .isRequired,
-  bg: PropTypes.string.isRequired
+  bg: PropTypes.string.isRequired,
+  linkTo: PropTypes.string.isRequired
 };

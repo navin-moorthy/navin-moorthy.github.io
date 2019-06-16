@@ -49,13 +49,13 @@ const upDownWideAnimation = css`
 `;
 
 export const UpDown = styled.div`
+  ${tw`inset-0 absolute`};
   animation: ${upDownAnimation};
-  ${tw`pin absolute`};
 `;
 
 export const UpDownWide = styled.div`
+  ${tw`inset-0 absolute`};
   animation: ${upDownWideAnimation};
-  ${tw`pin absolute`};
 `;
 
 export const waveAnimation = length => css`
