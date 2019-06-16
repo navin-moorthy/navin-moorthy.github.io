@@ -5,11 +5,30 @@ const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
 module.exports = {
   /* General Information */
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix
+    title: config.siteTitle,
+    author: config.author,
+    description: config.description,
+    siteUrl: config.siteUrl + pathPrefix,
+    social: {
+      twitter: config.userTwitter
+    }
   },
   /* Plugins */
   plugins: [
-    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: "blog"
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: "assets"
+      }
+    },
     "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-source-filesystem",
@@ -18,14 +37,14 @@ module.exports = {
         name: "images"
       }
     },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: config.googleAnalyticsID
       }
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -51,6 +70,7 @@ module.exports = {
       }
     },
     /* Must be placed at the end */
-    "gatsby-plugin-offline"
+    "gatsby-plugin-offline",
+    "gatsby-plugin-react-helmet"
   ]
 };

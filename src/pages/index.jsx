@@ -59,7 +59,7 @@ const footerYear = new Date().getFullYear();
 
 const Index = () => (
   <>
-    <Layout />
+    <Layout siteTitle="Home" />
     <Parallax pages={5}>
       <Hero offset={0}>
         <BigTitle>

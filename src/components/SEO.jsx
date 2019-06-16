@@ -1,20 +1,24 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { graphql, useStaticQuery } from "gatsby";
 import config from "../../config/website";
 
-const SEO = () => {
+const SEO = ({ siteTitle }) => {
   const data = useStaticQuery(
     graphql`
-      query SEO {
+      query {
         site {
+          siteMetadata {
+            title
+          }
           buildTime(formatString: "YYYY-MM-DD")
         }
       }
     `
   );
 
-  const title = config.siteTitle;
+  const title = `${siteTitle} | ${data.site.siteMetadata.title}`;
   const description = config.siteDescription;
 
   const realPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
@@ -131,3 +135,7 @@ const SEO = () => {
 };
 
 export default SEO;
+
+SEO.propTypes = {
+  siteTitle: PropTypes.string.isRequired
+};

@@ -2,9 +2,9 @@
   "name": "navin-navi.github.io",
   "private": true,
   "version": "2.0.0",
-  "author": "Navin <navin007.a@gmail.com>  (https://navin-navi.github.io)",
+  "author": "Navin <navin007.a@gmail.com> (https://navin-navi.github.io)",
   "license": "MIT",
-  "description": "",
+  "description": "Personal Website by Navin Powered by Gatsby",
   "keywords": [
     "gatsby",
     "website",
@@ -12,8 +12,11 @@
     "portfolio"
   ],
   "scripts": {
-    "dev": "gatsby develop -H '0.0.0.0' -p 8080",
+    "start": "npm run develop",
+    "develop": "gatsby develop -H '0.0.0.0' -p 8080",
     "build": "gatsby build",
+    "serve": "gatsby serve",
+    "format": "prettier --write src/**/*.{js,jsx}",
     "deploy:github": "npm run build && node ./scripts/deploy-github"
   },
   "dependencies": {
