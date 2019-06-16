@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     color: white;
   }
   a {
-    color: #ff1744;
+    color: #ec407a;
     text-decoration: none;
   }
 `;

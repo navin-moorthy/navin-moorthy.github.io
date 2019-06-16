@@ -18,6 +18,6 @@ module.exports = {
   googleAnalyticsID: "UA-142123747-1",
 
   // Manifest and Progress color
-  themeColor: "#ff1744",
-  backgroundColor: "#2C5282"
+  themeColor: "#ec407a",
+  backgroundColor: "#ec407a"
 };

@@ -4,22 +4,23 @@ import { Link, graphql } from "gatsby";
 import styled from "styled-components";
 import tw from "tailwind.macro";
 
+// components
 import Layout from "../components/Layout";
 
 const BlogStyle = tw.div`font-sans ml-auto text-base md:text-xl mr-auto max-w-4xl px-5 py-10 `;
 
-const BlogHeader = tw.h1`font-serif text-5xl text-center tracking-wider leading-normal mb-10 mt-0`;
+const BlogHeader = tw.h1`font-serif text-5xl  text-center tracking-wider leading-normal mb-10 mt-0`;
 
 const HeaderLink = styled(props => <Link {...props} />)`
-  ${tw`no-underline shadow-none text-white`}
-  text-shadow: 3px 4px black;
+  ${tw`no-underline shadow-none text-gray-200`}
+  text-shadow: 3px 4px 6px #ec407a;
 `;
 
 const PostsHeader = tw.h3`mb-0 mt-6 text-3xl `;
 
-const Small = tw.small`text-sm`;
+const Small = tw.small`text-sm opacity-75`;
 
-const PostPara = tw.p`p-0 mx-0 mt-2 mb-8`;
+const PostPara = tw.p`text-gray-400 p-0 mx-0 mt-2 mb-8`;
 
 const PostsLink = styled(props => <Link {...props} />)`
   ${tw`no-underline shadow-none`}
@@ -37,7 +38,9 @@ const Blog = ({ data }) => {
         </BlogHeader>
         {posts.map(({ node }) => {
           const { id, excerpt, fields, frontmatter } = node;
+
           const { title, date, description } = frontmatter;
+
           return (
             <div key={id}>
               <PostsHeader>
