@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://navin-navi.github.io">
-    <img alt="Navin | Logo" src="./static/logo.png" width="200" />
+    <img alt="Navin | Logo" src="./static/logo.png" width="130" />
   </a>
 </p>
 
