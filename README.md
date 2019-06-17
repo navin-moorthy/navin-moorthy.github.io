@@ -3,21 +3,57 @@
     <img alt="Navin | Logo" src="./static/logo.png" width="60" />
   </a>
 </p>
-<h1 align="center">
-  Gatsby powered WebApp
-</h1>
 
-Playful & Colorful website with Parallax effect. Inspired from [Gatsby Starter Portfolio: Cara](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
+<p align="center">
+  <a href="https://travis-ci.org/navin-navi/navin-navi.github.io">
+    <img
+      src="https://travis-ci.org/navin-navi/navin-navi.github.io.svg?branch=dev"
+      alt="TravisCI"
+    />
+  </a>
+  <a href="https://github.com/prettier/prettier">
+    <img
+      src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square"
+      alt="styled with prettier"
+    />
+  </a>
+</p>
 
-Checkout my site @ [navin-navi@github.io](https://navin-navi@github.io)
+<p align="center">
+  My personal portfolio & blog. Built with Gatsby.js.
+</p>
 
-#### Travic CI
+<p align="center">
+  Playful & colorful blog with Parallax effect
+</p>
 
-[![Build Status](https://travis-ci.org/navin-navi/navin-navi.github.io.svg?branch=dev)](https://travis-ci.org/navin-navi/navin-navi.github.io)
+<p align="center">
+  Developed upon <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Gatsby Starter Portfolio: Cara</a>
+</p>
 
-[![Edit this Site in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/navin-navi/navin-navi.github.io/tree/dev/)
+<p align="center">
+  <strong>
+  Checkout my site at <a href="https://navin-navi@github.io">navin-navi@github.io</a>
+  </strong>
+</p>
 
-## 🧐 Features
+<p align="center">
+  <a href="https://codesandbox.io/s/github/navin-navi/navin-navi.github.io/tree/dev/">
+    <img src="https://codesandbox.io/static/img/play-codesandbox.svg"  alt="Edit on CodeSandbox" />
+  </a>
+</p>
+
+---
+
+## 🖥 Tech Stack
+
+- Developed using [Gatsby](https://www.gatsbyjs.org)
+- Contents served from [Github](https://github.com) as Markdown files
+- [TravisCI](https://travis-ci.org/) for CI and Build checks
+- Hosted on [GithubPages](https://pages.github.com/)
+- [Renovate](https://renovatebot.com) for auto dependency updates
+
+## 📣 Features
 
 - [React Spring](https://github.com/drcmda/react-spring) (Used for Parallax effect)
 - [TailwindCSS](https://tailwindcss.com/) & [styled-components](https://www.styled-components.com/) for styling
