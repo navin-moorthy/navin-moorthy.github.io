@@ -33,7 +33,7 @@
 
 <p align="center">
   <strong>
-  Checkout my site at <a href="https://navin-navi@github.io">navin-navi@github.io</a>
+  Checkout my site at <a href="https://navin-navi.github.io">Navin-Navi</a>
   </strong>
 </p>
 
