@@ -16,7 +16,7 @@ const Wrapper = tw.div`w-full xl:w-2/3`;
 
 const Hero = ({ children, offset }) => (
   <>
-    <Divider speed={0.2} offset={offset}>
+    <Divider speed={0.2} offset={offset} factor={3}>
       <UpDown>
         <SVG
           icon="triangle"
