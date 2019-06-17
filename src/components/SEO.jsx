@@ -18,7 +18,7 @@ const SEO = ({ siteTitle }) => {
     `
   );
 
-  const title = `${siteTitle} | ${data.site.siteMetadata.title}`;
+  const title = siteTitle;
   const description = config.siteDescription;
 
   const realPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;

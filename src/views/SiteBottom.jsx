@@ -66,7 +66,7 @@ const SiteBottom = ({ offset }) => (
         </InnerWave>
       </WaveWrapper>
     </Divider>
-    <Content speed={2} offset={offset}>
+    <Content speed={1} offset={offset}>
       <Inner>
         <Title>Get in touch</Title>
         <ContactText>

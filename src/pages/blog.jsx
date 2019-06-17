@@ -35,7 +35,7 @@ const InnerWave = styled.div`
   }
 `;
 
-const BlogStyle = tw.div`font-sans ml-auto text-base md:text-xl mr-auto max-w-4xl px-5 py-10 `;
+const BlogStyle = tw.div`font-sans ml-auto text-base md:text-xl mr-auto max-w-2xl px-5 py-10 `;
 
 const BlogHeader = tw.h1`font-serif text-5xl  text-center tracking-wider leading-normal mb-10 mt-0`;
 
@@ -48,7 +48,7 @@ const PostsHeader = tw.h3`mb-0 mt-6 text-3xl `;
 
 const Small = tw.small`text-sm opacity-75`;
 
-const PostPara = tw.p`text-gray-400 p-0 mx-0 mt-2 mb-8`;
+const PostPara = tw.p`text-gray-200 p-0 mx-0 mt-2 mb-8`;
 
 const PostsLink = styled(props => <Link {...props} />)`
   ${tw`no-underline shadow-none`}
@@ -61,27 +61,6 @@ const Blog = ({ data }) => {
     <>
       <Layout siteTitle="Blog" />
       <Parallax pages={3}>
-        <Divider fill="#23262b" speed={0.2} offset={0}>
-          <WaveWrapper>
-            <InnerWave>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 800 338.05"
-                style={{ height: "100vh" }}
-              >
-                <path>
-                  <animate
-                    attributeName="d"
-                    values="M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 200 150 400 200 Q 600 250 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z"
-                    repeatCount="indefinite"
-                    dur="30s"
-                  />
-                </path>
-              </svg>
-            </InnerWave>
-          </WaveWrapper>
-        </Divider>
-
         <ParallaxLayer speed={0.4} offset="0" style={{ zIndex: "50" }}>
           <BlogStyle>
             <BlogHeader>
@@ -108,7 +87,27 @@ const Blog = ({ data }) => {
             })}
           </BlogStyle>
         </ParallaxLayer>
-        <Divider speed={0.1} offset={0}>
+        <Divider fill="#23262b" speed={0.2} offset={0}>
+          <WaveWrapper>
+            <InnerWave>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 800 338.05"
+                style={{ height: "100vh" }}
+              >
+                <path>
+                  <animate
+                    attributeName="d"
+                    values="M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 200 150 400 200 Q 600 250 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z"
+                    repeatCount="indefinite"
+                    dur="30s"
+                  />
+                </path>
+              </svg>
+            </InnerWave>
+          </WaveWrapper>
+        </Divider>
+        <Divider speed={0.1} offset={0} factor={2.5}>
           <UpDown>
             <SVG
               icon="triangle"
@@ -203,12 +202,6 @@ const Blog = ({ data }) => {
             top="60%"
           />
         </Divider>
-        <Divider
-          bg="#23262b"
-          clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
-          speed={0.2}
-          offset={1}
-        />
         <SiteBottom offset={2} />
       </Parallax>
     </>

@@ -20,7 +20,7 @@ const Writings = ({ children, offset }) => (
     <Content speed={0.4} offset={`${offset}.2`} factor={1}>
       <Inner>{children}</Inner>
     </Content>
-    <Divider speed={0.1} offset={offset} factor={2}>
+    <Divider speed={0.1} offset={offset} factor={2.5}>
       <UpDown>
         <SVG icon="box" width={6} fill={colors.white} left="85%" top="75%" />
         <SVG

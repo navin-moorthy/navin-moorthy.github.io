@@ -58,7 +58,7 @@ const Index = () => (
           <WritingCard
             title="Blog"
             bg="linear-gradient(to right, #fc4a1a, #f7b733)"
-            linkTo="/blog/"
+            linkTo="/blog"
           >
             Here you can find my updated colleciton of tips and tutorials which
             I am learning daily.
