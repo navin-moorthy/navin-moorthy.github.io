@@ -15,7 +15,7 @@ const FooterIcon = styled.img`
 
 const FooterCredits = styled.footer`
   ${tw`text-center text-gray-500 font-bold absolute font-sans text-xs md:text-sm lg:text-base`}
-  bottom:10px
+  bottom:20px
 `;
 
 const Footer = () => (

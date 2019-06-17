@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import tw from "tailwind.macro";
 import { rotateAnimation } from "../styles/animations";
@@ -20,11 +22,15 @@ export const Title = styled.h1`
 `;
 
 export const BigTitle = styled.h1`
-  ${tw`text-5xl lg:text-6xl font-serif text-gray-200 mb-6 tracking-wide`};
+  ${tw`text-5xl lg:text-6xl font-serif text-gray-100 mb-6 tracking-wide`};
   text-shadow: 0 5px 35px rgba(255, 255, 255, 0.15);
 `;
 
 export const Subtitle = styled.p`
   ${tw`text-2xl lg:text-3xl font-sans text-gray-300 mt-8 xxl:w-3/4`};
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+`;
+
+export const ErrorPageLink = styled(props => <Link {...props} />)`
+  ${tw`text-2xl lg:text-3xl font-sans mt-8 xxl:w-3/4`}
 `;

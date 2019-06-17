@@ -10,9 +10,13 @@ import SVG from "../components/SVG";
 // components
 import Layout from "../components/Layout";
 
+// views
+import SiteBottom from "../views/SiteBottom";
+
 // elements
 import { Divider } from "../elements/Dividers";
 
+// styles
 import { UpDown, UpDownWide, waveAnimation } from "../styles/animations";
 
 const { colors } = theme;
@@ -56,7 +60,7 @@ const Blog = ({ data }) => {
   return (
     <>
       <Layout siteTitle="Blog" />
-      <Parallax pages={2}>
+      <Parallax pages={3}>
         <Divider fill="#23262b" speed={0.2} offset={0}>
           <WaveWrapper>
             <InnerWave>
@@ -163,7 +167,7 @@ const Blog = ({ data }) => {
             <SVG
               icon="cross"
               width={8}
-              fill={colors.indigo[300]}
+              fill={colors.indigo["300"]}
               left="45%"
               top="10%"
             />
@@ -172,7 +176,7 @@ const Blog = ({ data }) => {
           <SVG
             icon="circle"
             width={6}
-            fill={colors.pink[600]}
+            fill={colors.pink["600"]}
             left="4%"
             top="20%"
           />
@@ -187,7 +191,7 @@ const Blog = ({ data }) => {
             icon="box"
             hiddenMobile
             width={12}
-            fill={colors.teal[300]}
+            fill={colors.teal["300"]}
             left="0%"
             top="30%"
           />
@@ -205,6 +209,7 @@ const Blog = ({ data }) => {
           speed={0.2}
           offset={1}
         />
+        <SiteBottom offset={2} />
       </Parallax>
     </>
   );
