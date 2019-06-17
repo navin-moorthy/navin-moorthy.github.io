@@ -8,15 +8,13 @@ import Layout from "../components/Layout";
 import WritingCard from "../components/WritingCard";
 
 // Elements
-import Inner from "../elements/Inner";
 import { Title, BigTitle, Subtitle } from "../elements/Titles";
 
 // Views
 import Hero from "../views/Hero";
 import Writings from "../views/Writings";
 import About from "../views/About";
-import Contact from "../views/Contact";
-import Footer from "../views/Footer";
+import SiteBottom from "../views/SiteBottom";
 
 import avatar from "../images/avatar.jpg";
 
@@ -40,8 +38,6 @@ const Avatar = tw.img`rounded-full w-32 xl:w-48 shadow-lg h-auto`;
 const AboutSub = tw.span`text-gray-200 pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`;
 
 const AboutDesc = tw.p`text-gray-400 text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify`;
-
-const ContactText = tw.p`text-gray-400 font-sans font-semibold text-xl md:text-2xl lg:text-3xl`;
 
 const Index = () => (
   <>
@@ -98,17 +94,7 @@ const Index = () => (
           and DC movies.
         </AboutDesc>
       </About>
-      <Contact offset={4}>
-        <Inner>
-          <Title>Get in touch</Title>
-          <ContactText>
-            Find me on these platforms where I am mostly active:{" "}
-            <a href="https://twitter.com/navin_navi19">Twitter</a> &{" "}
-            <a href="https://github.com/navin-navi">Github</a>
-          </ContactText>
-        </Inner>
-        <Footer />
-      </Contact>
+      <SiteBottom offset={4} />
     </Parallax>
   </>
 );

@@ -1,19 +1,28 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Parallax } from "react-spring/renderprops-addons.cjs";
+
+import SiteBottom from "../views/SiteBottom";
+import Inner from "../elements/Inner";
+import { BigTitle, Subtitle, ErrorPageLink } from "../elements/Titles";
 
 // Components
 import Layout from "../components/Layout";
 
-const NotFoundPage = ({ location }) => {
-  // console.log(__PATH_PREFIX__);
-  return (
-    <>
-      <Layout siteTitle="404: Not Found" />
-      <h1>Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      <Link to="/">Go to Home</Link>
-    </>
-  );
-};
+const NotFoundPage = () => (
+  <>
+    <Layout siteTitle="404: Not Found" />
+    <Parallax pages={1}>
+      <SiteBottom offset={0}>
+        <Inner>
+          <BigTitle>Not Found</BigTitle>
+          <Subtitle>
+            You just hit a route that doesn&#39;t exist... the sadness.
+          </Subtitle>
+          <ErrorPageLink to="/">Go to Home</ErrorPageLink>
+        </Inner>
+      </SiteBottom>
+    </Parallax>
+  </>
+);
 
 export default NotFoundPage;
