@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby powered blog
+  Gatsby powered WebApp
 </h1>
 
 Playful & Colorful website with Parallax effect. Inspired from [Gatsby Starter Portfolio: Cara](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
