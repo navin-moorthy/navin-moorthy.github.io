@@ -5,16 +5,14 @@ import tw from "tailwind.macro";
 import heart from "../images/heart.svg";
 
 const FooterMain = styled.footer`
-  ${tw`text-center text-gray-500 absolute font-sans font-bold text-xs md:text-sm lg:text-base`};
-  bottom: 50px;
+  ${tw`text-center text-gray-500 absolute font-semibold text-xs md:text-sm lg:text-base`};
+  bottom: 60px;
 `;
 
-const FooterIcon = styled.img`
-  display: inline;
-`;
+const FooterIcon = tw.img`inline m-0`;
 
 const FooterCredits = styled.footer`
-  ${tw`text-center text-gray-500 font-bold absolute font-sans text-xs md:text-sm lg:text-base`}
+  ${tw`text-center text-gray-500 font-semibold absolute text-xs md:text-sm lg:text-base`}
   bottom:20px
 `;
 

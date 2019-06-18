@@ -58,7 +58,7 @@ ReactDOM.render(<App />, document.querySelector("#root"));
 
 **Final Code**
 
-```jsx{1-2,6}{numberLines: true}
+```jsx{1-2,6}
 // import React and React Dom Libraries
 import React from "react";
 import ReactDOM from "react-dom";

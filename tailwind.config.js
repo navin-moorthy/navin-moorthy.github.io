@@ -8,21 +8,6 @@ module.exports = {
       xxl: "1600px"
     },
     fontFamily: {
-      sans: [
-        "Montserrat",
-        "-apple-system",
-        "BlinkMacSystemFont",
-        '"Segoe UI"',
-        "Roboto",
-        '"Helvetica Neue"',
-        "Arial",
-        '"Noto Sans"',
-        "sans-serif",
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"'
-      ],
       serif: [
         "Cantata One",
         "Georgia",
@@ -30,14 +15,6 @@ module.exports = {
         '"Times New Roman"',
         "Times",
         "serif"
-      ],
-      mono: [
-        "Menlo",
-        "Monaco",
-        "Consolas",
-        '"Liberation Mono"',
-        '"Courier New"',
-        "monospace"
       ]
     }
   }

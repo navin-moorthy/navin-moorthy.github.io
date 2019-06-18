@@ -17,7 +17,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const blogTemplate = path.resolve(`./src/components/BlogPostTemplate.jsx`);
+  const blogTemplate = path.resolve(`./src/components/MarkDownTemplate.jsx`);
   return graphql(
     `
       {

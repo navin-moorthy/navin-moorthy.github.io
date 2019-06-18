@@ -2,55 +2,25 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import styled from "styled-components";
-import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons.cjs";
 import tw from "tailwind.macro";
-import theme from "tailwindcss/defaultTheme";
+import logo from "../../static/logo.png";
 
 // Components
-import Layout from "./Layout";
+import SEO from "./SEO";
 
-import SVG from "./SVG";
-
-// views
-import SiteBottom from "../views/SiteBottom";
-
-// elements
-import { Divider } from "../elements/Dividers";
-
-// styles
-import { UpDown, UpDownWide, waveAnimation } from "../styles/animations";
-
-const WaveWrapper = styled.div`
-  ${tw`absolute w-full`};
-`;
-
-const InnerWave = styled.div`
-  ${tw`relative h-full`};
-  path {
-    ${waveAnimation("20s")};
-  }
-`;
+const Logo = tw.img`w-24 md:w-40 m-auto`;
 
 const PostMainStyle = tw.div`font-sans ml-auto text-base text-gray-200 md:text-xl mr-auto max-w-2xl px-5 py-10 `;
 
-const PostMainHeader = tw.h1`font-serif text-2xl  text-center tracking-wider leading-normal mb-10 mt-0`;
-
-const PostHeaderLink = styled(props => <Link {...props} />)`
-  ${tw`no-underline shadow-none text-gray-200`}
-  text-shadow: 1px 1px 6px #ec407a;
-`;
-
 const PostHeader = styled.h3`
-  ${tw`mb-0 mt-12 text-5xl`}
-  color: #ec407a
+  ${tw`text-5xl`}
 `;
 
 const PostNavigation = tw.ul`flex flex-wrap justify-between p-0 list-none`;
 
-const Small = tw.small`text-sm opacity-75`;
-
-const PostsLink = styled(props => <Link {...props} />)`
-  ${tw`no-underline shadow-none`}
+const PostHeaderLink = styled(props => <Link {...props} />)`
+  ${tw`text-gray-200 block my-5 border-none`}
+  text-shadow: 1px 1px 6px #ec407a;
 `;
 
 const BlogPostTemplate = ({ data, pageContext }) => {
@@ -60,13 +30,13 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
   return (
     <>
-      <Layout siteTitle={siteTitle} />
+      <SEO siteTitle={siteTitle} />
       <PostMainStyle>
-        <PostMainHeader>
-          <PostHeaderLink to="/blog">Navin's technical blog</PostHeaderLink>
-        </PostMainHeader>
+        <Link to="/">
+          <Logo src={logo} alt={Logo} />
+        </Link>
         <PostHeader>{post.frontmatter.title}</PostHeader>
-        <Small>{post.frontmatter.date}</Small>
+        <small>{post.frontmatter.date}</small>
         <div
           style={{ fontSize: "18px" }}
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -88,6 +58,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             )}
           </li>
         </PostNavigation>
+        <PostHeaderLink to="/blog">← Back to Blog</PostHeaderLink>
       </PostMainStyle>
     </>
   );
