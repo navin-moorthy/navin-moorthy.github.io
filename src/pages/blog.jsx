@@ -40,7 +40,7 @@ const Blog = ({ data }) => {
           {posts.map(({ node }) => {
             const { id, excerpt, fields, frontmatter } = node;
 
-            const { title, date, description } = frontmatter;
+            const { title, date } = frontmatter;
 
             return (
               <div key={id}>
@@ -50,7 +50,7 @@ const Blog = ({ data }) => {
                 <Small>{date}</Small>
                 <PostPara
                   dangerouslySetInnerHTML={{
-                    __html: description || excerpt
+                    __html: excerpt
                   }}
                 />
               </div>
@@ -81,7 +81,6 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            description
           }
         }
       }

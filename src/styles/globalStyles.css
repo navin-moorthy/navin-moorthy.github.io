@@ -5,14 +5,14 @@
 }
 
 ::selection {
-  background: #fff5b8;
-  color: #000;
+  background: #ec407a;
+  color: #fff;
   display: block;
 }
 
 ::-moz-selection {
-  background: #fff5b8;
-  color: #000;
+  background: #ec407a;
+  color: #fff;
   display: block;
 }
 
