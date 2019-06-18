@@ -91,7 +91,7 @@ Use the Gatsby CLI to create a new site, specifying the blog starter.
 ```sh
 gatsby new project-name https://github.com/LekoArts/gatsby-starter-portfolio-cara
 cd project-name
-npm run dev
+npm start
 ```
 
 Your site is now running at `http://0.0.0.0:8080`!
