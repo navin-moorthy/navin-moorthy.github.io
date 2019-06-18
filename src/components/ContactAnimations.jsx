@@ -3,16 +3,14 @@ import PropTypes from "prop-types";
 import tw from "tailwind.macro";
 import styled from "styled-components";
 
-import SVG from "../components/SVG";
+import SVG from "./SVG";
+import Footer from "./Footer";
 
 import { Divider } from "../elements/Dividers";
 import Content from "../elements/Content";
 import Inner from "../elements/Inner";
-import { Title } from "../elements/Titles";
 
 import { UpDown, UpDownWide, waveAnimation } from "../styles/animations";
-
-import Footer from "../components/Footer";
 
 import {
   white,
@@ -25,8 +23,6 @@ import {
   blue,
   red
 } from "../styles/color";
-
-const ContactText = tw.p`text-gray-400 font-sans font-semibold text-xl md:text-2xl lg:text-3xl`;
 
 const WaveWrapper = styled.div`
   ${tw`absolute bottom-0 w-full`};
@@ -44,9 +40,9 @@ const InnerWave = styled.div`
   }
 `;
 
-const SiteBottom = ({ offset }) => (
+const ContactAnimations = ({ offset, children }) => (
   <>
-    <Divider fill="#23262b" speed={0.5} offset={offset}>
+    <Divider fill="#111" speed={0.5} offset={offset}>
       <WaveWrapper>
         <InnerWave>
           <svg
@@ -67,14 +63,7 @@ const SiteBottom = ({ offset }) => (
       </WaveWrapper>
     </Divider>
     <Content speed={1} offset={offset}>
-      <Inner>
-        <Title>Get in touch</Title>
-        <ContactText>
-          Find me on these platforms where I am mostly active:{" "}
-          <a href="https://twitter.com/navin_navi19">Twitter</a> &{" "}
-          <a href="https://github.com/navin-navi">Github</a>
-        </ContactText>
-      </Inner>
+      <Inner>{children}</Inner>
       <Footer />
     </Content>
     <Divider speed={0.3} offset={offset}>
@@ -108,8 +97,9 @@ const SiteBottom = ({ offset }) => (
   </>
 );
 
-export default SiteBottom;
+export default ContactAnimations;
 
-SiteBottom.propTypes = {
-  offset: PropTypes.number.isRequired
+ContactAnimations.propTypes = {
+  offset: PropTypes.number.isRequired,
+  children: PropTypes.node.isRequired
 };

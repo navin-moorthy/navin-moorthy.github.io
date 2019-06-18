@@ -5,7 +5,7 @@ import { Divider, DividerMiddle } from "../elements/Dividers";
 import Content from "../elements/Content";
 import Inner from "../elements/Inner";
 import { UpDown, UpDownWide } from "../styles/animations";
-import SVG from "../components/SVG";
+import SVG from "./SVG";
 
 const { colors } = theme;
 

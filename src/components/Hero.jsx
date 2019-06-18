@@ -5,7 +5,7 @@ import theme from "tailwindcss/defaultTheme";
 import { Divider } from "../elements/Dividers";
 import Content from "../elements/Content";
 import { UpDown, UpDownWide } from "../styles/animations";
-import SVG from "../components/SVG";
+import SVG from "./SVG";
 
 const { colors } = theme;
 

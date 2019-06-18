@@ -1,23 +1,25 @@
 import React from "react";
-import styled from "styled-components";
-import tw from "tailwind.macro";
 import { Parallax } from "react-spring/renderprops-addons.cjs";
 
+// Styles
+import styled from "styled-components";
+import tw from "tailwind.macro";
+
 // Components
-import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 import WritingCard from "../components/WritingCard";
+import Hero from "../components/Hero";
+import Writings from "../components/Writings";
+import About from "../components/About";
+import Contact from "../components/Contact";
 
 // Elements
 import { Title, BigTitle, Subtitle } from "../elements/Titles";
 
-// Views
-import Hero from "../views/Hero";
-import Writings from "../views/Writings";
-import About from "../views/About";
-import SiteBottom from "../views/SiteBottom";
-
+// Image
 import avatar from "../images/avatar.jpg";
 
+// Local styles
 const WritingsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8 w-full`};
   display: grid;
@@ -37,11 +39,11 @@ const Avatar = tw.img`rounded-full w-32 xl:w-48 shadow-lg h-auto`;
 
 const AboutSub = tw.span`text-gray-200 pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`;
 
-const AboutDesc = tw.p`text-gray-400 text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify`;
+const AboutDesc = tw.p`text-gray-400 text-lg md:text-xl lg:text-2xl pt-6 md:pt-12 text-justify`;
 
 const Index = () => (
   <>
-    <Layout siteTitle="Home" />
+    <SEO siteTitle="Home" />
     <Parallax pages={5}>
       <Hero offset={0}>
         <BigTitle>
@@ -66,9 +68,9 @@ const Index = () => (
           <WritingCard
             title="Today I Learned"
             bg="linear-gradient(to top, #30cfd0 0%, #330867 100%)"
-            linkTo="/blog/"
+            linkTo="/blog/today-i-learned"
           >
-            Here you store the Timeline of my daily logs through which I publish
+            Here you find the Timeline of my daily logs through which I publish
             my learning to Coding Communities via Twitter.
           </WritingCard>
         </WritingsWrapper>
@@ -78,11 +80,10 @@ const Index = () => (
         <AboutHero>
           <Avatar src={avatar} alt="John Doe" />
           <AboutSub>
-            I'm a self thaught Web Developer mostly spending my days learning
-            and developing web application in different areas of Web
-            Technologies from Back End Programming (Node JS, MondoDB and
-            Firebase) to Front End Engineering (HTML, CSS, Javascript, Angular,
-            React and Gatsby).
+            I'm a self thaught Web Developer mostly you can find me learning and
+            developing web application in different areas of Web Technologies
+            from Back End Programming (Node JS, MondoDB and Firebase) to Front
+            End Engineering (HTML, CSS, Javascript, Angular, React and Gatsby).
           </AboutSub>
         </AboutHero>
         <AboutDesc>
@@ -94,7 +95,7 @@ const Index = () => (
           and DC movies.
         </AboutDesc>
       </About>
-      <SiteBottom offset={4} />
+      <Contact offset={4} />
     </Parallax>
   </>
 );

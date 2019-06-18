@@ -5,7 +5,7 @@ import { Divider } from "../elements/Dividers";
 import Content from "../elements/Content";
 import Inner from "../elements/Inner";
 import { UpDown, UpDownWide } from "../styles/animations";
-import SVG from "../components/SVG";
+import SVG from "./SVG";
 
 const { colors } = theme;
 
@@ -15,7 +15,7 @@ const orange = colors.orange["500"];
 const About = ({ children, offset }) => (
   <>
     <Divider
-      bg="#23262b"
+      bg="#111"
       clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
       speed={0.2}
       offset={offset}
