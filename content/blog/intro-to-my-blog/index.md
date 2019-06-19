@@ -1,6 +1,7 @@
 ---
 title: Intro to my blog
 date: "2019-06-19T04:46:37.121Z"
+description: Know the Tech Stack, Features and Functionalities used to build this blog. You can find a short tutorial on how to build and run this blog on your own. Also a brief explanation of the technologies used can be found.
 ---
 
 # [NavinNavi](https://navin-navi.github.io)
@@ -71,9 +72,9 @@ To copy and install this starter run this command (with "project-name" being the
 Use the Gatsby CLI to create a new site, specifying the blog starter.
 
 ```shell
-gatsby new project-name https://github.com/LekoArts/gatsby-starter-portfolio-cara
-cd project-name
-npm run dev
+gatsby new <project-name> https://github.com/navin-navi/navin-navi.github.io
+cd <project-name>
+npm start
 ```
 
 Your site is now running at `http://0.0.0.0:8080`!

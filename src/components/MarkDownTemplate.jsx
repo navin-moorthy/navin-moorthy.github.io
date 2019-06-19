@@ -25,12 +25,11 @@ const PostHeaderLink = styled(props => <Link {...props} />)`
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark;
-  const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
 
   return (
     <>
-      <SEO siteTitle={siteTitle} />
+      <SEO siteTitle={post.frontmatter.title} />
       <PostMainStyle>
         <Link to="/">
           <Logo src={logo} alt={Logo} />
@@ -73,12 +72,6 @@ BlogPostTemplate.propTypes = {
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
