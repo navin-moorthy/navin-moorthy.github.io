@@ -1,6 +1,6 @@
 ---
 title: Intro to my blog
-date: "2019-06-19T04:46:37.121Z"
+date: "2019-06-19"
 description: Know the Tech Stack, Features and Functionalities used to build this blog. You can find a short tutorial on how to build and run this blog on your own. Also a brief explanation of the technologies used can be found.
 ---
 
