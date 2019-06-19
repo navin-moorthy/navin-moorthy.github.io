@@ -20,9 +20,12 @@ const Footer = () => (
   <>
     <FooterMain>
       &copy; {new Date().getFullYear()} - Made with{" "}
-      <FooterIcon src={heart} alt="love icon" /> by Navin from{" "}
-      <a href="https://github.com/navin-navi/navin-navi.github.io">Github</a>{" "}
-      <br /> Original design by <a href="https://www.lekoarts.de">LekoArts</a>.
+      <FooterIcon src={heart} alt="love icon" /> by Navin{" "}
+      <a href="https://github.com/navin-navi/navin-navi.github.io">
+        {" "}
+        Hosted in Github
+      </a>{" "}
+      <br /> Designed by <a href="https://www.lekoarts.de">LekoArts</a>.
     </FooterMain>
     <FooterCredits>
       <div>

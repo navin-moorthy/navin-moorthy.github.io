@@ -62,37 +62,34 @@ const Index = () => (
             bg="linear-gradient(to right, #fc4a1a, #f7b733)"
             linkTo="/blog"
           >
-            Here you can find my updated colleciton of tips and tutorials which
-            I am learning daily.
+            Colleciton of tips and tutorials that I am learning daily.
           </WritingCard>
           <WritingCard
             title="Today I Learned"
             bg="linear-gradient(to top, #30cfd0 0%, #330867 100%)"
             linkTo="/blog/today-i-learned"
           >
-            Here you find the Timeline of my daily logs through which I publish
-            my learning to Coding Communities via Twitter.
+            Timeline of my daily worklogs which gets posted in my Twitter .
           </WritingCard>
         </WritingsWrapper>
       </Writings>
       <About offset={3}>
         <Title>About</Title>
         <AboutHero>
-          <Avatar src={avatar} alt="John Doe" />
+          <Avatar src={avatar} alt="Navin Navi" />
           <AboutSub>
-            I'm a self thaught Web Developer mostly you can find me learning and
+            I'm a self thaught Web Developer you can find me mostly learning and
             developing web application in different areas of Web Technologies
-            from Back End Programming (Node JS, MondoDB and Firebase) to Front
-            End Engineering (HTML, CSS, Javascript, Angular, React and Gatsby).
+            from Front End Engineering (HTML, CSS, Javascript, Angular, React
+            and Gatsby) to Back End Programming (Node JS, MondoDB and Firebase).
           </AboutSub>
         </AboutHero>
         <AboutDesc>
           I'm extremely passionate about web development and design in all it's
           forms. In my spare time, I will be supporting the web development
           communities which is a big part of my life. They support and guide me
-          every single day. I have plans to give back something to them in my
-          simple language for others to learn. Also, I'm a huge fan of Marvel
-          and DC movies.
+          every single day. I think to give back something to them with the
+          knowledge I gained via this site.
         </AboutDesc>
       </About>
       <Contact offset={4} />

@@ -55,6 +55,10 @@
 
 ## 📣 Features
 
+**Google Lighthouse Audit Result**
+
+![Google Lighthouse Audit Result of navinnavi.github.io](google-lighthouse-audit.png)
+
 - [React Spring](https://github.com/drcmda/react-spring) (Used for Parallax effect)
 - [TailwindCSS](https://tailwindcss.com/) & [styled-components](https://www.styled-components.com/) for styling
   - Use the full power of TailwindCSS while generating small styles (as unused data gets deleted)
@@ -73,6 +77,7 @@
 - Blog with Markdown usign Markdown Remark
 - Code syntax highlighting by Prismjs
 - Google Analytics
+- Generate Sitemap XML.
 
 Thanks to [@bradlc](https://github.com/bradlc)’s work on [babel-plugin-tailwind-components](https://github.com/bradlc/babel-plugin-tailwind-components), we can easily get the power of Tailwind without the stylesheet bloat by passing Tailwind classes into styled-components with **Babel macros** 🎉.
 
