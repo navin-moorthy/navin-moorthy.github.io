@@ -47,7 +47,8 @@ Developed upon [Gatsby Starter Portfolio: Cara](https://github.com/LekoArts/gats
   - Traced SVG Loading (Lazy-Loading)
   - WebP Support
 - Blog with Markdown usign Markdown Remark
-- Code syntax highlighting by Prismjs.
+- Code syntax highlighting by Prismjs
+- Google Analytics
 
 Thanks to [@bradlc](https://github.com/bradlc)’s work on [babel-plugin-tailwind-components](https://github.com/bradlc/babel-plugin-tailwind-components), we can easily get the power of Tailwind without the stylesheet bloat by passing Tailwind classes into styled-components with **Babel macros** 🎉.
 
