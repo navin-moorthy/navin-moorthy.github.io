@@ -38,7 +38,7 @@
 </p>
 
 <p align="center">
-  <a href="https://codesandbox.io/s/github/navin-navi/navin-navi.github.io/tree/dev/">
+  <a href="https://codesandbox.io/s/navin-navigithubio-egxzq?fontsize=14">
     <img src="https://codesandbox.io/static/img/play-codesandbox.svg"  alt="Edit on CodeSandbox" />
   </a>
 </p>

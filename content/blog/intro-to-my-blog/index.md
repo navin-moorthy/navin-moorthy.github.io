@@ -18,7 +18,7 @@ Developed upon [Gatsby Starter Portfolio: Cara](https://github.com/LekoArts/gats
 
 **Checkout my site at [Navin-Navi](https://navin-navi.github.io)**
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/navin-navi/navin-navi.github.io/tree/dev/)
+[![Edit navin-navi.github.io](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/navin-navigithubio-egxzq?fontsize=14)
 
 ---
 
