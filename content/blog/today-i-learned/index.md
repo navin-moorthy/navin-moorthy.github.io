@@ -1,6 +1,30 @@
 ---
 title: Today I Learned
-date: "2019-06-20"
+date: "2019-06-21"
+---
+
+# 3. First Javascript Article
+
+## Day 3: June 21, 2019 - Friday
+
+**Project:** Learn new Javascript API and Write article about it
+
+![Javascript Object.fromEntries vs Object.entries](../javascript-Object.fromEntries-vs-Object.entries/Object.fromEntries_vs_Object.entries.png)
+
+**Article Live @:** [this LINK](https://navin-navi.github.io/blog/javascript-Object.fromEntries-vs-Object.entries/)
+
+**Progress:** Wrote and published it in my site today
+
+**Brief Description:**
+
+Today I spent most of the time learning and researching about Javascript Object.entries and Object.fromEntries to write an article about those.
+
+Then I planned for the Issue Tracker Angular Application that I need to build as part of the Full Stack Course. Nearing the End date.
+
+**Links:**
+
+- Live - [Javascript Object.fromEntries vs Object.entries](https://navin-navi.github.io/blog/javascript-Object.fromEntries-vs-Object.entries/)
+
 ---
 
 # 2. Angular HTTP Assignment
