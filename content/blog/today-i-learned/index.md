@@ -1,6 +1,29 @@
 ---
 title: Today I Learned
-date: "2019-06-21"
+date: "2019-06-24"
+---
+
+# 4. Angular Issue Tracker Project
+
+## Day 4: June 24, 2019 - Monday
+
+**Project:** Complete Angular Issue Tracker Project
+
+![Issue Tracker WIP](images/3.issue-tracker.png)
+
+**Live Demo:** Will make it available once complete
+
+**Progress:** Half way through the Project
+
+**Brief Description:**
+
+- Designed UI and used model data to fetch from database.
+- Planned on how to implement CRUD Operation and the UI for the respective actions.
+
+**Links:**
+
+- [GitHub Repository](https://github.com/navin-navi/Angular-Collection.git)
+
 ---
 
 # 3. First Javascript Article
