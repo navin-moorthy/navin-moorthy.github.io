@@ -1,6 +1,30 @@
 ---
 title: Today I Learned
-date: "2019-06-24"
+date: "2019-06-25"
+---
+
+# 5. Angular Issue Tracker Project
+
+## Day 5: June 25, 2019 - Tuesday
+
+**Project:** Complete Angular Issue Tracker Project
+
+![Issue Tracker WIP](images/5.issue-tracker-update.png)
+
+**Live Demo:** Will make it available once complete
+
+**Progress:** Nearly Complete the Project
+
+**Brief Description:**
+
+- Designed UI for Create and Update Component.
+- Implemented and tested CRUD operation using JSON Server.
+- Need to implement filters and customization along with chip notification for every action.
+
+**Links:**
+
+- [GitHub Repository](https://github.com/navin-navi/Angular-Collection.git)
+
 ---
 
 # 4. Angular Issue Tracker Project
@@ -9,7 +33,7 @@ date: "2019-06-24"
 
 **Project:** Complete Angular Issue Tracker Project
 
-![Issue Tracker WIP](images/3.issue-tracker.png)
+![Issue Tracker WIP](images/4.issue-tracker.png)
 
 **Live Demo:** Will make it available once complete
 
