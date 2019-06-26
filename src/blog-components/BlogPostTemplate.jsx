@@ -6,7 +6,8 @@ import tw from "tailwind.macro";
 import logo from "../../static/logo.png";
 
 // Components
-import SEO from "./SEO";
+import SEO from "../components/SEO";
+import BlogFooter from "./BlogFooter";
 
 const PostMainStyle = tw.div`font-sans ml-auto text-base text-gray-200 md:text-xl mr-auto max-w-2xl px-5 py-10 `;
 
@@ -58,6 +59,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           </li>
         </PostNavigation>
         <PostHeaderLink to="/blog">← Back to Blog</PostHeaderLink>
+        <BlogFooter />
       </PostMainStyle>
     </>
   );

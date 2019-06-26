@@ -7,7 +7,7 @@ import styled from "styled-components";
 import tw from "tailwind.macro";
 
 // Components
-import BlogParallex from "../components/BlogParallex";
+import BlogParallex from "./BlogParallex";
 
 // Image
 import logo from "../../static/logo.png";
@@ -27,8 +27,16 @@ const PostsLink = styled(props => <Link {...props} />)`
   ${tw`no-underline shadow-none border-none`}
 `;
 
-const Blog = ({ data }) => {
+const Paginator = tw.ul`flex flex-wrap justify-between items-center p-0 list-none`;
+
+const Blog = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges;
+  const { numPages, currentPage } = pageContext;
+  const isFirst = currentPage === 1;
+  const isLast = currentPage === numPages;
+  const prevPage =
+    currentPage - 1 === 1 ? "/blog" : `/blog/${(currentPage - 1).toString()}`;
+  const nextPage = `/blog/${(currentPage + 1).toString()}`;
 
   return (
     <>
@@ -56,6 +64,38 @@ const Blog = ({ data }) => {
               </div>
             );
           })}
+          <Paginator>
+            {!isFirst && (
+              <Link to={prevPage} rel="prev">
+                ← Previous Page
+              </Link>
+            )}
+            {Array.from({ length: numPages }, (_, i) => (
+              <li
+                key={`pagination-number${i + 1}`}
+                style={{
+                  margin: 0
+                }}
+              >
+                <Link
+                  to={`/blog/${i === 0 ? "" : i + 1}`}
+                  style={{
+                    padding: "10px",
+                    textDecoration: "none",
+                    color: i + 1 === currentPage ? "#ffffff" : "",
+                    background: i + 1 === currentPage ? "#ec407a" : ""
+                  }}
+                >
+                  {i + 1}
+                </Link>
+              </li>
+            ))}
+            {!isLast && (
+              <Link to={nextPage} rel="next">
+                Next Page →
+              </Link>
+            )}
+          </Paginator>
         </BlogStyle>
       </BlogParallex>
     </>
@@ -65,12 +105,17 @@ const Blog = ({ data }) => {
 export default Blog;
 
 Blog.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired
 };
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  query blogPageQuery($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: $limit
+      skip: $skip
+    ) {
       edges {
         node {
           id

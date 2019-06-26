@@ -17,7 +17,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const blogTemplate = path.resolve(`./src/components/MarkDownTemplate.jsx`);
+  const blogTemplate = path.resolve(
+    `./src/blog-components/BlogPostTemplate.jsx`
+  );
+
+  const blogHome = path.resolve("./src/blog-components/Blog.jsx");
   return graphql(
     `
       {
@@ -62,6 +66,22 @@ exports.createPages = ({ graphql, actions }) => {
       });
     });
 
+    // Create blog post list pages
+    const postsPerPage = 2;
+    const numPages = Math.ceil(posts.length / postsPerPage);
+
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+        component: blogHome,
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1
+        }
+      });
+    });
     return null;
   });
 };

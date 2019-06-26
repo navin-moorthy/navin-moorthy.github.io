@@ -106,6 +106,10 @@ const SEO = ({ siteTitle }) => {
       <meta name="msapplication-TileColor" content={config.backgroundColor} />
       <meta name="msapplication-config" content="browserconfig.xml" />
       <meta name="description" content={description} />
+      <meta
+        name="keywords"
+        content="web-development, blog, personal-site, portfolio"
+      />
       <meta name="image" content={image} />
       <meta property="og:locale" content={config.ogLanguage} />
       <meta property="og:site_name" content={config.ogSiteName} />
@@ -117,7 +121,7 @@ const SEO = ({ siteTitle }) => {
       {config.siteFBAppID && (
         <meta property="fb:app_id" content={config.siteFBAppID} />
       )}
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:creator"
         content={config.userTwitter ? config.userTwitter : ""}
