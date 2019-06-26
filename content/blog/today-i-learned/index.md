@@ -1,6 +1,33 @@
 ---
 title: Today I Learned
-date: "2019-06-25"
+date: "2019-06-26"
+---
+
+# 6. Angular Issue Tracker Project
+
+## Day 6: June 26, 2019 - Wednesday
+
+**Project:** Complete Angular Issue Tracker Project
+
+![Issue Tracker Completed Image](images/6.issue-tracker-complete.png)
+
+**Live Demo:** Will soon give this one a seperate repo and make it live
+
+**Progress:** Completed Angular Issue Tracker Project
+
+**Brief Description:**
+
+- Implemented snackBar Notificaiton, filters and customizations to the Issue Tracker Project.
+- Submitted the Project for review.
+- Implemented Pagination to this blog.
+- Imported old blogs from the html to this site as markdown.
+- Some UI improvements to the blog.
+- Planned to implement Dark and Light Mode and Fira Code font for Code Syntax HighLighting.
+
+**Links:**
+
+- [GitHub Repository](https://github.com/navin-navi/Angular-Collection.git)
+
 ---
 
 # 5. Angular Issue Tracker Project
