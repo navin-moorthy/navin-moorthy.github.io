@@ -8,15 +8,15 @@ import logo from "../../static/logo.png";
 // Components
 import SEO from "./SEO";
 
-const Logo = tw.img`w-24 md:w-40 m-auto`;
-
 const PostMainStyle = tw.div`font-sans ml-auto text-base text-gray-200 md:text-xl mr-auto max-w-2xl px-5 py-10 `;
 
+const Logo = tw.img`w-12 md:w-24 m-auto`;
+
 const PostHeader = styled.h3`
-  ${tw`text-5xl`}
+  ${tw`text-2xl md:text-3xl`}
 `;
 
-const PostNavigation = tw.ul`flex flex-wrap justify-between p-0 list-none`;
+const PostNavigation = tw.ul`flex flex-wrap justify-between p-0 list-none text-sm md:text-base`;
 
 const PostHeaderLink = styled(props => <Link {...props} />)`
   ${tw`text-gray-200 block my-5 border-none`}
