@@ -51,7 +51,8 @@ Developed upon [Gatsby Starter Portfolio: Cara](https://github.com/LekoArts/gats
   - The right image size for every screen size
   - Traced SVG Loading (Lazy-Loading)
   - WebP Support
-- Blog with Markdown usign Markdown Remark
+- Blogging with Markdown usign Markdown Remark
+- Supports Paginator.
 - Code syntax highlighting by Prismjs
 - Google Analytics.
 - Generate Sitemap XML.
