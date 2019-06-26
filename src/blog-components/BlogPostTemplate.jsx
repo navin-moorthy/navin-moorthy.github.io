@@ -3,25 +3,20 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import styled from "styled-components";
 import tw from "tailwind.macro";
-import logo from "../../static/logo.png";
 
 // Components
-import SEO from "./SEO";
+import SEO from "../components/SEO";
+import BlogFooter from "./BlogFooter";
+import BlogNavbar from "./BlogNavbar";
+import BlogBio from "./BlogBio";
 
-const Logo = tw.img`w-24 md:w-40 m-auto`;
-
-const PostMainStyle = tw.div`font-sans ml-auto text-base text-gray-200 md:text-xl mr-auto max-w-2xl px-5 py-10 `;
+const PostMainStyle = tw.div`font-sans ml-auto text-sm text-gray-200 md:text-base mr-auto max-w-2xl px-5 py-10 `;
 
 const PostHeader = styled.h3`
-  ${tw`text-5xl`}
+  ${tw`text-2xl md:text-3xl`}
 `;
 
 const PostNavigation = tw.ul`flex flex-wrap justify-between p-0 list-none`;
-
-const PostHeaderLink = styled(props => <Link {...props} />)`
-  ${tw`text-gray-200 block my-5 border-none`}
-  text-shadow: 1px 1px 6px #ec407a;
-`;
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark;
@@ -31,16 +26,14 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     <>
       <SEO siteTitle={post.frontmatter.title} />
       <PostMainStyle>
-        <Link to="/">
-          <Logo src={logo} alt={Logo} />
-        </Link>
+        <BlogNavbar />
         <PostHeader>{post.frontmatter.title}</PostHeader>
-        <small>{post.frontmatter.date}</small>
-        <div
-          style={{ fontSize: "18px" }}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <small style={{ padding: "5px", display: "block" }}>
+          {post.frontmatter.date}
+        </small>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
+        <BlogBio />
         <PostNavigation>
           <li>
             {previous && (
@@ -57,7 +50,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             )}
           </li>
         </PostNavigation>
-        <PostHeaderLink to="/blog">← Back to Blog</PostHeaderLink>
+        <BlogFooter />
       </PostMainStyle>
     </>
   );

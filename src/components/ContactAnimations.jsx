@@ -62,7 +62,7 @@ const ContactAnimations = ({ offset, children }) => (
         </InnerWave>
       </WaveWrapper>
     </Divider>
-    <Content speed={1} offset={offset}>
+    <Content speed={0.3} offset={offset}>
       <Inner>{children}</Inner>
       <Footer />
     </Content>

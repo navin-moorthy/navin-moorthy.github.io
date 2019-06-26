@@ -151,7 +151,7 @@ blockquote p {
 
 hr {
   border: none;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #ddd;
   margin: 45px 0;
   box-sizing: content-box;
   height: 0;

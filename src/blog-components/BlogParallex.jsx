@@ -4,13 +4,13 @@ import theme from "tailwindcss/defaultTheme";
 import styled from "styled-components";
 import tw from "tailwind.macro";
 import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons.cjs";
-import SVG from "./SVG";
+import SVG from "../components/SVG";
 
 // components
-import SEO from "./SEO";
+import SEO from "../components/SEO";
 
 // views
-import Contact from "./Contact";
+import Contact from "../components/Contact";
 
 // elements
 import { Divider } from "../elements/Dividers";

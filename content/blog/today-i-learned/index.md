@@ -123,5 +123,3 @@ With this I am going to start over my #100DaysOfCode Rounds with just counting t
 
 - [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
 - [Original Inspiration Repo Link from LekoArts](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
-
----

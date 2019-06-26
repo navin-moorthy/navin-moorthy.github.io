@@ -4,11 +4,11 @@ module.exports = {
   siteTitle: "Navin | Personal Blog", // Navigation and Site Title
   siteTitleAlt: "Navin Navi", // Alternative Site title for SEO
   siteTitleShort: "Navin Navi", // short_name for manifest
-  siteHeadline: "Creating marvelous art & blazginly fast websites", // Headline for schema.org JSONLD
+  siteHeadline: "Creating marvelous art & blazginly fast websites with Gatsby", // Headline for schema.org JSONLD
   siteUrl: "https://navin-navi.github.io", // Domain of your site. No trailing slash!
   siteLanguage: "en", // Language Tag on <html> element
   siteLogo: "/logo.png", // Used for SEO and manifest
-  siteDescription: "Playful & Colorful personal website with Parallax effect",
+  siteDescription: "Personal Web Development related Blog with Parallax effect",
   author: "Navin", // Author for schema.org JSONLD
 
   siteFBAppID: "576603726168994", // Facebook App ID - Optional
