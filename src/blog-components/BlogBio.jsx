@@ -6,11 +6,11 @@ import avatar from "../images/avatar.jpg";
 
 const BioContainer = tw.div`flex flex-row mb-5`;
 
-const Avatar = tw.img`rounded-full w-12  h-12 shadow-lg my-1 mr-5`;
+const Avatar = tw.img`rounded-full w-16  h-16 shadow-lg my-1 mr-2 md:mr-5`;
 
-const BioText = tw.div`flex flex-col`;
+const BioText = tw.div`flex flex-col text-xs sm:text-sm md:text-base m-2`;
 
-const Text = tw.div`mb-4`;
+const Text = tw.div`mb-3 md:mb-4`;
 
 const BlogBio = () => {
   const data = useStaticQuery(graphql`
@@ -31,7 +31,7 @@ const BlogBio = () => {
       <Avatar src={avatar} alt={author} />
       <BioText>
         <Text>
-          Writted by <strong>{author}</strong>. I write blogs and log my daily
+          Written by <strong>{author}</strong>. I write blogs and log my daily
           activities here.
         </Text>
         <Text>
