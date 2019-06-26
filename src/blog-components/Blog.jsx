@@ -8,14 +8,11 @@ import tw from "tailwind.macro";
 
 // Components
 import BlogParallex from "./BlogParallex";
-
-// Image
-import logo from "../../static/logo.png";
+import BlogNavbar from "./BlogNavbar";
+import BlogBio from "./BlogBio";
 
 // Local styles
 const BlogStyle = tw.div`font-sans ml-auto mr-auto max-w-2xl px-5 py-10 `;
-
-const Logo = tw.img`w-24 md:w-40 m-auto pb-5`;
 
 const PostsHeader = tw.h3`mb-0 mt-6 text-xl md:text-3xl `;
 
@@ -42,9 +39,8 @@ const Blog = ({ data, pageContext }) => {
     <>
       <BlogParallex>
         <BlogStyle>
-          <Link to="/">
-            <Logo src={logo} alt="Logo" />
-          </Link>
+          <BlogNavbar />
+          <BlogBio />
           {posts.map(({ node }) => {
             const { id, excerpt, fields, frontmatter } = node;
 
