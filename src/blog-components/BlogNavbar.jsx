@@ -6,7 +6,6 @@ import tw from "tailwind.macro";
 import logo from "../../static/logo.png";
 
 const Navbar = tw.div`flex flex-row justify-between items-center mb-10`;
-const NavbarHeading = tw.h1``;
 
 const NavbarLogo = tw.img`w-24 m-auto`;
 
@@ -14,7 +13,7 @@ const BlogNavbar = () => (
   <>
     <Navbar>
       <Link to="/blog" style={{ borderBottom: "unset" }}>
-        <NavbarHeading>BLOG</NavbarHeading>
+        <h1>BLOG</h1>
       </Link>
 
       <Link to="/" style={{ borderBottom: "unset" }}>

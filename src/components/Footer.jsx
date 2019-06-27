@@ -2,10 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import tw from "tailwind.macro";
 
+// assets
 import heart from "../images/heart.svg";
 
+// Styles
 import { heartBeat } from "../styles/animations";
 
+// CSS
 const FooterMain = styled.footer`
   ${tw`text-center text-gray-500 absolute font-semibold text-xs md:text-sm lg:text-base`};
   bottom: 60px;
@@ -38,6 +41,17 @@ const Footer = () => (
         Icons made by{" "}
         <a href="https://www.flaticon.com/authors/google" title="Google">
           Google
+        </a>
+        {" , "}
+        <a
+          href="https://www.flaticon.com/authors/elegant-themes"
+          title="Elegant Themes"
+        >
+          Elegant Themes
+        </a>
+        {" & "}
+        <a href="https://www.flaticon.com/authors/icomoon" title="Icomoon">
+          Icomoon
         </a>{" "}
         from{" "}
         <a href="https://www.flaticon.com/" title="Flaticon">

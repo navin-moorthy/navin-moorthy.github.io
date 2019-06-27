@@ -43,8 +43,11 @@ const AboutDesc = tw.p`text-gray-400 text-lg md:text-xl lg:text-2xl pt-6 md:pt-1
 
 const Index = () => (
   <>
+    {/* SEO with Site Header */}
     <SEO siteTitle="Home" />
+    {/* Parallax for Background Animation */}
     <Parallax pages={5}>
+      {/* Hero Page 1 */}
       <Hero offset={0}>
         <BigTitle>
           Hello, <br /> I'm Navin.
@@ -54,6 +57,8 @@ const Index = () => (
           fulltime as a Cyber Security Analyst
         </Subtitle>
       </Hero>
+
+      {/* Writings Page 2 and 3 */}
       <Writings offset={1}>
         <Title>Writings</Title>
         <WritingsWrapper>
@@ -73,6 +78,8 @@ const Index = () => (
           </WritingCard>
         </WritingsWrapper>
       </Writings>
+
+      {/* About Page 4 */}
       <About offset={3}>
         <Title>About</Title>
         <AboutHero>
@@ -92,6 +99,8 @@ const Index = () => (
           knowledge I gained via this site.
         </AboutDesc>
       </About>
+
+      {/* Contact Page 5 */}
       <Contact offset={4} />
     </Parallax>
   </>

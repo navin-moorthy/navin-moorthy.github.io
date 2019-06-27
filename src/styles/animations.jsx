@@ -70,8 +70,11 @@ export const UpDownWide = styled.div`
   animation: ${upDownWideAnimation};
 `;
 
-export const waveAnimation = length => css`
-  animation: ${wave} ${length} linear infinite alternate;
+export const InnerWave = styled.div`
+  ${tw`relative h-full`};
+  path {
+    animation: ${wave} 20s linear infinite alternate;
+  }
 `;
 
 export const rotateAnimation = length => css`

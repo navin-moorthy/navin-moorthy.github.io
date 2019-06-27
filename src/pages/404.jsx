@@ -6,19 +6,22 @@ import { BigTitle, Subtitle, ErrorPageLink } from "../elements/Titles";
 
 // Components
 import SEO from "../components/SEO";
-import ContactAnimations from "../components/ContactAnimations";
+import SiteBottom from "../components/SiteBottom";
 
 const NotFoundPage = () => (
   <>
+    {/* SEO with Site Header */}
     <SEO siteTitle="404: Not Found" />
+    {/* Parallax for Background Animation */}
     <Parallax pages={1}>
-      <ContactAnimations offset={0}>
+      {/* Contant Background Animation */}
+      <SiteBottom offset={0}>
         <BigTitle>Not Found</BigTitle>
         <Subtitle>
           You just hit a route that doesn&#39;t exist... the sadness.
         </Subtitle>
         <ErrorPageLink to="/">Go to Home</ErrorPageLink>
-      </ContactAnimations>
+      </SiteBottom>
     </Parallax>
   </>
 );

@@ -1,12 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import tw from "tailwind.macro";
 
-import SiteBottom from "./ContactAnimations";
+// Contact Layer
+import SiteBottom from "./SiteBottom";
 
-import { Title } from "../elements/Titles";
-
-const ContactText = tw.p`text-gray-400 font-semibold text-xl md:text-2xl lg:text-3xl`;
+// Elements
+import { Title, ContactText } from "../elements/Titles";
 
 const Contact = ({ offset }) => (
   <>
