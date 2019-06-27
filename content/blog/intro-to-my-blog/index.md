@@ -45,7 +45,7 @@ Developed upon [Gatsby Starter Portfolio: Cara](https://github.com/LekoArts/gats
 
 **Google Lighthouse Audit Result**
 
-![Google Lighthouse Audit Result of navinnavi.github.io](content/blog/intro-to-my-blog/google-lighthouse-audit.png)
+![Google Lighthouse Audit Result of navinnavi.github.io](google-lighthouse-audit.png)
 
 - [React Spring](https://github.com/drcmda/react-spring) (Used for Parallax effect)
 - [TailwindCSS](https://tailwindcss.com/) & [styled-components](https://www.styled-components.com/) for styling
