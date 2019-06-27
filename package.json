@@ -39,8 +39,10 @@
     "gatsby-plugin-sharp": "2.2.1",
     "gatsby-plugin-sitemap": "2.2.0",
     "gatsby-plugin-styled-components": "3.1.0",
+    "gatsby-remark-autolink-headers": "^2.1.0",
     "gatsby-remark-copy-linked-files": "2.1.0",
     "gatsby-remark-images": "3.1.2",
+    "gatsby-remark-images-medium-zoom": "^1.2.1",
     "gatsby-remark-prismjs": "3.3.0",
     "gatsby-remark-responsive-iframe": "2.2.1",
     "gatsby-remark-smartypants": "2.1.0",
@@ -72,6 +74,7 @@
     "eslint-plugin-react": "7.14.2",
     "gh-pages": "2.0.1",
     "lodash": "^4.17.11",
-    "prettier": "1.18.2"
+    "prettier": "1.18.2",
+    "smooth-scroll": "^16.1.0"
   }
 }

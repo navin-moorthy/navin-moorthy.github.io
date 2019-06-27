@@ -110,6 +110,10 @@ a code {
   border-bottom: 1px dotted #ec407a;
 }
 
+.anchor {
+  border-bottom: unset;
+}
+
 small {
   font-size: 70%;
 }
