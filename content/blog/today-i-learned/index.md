@@ -1,7 +1,33 @@
 ---
 title: Today I Learned
-date: "2019-06-26"
+date: "2019-06-27"
 ---
+
+# 7. Blog Improvements
+
+## Day 7: June 27, 2019 - Thursday
+
+**Project:** Improve my blog layout and code quality
+
+![Fira Code In Action](images/7.fira-code-in-action.png)
+
+**Live Demo:** https://navin-navi.github.io/
+
+**Progress:** Made Progress and today's target was achieved
+
+**Brief Description:**
+
+- Changed Syntax Highlighting from Fira Mono to Fira Code
+- Updated [README](https://github.com/navin-navi/navin-navi.github.io/blob/dev/README.md) with tons of details.
+- Added heartbeat animation to Footer love SVG using tailwind.
+- Added Markdown Images - Medium like Zoom on click.
+- Smooth Scroll for all post header anchor link.
+- Mobile code display and multiple optimization and code refractoring done.
+
+**Links:**
+
+- [Live Demo](https://navin-navi.github.io/blog)
+- [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
 
 # 6. Angular Issue Tracker Project
 
