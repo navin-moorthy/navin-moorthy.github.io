@@ -8,7 +8,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: "Fira Mono", monospace;
+  font-family: "Fira Code", monospace;
   font-size: 1em;
 }
 
@@ -32,22 +32,23 @@ code {
   border-radius: 4px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 300px) {
   pre {
     padding: 5px !important;
     font-size: 10px;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 500px) {
   pre {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   pre {
-    font-size: 16px !important;
+    padding: 1rem !important;
+    font-size: 14px !important;
   }
 }
 
@@ -71,7 +72,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: #edf2f7;
   background: none;
-  font-family: Fira Mono, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: Fira Code, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
