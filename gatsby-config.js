@@ -39,7 +39,8 @@ module.exports = {
         name: "images"
       }
     },
-
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     // Markdown Plugins
     {
       resolve: "gatsby-transformer-remark",
@@ -69,11 +70,26 @@ module.exports = {
           `gatsby-remark-autolink-headers`,
           "gatsby-remark-prismjs",
           "gatsby-remark-copy-linked-files",
-          "gatsby-remark-smartypants"
+          "gatsby-plugin-catch-links",
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "noopener"
+            }
+          },
+          "gatsby-remark-smartypants",
+          `gatsby-remark-emojis`
         ]
       }
     },
-
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `darkorange`,
+        showSpinner: true
+      }
+    },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -107,8 +123,6 @@ module.exports = {
     /* Must be placed at the end */
     "gatsby-plugin-styled-components",
     "gatsby-plugin-catch-links",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
     `gatsby-plugin-lodash`,
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
