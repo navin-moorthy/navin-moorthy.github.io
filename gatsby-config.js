@@ -10,7 +10,9 @@ module.exports = {
     description: config.description,
     siteUrl: config.siteUrl + pathPrefix,
     social: {
-      twitter: "navin_navi19"
+      twitter: "navin_navi19",
+      github: "navin-navi",
+      facebook: "navinnavi19"
     }
   },
   /* Plugins */
