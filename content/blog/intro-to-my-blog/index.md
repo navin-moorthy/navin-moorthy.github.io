@@ -4,11 +4,19 @@ date: "2019-06-19"
 description: Know the Tech Stack, Features and Functionalities used to build this blog. You can find a short tutorial on how to build and run this blog on your own. Also a brief explanation of the technologies used can be found.
 ---
 
-# [NavinNavi](https://navin-navi.github.io)
+# [ 👨‍💻 NavinNavi 👨‍💻 ](https://navin-navi.github.io)
 
 [![TravisCI](https://travis-ci.org/navin-navi/navin-navi.github.io.svg?branch=dev)](https://travis-ci.org/navin-navi/navin-navi.github.io)
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/navin-navi/navin-navi.github.io.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/navin-navi/navin-navi.github.io/alerts/)
+
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/navin-navi/navin-navi.github.io.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/navin-navi/navin-navi.github.io/context:javascript)
+
+[![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100)](https://github.com/ebidel/lighthouse-badge)
+
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/navin-navi/navin-navi.github.io/issues)
 
 My personal portfolio & blog. Built with Gatsby.js.
 
@@ -20,59 +28,63 @@ Developed upon [Gatsby Starter Portfolio: Cara](https://github.com/LekoArts/gats
 
 [![Edit navin-navi.github.io](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/navin-navigithubio-egxzq?fontsize=14)
 
+[![Twitter: navin_navi19](https://img.shields.io/twitter/follow/navin_navi19.svg?style=social)](https://twitter.com/navin_navi19)
+
 ---
 
 ## 🖥 Tech Stack
 
-- Developed using [Gatsby](https://www.gatsbyjs.org)
+- Developed with [Gatsby](https://www.gatsbyjs.org)
 - Contents served from [Github](https://github.com) as Markdown files
 - [TravisCI](https://travis-ci.org/) for CI and Build checks
 - Hosted on [GithubPages](https://pages.github.com/)
 - [Renovate](https://renovatebot.com) for auto dependency updates
+- [LGTM](https://lgtm.com/) Automated Code Review Enabled
 
-## 📣 Features
+## 🚀 Features
 
 **Google Lighthouse Audit Result**
 
-![Google Lighthouse Audit Result of navinnavi.github.io](google-lighthouse-audit.png)
+![Google Lighthouse Audit Result of navinnavi.github.io](content/blog/intro-to-my-blog/google-lighthouse-audit.png)
 
 - [React Spring](https://github.com/drcmda/react-spring) (Used for Parallax effect)
 - [TailwindCSS](https://tailwindcss.com/) & [styled-components](https://www.styled-components.com/) for styling
   - Use the full power of TailwindCSS while generating small styles (as unused data gets deleted)
   - Uses `tailwind.macro` (Babel macro) to have hot-reloading of Tailwind styles
+- 🤖 Google Analytics Support.
+- Generate Sitemap XML.
+- 🧙 Offline Support PWA
+- WebApp Manifest Support
+- Blogging with Markdown usign Markdown Remark
+- Supports Pagination with multiple posts.
+- 💄 Code syntax highlighting by [Prismjs](https://prismjs.com/) With [Fira Code](https://github.com/tonsky/FiraCode)
+- Responsive images
+  - The right image size for every screen size
+  - Traced SVG Loading (Lazy-Loading)
+  - WebP Support
 - SEO
   - Schema.org JSONLD
   - OpenGraph Tags
   - Twitter Tags
 - [Typefaces](https://github.com/KyleAMathews/typefaces) for quicker font loading
-- Offline Support
-- WebApp Manifest Support
-- Responsive images
-  - The right image size for every screen size
-  - Traced SVG Loading (Lazy-Loading)
-  - WebP Support
-- Blogging with Markdown usign Markdown Remark
-- Supports Paginator.
-- Code syntax highlighting by Prismjs
-- Google Analytics.
-- Generate Sitemap XML.
+- ⚙ Easily Configurable
 
-Thanks to [@bradlc](https://github.com/bradlc)’s work on [babel-plugin-tailwind-components](https://github.com/bradlc/babel-plugin-tailwind-components), we can easily get the power of Tailwind without the stylesheet bloat by passing Tailwind classes into styled-components with **Babel macros** 🎉.
+> 💡 The parallax effect can be quite heavy for some older CPUs and the site uses some newer CSS features which will result in incompatibility with older browsers.
 
-**Please note:** The parallax effect can be quite heavy for some older CPUs and the site uses some newer CSS features which will result in incompatibility with older browsers.
+## 🧬 Quick start
 
-## 🚀 Quick start
+### ❗️ Pre-requisite
 
 Check your development environment! You'll need [Node.js](https://nodejs.org/en/), the [Gatsby CLI](https://www.gatsbyjs.org/docs/) and [node-gyp](https://github.com/nodejs/node-gyp#installation) installed. The official Gatsby website also lists two articles regarding this topic:
 
 - [Gatsby on Windows](https://www.gatsbyjs.org/docs/gatsby-on-windows/)
 - [Check your development environment](https://www.gatsbyjs.org/tutorial/part-zero/)
 
-To copy and install this starter run this command (with "project-name" being the name of your folder you wish to install it in):
+### ⚛️ Create a Gatsby Site
 
 Use the Gatsby CLI to create a new site, specifying the blog starter.
 
-```shell
+```sh
 gatsby new <project-name> https://github.com/navin-navi/navin-navi.github.io
 cd <project-name>
 npm start
@@ -80,35 +92,51 @@ npm start
 
 Your site is now running at `http://0.0.0.0:8080`!
 
-_Note: You'll also see a second link: _`http://0.0.0.0:8080/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+> 💡 You'll also see a second link: `http://0.0.0.0:8080/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).\_
 
 Edit `src/pages/index.js`, save your changes and the browser will update in real time!
 
-### Adding new features/plugins
+### ⚒ Building your site
 
-You can add other features by having a look at the official [plugins page](https://www.gatsbyjs.org/docs/plugins/).
-
-### Building your site
-
-```shell
+```sh
 npm run build
 ```
 
 Copy the content of the `public` folder to your webhost or use a website like Netlify which automates that for you.
 
-## 🎓 Configuration
+### ⚒ Build and deploy with Github Pages
+
+1. Install `npm install [gh-pages](https://www.npmjs.com/package/gh-pages) --save-dev`.
+2. Use the `config/deploy-github.js` to configure your `public` folder to get deployed in mentioned github repository and branch.
+3. Now run `npm run deploy:github`.
+
+> 💡 You will be asked to enter your Github Username and Password.
+
+Alternatively, this flow can be automated using Travis CI - [Docs](https://docs.travis-ci.com/user/deployment/pages/)
+
+### 🆕 Adding new features/plugins
+
+You can add other features by having a look at the official [plugins page](https://www.gatsbyjs.org/docs/plugins/).
+
+## 😎 Configuration
 
 You have multiple options to configure this project.
 
-1. Use the `config/website.js` to configure data passed to the SEO component and other parts of the Gatsby site
+### ❗️ Important Configurations
+
+1. Use the `config/website.js` to configure data passed to the **SEO component** and other parts of the Gatsby site
 
 2. Use the `tailwind.js` file to configure TailwindCSS. Their [documentation](https://tailwindcss.com/docs/configuration) explains it step-by-step.
 
-3. Modify the files in the `src/styles` directory.
+3. For changing the animation or styles, modify the files in the `src/styles` directory.
 
 4. Modify the sections in the `src/views` directory. They contain the Dividers & SVG icons.
 
-5. You can also place the icons somewhere else on the page, modify their animation and hide them on smaller screens:
+5. You can also place the icons somewhere else on the page, modify their animation and hide them on smaller screens.
+
+6. Blog contents can be found in `content/blog` and blog templates in `src/blog-components/...`
+
+### 🛠 Icons Configuration
 
 ```JSX
   <SVG icon="triangle" hideMobile width={48} stroke={colors.orange} left="10%" top="20%" />
@@ -120,26 +148,74 @@ You have multiple options to configure this project.
 - If you want the SVG to be hidden on mobile view, add `hideMobile` to the SVG component
 - You can define the width via the TailwindCSS width [option](https://tailwindcss.com/docs/width)
 - The colors get defined via the TailwindCSS color [option](https://tailwindcss.com/docs/colors)
-  - Please note that you will either have to define the color in `stroke` **or** `fill` depending on the icon. For reference, have a look at the currently used SVGs
+  - 💡 You will either have to define the color in `stroke` **or** `fill` depending on the icon. For reference, have a look at the currently used SVGs
 - The options `left` and `top` position the icon relatively to its parent container
 - You can also wrap the SVGs with `<UpDown />` or `<UpDownWide />` to animate them
 
-### Typography
+### 🖊 Typography
 
-Instead of relying on Google's CDN to host its fonts, this site self-hosts the fonts and therefore benefits from increased performance. The installed fonts can be found in `gatsby-browser.js`:
-
-```JSX
-import 'typeface-cantata-one';
-import 'typeface-montserrat';
-```
+Instead of relying on Google's CDN to host its fonts, this site self-hosts the fonts and therefore benefits from increased performance. The installed fonts and global styles import can be found in `gatsby-browser.js`:
 
 This starter uses [typefaces](https://github.com/KyleAMathews/typefaces) by Kyle Mathews. Have a look at the repository if you want to install & use other fonts.
 
-You'll also need to configure your own **fonts** by installing or importing in `gatsby-browser.js`. You then can use the fonts by confirguring in `tailwind.config.js` or in `src/styles/globalStyle.css`.
+You'll also need to configure `fonts` in `tailwind.js` or in `src/styles/globalStyles.css` to reflect the changes.
+
+#### 🗃 Folder Structure View
+
+##### ⚙ Gatsby config
+
+```
+/root
+├── gatsby-browser.js // font, polyfill, onClientRender ...
+├── gatsby-config.js // Gatsby config
+├── config/website.js // Template meta SEO config
+└── gatsby-node.js // Gatsby Node config
+```
+
+##### ⛑ Source Structure
+
+```
+src
+├── blog-components // Blog templates and associated components
+│   ├── Blog.jsx // Blog Home
+│   └── BlogPostTemplate.jsx // Markdown Pages Template
+├── components // Reusable components
+│   └── SEO.jsx // SEO customization with REACT HELMET here
+├── elements // Small elements to be used within components
+├── images // Avatar and SVG's
+├── pages // routing
+│   ├── 404.jsx
+│   └── index.jsx
+└── styles // Styles that are used across the site
+```
+
+##### 🎨 Style
+
+You can customize styles in `src/styles` directory.
+
+```
+src/styles
+├── animation.jsx // All Animations are exported from here
+├── color.jsx // Tailwind Color Shortcut
+├── globalStyles.css // Global Styles
+├── prism-a11y-dark.css // Prism JS Code Highlighting
+└── utils.jsx // Mobile Display Hide Utils
+```
+
+##### 🍭 Tips (You can change...)
+
+- Profile image! (replace file in `src/images/avatar.jpg`)
+- Favicon image! (replace file in `static/favicon.ico`)
+- Logo image! (replace file in `static/logo.png`)
+- PWA theme customization! (edit file in `static/browserconfig.xml`)
+- Edit robot.txt! (file in `static/robots.txt`)
+- Google Verification (file in `static/google051e1d59950b0532.html`)
 
 ## 💫 Thanks and Support
 
 ### [LekoArts](https://www.lekoarts.de)
+
+> Design based on [LekoArts](https://www.lekoarts.de) - [gatsby-starter-portfolio-cara](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
 
 If you want to quickly bootstrap a design/photography portfolio or use it as a foundation for your personal site, the starters in _gatsby-starter-portfolio_ are a perfect fit for you! The project's goal is to offer minimalistic and fast websites.
 
@@ -153,3 +229,27 @@ Also, check out the other starters for _gatsby-starter-portfolio_:
 - [gatsby-starter-portfolio-jodie](https://github.com/LekoArts/gatsby-starter-portfolio-jodie)
 
 Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfolio.netlify.com/)!
+
+> Pagination based on [Nicky Starter Blog](https://github.com/NickyMeuleman/gatsby-paginated-blog)
+
+> Dark/Light Theme and more based on [JaeYeopHan's Starter Blog](https://github.com/JaeYeopHan/gatsby-starter-bee)
+
+> Thanks to [@bradlc](https://github.com/bradlc)’s work on [babel-plugin-tailwind-components](https://github.com/bradlc/babel-plugin-tailwind-components), we can easily get the power of Tailwind without the stylesheet bloat by passing Tailwind classes into styled-components with **Babel macros** 🎉.
+
+## 🤔 If...
+
+If you are currently writing in the Medium, consider migration with [medium-to-own-blog](https://github.com/mathieudutour/medium-to-own-blog)!
+
+## :bug: Bug reporting
+
+[Issue](https://github.com/navin-navi/navin-navi.github.io/issues)
+
+## ™️ LICENSE
+
+[MIT](./LICENSE)
+
+<div align="center">
+
+<sub><sup>Project by <a href="https://github.com/navin-navi"> @Navin Navi</a></sup></sub><small>✌</small>
+
+</div>

@@ -17,7 +17,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "deploy:github": "npm run build && node ./scripts/deploy-github"
+    "deploy:github": "npm run build && node ./config/deploy-github"
   },
   "dependencies": {
     "gatsby": "2.11.0",

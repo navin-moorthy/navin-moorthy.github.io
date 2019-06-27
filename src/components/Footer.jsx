@@ -4,12 +4,17 @@ import tw from "tailwind.macro";
 
 import heart from "../images/heart.svg";
 
+import { heartBeat } from "../styles/animations";
+
 const FooterMain = styled.footer`
   ${tw`text-center text-gray-500 absolute font-semibold text-xs md:text-sm lg:text-base`};
   bottom: 60px;
 `;
 
-const FooterIcon = tw.img`inline m-0`;
+const FooterIcon = styled.img`
+  ${tw` inline m-0`}
+  ${heartBeat}
+`;
 
 const FooterCredits = styled.footer`
   ${tw`text-center text-gray-500 font-semibold absolute text-xs md:text-sm lg:text-base`}
@@ -23,9 +28,10 @@ const Footer = () => (
       <FooterIcon src={heart} alt="love icon" /> by Navin{" "}
       <a href="https://github.com/navin-navi/navin-navi.github.io">
         {" "}
-        Hosted in Github
+        Hosted with GHPages
       </a>{" "}
-      <br /> Designed by <a href="https://www.lekoarts.de">LekoArts</a>.
+      <br /> Built with <a href="https://www.gatsbyjs.org/"> Gatsby</a>. Design
+      Inspiration <a href="https://www.lekoarts.de">LekoArts</a>.
     </FooterMain>
     <FooterCredits>
       <div>

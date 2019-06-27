@@ -10,6 +10,18 @@ const rotate = keyframes`
   }
 `;
 
+const heartScaleUp = keyframes`
+0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
 const wave = keyframes`
   0% {
     d: path("M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z");
@@ -64,4 +76,8 @@ export const waveAnimation = length => css`
 
 export const rotateAnimation = length => css`
   animation: ${rotate} ${length} linear infinite;
+`;
+
+export const heartBeat = css`
+  animation: ${heartScaleUp} 0.5s infinite;
 `;
