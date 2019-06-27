@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import styled from "styled-components";
@@ -10,6 +10,8 @@ import BlogFooter from "./BlogFooter";
 import BlogNavbar from "./BlogNavbar";
 import BlogBio from "./BlogBio";
 
+import * as ScrollManager from "../styles/scroll";
+
 const PostMainStyle = tw.div`font-sans ml-auto text-sm text-gray-200 md:text-base mr-auto max-w-2xl px-5 py-10 `;
 
 const PostHeader = styled.h3`
@@ -19,6 +21,12 @@ const PostHeader = styled.h3`
 const PostNavigation = tw.ul`flex flex-wrap justify-between p-0 list-none`;
 
 const BlogPostTemplate = ({ data, pageContext }) => {
+  // Smooth Scroll Initialization
+  useEffect(() => {
+    ScrollManager.init();
+    return () => ScrollManager.destroy();
+  }, []);
+
   const post = data.markdownRemark;
   const { previous, next } = pageContext;
 
