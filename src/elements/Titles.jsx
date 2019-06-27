@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import tw from "tailwind.macro";
@@ -31,6 +30,8 @@ export const Subtitle = styled.p`
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 `;
 
-export const ErrorPageLink = styled(props => <Link {...props} />)`
+export const ContactText = tw.p`text-gray-400 font-semibold text-xl md:text-2xl lg:text-3xl`;
+
+export const ErrorPageLink = styled(Link)`
   ${tw`text-2xl lg:text-3xl mt-8 xxl:w-3/4`}
 `;

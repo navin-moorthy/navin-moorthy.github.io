@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-
-// Styles
 import styled from "styled-components";
 import tw from "tailwind.macro";
 
@@ -11,8 +9,8 @@ import BlogParallex from "./BlogParallex";
 import BlogNavbar from "./BlogNavbar";
 import BlogBio from "./BlogBio";
 
-// Local styles
-const BlogStyle = tw.div`font-sans ml-auto mr-auto max-w-2xl px-5 py-10 `;
+// S tyles
+const BlogStyle = tw.div`ml-auto mr-auto max-w-2xl px-5 py-10 `;
 
 const PostsHeader = tw.h3`mb-0 mt-6 text-xl md:text-3xl `;
 
@@ -20,7 +18,7 @@ const Small = tw.small`text-xs opacity-75`;
 
 const PostPara = tw.p`text-gray-200 p-0 mx-0 mt-2 mb-8 text-sm md:text-base`;
 
-const PostsLink = styled(props => <Link {...props} />)`
+const PostsLink = styled(Link)`
   ${tw`no-underline shadow-none border-none`}
 `;
 
