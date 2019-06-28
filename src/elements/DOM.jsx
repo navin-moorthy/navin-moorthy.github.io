@@ -13,7 +13,3 @@ export const addClassToBody = className => addClass(getBody(), className);
 export const removeClassFromBody = className =>
   removeClass(getBody(), className);
 export const hasClassOfBody = className => hasClass(getBody(), className);
-export const getRect = className =>
-  getElement(className).getBoundingClientRect();
-export const getPosY = className => getRect(className).y;
-export const getDocumentHeight = () => document.documentElement.offsetHeight;

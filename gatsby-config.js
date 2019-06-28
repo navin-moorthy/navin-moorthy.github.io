@@ -122,7 +122,6 @@ module.exports = {
     /* Must be placed at the end */
     "gatsby-plugin-styled-components",
     "gatsby-plugin-catch-links",
-    `gatsby-plugin-lodash`,
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
     {

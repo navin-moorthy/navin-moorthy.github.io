@@ -11,7 +11,7 @@ import { heartBeat } from "../styles/animations";
 // CSS
 const FooterMain = styled.footer`
   ${tw`text-center absolute font-semibold text-xs md:text-sm lg:text-base`};
-  bottom: 60px;
+  bottom: 70px;
 `;
 
 const FooterIcon = styled.img`
