@@ -9,6 +9,7 @@ import SEO from "../components/SEO";
 import BlogFooter from "./BlogFooter";
 import BlogNavbar from "./BlogNavbar";
 import BlogBio from "./BlogBio";
+import BlogSocialShare from "./BlogSocialShare";
 import ThemeSwitch from "../components/ThemeSwitch";
 
 import * as ScrollManager from "../styles/scroll";
@@ -20,6 +21,15 @@ const PostHeader = styled.h3`
 `;
 
 const PostNavigation = tw.ul`flex flex-wrap justify-between p-0 list-none`;
+
+const NavigationLink = styled(Link)`
+  ${tw`text-xs lg:text-sm rounded-lg border-b-0`}
+  background: #ec407a30;
+  padding: 0.3rem;
+  @media only screen and (max-width: 400px) {
+    font-size: 10px;
+  }
+`;
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   // Smooth Scroll Initialization
@@ -42,21 +52,22 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           {post.frontmatter.date}
         </small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <BlogSocialShare title={post.frontmatter.title} />
         <hr />
         <BlogBio />
         <PostNavigation>
           <li>
             {previous && (
-              <Link to={`/blog${previous.fields.slug}`} rel="prev">
+              <NavigationLink to={`/blog${previous.fields.slug}`} rel="prev">
                 ← {previous.frontmatter.title}
-              </Link>
+              </NavigationLink>
             )}
           </li>
           <li>
             {next && (
-              <Link to={`/blog${next.fields.slug}`} rel="next">
+              <NavigationLink to={`/blog${next.fields.slug}`} rel="next">
                 {next.frontmatter.title} →
-              </Link>
+              </NavigationLink>
             )}
           </li>
         </PostNavigation>
