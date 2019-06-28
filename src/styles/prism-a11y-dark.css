@@ -106,9 +106,9 @@ pre[class*="language-"] {
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-  background: #f1f0ea;
-  color: #111;
-  font-weight: 700;
+  background: #222;
+  color: #eee;
+  font-weight: 500;
   padding: 0.2em;
   border-radius: 0.3em;
   white-space: normal;

@@ -9,7 +9,6 @@ import Footer from "./Footer";
 import { Divider } from "../elements/Dividers";
 import Content from "../elements/Content";
 import Inner from "../elements/Inner";
-import BottomWave from "../elements/BottomWave";
 
 // Styles
 import { UpDown, UpDownWide } from "../styles/animations";
@@ -27,9 +26,6 @@ import {
 
 const SiteBottom = ({ offset, children }) => (
   <>
-    <Divider fill="#111" speed={0.5} offset={offset}>
-      <BottomWave />
-    </Divider>
     <Content speed={0.3} offset={offset}>
       <Inner>{children}</Inner>
       <Footer />

@@ -9,10 +9,11 @@ import SEO from "../components/SEO";
 import BlogFooter from "./BlogFooter";
 import BlogNavbar from "./BlogNavbar";
 import BlogBio from "./BlogBio";
+import ThemeSwitch from "../components/ThemeSwitch";
 
 import * as ScrollManager from "../styles/scroll";
 
-const PostMainStyle = tw.div`font-sans ml-auto text-sm text-gray-200 md:text-base mr-auto max-w-2xl px-5 py-10 `;
+const PostMainStyle = tw.div`font-sans ml-auto text-sm md:text-base mr-auto max-w-2xl px-5 py-10 `;
 
 const PostHeader = styled.h3`
   ${tw`text-2xl md:text-3xl`}
@@ -35,6 +36,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       <SEO siteTitle={post.frontmatter.title} />
       <PostMainStyle>
         <BlogNavbar />
+        <ThemeSwitch />
         <PostHeader>{post.frontmatter.title}</PostHeader>
         <small style={{ padding: "5px", display: "block" }}>
           {post.frontmatter.date}

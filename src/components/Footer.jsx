@@ -10,7 +10,7 @@ import { heartBeat } from "../styles/animations";
 
 // CSS
 const FooterMain = styled.footer`
-  ${tw`text-center text-gray-500 absolute font-semibold text-xs md:text-sm lg:text-base`};
+  ${tw`text-center absolute font-semibold text-xs md:text-sm lg:text-base`};
   bottom: 60px;
 `;
 
@@ -20,7 +20,7 @@ const FooterIcon = styled.img`
 `;
 
 const FooterCredits = styled.footer`
-  ${tw`text-center text-gray-500 font-semibold absolute text-xs md:text-sm lg:text-base`}
+  ${tw`text-center font-semibold absolute text-xs md:text-sm lg:text-base`}
   bottom:20px
 `;
 

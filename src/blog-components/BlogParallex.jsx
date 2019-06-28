@@ -5,13 +5,10 @@ import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons.cjs";
 // components
 import SEO from "../components/SEO";
 import SVG from "../components/SVG";
-
-// views
 import Contact from "../components/Contact";
 
 // elements
 import { Divider } from "../elements/Dividers";
-import TopWave from "../elements/TopWave";
 
 // styles
 import { UpDown, UpDownWide } from "../styles/animations";
@@ -30,13 +27,10 @@ import {
 const BlogParallex = ({ children }) => (
   <>
     <SEO siteTitle="Blog" />
-    <Parallax pages={3}>
+    <Parallax pages={3} class="parallax">
       <ParallaxLayer speed={0.4} offset="0" style={{ zIndex: "50" }}>
         {children}
       </ParallaxLayer>
-      <Divider fill="#111" speed={0.2} offset={0}>
-        <TopWave />
-      </Divider>
       <Divider speed={0.1} offset={0} factor={2.5}>
         <UpDown>
           <SVG icon="triangle" width={10} fill={blue} left="50%" top="75%" />

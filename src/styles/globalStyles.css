@@ -33,16 +33,14 @@ html {
 
 html,
 body {
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
-  color: white;
   margin: 0;
-  background-color: rgb(30, 34, 39);
-  color: #fff;
+  background-color: #eee;
+  color: #222;
   font-size: 18px;
   font-family: "Montserrat";
+  font-weight: 500;
 }
 
 h1 {
@@ -100,6 +98,10 @@ p {
   border: none;
 }
 
+.anchor {
+  border-bottom: unset;
+}
+
 a {
   text-decoration: none;
   background-color: transparent;
@@ -109,11 +111,7 @@ a {
 a,
 a code {
   color: #ec407a;
-  border-bottom: 1px dotted #ec407a;
-}
-
-.anchor {
-  border-bottom: unset;
+  border-bottom: 1px dotted #40ff00;
 }
 
 small {
@@ -149,7 +147,7 @@ blockquote {
 }
 
 blockquote p {
-  color: #fff;
+  color: #222;
   font-style: italic;
   margin: 0;
   width: 100%;
@@ -157,20 +155,10 @@ blockquote p {
 
 hr {
   border: none;
-  border-bottom: 1px solid #ddd;
-  margin: 45px 0;
   box-sizing: content-box;
-  height: 0;
-}
-
-figure {
-  margin: 1em 40px;
-}
-
-button,
-hr,
-input {
-  overflow: visible;
+  margin: 50px 80px;
+  background: linear-gradient(45deg, #ec407a, #40ff00);
+  height: 2px;
 }
 
 img,
@@ -219,21 +207,6 @@ sup {
   position: relative;
 }
 
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
-}
-
-dfn {
-  font-style: italic;
-}
-
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-
 sub,
 sup {
   font-size: 75%;
@@ -248,144 +221,27 @@ sup {
   top: -0.5em;
 }
 
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
 img {
   border-style: none;
   margin: 40px 0;
   width: auto;
 }
 
-table {
-  width: 100%;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-}
-
-textarea {
-  overflow: auto;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
-[type="reset"],
-[type="submit"],
-button,
-html [type="button"] {
-  -webkit-appearance: button;
-}
-
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
-  outline: ButtonText dotted 1px;
-}
-
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
-legend {
-  color: inherit;
-  display: table;
-  white-space: normal;
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-
-body.dark aside input {
-  border: 1px solid #333;
-}
-
 body.dark,
 body.dark input {
-  background-color: rgb(30, 34, 39);
-  color: #fff;
+  background-color: #222;
+  color: #eee;
 }
 
-body.dark .post-stub a,
-body.dark .home-section-col ul li:nth-child(even),
-body.dark .home-section-col ul li a,
-body.dark aside ul li a {
-  color: #fff;
+body.dark :not(pre) > code[class*="language-"] {
+  background: #eee;
+  color: #222;
 }
 
-body.dark .post-stub:hover,
-body.dark :not(pre) > code[class*="language-"],
-body.dark pre[class*="language-"],
-body.dark pre {
-  background: #282c34;
+body.dark blockquote p {
+  color: #eee;
 }
 
-body.dark code[class*="language-"],
-body.dark pre[class*="language-"] {
-  text-shadow: none;
-  color: #fff;
-}
-
-body.dark .language-css .token.string,
-body.dark .style .token.string,
-body.dark .token.entity,
-body.dark .token.operator,
-body.dark .token.url {
-  background: none;
-}
-
-body.dark table tbody > tr:nth-child(odd) > td,
-body.dark table tbody > tr:nth-child(odd) > th {
-  background: #282c34;
-}
-
-body.dark .token.attr-name,
-body.dark .token.builtin,
-body.dark .token.char,
-body.dark .token.inserted,
-body.dark .token.selector,
-body.dark .token.string {
-  color: #ecdb54;
+body.dark #___gatsby > div > div {
+  background: #222;
 }
