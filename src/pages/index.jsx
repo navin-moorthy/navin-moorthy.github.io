@@ -12,6 +12,7 @@ import Hero from "../components/Hero";
 import Writings from "../components/Writings";
 import About from "../components/About";
 import Contact from "../components/Contact";
+import ThemeSwitch from "../components/ThemeSwitch";
 
 // Elements
 import { Title, BigTitle, Subtitle } from "../elements/Titles";
@@ -49,6 +50,7 @@ const Index = () => (
     <Parallax pages={5}>
       {/* Hero Page 1 */}
       <Hero offset={0}>
+        <ThemeSwitch />
         <BigTitle>
           Hello, <br /> I'm Navin.
         </BigTitle>

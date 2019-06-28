@@ -16,7 +16,7 @@ const THEME = {
 };
 
 function getTheme(theme) {
-  return theme ? THEME.DARK : THEME.LIGHT;
+  return theme ? THEME.LIGHT : THEME.DARK;
 }
 
 function toggleTheme(theme) {
@@ -49,7 +49,7 @@ const ThemeSwitch = () => {
 
   // Default to Dark Theme on a new and reloaded site
   useEffect(() => {
-    const check = DOM.hasClassOfBody(THEME.DARK);
+    const check = DOM.hasClassOfBody(THEME.LIGHT);
     handleChange(check);
   }, []);
 
@@ -63,12 +63,12 @@ const ThemeSwitch = () => {
           id="normal-switch"
           height={24}
           width={48}
-          checkedIcon={<Letter>D</Letter>}
-          uncheckedIcon={<Letter>L</Letter>}
-          offColor="#d9dfe2"
-          offHandleColor="#fff"
-          onColor="#999"
-          onHandleColor="#282c35"
+          checkedIcon={<Letter>L</Letter>}
+          uncheckedIcon={<Letter>D</Letter>}
+          offColor="#999"
+          offHandleColor="#282c35"
+          onColor="#d9dfe2"
+          onHandleColor="#fff"
         />
       </label>
     </SwitchContainer>
