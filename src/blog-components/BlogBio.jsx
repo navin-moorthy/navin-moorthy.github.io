@@ -37,8 +37,8 @@ const BlogBio = () => {
       <Avatar src={avatar} alt={author} />
       <BioText>
         <Text>
-          Written by <strong>{author}</strong>. He loves writing blogs & log
-          daily activities here.
+          Written by <strong>{author}</strong>. He loves to learn, blog and
+          develop new applications.
         </Text>
         <Text>
           <a

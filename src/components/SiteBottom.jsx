@@ -12,17 +12,7 @@ import Inner from "../elements/Inner";
 
 // Styles
 import { UpDown, UpDownWide } from "../styles/animations";
-import {
-  white,
-  gray,
-  purple,
-  teal,
-  green,
-  indigo,
-  pink,
-  blue,
-  red
-} from "../styles/color";
+import { purple, teal, green, indigo, pink, blue, red } from "../styles/color";
 
 const SiteBottom = ({ offset, children }) => (
   <>
@@ -34,11 +24,11 @@ const SiteBottom = ({ offset, children }) => (
       <UpDown>
         <SVG icon="upDown" width={8} fill={red} left="60%" top="20%" />
         <SVG icon="triangle" width={8} fill={pink} left="25%" top="5%" />
-        <SVG icon="circle" width={12} stroke={gray} left="70%" top="60%" />
+        <SVG icon="circle" width={12} stroke={teal} left="70%" top="60%" />
       </UpDown>
       <UpDownWide>
         <SVG icon="triangle" width={12} fill={purple} left="95%" top="50%" />
-        <SVG icon="cross" width={6} fill={white} left="85%" top="15%" />
+        <SVG icon="cross" width={6} fill={green} left="85%" top="15%" />
         <SVG
           icon="upDown"
           hiddenMobile

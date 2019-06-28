@@ -85,10 +85,10 @@ const Index = () => (
         <AboutHero>
           <Avatar src={avatar} alt="Navin Navi" />
           <AboutSub>
-            I'm a self taught Web Developer you can find me mostly learning and
-            developing web application in different areas of Web Technologies
-            from Front End Engineering (HTML, CSS, Javascript, Angular, React
-            and Gatsby) to Back End Programming (Node JS, MondoDB and Firebase).
+            I'm a self taught Web Developer. Mostly learning and developing web
+            application in different areas of Web Technologies from Front End
+            Engineering (HTML, CSS, Javascript, Angular, React and Gatsby) to
+            Back End Programming (Node JS, MondoDB and Firebase).
           </AboutSub>
         </AboutHero>
         <AboutDesc>
