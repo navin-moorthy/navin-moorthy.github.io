@@ -5,7 +5,7 @@ import tw from "tailwind.macro";
 
 // css
 const IconTextContainer = styled.div`
-  ${tw` inline-block p-2 m-1 rounded text-1xs cursor-pointer`}
+  ${tw` inline-block p-1 m-1 rounded text-1xs cursor-pointer`}
   background: ${props => props.bg};
   &:hover {
     background-color: ${props => props.hoverbg};
@@ -13,7 +13,7 @@ const IconTextContainer = styled.div`
 `;
 
 const Icon = styled.div`
-  ${tw`inline-block align-middle w-4 h-4 ml-1 mr-2`}
+  ${tw`inline-block align-middle w-4 h-4 ml-1 mr-1`}
 `;
 
 const Text = tw.span`align-middle`;

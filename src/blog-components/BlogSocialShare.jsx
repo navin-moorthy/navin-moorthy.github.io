@@ -7,8 +7,23 @@ import ShareIconWrapper from "../components/ShareIconWrapper";
 
 const SocialShare = tw.div`text-right h-full`;
 
-const sharerWindowOpen = href => {
-  window.open(`${href}`, "sharer", "toolbar=0,status=0,width=626,height=436");
+const shareToFacebook = (href, text) => {
+  window.FB.ui({
+    method: "share",
+    mobile_iframe: true,
+    href,
+    quote: text
+  });
+};
+
+const shareToTwitter = (href, text) => {
+  window.open(
+    `https://twitter.com/intent/tweet?url=${encodeURI(
+      encodeURI(href)
+    )}&text=${text}&hashtags=100DaysOfCode`,
+    "sharer",
+    "toolbar=0,status=0,width=626,height=436"
+  );
 };
 
 const BlogSocialShare = ({ title }) => {
@@ -17,20 +32,13 @@ const BlogSocialShare = ({ title }) => {
   const onClickTwitterIcon = e => {
     e.preventDefault();
 
-    return sharerWindowOpen(
-      `https://twitter.com/intent/tweet/?url=${encodeURI(
-        window.location.href
-      )}&text=${text}&hashtags=100DaysOfCode`
-    );
+    return shareToTwitter(window.location.href, text);
   };
 
   const onClickFacebookIcon = e => {
     e.preventDefault();
-    return sharerWindowOpen(
-      `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(
-        window.location.href
-      )}`
-    );
+
+    return shareToFacebook(window.location.href, text);
   };
 
   return (

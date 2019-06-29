@@ -12,7 +12,7 @@ module.exports = {
     social: {
       twitter: "navin_navi19",
       github: "navin-navi",
-      facebook: config.siteFBAppID
+      facebook: config.ogSiteName
     }
   },
   /* Plugins */

@@ -26,7 +26,7 @@ const PostDate = styled.small`
     width: 50px;
     height: 4px;
     display: block;
-    background: linear-gradient(45deg, #ec407a, #40ff00);
+    background: linear-gradient(90deg, #ec407a, #40ff00);
     margin: 1rem 0px;
   }
 `;
