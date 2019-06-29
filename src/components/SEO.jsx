@@ -111,10 +111,7 @@ const SEO = ({ siteTitle }) => {
         content="web-development, blog, personal-site, portfolio"
       />
       <meta name="image" content={image} />
-      <meta
-        property="og:url"
-        content={`${config.siteUrl}${window.location.pathname}`}
-      />
+      <meta property="og:url" content={config.siteUrl} />
       <meta property="og:locale" content={config.ogLanguage} />
       <meta property="og:site_name" content={config.ogSiteName} />
       <meta property="og:title" content={title} />
