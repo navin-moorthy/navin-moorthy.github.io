@@ -7,6 +7,7 @@ import styled from "styled-components";
 import avatar from "../images/avatar.jpg";
 import twitter from "../images/twitter.svg";
 import github from "../images/github.svg";
+import facebook from "../images/facebook.svg";
 
 // Styles
 import { flutterAnimation } from "../styles/animations";
@@ -36,6 +37,7 @@ const BlogBio = () => {
           social {
             twitter
             github
+            facebook
           }
         }
       }
@@ -52,7 +54,7 @@ const BlogBio = () => {
         </Text>
         <Text>
           <a
-            href={`https://twitter.com/${social.twitter}`}
+            href={`https://twitter.com/intent/follow?screen_name=${social.twitter}`}
             style={{ borderBottom: "unset" }}
             target="_blank"
             rel="noopener noreferrer"
@@ -66,6 +68,14 @@ const BlogBio = () => {
             rel="noopener noreferrer"
           >
             <Icon src={github} alt="Github Logo" />
+          </a>
+          <a
+            href={`https://www.facebook.com/${social.facebook}`}
+            style={{ borderBottom: "unset" }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon src={facebook} alt="FaceBook Logo" />
           </a>
         </Text>
       </BioText>
