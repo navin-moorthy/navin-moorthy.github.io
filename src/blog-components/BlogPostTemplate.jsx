@@ -20,6 +20,17 @@ const PostHeader = styled.h3`
   ${tw`text-2xl md:text-3xl`}
 `;
 
+const PostDate = styled.small`
+  ::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    display: block;
+    background: linear-gradient(45deg, #ec407a, #40ff00);
+    margin: 1rem 0px;
+  }
+`;
+
 const PostNavigation = tw.ul`flex flex-wrap justify-between p-0 list-none`;
 
 const NavigationLink = styled(Link)`
@@ -48,9 +59,9 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <BlogNavbar />
         <ThemeSwitch />
         <PostHeader>{post.frontmatter.title}</PostHeader>
-        <small style={{ padding: "5px", display: "block" }}>
+        <PostDate style={{ padding: "5px", display: "block" }}>
           {post.frontmatter.date}
-        </small>
+        </PostDate>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <BlogSocialShare title={post.frontmatter.title} />
         <hr />

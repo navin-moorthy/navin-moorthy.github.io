@@ -54,7 +54,7 @@ const BlogBio = () => {
         </Text>
         <Text>
           <a
-            href={`https://twitter.com/${social.twitter}`}
+            href={`https://twitter.com/intent/follow?screen_name=${social.twitter}`}
             style={{ borderBottom: "unset" }}
             target="_blank"
             rel="noopener noreferrer"
