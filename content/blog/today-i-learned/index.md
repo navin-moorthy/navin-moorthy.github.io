@@ -1,7 +1,33 @@
 ---
 title: Today I Learned
-date: "2019-06-27"
+date: "2019-06-28"
 ---
+
+# 8.Blog Improvements
+
+## Day 8: June 28, 2019 - Friday
+
+**Project:** Improve my blog layout and code quality
+
+![Light Mode with Social Share](images/8.light-mode&social-share.jpg)
+
+**Live Demo:** https://navin-navi.github.io/
+
+**Progress:** Made Progress and today's target was achieved
+
+**Brief Description:**
+
+- **Highlight** - Added Dark & Light Theme Switch.
+- Fixed all the css to control the theme switch bugs.
+- Made Dark Theme as Default on Page Load.
+- **Highlight** - Added Social Share Icons - FaceBook and Twitter.
+- Still a lot of work and code optimization needs to be done.
+- Removed Lodash as there is no use for it in the Project.
+
+**Links:**
+
+- [Live Demo](https://navin-navi.github.io/blog)
+- [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
 
 # 7. Blog Improvements
 
