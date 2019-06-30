@@ -1,6 +1,33 @@
 ---
 title: Today I Learned
-date: "2019-06-28"
+date: "2019-06-29"
+---
+
+# 9.Blog Improvements
+
+## Day 9: June 29, 2019 - Saturday
+
+**Project:** Improve my blog layout and code quality
+
+![Added Project Section](images/9.project-section-added.jpg)
+
+**Live Demo:** https://navin-navi.github.io/
+
+**Progress:** Made Progress and today's target was achieved
+
+**Brief Description:**
+
+- Experimented with FB and Twitter SDK to add the Share Button.
+- Fixed the layout and refracted the code for the Share Component.
+- Added Projects Section and Created a Layout Component.
+- Now Layout Component Will be the default for all the pages.
+- Took some time for planning the design but finally fixed with the common layout.
+
+**Links:**
+
+- [Live Demo](https://navin-navi.github.io/blog)
+- [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
+
 ---
 
 # 8.Blog Improvements
@@ -29,6 +56,8 @@ date: "2019-06-28"
 - [Live Demo](https://navin-navi.github.io/blog)
 - [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
 
+---
+
 # 7. Blog Improvements
 
 ## Day 7: June 27, 2019 - Thursday
@@ -54,6 +83,8 @@ date: "2019-06-28"
 
 - [Live Demo](https://navin-navi.github.io/blog)
 - [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
+
+---
 
 # 6. Angular Issue Tracker Project
 
