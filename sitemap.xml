@@ -10,4 +10,5 @@
 <url> <loc>https://navin-navi.github.io/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://navin-navi.github.io/blog/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://navin-navi.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://navin-navi.github.io/projects/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
