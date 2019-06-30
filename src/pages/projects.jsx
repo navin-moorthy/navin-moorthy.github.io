@@ -29,9 +29,31 @@ const Projects = () => (
             Old Site
           </a>
         </div>
-        <div>Projects</div>
-        <div>Projects</div>
-        <div>Projects</div>
+        <div>
+          <a href="https://navin-navi.github.io/image-gallery/">
+            Image Gallery
+          </a>
+        </div>
+        <div>
+          <a href="https://navin-navi.github.io/purrfect-match/#">
+            Purrfect Match
+          </a>
+        </div>
+        <div>
+          <a href="https://navin-navi.github.io/patterns/">Patterns</a>
+        </div>
+        <div>
+          <a href="https://navin-navi.github.io/museum-of-candy/">
+            Meseum Of Candy
+          </a>
+          <a href="https://navin-navi.github.io/color-game/">Color Game</a>
+          <a href="https://navin-navi.github.io/to-do-list-basic/">
+            To Do List Basic
+          </a>
+          <a href="https://navin-navi.github.io/patatap-clone/">
+            Patatap Clone
+          </a>
+        </div>
       </ProjectWrapper>
     </Layout>
   </>
