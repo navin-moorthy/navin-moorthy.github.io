@@ -28,7 +28,7 @@ const AuthorStrong = styled.span`
 
 const Icon = tw.img`inline m-0 w-5 h-5 mr-5`;
 
-const BlogBio = () => {
+const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
@@ -49,7 +49,7 @@ const BlogBio = () => {
       <Avatar src={avatar} alt={author} />
       <BioText>
         <Text>
-          Written by <AuthorStrong>{author}</AuthorStrong>. He loves to learn,
+          Created by <AuthorStrong>{author}</AuthorStrong>. He loves to learn,
           blog and develop new applications.
         </Text>
         <Text>
@@ -82,4 +82,4 @@ const BlogBio = () => {
     </BioContainer>
   );
 };
-export default BlogBio;
+export default Bio;

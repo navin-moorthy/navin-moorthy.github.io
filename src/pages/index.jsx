@@ -76,7 +76,14 @@ const Index = () => (
             bg="linear-gradient(to top, #30cfd0 0%, #330867 100%)"
             linkTo="/blog/today-i-learned"
           >
-            Timeline of my daily worklogs which gets posted in my Twitter .
+            Timeline of my daily worklogs which gets posted in my Twitter.
+          </WritingCard>
+          <WritingCard
+            title="Projects"
+            bg="linear-gradient(to top, #3f5efb 0%, #fc466b 100%)"
+            linkTo="/projects"
+          >
+            Collection of my creations.
           </WritingCard>
         </WritingsWrapper>
       </Writings>

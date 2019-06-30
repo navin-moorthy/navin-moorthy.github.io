@@ -5,13 +5,7 @@ import styled from "styled-components";
 import tw from "tailwind.macro";
 
 // Components
-import BlogParallex from "./BlogParallex";
-import BlogNavbar from "./BlogNavbar";
-import BlogBio from "./BlogBio";
-import ThemeSwitch from "../components/ThemeSwitch";
-
-// S tyles
-const BlogStyle = tw.div`ml-auto mr-auto max-w-2xl px-5 py-10 `;
+import Layout from "../components/Layout";
 
 const PostsHeader = tw.h3`mb-0 mt-6 text-xl md:text-3xl `;
 
@@ -36,64 +30,59 @@ const Blog = ({ data, pageContext }) => {
 
   return (
     <>
-      <BlogParallex>
-        <ThemeSwitch />
-        <BlogStyle>
-          <BlogNavbar />
-          <BlogBio />
-          {posts.map(({ node }) => {
-            const { id, excerpt, fields, frontmatter } = node;
+      <Layout pages={3} factor={2} siteTitle="Blog" to="/blog">
+        {posts.map(({ node }) => {
+          const { id, excerpt, fields, frontmatter } = node;
 
-            const { title, date, description } = frontmatter;
+          const { title, date, description } = frontmatter;
 
-            return (
-              <div key={id}>
-                <PostsHeader>
-                  <PostsLink to={`/blog${fields.slug}`}>{title}</PostsLink>
-                </PostsHeader>
-                <Small>{date}</Small>
-                <PostPara
-                  dangerouslySetInnerHTML={{
-                    __html: description || excerpt
-                  }}
-                />
-              </div>
-            );
-          })}
-          <Paginator>
-            {!isFirst && (
-              <Link to={prevPage} rel="prev">
-                ← Previous Page
-              </Link>
-            )}
-            {Array.from({ length: numPages }, (_, i) => (
-              <li
-                key={`pagination-number${i + 1}`}
+          return (
+            <div key={id}>
+              <PostsHeader>
+                <PostsLink to={`/blog${fields.slug}`}>{title}</PostsLink>
+              </PostsHeader>
+              <Small>{date}</Small>
+              <PostPara
+                dangerouslySetInnerHTML={{
+                  __html: description || excerpt
+                }}
+              />
+            </div>
+          );
+        })}
+        <Paginator>
+          {!isFirst && (
+            <Link to={prevPage} rel="prev">
+              ← Previous Page
+            </Link>
+          )}
+          {Array.from({ length: numPages }, (_, i) => (
+            <li
+              key={`pagination-number${i + 1}`}
+              style={{
+                margin: 0
+              }}
+            >
+              <Link
+                to={`/blog/${i === 0 ? "" : i + 1}`}
                 style={{
-                  margin: 0
+                  padding: "10px",
+                  textDecoration: "none",
+                  color: i + 1 === currentPage ? "#ffffff" : "",
+                  background: i + 1 === currentPage ? "#ec407a" : ""
                 }}
               >
-                <Link
-                  to={`/blog/${i === 0 ? "" : i + 1}`}
-                  style={{
-                    padding: "10px",
-                    textDecoration: "none",
-                    color: i + 1 === currentPage ? "#ffffff" : "",
-                    background: i + 1 === currentPage ? "#ec407a" : ""
-                  }}
-                >
-                  {i + 1}
-                </Link>
-              </li>
-            ))}
-            {!isLast && (
-              <Link to={nextPage} rel="next">
-                Next Page →
+                {i + 1}
               </Link>
-            )}
-          </Paginator>
-        </BlogStyle>
-      </BlogParallex>
+            </li>
+          ))}
+          {!isLast && (
+            <Link to={nextPage} rel="next">
+              Next Page →
+            </Link>
+          )}
+        </Paginator>
+      </Layout>
     </>
   );
 };
