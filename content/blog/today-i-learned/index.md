@@ -1,6 +1,6 @@
 ---
 title: Today I Learned
-date: "2019-06-28"
+date: "2019-06-29"
 ---
 
 # 9.Blog Improvements
