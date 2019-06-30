@@ -15,7 +15,7 @@ Okay!!!, lets get straight into the main stuff.
 
 > ["Learning to Code: When It Gets Dark"](https://medium.freecodecamp.org/learning-to-code-when-it-gets-dark-e485edfb58fd)
 
-As said in my last [post](https://vanuss.in/blog/posts/post_2.html) about “[100DayOfCode](https://www.100daysofcode.com/)”, this is a continuation to that. Reading this post, you will learn a way to boost your confidence, steps to stop procrastinating things and to overcome your own resistance. Beginning to code and making it as a practice? you will often face a lot of resistance. Because you are developing a new habit. In my personal experience, I have been coding daily for at least 1hr for the past 75 days (the time I am drafting this post) overcoming a lot of resistance and being less prone to procrastinating important things.
+As said in my last [post](https://navin-navi.github.io/blog/top-10-links-monthly-post-2/) about “[100DayOfCode](https://www.100daysofcode.com/)”, this is a continuation to that. Reading this post, you will learn a way to boost your confidence, steps to stop procrastinating things and to overcome your own resistance. Beginning to code and making it as a practice? you will often face a lot of resistance. Because you are developing a new habit. In my personal experience, I have been coding daily for at least 1hr for the past 75 days (the time I am drafting this post) overcoming a lot of resistance and being less prone to procrastinating important things.
 
 #### 2\. Useful Tip
 
