@@ -24,7 +24,11 @@ const Projects = () => (
   <>
     <Layout pages={3} factor={2} siteTitle="Projects" to="/projects">
       <ProjectWrapper>
-        <div>Projects</div>
+        <div>
+          <a href="https://navin-navi.github.io/vanuss-first-website/">
+            Old Site
+          </a>
+        </div>
         <div>Projects</div>
         <div>Projects</div>
         <div>Projects</div>
