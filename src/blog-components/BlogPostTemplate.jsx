@@ -7,8 +7,8 @@ import tw from "tailwind.macro";
 // Components
 import SEO from "../components/SEO";
 import BlogFooter from "./BlogFooter";
-import BlogNavbar from "./BlogNavbar";
-import BlogBio from "./BlogBio";
+import Navbar from "../components/Navbar";
+import Bio from "../components/Bio";
 import BlogSocialShare from "./BlogSocialShare";
 import ThemeSwitch from "../components/ThemeSwitch";
 
@@ -56,7 +56,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     <>
       <SEO siteTitle={post.frontmatter.title} />
       <PostMainStyle>
-        <BlogNavbar />
+        <Navbar />
         <ThemeSwitch />
         <PostHeader>{post.frontmatter.title}</PostHeader>
         <PostDate style={{ padding: "5px", display: "block" }}>
@@ -65,7 +65,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <BlogSocialShare title={post.frontmatter.title} />
         <hr />
-        <BlogBio />
+        <Bio />
         <PostNavigation>
           <li>
             {previous && (
