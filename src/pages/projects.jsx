@@ -25,33 +25,82 @@ const Projects = () => (
     <Layout pages={3} factor={2} siteTitle="Projects" to="/projects">
       <ProjectWrapper>
         <div>
-          <a href="https://navin-navi.github.io/vanuss-first-website/">
+          <a
+            href="https://navin-navi.github.io/vanuss-first-website/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Old Site
           </a>
         </div>
         <div>
-          <a href="https://navin-navi.github.io/image-gallery/">
+          <a
+            href="https://navin-navi.github.io/image-gallery/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Image Gallery
           </a>
         </div>
         <div>
-          <a href="https://navin-navi.github.io/purrfect-match/#">
+          <a
+            href="https://navin-navi.github.io/purrfect-match/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Purrfect Match
           </a>
         </div>
         <div>
-          <a href="https://navin-navi.github.io/patterns/">Patterns</a>
+          <a
+            href="https://navin-navi.github.io/patterns/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Patterns
+          </a>
         </div>
         <div>
-          <a href="https://navin-navi.github.io/museum-of-candy/">
+          <a
+            href="https://navin-navi.github.io/museum-of-candy/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Meseum Of Candy
           </a>
-          <a href="https://navin-navi.github.io/color-game/">Color Game</a>
-          <a href="https://navin-navi.github.io/to-do-list-basic/">
+        </div>
+        <div>
+          <a
+            href="https://navin-navi.github.io/color-game/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Color Game
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://navin-navi.github.io/to-do-list-basic/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             To Do List Basic
           </a>
-          <a href="https://navin-navi.github.io/patatap-clone/">
+        </div>
+        <div>
+          <a
+            href="https://navin-navi.github.io/patatap-clone/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Patatap Clone
+          </a>
+          <a
+            href="http://yelp-camp-campground.herokuapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YelpCamp Campground
           </a>
         </div>
       </ProjectWrapper>
