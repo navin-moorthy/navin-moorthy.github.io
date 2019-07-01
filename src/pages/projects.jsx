@@ -95,6 +95,13 @@ const Projects = () => (
           >
             Patatap Clone
           </a>
+          <a
+            href="http://yelp-camp-campground.herokuapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YelpCamp Campground
+          </a>
         </div>
         <div>
           <a
