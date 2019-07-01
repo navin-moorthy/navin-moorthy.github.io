@@ -1,6 +1,29 @@
 ---
 title: Today I Learned
-date: "2019-06-29"
+date: "2019-06-30"
+---
+
+# 10.Organize Old Projects
+
+## Day 10: June 30, 2019 - Sunday
+
+**Project:** Organize my Old Projects
+
+![Projects Organized](images/10-projects-organized.png)
+
+**Live Demo:** https://navin-navi.github.io/
+
+**Progress:** Made Progress and today's target was achieved
+
+**Brief Description:**
+
+- Worked on organizing some of my old experiments and improving them giving them a URL
+
+**Links:**
+
+- [Live Demo WIP](https://navin-navi.github.io/projects)
+- [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
+
 ---
 
 # 9.Blog Improvements
