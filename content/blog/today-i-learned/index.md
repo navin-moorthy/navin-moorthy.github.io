@@ -1,6 +1,32 @@
 ---
 title: Today I Learned
-date: "2019-06-30"
+date: "2019-07-01"
+---
+
+# 11.Organize Old Projects
+
+## Day 11: July 01, 2019 - Monday
+
+**Project:** Organize my Old Projects
+
+![Projects Organized](images/11-old-projects-organized.jpg)
+
+**Live Demo:** https://navin-navi.github.io/
+
+**Progress:** Made Progress and today's target was achieved
+
+**Brief Description:**
+
+- Worked on organizing some of my old experiments and improving them giving them a URL.
+- Updated the dependencies and renovated them for auto dependency update.
+- Understood ESlint and Prettier Integration.
+- Airbnb styled as default.
+
+**Links:**
+
+- [Live Demo WIP](https://navin-navi.github.io/projects)
+- [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
+
 ---
 
 # 10.Organize Old Projects
