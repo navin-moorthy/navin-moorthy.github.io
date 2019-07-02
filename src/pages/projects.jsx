@@ -95,12 +95,23 @@ const Projects = () => (
           >
             Patatap Clone
           </a>
+        </div>
+        <div>
           <a
             href="http://yelp-camp-campground.herokuapp.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             YelpCamp Campground
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://vanuss-v2.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Vanuss Nodified & Redesigned
           </a>
         </div>
       </ProjectWrapper>
