@@ -123,6 +123,42 @@ const Projects = () => (
             Vanuss Nodified & Redesigned
           </a>
         </div>
+        <div>
+          <a
+            href="https://navin-navi.github.io/fullpage-js-demo/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            FullPage JS Demo
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://navin-navi.github.io/component-pricing-plans/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pricing Plans Components
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://navin-navi.github.io/vue-animations/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Vue Animation Basics
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://to-do-ajax.herokuapp.com/todos"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ajax To Do App
+          </a>
+        </div>
       </ProjectWrapper>
     </Layout>
   </>

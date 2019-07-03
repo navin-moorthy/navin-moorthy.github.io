@@ -1,6 +1,30 @@
 ---
 title: Today I Learned
-date: "2019-07-01"
+date: "2019-07-02"
+---
+# 12.Organize Old Projects
+
+## Day 12: July 02, 2019 - Tuesday
+
+**Project:** Organize my Old Projects
+
+![Projects Organized](images/12.old-projects-organized.jpg)
+
+**Live Demo:** https://navin-navi.github.io/
+
+**Progress:** Made Progress and today's target was achieved
+
+**Brief Description:**
+
+- Worked on organizing some of my old experiments and improving them giving them a URL.
+- Had to how Mongo DB and Mongoose Works.
+- Really amazed to see these projects getting organized that were sitting.
+
+**Links:**
+
+- [Live Demo WIP](https://navin-navi.github.io/projects)
+- [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
+
 ---
 
 # 11.Organize Old Projects
@@ -9,7 +33,7 @@ date: "2019-07-01"
 
 **Project:** Organize my Old Projects
 
-![Projects Organized](images/11-old-projects-organized.jpg)
+![Projects Organized](images/11.old-projects-organized.jpg)
 
 **Live Demo:** https://navin-navi.github.io/
 
@@ -35,7 +59,7 @@ date: "2019-07-01"
 
 **Project:** Organize my Old Projects
 
-![Projects Organized](images/10-projects-organized.png)
+![Projects Organized](images/10.projects-organized.png)
 
 **Live Demo:** https://navin-navi.github.io/
 
