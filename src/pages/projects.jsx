@@ -23,7 +23,17 @@ const ProjectWrapper = styled.div`
 const Projects = () => (
   <>
     <Layout pages={3} factor={2} siteTitle="Projects" to="/projects">
+      <h1>Big Projects</h1>
       <ProjectWrapper>
+        <div>
+          <a
+            href="https://materialized-blog.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Materialized Blog
+          </a>
+        </div>
         <div>
           <a
             href="https://navin-navi.github.io/vanuss-first-website/"
@@ -157,6 +167,126 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             Ajax To Do App
+          </a>
+        </div>
+      </ProjectWrapper>
+      <h1>CodePen Creations</h1>
+      <ProjectWrapper>
+        <div>
+          <a
+            href="https://navin-navi.github.io/behance-clone/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Behance Clone
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://codepen.io/navinnavi19/full/WWKdoP"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Circle to Square Animation
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://codepen.io/navinnavi19/full/PgrZpd"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Checkbox Varieties
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://codepen.io/navinnavi19/full/OYVeLw"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Thanos Snap Effect
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://codepen.io/navinnavi19/full/vwOqZj"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Thanos Snap
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://codepen.io/navinnavi19/full/ZNOboZ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Floating Form Label - Materialized
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://codepen.io/navinnavi19/full/QREEZZ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pure CSS - Slides and Loaders
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://codepen.io/navinnavi19/full/byever"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hamburger Menu Animation
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://codepen.io/navinnavi19/full/jorXRE"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Testimonial Box Component
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://codepen.io/navinnavi19/full/PvGmrP"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Simple Profile without Bootstrap with own design.
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://codepen.io/navinnavi19/full/QRmJrd"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Simple Profile with Bootstrap and Material Theme
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://codepen.io/navinnavi19/full/YbajNB"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Linear Gradient Experiments
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://codepen.io/navinnavi19/full/qGrKrN"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CSS Positioning and Z-Index Playground
           </a>
         </div>
       </ProjectWrapper>

@@ -245,3 +245,78 @@ body.dark blockquote p {
 body.dark #___gatsby > div > div {
   background: #222;
 }
+
+/* Two Liner Logo */
+.twoLinerLogo {
+  display: block;
+  margin: 0px auto;
+  width: 120px;
+}
+
+#home-svg-path1 {
+  fill: #ec407a;
+  stroke: #ec407a;
+}
+
+#home-svg-path2 {
+  fill: #43fc04;
+  stroke: #43fc04;
+}
+
+#home-svg-path1,
+#home-svg-path2 {
+  stroke-width: 0;
+  animation: logo 3s linear infinite;
+}
+
+@keyframes logo {
+  0% {
+    stroke-width: 2pt;
+    stroke-dashoffset: 1200;
+    fill-opacity: 0;
+  }
+  50% {
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke-width: 0pt;
+  }
+}
+
+/* One Liner Logo */
+.oneLinerLogo {
+  display: none;
+  width: 400px;
+}
+
+#home-svg-path {
+  stroke-width: 0;
+  animation: logo 4s linear infinite;
+}
+
+@keyframes logo {
+  0% {
+    stroke-width: 2pt;
+    stroke-dashoffset: 1200;
+    fill-opacity: 0;
+  }
+  50% {
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke-width: 0pt;
+  }
+}
+
+@media (min-width: 640px) {
+  .twoLinerLogo {
+    display: none;
+  }
+  .oneLinerLogo {
+    display: block;
+  }
+}

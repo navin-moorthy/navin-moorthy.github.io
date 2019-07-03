@@ -1,7 +1,34 @@
 ---
 title: Today I Learned
-date: "2019-07-02"
+date: "2019-07-03"
 ---
+
+# 13.Organize Old Projects
+
+## Day 13: July 03, 2019 - Wednesday
+
+**Project:** Organize my Old Projects
+
+![Materialized Blog](images/13.materialized-blog.PNG)
+
+**Live Demo:** https://materialized-blog.herokuapp.com/
+
+**Progress:** Finally the site is made public
+
+**Brief Description:**
+
+- Worked on one project, split the code into front and backend
+- Deployed in Heroku
+- Mongo DB atlas connected
+- Relearned how the project work and fixed some bugs.
+
+**Links:**
+
+- [Live Demo WIP](https://materialized-blog.herokuapp.com/)
+- [GitHub Repository](https://github.com/navin-navi/material-blog-backend)
+
+---
+
 # 12.Organize Old Projects
 
 ## Day 12: July 02, 2019 - Tuesday
@@ -17,7 +44,7 @@ date: "2019-07-02"
 **Brief Description:**
 
 - Worked on organizing some of my old experiments and improving them giving them a URL.
-- Had to how Mongo DB and Mongoose Works.
+- Had to recall Mongo DB and Mongoose Works.
 - Really amazed to see these projects getting organized that were sitting.
 
 **Links:**
