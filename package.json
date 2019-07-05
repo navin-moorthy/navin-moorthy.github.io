@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/navin-navi/navin-navi.github.io#readme",
   "dependencies": {
-    "gatsby": "2.13.3",
+    "gatsby": "2.13.4",
     "gatsby-image": "2.2.4",
     "gatsby-plugin-catch-links": "2.1.0",
     "gatsby-plugin-google-analytics": "2.1.1",
@@ -43,7 +43,7 @@
     "gatsby-remark-copy-linked-files": "2.1.0",
     "gatsby-remark-emojis": "0.3.2",
     "gatsby-remark-external-links": "0.0.4",
-    "gatsby-remark-images": "3.1.2",
+    "gatsby-remark-images": "3.1.3",
     "gatsby-remark-images-medium-zoom": "1.2.1",
     "gatsby-remark-prismjs": "3.3.1",
     "gatsby-remark-responsive-iframe": "2.2.1",
