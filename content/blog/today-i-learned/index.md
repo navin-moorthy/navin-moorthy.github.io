@@ -1,6 +1,56 @@
 ---
-title: Today I Learned
-date: "2019-07-03"
+title: Round 2 100Days Of Code
+date: "2019-07-05"
+description: Round 2 of 100 Days of Code
+---
+
+# 15.Issue Tracker Application
+
+## Day 15: July 05, 2019 - Friday
+
+**Project:** Angular Issue Tracker
+
+![Angular Issue Tracker](images/15.angular-issue-tracker.png)
+
+**Live Demo:** https://navin-navi.github.io/angular-issue-tracker/
+
+**Progress:** Published the application in GHpages with CI
+
+**Brief Description:**
+
+- Worked on bringing my Issue Tracker Application Live.
+- Fixed some bugs while making them live.
+- Travis CI for Auto Deployment on successful build.
+
+**Links:**
+
+- [Issue Tracker Live](https://navin-navi.github.io/angular-issue-tracker/)
+- [GitHub Repository](https://github.com/navin-navi/angular-issue-tracker)
+
+---
+
+# 14.Organize Old Projects
+
+## Day 14: July 04, 2019 - Thursday
+
+**Project:** Organize my Old Projects
+
+![100DaysOfCode-Round1](images/14.round-1-100-days-of-code.png)
+
+**Live Demo:** https://navin-navi.github.io/100-Days-of-Code-Round-1/
+
+**Progress:** Made an JSON API endpoint to power a project
+
+**Brief Description:**
+
+- Worked on creating own JSON Server to power an app.
+- Made my Round 1 in #100DaysOfCode into a Jekyll site.
+
+**Links:**
+
+- [Live](https://navin-navi.github.io/100-Days-of-Code-Round-1/)
+- [GitHub Repository](https://github.com/navin-navi/100-Days-of-Code-Round-1)
+
 ---
 
 # 13.Organize Old Projects
