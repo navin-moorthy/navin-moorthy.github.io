@@ -23,7 +23,7 @@ const Footer = () => (
       <FooterIcon src={heart} alt="love icon" /> by Navin{" "}
       <a href="https://github.com/navin-navi/navin-navi.github.io">
         {" "}
-        Hosted with GHPages
+        Hosted in GHPages
       </a>{" "}
       <br /> Built with <a href="https://www.gatsbyjs.org/"> Gatsby</a>. Design
       Inspiration <a href="https://www.lekoarts.de">LekoArts</a>.

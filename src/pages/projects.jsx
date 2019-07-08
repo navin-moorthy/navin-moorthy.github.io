@@ -8,21 +8,6 @@ import Image from "gatsby-image";
 // Components
 import Layout from "../components/Layout";
 
-// Images
-
-import angularRecipeBook from "../images/projects/angular-recipe-book.png";
-import materializeBlog from "../images/projects/materialized-blog.png";
-import patterns from "../images/projects/patterns.png";
-import vanuss from "../images/projects/vanuss.png";
-import museumOfCandy from "../images/projects/museum-of-candy.png";
-import shrineMdnSite from "../images/projects/shrine-mdn-site.png";
-import vueAnimation from "../images/projects/vue-animation.png";
-import colorGame from "../images/projects/color-game.png";
-import patatapClone from "../images/projects/patatap-clone.png";
-import toDoListBasic from "../images/projects/to-do-list-basic.png";
-import behanceClone from "../images/projects/behance-clone.png";
-import ajaxToDoList from "../images/projects/ajax-to-do-list.png";
-
 const ProjectsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8 w-full`};
   display: grid;
@@ -38,7 +23,7 @@ const ProjectsWrapper = styled.div`
 
 const ProjectWrapper = tw.div`text-center`;
 
-const Projects = ({ data }) => (
+const ProjectsPage = ({ data }) => (
   <>
     <Layout siteTitle="Projects" to="/projects">
       <h1>Creations</h1>
@@ -87,6 +72,42 @@ const Projects = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
+            href="https://to-do-ajax.herokuapp.com/todos"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ajax To Do App
+            <Image
+              fluid={data.ajaxToDoList.childImageSharp.fluid}
+              alt="Ajax To Do App"
+            />
+          </a>
+        </ProjectWrapper>
+        <ProjectWrapper>
+          <a
+            href="http://yelp-camp-campground.herokuapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YelpCamp Campground
+            <Image fluid={data.yelpcamp.childImageSharp.fluid} alt="YelpCamp" />
+          </a>
+        </ProjectWrapper>
+        <ProjectWrapper>
+          <a
+            href="https://navin-navi.github.io/color-game/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Color Game
+            <Image
+              fluid={data.colorGame.childImageSharp.fluid}
+              alt="Color Game"
+            />
+          </a>
+        </ProjectWrapper>
+        <ProjectWrapper>
+          <a
             href="https://vanuss-v2.herokuapp.com/"
             target="_blank"
             rel="noopener noreferrer"
@@ -111,17 +132,6 @@ const Projects = ({ data }) => (
             />
           </a>
         </ProjectWrapper>
-
-        <ProjectWrapper>
-          <a
-            href="https://navin-navi.github.io/patterns/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Patterns
-            <Image fluid={data.patterns.childImageSharp.fluid} alt="Patterns" />
-          </a>
-        </ProjectWrapper>
         <ProjectWrapper>
           <a
             href="https://navin-navi.github.io/shrine-material-design-demo/"
@@ -132,32 +142,6 @@ const Projects = ({ data }) => (
             <Image
               fluid={data.shrineMdnSite.childImageSharp.fluid}
               alt="Shrine MDN Site"
-            />
-          </a>
-        </ProjectWrapper>
-        <ProjectWrapper>
-          <a
-            href="https://navin-navi.github.io/color-game/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Color Game
-            <Image
-              fluid={data.colorGame.childImageSharp.fluid}
-              alt="Color Game"
-            />
-          </a>
-        </ProjectWrapper>
-        <ProjectWrapper>
-          <a
-            href="https://to-do-ajax.herokuapp.com/todos"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ajax To Do App
-            <Image
-              fluid={data.ajaxToDoList.childImageSharp.fluid}
-              alt="Ajax To Do App"
             />
           </a>
         </ProjectWrapper>
@@ -202,6 +186,16 @@ const Projects = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
+            href="https://navin-navi.github.io/patterns/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Patterns
+            <Image fluid={data.patterns.childImageSharp.fluid} alt="Patterns" />
+          </a>
+        </ProjectWrapper>
+        <ProjectWrapper>
+          <a
             href="https://navin-navi.github.io/behance-clone/"
             target="_blank"
             rel="noopener noreferrer"
@@ -230,6 +224,10 @@ const Projects = ({ data }) => (
             rel="noopener noreferrer"
           >
             Image Gallery
+            <Image
+              fluid={data.imageGallery.childImageSharp.fluid}
+              alt="Image Gallery"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -239,16 +237,10 @@ const Projects = ({ data }) => (
             rel="noopener noreferrer"
           >
             Purrfect Match
-          </a>
-        </ProjectWrapper>
-
-        <ProjectWrapper>
-          <a
-            href="http://yelp-camp-campground.herokuapp.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            YelpCamp Campground
+            <Image
+              fluid={data.purrfectMatch.childImageSharp.fluid}
+              alt="Purrfect Match"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -258,6 +250,10 @@ const Projects = ({ data }) => (
             rel="noopener noreferrer"
           >
             FullPage JS Demo
+            <Image
+              fluid={data.fullpageJsDemo.childImageSharp.fluid}
+              alt="Fullpage JS Demo"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -266,7 +262,11 @@ const Projects = ({ data }) => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            Pricing Plans Components
+            Pricing Plans Component
+            <Image
+              fluid={data.pricingPlanComponent.childImageSharp.fluid}
+              alt="Pricing Plan Component"
+            />
           </a>
         </ProjectWrapper>
       </ProjectsWrapper>
@@ -274,9 +274,9 @@ const Projects = ({ data }) => (
   </>
 );
 
-export default Projects;
+export default ProjectsPage;
 
-Projects.propTypes = {
+ProjectsPage.propTypes = {
   data: PropTypes.object.isRequired
 };
 
@@ -373,6 +373,45 @@ export const query = graphql`
       }
     }
     ajaxToDoList: file(relativePath: { eq: "projects/ajax-to-do-list.png" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageGallery: file(relativePath: { eq: "projects/image-gallery.jpg" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    purrfectMatch: file(relativePath: { eq: "projects/purrfect-match.jpg" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    yelpcamp: file(relativePath: { eq: "projects/yelpcamp.jpg" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    fullpageJsDemo: file(
+      relativePath: { eq: "projects/fullpage-js-demo.jpg" }
+    ) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    pricingPlanComponent: file(
+      relativePath: { eq: "projects/pricing-plan-component.jpg" }
+    ) {
       childImageSharp {
         fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
           ...GatsbyImageSharpFluid

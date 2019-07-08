@@ -30,7 +30,7 @@ export const Subtitle = styled.p`
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 `;
 
-export const ContactText = tw.p`font-semibold text-xl md:text-2xl lg:text-3xl`;
+export const ContactText = tw.p`font-semibold text-base md:text-lg lg:text-xl`;
 
 export const ErrorPageLink = styled(Link)`
   ${tw`text-2xl lg:text-3xl mt-8 xxl:w-3/4`}

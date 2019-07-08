@@ -5,16 +5,11 @@ import styled from "styled-components";
 import tw from "tailwind.macro";
 
 // Components
-import SEO from "../components/SEO";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Layout from "../components/Layout";
 import Bio from "../components/Bio";
 import BlogSocialShare from "./BlogSocialShare";
-import ThemeSwitch from "../components/ThemeSwitch";
 
 import * as ScrollManager from "../styles/scroll";
-
-const PostMainStyle = tw.div`ml-auto text-sm md:text-base mr-auto max-w-3xl px-5 pt-10`;
 
 const PostHeader = styled.h3`
   ${tw`text-2xl md:text-3xl`}
@@ -54,10 +49,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
   return (
     <>
-      <SEO siteTitle={post.frontmatter.title} />
-      <PostMainStyle>
-        <Navbar />
-        <ThemeSwitch />
+      <Layout siteTitle="Blog" to="/blog" bio={false}>
         <PostHeader>{post.frontmatter.title}</PostHeader>
         <PostDate style={{ padding: "5px", display: "block" }}>
           {post.frontmatter.date}
@@ -82,8 +74,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             )}
           </li>
         </PostNavigation>
-        <Footer />
-      </PostMainStyle>
+      </Layout>
     </>
   );
 };

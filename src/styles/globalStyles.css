@@ -37,7 +37,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #eee;
-  color: #222;
+  color: #000;
   font-size: 18px;
   font-family: "Montserrat";
   font-weight: 500;
@@ -147,7 +147,7 @@ blockquote {
 }
 
 blockquote p {
-  color: #222;
+  color: #000;
   font-style: italic;
   margin: 0;
   width: 100%;
@@ -231,18 +231,15 @@ sup {
   top: -0.5em;
 }
 
-img {
-}
-
 body.dark,
 body.dark input {
-  background-color: #222;
+  background-color: #000;
   color: #eee;
 }
 
 body.dark :not(pre) > code[class*="language-"] {
   background: #eee;
-  color: #222;
+  color: #000;
 }
 
 body.dark blockquote p {
@@ -250,7 +247,7 @@ body.dark blockquote p {
 }
 
 body.dark #___gatsby > div > div {
-  background: #222;
+  background: #000;
 }
 
 /* Two Liner Logo */
@@ -260,45 +257,13 @@ body.dark #___gatsby > div > div {
   width: 120px;
 }
 
-#home-svg-path1 {
-  fill: #ec407a;
-  stroke: #ec407a;
-}
-
-#home-svg-path2 {
-  fill: #43fc04;
-  stroke: #43fc04;
-}
-
-#home-svg-path1,
-#home-svg-path2 {
-  stroke-width: 0;
-  animation: logo 3s linear infinite;
-}
-
-@keyframes logo {
-  0% {
-    stroke-width: 2pt;
-    stroke-dashoffset: 1200;
-    fill-opacity: 0;
-  }
-  50% {
-    fill-opacity: 0;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-    stroke-width: 0pt;
-  }
-}
-
 /* One Liner Logo */
 .oneLinerLogo {
   display: none;
   width: 400px;
 }
 
-#home-svg-path {
+.home-svg-path {
   stroke-width: 0;
   animation: logo 4s linear infinite;
 }

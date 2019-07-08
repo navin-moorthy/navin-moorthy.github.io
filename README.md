@@ -5,16 +5,16 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/navin-navi">
+    <img
+      src="https://img.shields.io/badge/navin-navi-orange.svg?colorB=40ff00&colorA=ec407a"
+      alt="author badge with navin-navi written on it"
+    />
+  </a>
   <a href="https://travis-ci.org/navin-navi/navin-navi.github.io">
     <img
       src="https://travis-ci.org/navin-navi/navin-navi.github.io.svg?branch=dev"
       alt="TravisCI"
-    />
-  </a>
-  <a href="https://github.com/prettier/prettier">
-    <img
-      src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square"
-      alt="styled with prettier"
     />
   </a>
   <a href="https://lgtm.com/projects/g/navin-navi/navin-navi.github.io/alerts/">
@@ -26,11 +26,41 @@
   <a href="https://lgtm.com/projects/g/navin-navi/navin-navi.github.io/context:javascript">
     <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/navin-navi/navin-navi.github.io.svg?logo=lgtm&logoWidth=18"/>
   </a>
-  <a href="https://github.com/ebidel/lighthouse-badge" target="_blank" rel="noopener">
-    <img src="https://lighthouse-badge.appspot.com?score=100">
+  <a href="https://github.com/styled-components/styled-components">
+    <img
+      src="https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e"
+      alt="styled components"
+    />
   </a>
-  <a href="https://github.com/navin-navi/navin-navi.github.io/issues" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat">
+  <a href="https://github.com/tailwindcss/tailwindcss">
+    <img
+      src="https://img.shields.io/badge/style-tialwind--css-orange.svg?colorB=38b2ac&colorA=db748e"
+      alt="tailwind css"
+    />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/prettier/prettier">
+    <img
+      src="https://img.shields.io/badge/formatted_with-prettier-ff69b4.svg"
+      alt="styled with prettier"
+    />
+  </a>
+  <a href="https://renovatebot.com" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/renovate-enabled-brightgreen.svg" alt="Renovate enabled">
+  </a>
+  <a href="https://david-dm.org/navin-navi/navin-navi.github.io">
+    <img
+      src="https://david-dm.org/navin-navi/navin-navi.github.io/status.svg"
+      alt="Dependency Update Status"
+    />
+  </a>
+  <a href="https://david-dm.org/navin-navi/navin-navi.github.io?type=dev">
+    <img
+      src="https://david-dm.org/navin-navi/navin-navi.github.io/dev-status.svg"
+      alt="Dev Dependency Update Status"
+    />
   </a>
 </p>
 
@@ -245,7 +275,7 @@ src/styles
 - Edit robot.txt! (file in `static/robots.txt`)
 - Google Verification (file in `static/google051e1d59950b0532.html`)
 
-## 💫 Thanks and Support
+## 💫 Thanks and Credits
 
 ### [LekoArts](https://www.lekoarts.de)
 

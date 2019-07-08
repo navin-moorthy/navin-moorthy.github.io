@@ -9,15 +9,15 @@ import Navbar from "./Navbar";
 import Bio from "./Bio";
 import Footer from "./Footer";
 
-const Contents = tw.div`ml-auto text-sm md:text-base mr-auto max-w-5xl px-5 py-10`;
+const Contents = tw.div`ml-auto text-sm md:text-base mr-auto max-w-4xl px-5 py-10`;
 
-const Layout = ({ children, siteTitle, to }) => (
+const Layout = ({ children, siteTitle, to, bio }) => (
   <>
     <SEO siteTitle={siteTitle} />
     <Contents>
       <ThemeSwitch />
       <Navbar pageTitle={siteTitle} to={to} />
-      <Bio />
+      {bio && <Bio />}
       {children}
     </Contents>
     <Footer />
@@ -29,5 +29,10 @@ export default Layout;
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   siteTitle: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
+  bio: PropTypes.bool
+};
+
+Layout.defaultProps = {
+  bio: true
 };

@@ -38,11 +38,11 @@ const AboutHero = tw.div`flex flex-col lg:flex-row items-center mt-8`;
 
 const Avatar = tw.img`rounded-full w-32 xl:w-48 shadow-lg h-auto`;
 
-const AboutSub = tw.span`pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`;
+const AboutSub = tw.span`font-serif pt-12 lg:pt-0 lg:pl-12 text-xl lg:text-2xl xl:text-3xl leading-tight`;
 
-const AboutDesc = tw.p`text-lg md:text-xl lg:text-2xl pt-6 md:pt-12 text-justify`;
+const AboutDesc = tw.p`text-lg md:text-base lg:text-lg  pt-6 md:pt-12 text-justify`;
 
-const Index = () => (
+const IndexPage = () => (
   <>
     {/* SEO with Site Header */}
     <SEO siteTitle="Home" />
@@ -80,10 +80,17 @@ const Index = () => (
           </CreationsCard>
           <CreationsCard
             title="Projects"
-            bg="linear-gradient(to top, #3f5efb 0%, #fc466b 100%)"
+            bg="linear-gradient(to bottom, #3f5efb 0%, #fc466b 100%)"
             linkTo="/projects"
           >
             Collection of my works on different dev technologies.
+          </CreationsCard>
+          <CreationsCard
+            title="About"
+            bg="linear-gradient(to left, #40ff00 0%, #ec407a 100%)"
+            linkTo="/about"
+          >
+            Know more about me here
           </CreationsCard>
         </CreationsWrapper>
       </Creations>
@@ -94,8 +101,8 @@ const Index = () => (
         <AboutHero>
           <Avatar src={avatar} alt="Navin Navi" />
           <AboutSub>
-            I'm a self taught Web Developer. Mostly learning and developing web
-            application in different areas of Web Technologies from Front End
+            I'm a self taught web developer. Mostly learning and developing web
+            application in different areas of web Technologies from Front End
             Engineering (HTML, CSS, Javascript, Angular, React and Gatsby) to
             Back End Programming (Node JS, MondoDB and Firebase).
           </AboutSub>
@@ -115,4 +122,4 @@ const Index = () => (
   </>
 );
 
-export default Index;
+export default IndexPage;
