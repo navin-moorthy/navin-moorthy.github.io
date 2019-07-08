@@ -27,11 +27,38 @@ const Projects = () => (
       <ProjectWrapper>
         <div>
           <a
+            href="https://navin-navi.github.io/angular-issue-tracker/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Angular Issue Tracker
+          </a>
+        </div>
+        <div>
+          <a
+            href="http://angular7-udemy-the-complete-guide.s3-website.ap-south-1.amazonaws.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Angular Recipe Book Basic
+          </a>
+        </div>
+        <div>
+          <a
             href="https://materialized-blog.herokuapp.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Materialized Blog
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://navin-navi.github.io/shrine-material-design-demo/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Shrine MDN Site
           </a>
         </div>
         <div>
@@ -117,15 +144,6 @@ const Projects = () => (
         </div>
         <div>
           <a
-            href="http://yelp-camp-campground.herokuapp.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            YelpCamp Campground
-          </a>
-        </div>
-        <div>
-          <a
             href="https://vanuss-v2.herokuapp.com/"
             target="_blank"
             rel="noopener noreferrer"
@@ -169,9 +187,6 @@ const Projects = () => (
             Ajax To Do App
           </a>
         </div>
-      </ProjectWrapper>
-      <h1>CodePen Creations</h1>
-      <ProjectWrapper>
         <div>
           <a
             href="https://navin-navi.github.io/behance-clone/"
@@ -181,6 +196,9 @@ const Projects = () => (
             Behance Clone
           </a>
         </div>
+      </ProjectWrapper>
+      <h1>CodePen Creations</h1>
+      <ProjectWrapper>
         <div>
           <a
             href="https://codepen.io/navinnavi19/full/WWKdoP"
