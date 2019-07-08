@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/navin-navi/navin-navi.github.io#readme",
   "dependencies": {
-    "gatsby": "2.13.7",
+    "gatsby": "2.13.9",
     "gatsby-image": "2.2.4",
     "gatsby-plugin-catch-links": "2.1.0",
     "gatsby-plugin-google-analytics": "2.1.1",
