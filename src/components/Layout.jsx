@@ -89,7 +89,6 @@ const Layout = ({ children, pages, factor, siteTitle, to }) => (
         />
         <SVG icon="hexa" width={12} stroke={red} left="30%" top="60%" />
       </Divider>
-      <Contact speed={0.4} offset={2} />
     </Parallax>
   </>
 );

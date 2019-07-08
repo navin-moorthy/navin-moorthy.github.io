@@ -7,12 +7,12 @@ import tw from "tailwind.macro";
 
 // Components
 import SEO from "../components/SEO";
-import WritingCard from "../components/WritingCard";
 import Hero from "../components/Hero";
-import Writings from "../components/Writings";
+import ThemeSwitch from "../components/ThemeSwitch";
+import Creations from "../components/Creations";
+import CreationsCard from "../components/CreationsCard";
 import About from "../components/About";
 import Contact from "../components/Contact";
-import ThemeSwitch from "../components/ThemeSwitch";
 
 // Elements
 import { Title, BigTitle, Subtitle } from "../elements/Titles";
@@ -21,7 +21,7 @@ import { Title, BigTitle, Subtitle } from "../elements/Titles";
 import avatar from "../images/avatar.jpg";
 
 // Local styles
-const WritingsWrapper = styled.div`
+const CreationsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8 w-full`};
   display: grid;
   grid-gap: 4rem;
@@ -61,32 +61,32 @@ const Index = () => (
       </Hero>
 
       {/* Writings Page 2 and 3 */}
-      <Writings offset={1}>
-        <Title>Writings</Title>
-        <WritingsWrapper>
-          <WritingCard
+      <Creations offset={1}>
+        <Title>Creations</Title>
+        <CreationsWrapper>
+          <CreationsCard
             title="Blog"
             bg="linear-gradient(to right, #fc4a1a, #f7b733)"
             linkTo="/blog"
           >
             Colleciton of tips and tutorials that I am learning daily.
-          </WritingCard>
-          <WritingCard
+          </CreationsCard>
+          <CreationsCard
             title="Today I Learned"
             bg="linear-gradient(to top, #30cfd0 0%, #330867 100%)"
             linkTo="/blog/today-i-learned"
           >
             Timeline of my daily worklogs which gets posted in my Twitter.
-          </WritingCard>
-          <WritingCard
+          </CreationsCard>
+          <CreationsCard
             title="Projects"
             bg="linear-gradient(to top, #3f5efb 0%, #fc466b 100%)"
             linkTo="/projects"
           >
-            Collection of my creations.
-          </WritingCard>
-        </WritingsWrapper>
-      </Writings>
+            Collection of my works on different dev technologies.
+          </CreationsCard>
+        </CreationsWrapper>
+      </Creations>
 
       {/* About Page 4 */}
       <About offset={3}>

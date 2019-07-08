@@ -8,7 +8,7 @@ import SVG from "./SVG";
 
 import { purple, teal, green, indigo, pink, blue, red } from "../styles/color";
 
-const Writings = ({ children, offset }) => (
+const Creations = ({ children, offset }) => (
   <>
     <DividerMiddle
       bg="linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%)"
@@ -72,9 +72,9 @@ const Writings = ({ children, offset }) => (
   </>
 );
 
-export default Writings;
+export default Creations;
 
-Writings.propTypes = {
+Creations.propTypes = {
   children: PropTypes.node.isRequired,
   offset: PropTypes.number.isRequired
 };
