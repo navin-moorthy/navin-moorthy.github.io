@@ -1,16 +1,15 @@
 import React from "react";
-// import PropTypes from "prop-types";
-// import { Link, graphql } from "gatsby";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import tw from "tailwind.macro";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
+import Image from "gatsby-image";
 
 // Components
 import Layout from "../components/Layout";
 
 // Images
 
-import angularIssueTracker from "../images/projects/angular-issue-tracker.png";
 import angularRecipeBook from "../images/projects/angular-recipe-book.png";
 import materializeBlog from "../images/projects/materialized-blog.png";
 import patterns from "../images/projects/patterns.png";
@@ -39,9 +38,9 @@ const ProjectsWrapper = styled.div`
 
 const ProjectWrapper = tw.div`text-center`;
 
-const Projects = () => (
+const Projects = ({ data }) => (
   <>
-    <Layout pages={6} factor={2} siteTitle="Projects" to="/projects">
+    <Layout siteTitle="Projects" to="/projects">
       <h1>Creations</h1>
       <h4 style={{ textAlign: "center" }}>
         See my Codepen Creations <Link to="/blog/codepen-creations/">here</Link>
@@ -53,8 +52,11 @@ const Projects = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            Angular Issue Tracker
-            <img src={angularIssueTracker} alt="Angular Issue Tracker" />
+            <span style={{ marginbottom: "20px" }}>Angular Issue Tracker</span>
+            <Image
+              fluid={data.angularIssueTracker.childImageSharp.fluid}
+              alt="Angular Issue Tracker"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -64,7 +66,10 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             Angular Recipe Book Basic
-            <img src={angularRecipeBook} alt="Angular Recipe Book" />
+            <Image
+              fluid={data.angularRecipeBook.childImageSharp.fluid}
+              alt="Angular Recipe Book"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -74,7 +79,10 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             Materialized Blog
-            <img src={materializeBlog} alt="Materialized Blog" />
+            <Image
+              fluid={data.materializeBlog.childImageSharp.fluid}
+              alt="Materialized Blog"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -84,7 +92,10 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             Vanuss V2
-            <img src={vanuss} alt="Vanuss Nodified" />
+            <Image
+              fluid={data.vanuss.childImageSharp.fluid}
+              alt="Vanuss Nodified"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -94,7 +105,10 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             Meseum Of Candy
-            <img src={museumOfCandy} alt="Meseum Of Candy" />
+            <Image
+              fluid={data.museumOfCandy.childImageSharp.fluid}
+              alt="Meseum Of Candy"
+            />
           </a>
         </ProjectWrapper>
 
@@ -105,7 +119,7 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             Patterns
-            <img src={patterns} alt="Patterns" />
+            <Image fluid={data.patterns.childImageSharp.fluid} alt="Patterns" />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -115,7 +129,10 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             Shrine MDN Site
-            <img src={shrineMdnSite} alt="Shrine MDN Site" />
+            <Image
+              fluid={data.shrineMdnSite.childImageSharp.fluid}
+              alt="Shrine MDN Site"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -125,7 +142,10 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             Color Game
-            <img src={colorGame} alt="Color Game" />
+            <Image
+              fluid={data.colorGame.childImageSharp.fluid}
+              alt="Color Game"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -135,7 +155,10 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             Ajax To Do App
-            <img src={ajaxToDoList} alt="Ajax To Do App" />
+            <Image
+              fluid={data.ajaxToDoList.childImageSharp.fluid}
+              alt="Ajax To Do App"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -145,7 +168,10 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             To Do List Basic
-            <img src={toDoListBasic} alt="To Do List Basic" />
+            <Image
+              fluid={data.toDoListBasic.childImageSharp.fluid}
+              alt="To Do List Basic"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -155,7 +181,10 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             Patatap Clone
-            <img src={patatapClone} alt="Patatap Clone" />
+            <Image
+              fluid={data.patatapClone.childImageSharp.fluid}
+              alt="Patatap Clone"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -165,7 +194,10 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             Vue Animation Basics
-            <img src={vueAnimation} alt="Vue Animation" />
+            <Image
+              fluid={data.vueAnimation.childImageSharp.fluid}
+              alt="Vue Animation"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -175,7 +207,10 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             Behance Clone
-            <img src={behanceClone} alt="Behance Clone" />
+            <Image
+              fluid={data.behanceClone.childImageSharp.fluid}
+              alt="Behance Clone"
+            />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -185,7 +220,7 @@ const Projects = () => (
             rel="noopener noreferrer"
           >
             Vanuss V1
-            <img src={vanuss} alt="Vanuss v1" />
+            <Image fluid={data.vanuss.childImageSharp.fluid} alt="Vanuss v1" />
           </a>
         </ProjectWrapper>
         <ProjectWrapper>
@@ -240,3 +275,109 @@ const Projects = () => (
 );
 
 export default Projects;
+
+Projects.propTypes = {
+  data: PropTypes.object.isRequired
+};
+
+export const query = graphql`
+  query {
+    angularIssueTracker: file(
+      relativePath: { eq: "projects/angular-issue-tracker.png" }
+    ) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    angularRecipeBook: file(
+      relativePath: { eq: "projects/angular-recipe-book.png" }
+    ) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    materializeBlog: file(
+      relativePath: { eq: "projects/materialized-blog.png" }
+    ) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    patterns: file(relativePath: { eq: "projects/patterns.png" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    vanuss: file(relativePath: { eq: "projects/vanuss.png" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    museumOfCandy: file(relativePath: { eq: "projects/museum-of-candy.png" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    shrineMdnSite: file(relativePath: { eq: "projects/shrine-mdn-site.png" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    vueAnimation: file(relativePath: { eq: "projects/vue-animation.png" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    colorGame: file(relativePath: { eq: "projects/color-game.png" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    patatapClone: file(relativePath: { eq: "projects/patatap-clone.png" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    toDoListBasic: file(relativePath: { eq: "projects/to-do-list-basic.png" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    behanceClone: file(relativePath: { eq: "projects/behance-clone.png" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ajaxToDoList: file(relativePath: { eq: "projects/ajax-to-do-list.png" }) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

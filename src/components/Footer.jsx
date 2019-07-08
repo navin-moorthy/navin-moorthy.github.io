@@ -9,7 +9,7 @@ import heart from "../images/heart.svg";
 import { heartBeat } from "../styles/animations";
 
 // CSS
-const FooterMain = tw.footer`text-center absolute font-semibold text-1xs lg:text-xs bottom-0`;
+const FooterMain = tw.footer`text-center font-semibold text-1xs lg:text-xs p-2`;
 
 const FooterIcon = styled.img`
   ${tw` inline m-0`}

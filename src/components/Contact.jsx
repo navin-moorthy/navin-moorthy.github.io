@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 // Contact Layer
 import SiteBottom from "./SiteBottom";
+import Footer from "./Footer";
 
 // Elements
 import { Title, ContactText } from "../elements/Titles";
@@ -16,6 +17,7 @@ const Contact = ({ offset }) => (
         <a href="https://twitter.com/navin_navi19">Twitter</a> &{" "}
         <a href="https://github.com/navin-navi">Github</a>
       </ContactText>
+      <Footer />
     </SiteBottom>
   </>
 );

@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 // Components
 import SVG from "./SVG";
-import Footer from "./Footer";
 
 // Elements
 import { Divider } from "../elements/Dividers";
@@ -18,7 +17,6 @@ const SiteBottom = ({ offset, children }) => (
   <>
     <Content speed={0.3} offset={offset}>
       <Inner>{children}</Inner>
-      <Footer />
     </Content>
     <Divider speed={0.3} offset={offset}>
       <UpDown>

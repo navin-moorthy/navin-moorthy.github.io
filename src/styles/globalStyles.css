@@ -164,6 +164,16 @@ hr {
 img,
 legend {
   max-width: 100%;
+  border-style: none;
+  margin: 40px 0;
+}
+
+picture img {
+  margin: 0;
+}
+
+.gatsby-image-wrapper {
+  margin: 40px auto !important;
 }
 
 audio,
@@ -222,9 +232,6 @@ sup {
 }
 
 img {
-  border-style: none;
-  margin: 40px 0;
-  width: auto;
 }
 
 body.dark,
