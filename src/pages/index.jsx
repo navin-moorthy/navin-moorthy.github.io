@@ -11,7 +11,7 @@ import Hero from "../components/Hero";
 import ThemeSwitch from "../components/ThemeSwitch";
 import Creations from "../components/Creations";
 import CreationsCard from "../components/CreationsCard";
-import About from "../components/About";
+import AboutIndexPage from "../components/About";
 import Contact from "../components/Contact";
 
 // Elements
@@ -96,25 +96,24 @@ const IndexPage = () => (
       </Creations>
 
       {/* About Page 4 */}
-      <About offset={3}>
+      <AboutIndexPage offset={3}>
         <Title>About</Title>
         <AboutHero>
           <Avatar src={avatar} alt="Navin Navi" />
           <AboutSub>
-            I'm a self taught web developer. Mostly learning and developing web
-            application in different areas of web Technologies from Front End
-            Engineering (HTML, CSS, Javascript, Angular, React and Gatsby) to
-            Back End Programming (Node JS, MondoDB and Firebase).
+            A self taught full-stack web developer with 6 months of practise in
+            different areas of web Technologies from Front End Programming
+            (HTML, CSS, Javascript, Angular, React and Gatsby) to Back End
+            Programming (Node JS, MondoDB and Firebase)
           </AboutSub>
         </AboutHero>
         <AboutDesc>
           I'm extremely passionate about web development and design in all it's
           forms. In my spare time, I will be supporting the web development
-          communities which is a big part of my life. They support and guide me
-          every single day. I think to give back something to them with the
-          knowledge I gained via this site.
+          communities which is a big part of my life. I hope to give back
+          something to them with the knowledge I gained via this blog.
         </AboutDesc>
-      </About>
+      </AboutIndexPage>
 
       {/* Contact Page 5 */}
       <Contact offset={4} />

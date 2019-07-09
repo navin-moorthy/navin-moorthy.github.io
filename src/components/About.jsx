@@ -8,7 +8,7 @@ import SVG from "./SVG";
 
 import { purple, teal, green, indigo, pink, blue, red } from "../styles/color";
 
-const About = ({ children, offset }) => (
+const AboutIndexPage = ({ children, offset }) => (
   <>
     <Divider
       bg="#4b6cb7"
@@ -76,9 +76,9 @@ const About = ({ children, offset }) => (
   </>
 );
 
-export default About;
+export default AboutIndexPage;
 
-About.propTypes = {
+AboutIndexPage.propTypes = {
   children: PropTypes.node.isRequired,
   offset: PropTypes.number.isRequired
 };

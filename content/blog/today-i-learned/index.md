@@ -1,7 +1,56 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-05"
+date: "2019-07-09"
 description: Round 2 of 100 Days of Code
+---
+
+# 17.About Page
+
+## Day 17: July 09, 2019 - Tuesday
+
+**Project:** Build About Page
+
+![About Page](images/17.about-page.jpg)
+
+**Live Demo:** https://navin-navi.github.io/about
+
+**Progress:** Half completed about Page for my blog
+
+**Brief Description:**
+
+- Designed my about page.
+- Started building the site and it's now half completed with Intro and Skills completed.
+- Wasted most of my time in trying out new designs and in deciding on which to proceed.
+
+**Links:**
+
+- [About Page](https://navin-navi.github.io/about)
+
+---
+
+# 16.Projects Page
+
+## Day 16: July 08, 2019 - Monday
+
+**Project:** Build Projects Page
+
+![Projects Page](images/16.projects-page.jpg)
+
+**Live Demo:** https://navin-navi.github.io/projects
+
+**Progress:** Finished building Projects Page for my blog
+
+**Brief Description:**
+
+- Added Images to every projects.
+- Images are rendered by Gatsby Images - Traced SVG and lazy loading.
+- Added Codepen Creations Page with all the Codepen project Iframes.
+
+**Links:**
+
+- [Projects Page](https://navin-navi.github.io/projects)
+- [Codepen Creations](https://navin-navi.github.io/blog/codepen-creations/)
+
 ---
 
 # 15.Issue Tracker Application
