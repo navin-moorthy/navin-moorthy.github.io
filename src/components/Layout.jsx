@@ -9,7 +9,7 @@ import Navbar from "./Navbar";
 import Bio from "./Bio";
 import Footer from "./Footer";
 
-const Contents = tw.div`ml-auto text-sm md:text-base mr-auto max-w-4xl px-5 py-10`;
+const Contents = tw.div`ml-auto text-xs md:text-sm lg:text-base mr-auto max-w-4xl px-5 py-10`;
 
 const Layout = ({ children, siteTitle, to, bio }) => (
   <>

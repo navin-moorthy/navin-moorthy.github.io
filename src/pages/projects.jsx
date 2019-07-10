@@ -28,7 +28,7 @@ const ProjectsPage = ({ data }) => (
     <Layout siteTitle="Projects" to="/projects">
       <h1>Creations</h1>
       <h4 style={{ textAlign: "center" }}>
-        See my Codepen Creations <Link to="/blog/codepen-creations/">here</Link>
+        Codepen Creations <Link to="/blog/codepen-creations/">here</Link>
       </h4>
       <ProjectsWrapper>
         <ProjectWrapper>

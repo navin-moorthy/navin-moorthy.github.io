@@ -45,14 +45,20 @@ body {
 
 h1 {
   font-size: 35px;
+  font-weight: 900;
+  font-family: "Cantata One";
+  letter-spacing: 1px;
+  font-weight: 900;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 h3 {
   font-size: 26px;
+  font-weight: 700;
 }
 
 h1,
@@ -61,7 +67,6 @@ h3 {
   color: #ec407a;
   margin-bottom: 20px;
   margin-top: 40px;
-  font-weight: 900;
 }
 
 h4 {
@@ -116,6 +121,7 @@ a code {
 
 small {
   font-size: 70%;
+  font-family: "Fira Code";
 }
 
 b,

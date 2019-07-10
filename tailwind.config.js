@@ -15,7 +15,9 @@ module.exports = {
         '"Times New Roman"',
         "Times",
         "serif"
-      ]
+      ],
+      sans: ["Montserrat"],
+      mono: ["Fira Code"]
     },
     inset: {
       "0": "0",

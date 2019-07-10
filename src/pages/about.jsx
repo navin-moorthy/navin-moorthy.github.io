@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import styled from "styled-components";
 import tw from "tailwind.macro";
 
@@ -80,8 +80,46 @@ const WorkExperiences = [
       "Have expert knowledge of the Messaging & Collaboration environments in order to be routinely involved in root cause analysis whenever issues arise in the production environment.",
       "Effective in delivering solutions and providing speedy turn around when required"
     ]
+  },
+  {
+    role: "Data Security Administrator",
+    company: "Wipro",
+    period: "Apri 2017 - March 2018 (1 year)",
+    summary:
+      "Started my carrer as a Security Administrator by learning and performing jobs on all the applications securing the data of a company. Learned about most of the Infrastructure Security Practices while giving my best in work",
+    highlights: [
+      "Good experience in Symantec EndPoint Security to provide support on all kinds of incidents",
+      "In depth experience in Symantec Certification(now integrated into Digicert)",
+      "Competent in creating CSR (Certificate Signing Request) with Private and Public keys for generating and  renewing certificates",
+      "Experienced in Proofpoint - Email Security platform to maintain the email continuity and prevent email threats",
+      "Competent Zscalar - Cloud Proxy Service Provider in which enforced rules to block malicious sites",
+      "Worked and learned how RSA Secure ID works",
+      "Worked on Cisco Identity Serivce Engine (ISE) to control the access given to the personals",
+      "Little knowledge on Symantec DLP and Disk encryption platform",
+      "Learned about how basic F5 - Loadbalancer and Cisco ASA Firewall works"
+    ]
   }
 ];
+
+const Educations = [
+  {
+    name: "St.Joseph's College of Engineering",
+    degree: "Instrumentation and Control Engineering",
+    place: "Chennai, TamilNadu, India",
+    period: "2012 - 2016"
+  }
+];
+
+const Interests = [
+  "Coding",
+  "Netflix",
+  "Gaming",
+  "Cricket",
+  "Bug Bounty",
+  "CTF"
+];
+
+const Languages = ["Tamil", "English"];
 
 const ImageSocialContainer = tw.div`flex flex-col items-center justify-center`;
 
@@ -91,9 +129,9 @@ const IconContainer = tw.div`m-5`;
 
 const Icon = tw.img`inline m-0 w-12 h-12 m-4`;
 
-const Intro = tw.div``;
+const IntroContainer = tw.div`my-5 font-sans`;
 
-const SkillsContainer = tw.div``;
+const SkillsContainer = tw.div`my-5 font-mono`;
 
 const SkillContainer = tw.div`w-3/4 m-auto`;
 
@@ -111,7 +149,17 @@ const SkillBarLevel = styled.div`
   height: 8px;
 `;
 
+const WorkExperiencesContainer = tw.div`my-5`;
+
 const WorkExperienceContainer = tw.div`my-5`;
+
+const EducationsContainer = tw.div`my-5`;
+
+const EducationContainer = tw.div`my-5`;
+
+const InterestsContainer = tw.div`my-5`;
+
+const LanguagesContainer = tw.div`my-5`;
 
 const AboutPage = () => {
   const data = useStaticQuery(graphql`
@@ -161,7 +209,7 @@ const AboutPage = () => {
         </IconContainer>
       </ImageSocialContainer>
       <hr />
-      <Intro>
+      <IntroContainer>
         <h1>Intro</h1>
         <p>
           I did my first programming course in my school days and performed well
@@ -181,7 +229,7 @@ const AboutPage = () => {
           technologies and still persuing my coding passion without slowing down
           and learning every single day.
         </p>
-      </Intro>
+      </IntroContainer>
       <hr />
       <SkillsContainer>
         <h1>Skills</h1>
@@ -194,24 +242,63 @@ const AboutPage = () => {
           </SkillContainer>
         ))}
       </SkillsContainer>
-
       <hr />
-      <WorkExperienceContainer>
+      <h2 style={{ textAlign: "center" }}>
+        <Link to="/projects">Web Developement Portfolio</Link>
+      </h2>
+      <hr />
+      <h2 style={{ textAlign: "center" }}>
+        <Link to="/blog">Publications</Link>
+      </h2>
+      <hr />
+      <WorkExperiencesContainer>
         <h1>Work Experience</h1>
         {WorkExperiences.map(WorkExperience => (
-          <>
-            <div>{WorkExperience.role}</div>
-            <div>{WorkExperience.company}</div>
-            <div>{WorkExperience.period}</div>
-            <div>{WorkExperience.summary}</div>
+          <WorkExperienceContainer key={WorkExperience.role}>
+            <h2>{WorkExperience.role}</h2>
+            <small>{WorkExperience.period}</small>
+            <h3>{WorkExperience.company}</h3>
+            <h4>Summary</h4>
+            <p>{WorkExperience.summary}</p>
+            <h4>Hightlights</h4>
             <ul>
               {WorkExperience.highlights.map(highlight => (
-                <li>{highlight}</li>
+                <li key={highlight}>{highlight}</li>
               ))}
             </ul>
-          </>
+            <hr />
+          </WorkExperienceContainer>
         ))}
-      </WorkExperienceContainer>
+      </WorkExperiencesContainer>
+      <EducationsContainer>
+        <h1>Education</h1>
+        {Educations.map(education => (
+          <EducationContainer key={education}>
+            <h2>{education.degree}</h2>
+            <h4>{education.name}</h4>
+            <small>{education.period}</small>
+            <p>{education.place}</p>
+          </EducationContainer>
+        ))}
+      </EducationsContainer>
+      <hr />
+      <InterestsContainer>
+        <h1>Interests</h1>
+        <ul>
+          {Interests.map(interest => (
+            <li key={interest}>{interest}</li>
+          ))}
+        </ul>
+      </InterestsContainer>
+      <hr />
+      <LanguagesContainer>
+        <h1>Languages</h1>
+        <ul>
+          {Languages.map(language => (
+            <li key={language}>{language}</li>
+          ))}
+        </ul>
+      </LanguagesContainer>
       <hr />
     </Layout>
   );
