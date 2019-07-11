@@ -1,7 +1,46 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-09"
+date: "2019-07-11"
 description: Round 2 of 100 Days of Code
+---
+
+# 19.Node JS Assignments
+
+## Day 19: July 11, 2019 - Thursday
+
+**Project:** Finish 3 Node JS Assignments
+
+**Progress:** Finished all 3 Node JS Assignments
+
+**Brief Description:**
+
+- Built an Express router to get the result params from the url.
+- Built an Express router to accept json input and display them in table on request.
+- Built an Express router that sends the json file on request.
+
+---
+
+# 18.About Page
+
+## Day 18: July 10, 2019 - Wednesday
+
+**Project:** Build About Page
+
+![About Page](images/18.about-page.jpg)
+
+**Live Demo:** https://navin-navi.github.io/about
+
+**Progress:** Completed about Page for my blog
+
+**Brief Description:**
+
+- Finished writing contents for my about page.
+- Built company and Linkedin Profile.
+
+**Links:**
+
+- [About Page](https://navin-navi.github.io/about)
+
 ---
 
 # 17.About Page
