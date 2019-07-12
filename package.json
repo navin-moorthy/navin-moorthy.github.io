@@ -69,7 +69,7 @@
   "devDependencies": {
     "ts-pnp": "1.1.2",
     "typescript": "3.5.3",
-    "eslint-config-react-app": "3.0.8",
+    "eslint-config-react-app": "4.0.1",
     "eslint-plugin-flowtype": "2.50.3",
     "babel-eslint": "9.0.0",
     "babel-plugin-styled-components": "1.10.6",
