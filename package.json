@@ -71,7 +71,7 @@
     "typescript": "3.5.3",
     "eslint-config-react-app": "3.0.8",
     "eslint-plugin-flowtype": "2.50.3",
-    "babel-eslint": "9.0.0",
+    "babel-eslint": "10.0.2",
     "babel-plugin-styled-components": "1.10.6",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.1",
