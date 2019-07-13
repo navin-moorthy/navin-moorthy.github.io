@@ -1,7 +1,24 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-11"
+date: "2019-07-12"
 description: Round 2 of 100 Days of Code
+---
+
+# 20.Node JS Issue Tracker Project
+
+## Day 20: July 12, 2019 - Friday
+
+**Project:** Finish Node JS Project
+
+![Issue Tracker Node Dashboard](images/20.issue-tracker-node-dashboard.jpg)
+
+**Progress:** Half Completed Node JS Project
+
+**Brief Description:**
+
+- Rebuild the Angular Issue Tracker with Node JS.
+- Used MDC Material Design Components for the UI.
+
 ---
 
 # 19.Node JS Assignments
