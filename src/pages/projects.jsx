@@ -33,7 +33,7 @@ const ProjectsPage = ({ data }) => (
       <ProjectsWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/angular-issue-tracker/"
+            href="https://angular-express-issue-tracker.herokuapp.com"
             target="_blank"
             rel="noopener noreferrer"
           >
