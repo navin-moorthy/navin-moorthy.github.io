@@ -1,7 +1,54 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-12"
+date: "2019-07-14"
 description: Round 2 of 100 Days of Code
+---
+
+# 22.Angular Express Issue Tracker Project
+
+## Day 22: July 14, 2019 - Sunday
+
+**Project:** Finish Angular Express Project
+
+![Angular Express Project](images/6.issue-tracker-complete.png)
+
+**Progress:** Completed Angular Express Project
+
+**Live Demo:** https://angular-express-issue-tracker.herokuapp.com/
+
+**Brief Description:**
+
+- Integrated both the Angular and Express App into One App
+- Deployed in Heroku
+
+**Links:**
+
+- [GitHub Repository](https://github.com/navin-navi/angular-express-issue-tracker)
+
+---
+
+# 21.Express Issue Tracker Project
+
+## Day 21: July 13, 2019 - Saturday
+
+**Project:** Finish Express Project
+
+![Issue Tracker Express Update Page](images/21.issue-tracker-node-update-issue.jpg)
+
+**Progress:** Completed Express Project
+
+**Live Demo:** https://express-issue-tracker.herokuapp.com/
+
+**Brief Description:**
+
+- Finished designing the New and Update Page.
+- Performed CRUD Operations.
+- Fully functioning application deployed in Heroku.
+
+**Links:**
+
+- [GitHub Repository](https://github.com/navin-navi/express-issue-tracker)
+
 ---
 
 # 20.Node JS Issue Tracker Project
