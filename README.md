@@ -105,7 +105,7 @@
 - [Renovate](https://renovatebot.com) for auto dependency updates
 - [LGTM](https://lgtm.com/) Automated Code Review Enabled
 
-## 🚀 Features
+## 🧐 Features
 
 **Google Lighthouse Audit Result**
 
@@ -135,7 +135,7 @@
 
 > 💡 The parallax effect can be quite heavy for some older CPUs and the site uses some newer CSS features which will result in incompatibility with older browsers.
 
-## 🧬 Quick start
+## 🚀 Quick start
 
 ### ❗️ Pre-requisite
 
