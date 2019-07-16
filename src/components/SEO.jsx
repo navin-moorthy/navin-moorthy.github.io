@@ -101,7 +101,6 @@ const SEO = ({ siteTitle }) => {
         sizes="16x16"
         href="/favicons/favicon-16x16.png"
       />
-      <meta name="gatsby-starter" content="Gatsby Starter Portfolio Cara" />
       <link rel="shortcut icon" href="favicon.ico" />
       <meta name="msapplication-TileColor" content={config.backgroundColor} />
       <meta name="msapplication-config" content="browserconfig.xml" />
