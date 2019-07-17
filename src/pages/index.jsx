@@ -52,7 +52,7 @@ const IndexPage = () => (
       <Hero offset={0}>
         <ThemeSwitch />
         <BigTitle>
-          Hello, <br /> I'm Navin.
+          Hello, <br /> I&apos;m Navin.
         </BigTitle>
         <Subtitle>
           Currently teaching myself web development technologies while working
@@ -108,10 +108,10 @@ const IndexPage = () => (
           </AboutSub>
         </AboutHero>
         <AboutDesc>
-          I'm extremely passionate about web development and design in all it's
-          forms. In my spare time, I will be supporting the web development
-          communities which is a big part of my life. I hope to give back
-          something to them with the knowledge I gained via this blog.
+          I&apos;m extremely passionate about web development and design in all
+          it&apos;s forms. In my spare time, I will be supporting the web
+          development communities which is a big part of my life. I hope to give
+          back something to them with the knowledge I gained via this blog.
         </AboutDesc>
       </AboutIndexPage>
 

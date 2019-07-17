@@ -1,7 +1,41 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-14"
+date: "2019-07-16"
 description: Round 2 of 100 Days of Code
+---
+
+# 24.Understand Reboot, reset & remedy CSS
+
+## Day 24: July 16, 2019 - Tuesday
+
+**Project:** Understand Reboot, reset & remedy CSS
+
+**Brief Description:**
+
+- Learned about Twitter bootstrap's Reboot CSS.
+- Understood what reset and remedy css is doing.
+- Took a peek on normalize css & Tailwind base css.
+- Decided to use reboot css for my project as a starter css.
+
+---
+
+# 23.Understand ESLint
+
+## Day 23: July 15, 2019 - Monday
+
+**Project:** Understand ESLint
+
+![Angular Express Project](images/23.eslint-config.png)
+
+**Brief Description:**
+
+- Took some break from projects to understand the eslint basics.
+- Initialized Eslint in VsCode and chose Airbnb Code style.
+- Integrated with Prettier and used Recommended rules.
+- Understood each and every plugins used in eslint through their docs.
+- Integrated Prettier/React plugins and used React recommended lints.
+- Understood the difference between extends and plugins.
+
 ---
 
 # 22.Angular Express Issue Tracker Project

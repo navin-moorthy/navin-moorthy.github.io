@@ -277,7 +277,7 @@ const ProjectsPage = ({ data }) => (
 export default ProjectsPage;
 
 ProjectsPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.objectOf(PropTypes.object).isRequired
 };
 
 export const query = graphql`
