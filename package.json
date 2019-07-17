@@ -66,7 +66,7 @@
     "tailwindcss": "1.0.5",
     "typeface-cantata-one": "0.0.72",
     "typeface-fira-mono": "0.0.72",
-    "typeface-montserrat": "0.0.54"
+    "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
     "gh-pages": "2.0.1",
