@@ -4,6 +4,20 @@ date: "2019-07-16"
 description: Round 2 of 100 Days of Code
 ---
 
+# 25.Understand Styled Components and Tailwind CSS
+
+## Day 25: July 17, 2019 - Wednesday
+
+**Project:** Understand Styled Components and Tailwind CSS
+
+**Brief Description:**
+
+- Today was completely on using Tailwind with Styled Components.
+- Read the documentation of both in their sites.
+- Tried out some code snippets to understand them better.
+
+---
+
 # 24.Understand Reboot, reset & remedy CSS
 
 ## Day 24: July 16, 2019 - Tuesday

@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/navin-navi/navin-navi.github.io#readme",
   "dependencies": {
+    "babel-plugin-macros": "2.6.1",
+    "babel-plugin-styled-components": "1.10.6",
     "gatsby": "2.13.25",
     "gatsby-image": "2.2.6",
     "gatsby-plugin-catch-links": "2.1.2",
@@ -64,8 +66,7 @@
     "tailwindcss": "1.0.5",
     "typeface-cantata-one": "0.0.72",
     "typeface-fira-mono": "0.0.72",
-    "typeface-montserrat": "0.0.54",
-    "babel-plugin-styled-components": "1.10.6"
+    "typeface-montserrat": "0.0.54"
   },
   "devDependencies": {
     "gh-pages": "2.0.1",
