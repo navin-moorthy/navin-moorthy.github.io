@@ -1,7 +1,21 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-16"
+date: "2019-07-18"
 description: Round 2 of 100 Days of Code
+---
+
+# 26.Fitness Studio Project
+
+## Day 26: July 18, 2019 - Thursday
+
+**Project:** Upgrade to Gatsby and Improve the Site
+
+**Brief Description:**
+
+- Worked on the Top Bar and the Navbar
+- Navbar is almost done, but working on the hamburger menu with side nav for Mobile device
+- Prefer to develop Desktop first and mobile next component wise.
+
 ---
 
 # 25.Understand Styled Components and Tailwind CSS
