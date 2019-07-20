@@ -1,7 +1,21 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-18"
+date: "2019-07-19"
 description: Round 2 of 100 Days of Code
+---
+
+# 27.Fitness Studio Project
+
+## Day 27: July 19, 2019 - Friday
+
+**Project:** Build components to the Projects
+
+**Brief Description:**
+
+- Worked on the SideNav for Mobile Devices.
+- Learned about passing the state between child and parent.
+- Took some time but I learned something new.
+
 ---
 
 # 26.Fitness Studio Project
