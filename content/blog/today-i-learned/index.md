@@ -1,7 +1,48 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-19"
+date: "2019-07-24"
 description: Round 2 of 100 Days of Code
+---
+
+# 30.Fitness Studio Project
+
+## Day 30: July 24, 2019 - Wednesday
+
+**Project:** Build components to the Projects
+
+**Brief Description:**
+
+- Worked on the Contact Component.
+- Took some to test Thea IDE in installing locally and testing it's features.
+- Also installed a bunch of new VS Code Extensions to IDE.
+
+---
+
+# 29.Fitness Studio Project
+
+## Day 29: July 23, 2019 - Tuesday
+
+**Project:** Build components to the Projects
+
+**Brief Description:**
+
+- Worked on the Trainings Offered Component.
+- Carefully selected Icons for the component from Flaticon.
+- Icons are all of same Fill type.
+
+---
+
+# 28.Fitness Studio Project
+
+## Day 28: July 20, 2019 - Saturday
+
+**Project:** Build components to the Projects
+
+**Brief Description:**
+
+- Worked on the Service Offered Component.
+- Learned more about Flexbox.
+
 ---
 
 # 27.Fitness Studio Project
