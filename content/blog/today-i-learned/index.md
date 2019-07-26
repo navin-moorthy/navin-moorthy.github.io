@@ -1,7 +1,35 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-24"
+date: "2019-07-26"
 description: Round 2 of 100 Days of Code
+---
+
+# 32.Fitness Studio Project
+
+## Day 32: July 26, 2019 - Friday
+
+**Project:** Build components to the Projects
+
+**Brief Description:**
+
+- Worked on the Testimial and Hero Component.
+- Learned about some React NPM Components and thier functionalities.
+- Used React Slick Component and React Lazy Hero Component.
+
+---
+
+# 31.Fitness Studio Project
+
+## Day 31: July 25, 2019 - Thursday
+
+**Project:** Build components to the Projects
+
+**Brief Description:**
+
+- Worked on the About Component.
+- Forked and installed new Code-Server Beta Application.
+- Learned more about VSCode settings.json
+
 ---
 
 # 30.Fitness Studio Project
