@@ -4,6 +4,25 @@ date: "2019-07-26"
 description: Round 2 of 100 Days of Code
 ---
 
+# 33.Fitness Studio Project
+
+## Day 33: July 27, 2019 - Saturday
+
+**Project:** Final touches to the Project
+
+![Angular Express Project](images/33.jfs.jpg)
+
+**Live Demo:** https://jackfitnessstudio.com
+
+**Brief Description:**
+
+- Worked on the Video Gallery and 404 Page.
+- Not Experienced in building the Video Component, so built with a available package.
+- Completed the MVP and the product ready for the launch.
+- Lot more code refractoring and performance improvements are needed.
+
+---
+
 # 32.Fitness Studio Project
 
 ## Day 32: July 26, 2019 - Friday
