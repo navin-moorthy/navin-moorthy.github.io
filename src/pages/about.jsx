@@ -11,6 +11,7 @@ import avatar from "../images/avatar.jpg";
 import twitter from "../images/twitter.svg";
 import github from "../images/github.svg";
 import facebook from "../images/facebook.svg";
+import linkedin from "../images/linkedin.svg";
 
 const skills = [
   {
@@ -197,6 +198,14 @@ const AboutPage = () => {
             rel="noopener noreferrer"
           >
             <Icon src={github} alt="Github Logo" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/navinnavi19/"
+            style={{ borderBottom: "unset" }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon src={linkedin} alt="LinkedIn Logo" />
           </a>
           <a
             href={`https://www.facebook.com/${social.facebook}`}

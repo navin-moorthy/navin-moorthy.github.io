@@ -33,11 +33,24 @@ const ProjectsPage = ({ data }) => (
       <ProjectsWrapper>
         <ProjectWrapper>
           <a
+            href="https://jackfitnessstudio.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Jack Fitness Studio</span>
+            <Image
+              fluid={data.jackFitnessStudio.childImageSharp.fluid}
+              alt="Jack Fitness Studio"
+            />
+          </a>
+        </ProjectWrapper>
+        <ProjectWrapper>
+          <a
             href="https://angular-express-issue-tracker.herokuapp.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span style={{ marginbottom: "20px" }}>Angular Issue Tracker</span>
+            <span>Angular Issue Tracker</span>
             <Image
               fluid={data.angularIssueTracker.childImageSharp.fluid}
               alt="Angular Issue Tracker"
@@ -282,6 +295,15 @@ ProjectsPage.propTypes = {
 
 export const query = graphql`
   query {
+    jackFitnessStudio: file(
+      relativePath: { eq: "projects/jack-fitness-studio.jpg" }
+    ) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     angularIssueTracker: file(
       relativePath: { eq: "projects/angular-issue-tracker.png" }
     ) {
