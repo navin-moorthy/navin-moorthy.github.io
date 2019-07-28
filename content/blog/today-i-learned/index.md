@@ -1,7 +1,25 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-26"
+date: "2019-07-28"
 description: Round 2 of 100 Days of Code
+---
+
+# 34.Fitness Studio Project
+
+## Day 34: July 28, 2019 - Sunday
+
+**Project:** Final touches to the Project
+
+![Jack Fitness Studio](images/34.jfs-pwa.jpg)
+
+**Live Demo:** https://jackfitnessstudio.com
+
+**Brief Description:**
+
+- Started the day with excitation about my completion of first client project.
+- Done some final small changes to the site based on the reviews.
+- Had to explain some features of the site and some emails explaining some everything.
+
 ---
 
 # 33.Fitness Studio Project
@@ -10,7 +28,7 @@ description: Round 2 of 100 Days of Code
 
 **Project:** Final touches to the Project
 
-![Angular Express Project](images/33.jfs.jpg)
+![Jack Fitness Studio](images/33.jfs.jpg)
 
 **Live Demo:** https://jackfitnessstudio.com
 
