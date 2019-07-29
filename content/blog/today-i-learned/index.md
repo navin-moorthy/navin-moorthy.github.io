@@ -1,7 +1,27 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-28"
+date: "2019-07-29"
 description: Round 2 of 100 Days of Code
+---
+
+# 35.JavaScript Basics - Ultimate Courses
+
+## Day 35: July 29, 2019 - Monday
+
+**Project:** JavaScript History and Starter Application Walkthrough
+
+![JavaScript Basics](../ultimate-courses-javascript-basics/images/2.png)
+
+**Live Post:** https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/
+
+**Brief Description:**
+
+- After months of project and assignments, I am back to full fledged learning.
+- Started of with the most recommeded course I encountered in Twitter.
+- The saying is true, I completed two modules and I am already in love with the quality and presentation of the contents.
+- Today I learned about the Introduction to Javascript.
+- Cloned the starter application and learned about every file in them.
+
 ---
 
 # 34.Fitness Studio Project
