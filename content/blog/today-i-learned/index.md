@@ -1,12 +1,31 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-29"
+date: "2019-07-30"
 description: Round 2 of 100 Days of Code
 ---
 
-# 35.JavaScript Basics - Ultimate Courses
+## 36.JavaScript Basics - Ultimate Courses
 
-## Day 35: July 29, 2019 - Monday
+### Day 36: July 30, 2019 - Tuesday
+
+**Project:** JavaScript variables and truthy and falsy values
+
+![JavaScript Basics](images/36.variables.png)
+
+**Live Post:** [Javascript Variables](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#understanding-var-and-hoisting)
+
+**Brief Description:**
+
+- Understanding `var` and Hoisting
+- Block scoping and `let`
+- Variables with `const`
+- Conditional Logic - `Truthy and Falsy Values`
+
+---
+
+## 35.JavaScript Basics - Ultimate Courses
+
+### Day 35: July 29, 2019 - Monday
 
 **Project:** JavaScript History and Starter Application Walkthrough
 
@@ -24,9 +43,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 34.Fitness Studio Project
+## 34.Fitness Studio Project
 
-## Day 34: July 28, 2019 - Sunday
+### Day 34: July 28, 2019 - Sunday
 
 **Project:** Final touches to the Project
 
@@ -42,9 +61,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 33.Fitness Studio Project
+## 33.Fitness Studio Project
 
-## Day 33: July 27, 2019 - Saturday
+### Day 33: July 27, 2019 - Saturday
 
 **Project:** Final touches to the Project
 
@@ -61,9 +80,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 32.Fitness Studio Project
+## 32.Fitness Studio Project
 
-## Day 32: July 26, 2019 - Friday
+### Day 32: July 26, 2019 - Friday
 
 **Project:** Build components to the Projects
 
@@ -75,9 +94,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 31.Fitness Studio Project
+## 31.Fitness Studio Project
 
-## Day 31: July 25, 2019 - Thursday
+### Day 31: July 25, 2019 - Thursday
 
 **Project:** Build components to the Projects
 
@@ -89,9 +108,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 30.Fitness Studio Project
+## 30.Fitness Studio Project
 
-## Day 30: July 24, 2019 - Wednesday
+### Day 30: July 24, 2019 - Wednesday
 
 **Project:** Build components to the Projects
 
@@ -103,9 +122,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 29.Fitness Studio Project
+## 29.Fitness Studio Project
 
-## Day 29: July 23, 2019 - Tuesday
+### Day 29: July 23, 2019 - Tuesday
 
 **Project:** Build components to the Projects
 
@@ -117,9 +136,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 28.Fitness Studio Project
+## 28.Fitness Studio Project
 
-## Day 28: July 20, 2019 - Saturday
+### Day 28: July 20, 2019 - Saturday
 
 **Project:** Build components to the Projects
 
@@ -130,9 +149,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 27.Fitness Studio Project
+## 27.Fitness Studio Project
 
-## Day 27: July 19, 2019 - Friday
+### Day 27: July 19, 2019 - Friday
 
 **Project:** Build components to the Projects
 
@@ -144,9 +163,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 26.Fitness Studio Project
+## 26.Fitness Studio Project
 
-## Day 26: July 18, 2019 - Thursday
+### Day 26: July 18, 2019 - Thursday
 
 **Project:** Upgrade to Gatsby and Improve the Site
 
@@ -158,9 +177,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 25.Understand Styled Components and Tailwind CSS
+## 25.Understand Styled Components and Tailwind CSS
 
-## Day 25: July 17, 2019 - Wednesday
+### Day 25: July 17, 2019 - Wednesday
 
 **Project:** Understand Styled Components and Tailwind CSS
 
@@ -172,9 +191,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 24.Understand Reboot, reset & remedy CSS
+## 24.Understand Reboot, reset & remedy CSS
 
-## Day 24: July 16, 2019 - Tuesday
+### Day 24: July 16, 2019 - Tuesday
 
 **Project:** Understand Reboot, reset & remedy CSS
 
@@ -187,9 +206,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 23.Understand ESLint
+## 23.Understand ESLint
 
-## Day 23: July 15, 2019 - Monday
+### Day 23: July 15, 2019 - Monday
 
 **Project:** Understand ESLint
 
@@ -206,9 +225,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 22.Angular Express Issue Tracker Project
+## 22.Angular Express Issue Tracker Project
 
-## Day 22: July 14, 2019 - Sunday
+### Day 22: July 14, 2019 - Sunday
 
 **Project:** Finish Angular Express Project
 
@@ -229,9 +248,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 21.Express Issue Tracker Project
+## 21.Express Issue Tracker Project
 
-## Day 21: July 13, 2019 - Saturday
+### Day 21: July 13, 2019 - Saturday
 
 **Project:** Finish Express Project
 
@@ -253,9 +272,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 20.Node JS Issue Tracker Project
+## 20.Node JS Issue Tracker Project
 
-## Day 20: July 12, 2019 - Friday
+### Day 20: July 12, 2019 - Friday
 
 **Project:** Finish Node JS Project
 
@@ -270,9 +289,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 19.Node JS Assignments
+## 19.Node JS Assignments
 
-## Day 19: July 11, 2019 - Thursday
+### Day 19: July 11, 2019 - Thursday
 
 **Project:** Finish 3 Node JS Assignments
 
@@ -286,9 +305,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 18.About Page
+## 18.About Page
 
-## Day 18: July 10, 2019 - Wednesday
+### Day 18: July 10, 2019 - Wednesday
 
 **Project:** Build About Page
 
@@ -309,9 +328,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 17.About Page
+## 17.About Page
 
-## Day 17: July 09, 2019 - Tuesday
+### Day 17: July 09, 2019 - Tuesday
 
 **Project:** Build About Page
 
@@ -333,9 +352,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 16.Projects Page
+## 16.Projects Page
 
-## Day 16: July 08, 2019 - Monday
+### Day 16: July 08, 2019 - Monday
 
 **Project:** Build Projects Page
 
@@ -358,9 +377,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 15.Issue Tracker Application
+## 15.Issue Tracker Application
 
-## Day 15: July 05, 2019 - Friday
+### Day 15: July 05, 2019 - Friday
 
 **Project:** Angular Issue Tracker
 
@@ -383,9 +402,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 14.Organize Old Projects
+## 14.Organize Old Projects
 
-## Day 14: July 04, 2019 - Thursday
+### Day 14: July 04, 2019 - Thursday
 
 **Project:** Organize my Old Projects
 
@@ -407,9 +426,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 13.Organize Old Projects
+## 13.Organize Old Projects
 
-## Day 13: July 03, 2019 - Wednesday
+### Day 13: July 03, 2019 - Wednesday
 
 **Project:** Organize my Old Projects
 
@@ -433,9 +452,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 12.Organize Old Projects
+## 12.Organize Old Projects
 
-## Day 12: July 02, 2019 - Tuesday
+### Day 12: July 02, 2019 - Tuesday
 
 **Project:** Organize my Old Projects
 
@@ -458,9 +477,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 11.Organize Old Projects
+## 11.Organize Old Projects
 
-## Day 11: July 01, 2019 - Monday
+### Day 11: July 01, 2019 - Monday
 
 **Project:** Organize my Old Projects
 
@@ -484,9 +503,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 10.Organize Old Projects
+## 10.Organize Old Projects
 
-## Day 10: June 30, 2019 - Sunday
+### Day 10: June 30, 2019 - Sunday
 
 **Project:** Organize my Old Projects
 
@@ -507,9 +526,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 9.Blog Improvements
+## 9.Blog Improvements
 
-## Day 9: June 29, 2019 - Saturday
+### Day 9: June 29, 2019 - Saturday
 
 **Project:** Improve my blog layout and code quality
 
@@ -534,9 +553,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 8.Blog Improvements
+## 8.Blog Improvements
 
-## Day 8: June 28, 2019 - Friday
+### Day 8: June 28, 2019 - Friday
 
 **Project:** Improve my blog layout and code quality
 
@@ -562,9 +581,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 7. Blog Improvements
+## 7. Blog Improvements
 
-## Day 7: June 27, 2019 - Thursday
+### Day 7: June 27, 2019 - Thursday
 
 **Project:** Improve my blog layout and code quality
 
@@ -590,9 +609,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 6. Angular Issue Tracker Project
+## 6. Angular Issue Tracker Project
 
-## Day 6: June 26, 2019 - Wednesday
+### Day 6: June 26, 2019 - Wednesday
 
 **Project:** Complete Angular Issue Tracker Project
 
@@ -617,9 +636,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 5. Angular Issue Tracker Project
+## 5. Angular Issue Tracker Project
 
-## Day 5: June 25, 2019 - Tuesday
+### Day 5: June 25, 2019 - Tuesday
 
 **Project:** Complete Angular Issue Tracker Project
 
@@ -641,9 +660,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 4. Angular Issue Tracker Project
+## 4. Angular Issue Tracker Project
 
-## Day 4: June 24, 2019 - Monday
+### Day 4: June 24, 2019 - Monday
 
 **Project:** Complete Angular Issue Tracker Project
 
@@ -664,9 +683,9 @@ description: Round 2 of 100 Days of Code
 
 ---
 
-# 3. First Javascript Article
+## 3. First Javascript Article
 
-## Day 3: June 21, 2019 - Friday
+### Day 3: June 21, 2019 - Friday
 
 **Project:** Learn new Javascript API and Write article about it
 
@@ -688,9 +707,9 @@ Then I planned for the Issue Tracker Angular Application that I need to build as
 
 ---
 
-# 2. Angular HTTP Assignment
+## 2. Angular HTTP Assignment
 
-## Day 2: June 20, 2019 - Thursday
+### Day 2: June 20, 2019 - Thursday
 
 **Project:** FullStack Program Angular Assignment
 
@@ -713,9 +732,9 @@ This assignment is completely focused on Angular HTTP feature, where
 
 ---
 
-# 1. Welcome to my Blog
+## 1. Welcome to my Blog
 
-## Day 1: June 19, 2019 - Wednesday
+### Day 1: June 19, 2019 - Wednesday
 
 **Project:** Polished my [Blog](https://navin-navi.github.io/)
 
