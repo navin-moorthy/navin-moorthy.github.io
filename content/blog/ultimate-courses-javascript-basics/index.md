@@ -10,10 +10,9 @@ description: Ultimate Courses - JavaScript Basics Notes
 
 ![JavaScript Basics](images/2.png)
 
-One of the most recommended courses in Twitter crafted by Todd Motto with  [Ultimate Courses](https://ultimatecourses.com/course/javascript-basics)
+One of the most recommended courses in Twitter crafted by Todd Motto with [Ultimate Courses](https://ultimatecourses.com/course/javascript-basics)
 
 ## The Missing Introduction to JavaScript
-
 
 ![The Missing Introduction to JavaScript](images/3.png)
 
@@ -126,6 +125,7 @@ Join Ultimate Courses - [Slack Channel](https://slack.ultimatecourses.com/)
 ### Project Walk-through and Install
 
 **Project Walk-through**
+
 - Clone the starter application from source code - GitHub [link](https://github.com/ultimatecourses/javascript-basics).
 
 - `git clone https://github.com/ultimatecourses/javascript-basics`
@@ -137,6 +137,7 @@ Join Ultimate Courses - [Slack Channel](https://slack.ultimatecourses.com/)
 - Now lets start with the `index.html` - base of our project.
 
 `Path: ./index.html`
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -158,11 +159,12 @@ Join Ultimate Courses - [Slack Channel](https://slack.ultimatecourses.com/)
 - We will be seeing the source code here and console window from Chrome's Dev-Tools to debug our application.
 
 `Path: ./src/index.js`
-```js
-import '../assets/css/style.css';
 
-const app = document.getElementById('app');
-app.innerHTML = '<h1>JavaScript Basics</h1>';
+```js
+import "../assets/css/style.css";
+
+const app = document.getElementById("app");
+app.innerHTML = "<h1>JavaScript Basics</h1>";
 ```
 
 1. Imported the css file into this java script file
@@ -176,6 +178,7 @@ app.innerHTML = '<h1>JavaScript Basics</h1>';
 - `.babelrc` has the recommended basic configuration required by the Babel.
 
 `Path: ./.babelrc`
+
 ```json
 {
   "presets": ["@babel/preset-env"]
@@ -186,6 +189,7 @@ app.innerHTML = '<h1>JavaScript Basics</h1>';
 - Display's errors in case of a bad quality of code written as red squiggly.
 
 `Path: ./.eslint.json`
+
 ```json
 {
   "env": {
@@ -208,6 +212,7 @@ app.innerHTML = '<h1>JavaScript Basics</h1>';
 ```
 
 `Path: ./webpack.config.babel.js`
+
 ```js
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
@@ -265,27 +270,186 @@ export default {
 - `devServer` to configure our development server.
 - `mode` can be set to development/production.
 
+`Path: ./package.json`
+
+```js
+{
+  "name": "javascript-basics",
+  "version": "1.0.0",
+  "description": "Starter Repo for JavaScript Basics",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ultimatecourses/javascript-basics.git"
+  },
+  // Scripts that can be run using `npm`
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch", // `npm run watch`
+    "start": "webpack-dev-server", // `npm start`
+    "build": "webpack" // `npm run build`
+  },
+  "author": "Ultimate Courses",
+  "license": "MIT",
+  // Dev Dependencies that your project relies on!!!
+  "devDependencies": {
+    "@babel/core": "^7.4.3", // '^'-> Satisfies Latest Version
+    "@babel/preset-env": "7.4.3", // Fixed Version
+    "@babel/register": "^7.4.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.1",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  }
+}
+```
+
 **Install**
-- Install the dependencies with `npm install` and run `npm start` to start the application.
+
+- Dependencies are the packages that are available in NPM registry.
+- Install them using `npm install`.
+- Creates a `package-lock.json` which should be committed to the version control and `node_modules` which has all the files requires by our dependencies.
+- This is useful to check the integrity of these packages.
+- Run `npm start` to start the application by the command `webpack-dev-server`.
+- This command runs the code belongs to its dependency.
+- Spins up the application in `http://0.0.0.0:8080/`.
 - Build the project with `npm build`. `dist` folder contains all compiled code is generated.
+
+**Extras**
+
+`Path: ./gitignore`
+
+```git
+node_modules
+dist/*
+```
+
+- Remove the `.git` folder and `git init` to make your own git container and commit the files.
+- Our `node_modules` and `dist` directory will be excluded from git watch.
 
 ![Built Project](images/26.png)
 
+Next we will see more about the project.
+
 ### Hello `<script>` World
 
-- Learn about the `<script>` tag and it's attributes `src` and `type` and `<noscript>` tag.
+- Lets learn about the `<script>` tag.
+- It is an HTML element which holds our javascript code.
+- It has two attributes `src` and `type` and `<noscript>` tag.
 - `src` - path to your JavaScript file.
 - `type` - `text/javascript` which means that this script is a JavaScript
+
 ```html
 <script>
-    console.log("Hello World!!");
+  console.log("Hello World!!");
 </script>
 ```
-- Output can viewed in Chrome's Dev-Tools at Console Window. 
+
+- Output can viewed in Chrome's Dev-Tools at Console Window.
+- `script` tags can be placed in `head` tag or in the end of `body` tag.
 - `noscript` - to inform the user about the disabled JavaScript.
+
 ```html
 <noscript>Your Javascript is disabled!!</noscript>
 ```
-- `script` tags can be placed in `head` tag or in the end of `body` tag.
+
+- Above code will be executed only when the browsers does not have the JavaScript Enabled.
+
+> **Note:**
+> JavaScript can be disabled manually in the browser by going to the devTools->Preference->Debugger-> Click the checkbox `Disable JavaScript`
+
+![Disable JavaScript Manually](images/29.jpg)
 
 ### Understanding `var` and Hoisting
+
+- Learned about the `var` reserved keywords.
+- Declarations
+- Initialization
+- `undefined` - More clearance on this
+- Hoisting - whatever or wherever a variable is declared, JavaScript will take and declare them at the top of the file.
+
+```js
+// Declaration
+var a;
+console.log(a); // `undefined`
+// Initialization
+a = 2;
+console.log(a); // 2
+```
+
+### Block scoping and `let`
+
+- Scoped - Within the nearest block.
+- Will not be hoisted.
+- Only available within the respective block.
+- Can declare variables of same name in the same file within different block.
+
+```js
+// `let` declared and initialized
+console.log(a); // ReferenceError: Cannot access 'a' before initialization
+let a = 5;
+console.log(a); // 5
+```
+
+### Variables with `const`
+
+- Scoped
+- Not bind-able to another value again
+- Immutable - the variable itself
+- Mutable - Objects of that variable
+
+```js
+const a = 10;
+console.log(a); // 10
+a = 11; // Assignment to constant variable.
+```
+
+## Conditional Logic
+
+![Conditional Logic](images/30.png)
+
+### Truthy and Falsy Values
+
+`Intro`
+
+```js
+console.log(1 == 1); // true
+console.log(1 === 1); // true
+
+console.log(1 == "1"); // true
+console.log(1 === "1"); // false
+```
+
+`Truthy`
+
+```js
+console.log(!!true)
+console.log(Boolean(true)
+console.log(!!{})
+console.log(!![])
+console.log(!!new Date())
+console.log(!!"0")
+console.log(!!42)
+console.log(!!-42)
+console.log(!!43.3)
+console.log(!!-43.3)
+```
+
+`Falsy`
+
+```js
+console.log(!!false)
+console.log(Boolean(false)
+console.log(!!0)
+console.log(!!"")
+console.log(!!null)
+console.log(!!undefined)
+console.log(!!NaN)
+```
