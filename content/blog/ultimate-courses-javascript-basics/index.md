@@ -12,7 +12,7 @@ description: Ultimate Courses - JavaScript Basics Notes
 
 One of the most recommended courses in Twitter crafted by Todd Motto with [Ultimate Courses](https://ultimatecourses.com/course/javascript-basics)
 
-## The Missing Introduction to JavaScript
+## The Missing Introduction to Java-Script
 
 ![The Missing Introduction to JavaScript](images/3.png)
 
@@ -124,7 +124,7 @@ Join Ultimate Courses - [Slack Channel](https://slack.ultimatecourses.com/)
 
 ### Project Walk-through and Install
 
-**Project Walk-through**
+#### Project Walk-through
 
 - Clone the starter application from source code - GitHub [link](https://github.com/ultimatecourses/javascript-basics).
 
@@ -311,7 +311,7 @@ export default {
 }
 ```
 
-**Install**
+#### Install
 
 - Dependencies are the packages that are available in NPM registry.
 - Install them using `npm install`.
@@ -322,7 +322,7 @@ export default {
 - Spins up the application in `http://0.0.0.0:8080/`.
 - Build the project with `npm build`. `dist` folder contains all compiled code is generated.
 
-**Extras**
+#### Extras
 
 `Path: ./gitignore`
 
@@ -705,10 +705,11 @@ console.log("Pepperoni".slice(2, -3)); // pper
 console.log("Pepperoni~Plain".split("~")[1]); // Plain
 console.log("Pepperoni~Plain".split(/~/)[1]); // Plain
 
-console.log("Pepperoni~Plain".split("~")[1]); // (15) ["P", "e", "p", "p", "e", "r", "o", "n", "i", "~", "P", "l", "a", "i", "n"]
+console.log("Pepperoni~Plain".split());
+// (15) ["P", "e", "p", "p", "e", "r", "o", "n", "i", "~", "P", "l", "a", "i", "n"]
 
 console.log("  4444 5555 6666 7777  ".trim()); // 4444 5555 6666 7777
-console.log("  4444 5555 6666 7777  ".replace(/\s/g, "")); // 444455556666 7777
+console.log("  4444 5555 6666 7777  ".replace(/\s/g, "")); // 4444555566667777
 ```
 
 ## Boolean In-Depth
