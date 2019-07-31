@@ -460,28 +460,29 @@ console.log(!!NaN)
 const condition = true;
 
 if (condition) {
-  console.log('Yes'); // Yes
+  console.log("Yes"); // Yes
 } else {
-  console.log('No');
+  console.log("No");
 }
 
 // OR
 
-if (condition) console.log('Yes'); // Yes
-else console.log('No');
+if (condition) console.log("Yes");
+// Yes
+else console.log("No");
 
 // More realistic example
 const number = 99;
 let result; // undefined
 
 if (number === 1) {
-  result = 'One';
+  result = "One";
 } else if (number === 99) {
-  result = 'Ninety-Nine'; 
+  result = "Ninety-Nine";
 } else if (number === 1000) {
-  result = 'One Thousand';
+  result = "One Thousand";
 } else {
-  result = 'No Match';
+  result = "No Match";
 }
 
 console.log(result); // Ninety-Nine
@@ -491,7 +492,7 @@ Ternary Operator
 
 ```js
 const number = 1;
-const result = 'The Number is: ' + (number === 1 ? 'One' : 'No Match');
+const result = "The Number is: " + (number === 1 ? "One" : "No Match");
 
 console.log(result); // The Number is: One
 
@@ -499,14 +500,15 @@ console.log(result); // The Number is: One
 const anotherNumber = 99;
 const anotherResult =
   anotherNumber === 1
-    ? 'One'
+    ? "One"
     : anotherNumber === 99
-    ? 'Ninety-Nine'
+    ? "Ninety-Nine"
     : anotherNumber === 1000
-    ? 'One Thousand'
-    : 'No Match';
+    ? "One Thousand"
+    : "No Match";
 
-console.log(anotherResult); Ninety-Nine
+console.log(anotherResult);
+Ninety - Nine;
 ```
 
 Switch Statements
@@ -517,20 +519,20 @@ let result;
 
 switch (number) {
   case 1: {
-    const text = 'One';
+    const text = "One";
     result = text;
     break;
   }
   case 99: {
-    const text = 'Ninety-Nine';
+    const text = "Ninety-Nine";
     result = text;
     break;
   }
   case 1000:
-    result = 'One Thousand';
+    result = "One Thousand";
     break;
   default:
-    result = 'No Match';
+    result = "No Match";
 }
 
 console.log(result); // One
@@ -550,12 +552,12 @@ console.log(literalNumber); // 99
 // function syntax
 // perform a type-conversion in a non-constructor context
 console.log(Number(55)); // 55
-console.log(Number('33')); // 33
-console.log(Number('44px')); // NaN
+console.log(Number("33")); // 33
+console.log(Number("44px")); // NaN
 
 // constructor syntax, creates a wrapper Object
 // avoid using it
-console.log(new Number('44px')); // Number {NaN}
+console.log(new Number("44px")); // Number {NaN}
 ```
 
 ### Integers and Floating Points
@@ -575,27 +577,27 @@ console.log((anotherPrice * anotherQuantity) / 100); // 27.99
 ### Parsing Strings to Numbers
 
 ```js
-console.log(parseInt('55px', 10)); // 55
-console.log(parseFloat('55.9999px') * 10); // 559.999
+console.log(parseInt("55px", 10)); // 55
+console.log(parseFloat("55.9999px") * 10); // 559.999
 
-console.log(Number('55e10')); // 550000000000
-console.log(Number('55.9999')); // 55.9999
-console.log(9 + +'99.5555'); // 108.5555
+console.log(Number("55e10")); // 550000000000
+console.log(Number("55.9999")); // 55.9999
+console.log(9 + +"99.5555"); // 108.5555
 ```
 
 ### Understanding Not-a-Number
 
 ```js
-const result = Number('55px'); 
+const result = Number("55px");
 
 // isNaN "NaN"
 console.log(isNaN(result)); // true
-console.log(isNaN('I am a String!')); // true
+console.log(isNaN("I am a String!")); // true
 
 console.log(Number.NaN); // NaN
 console.log(Number.isNaN(Number.NaN)); // true
 console.log(Number.isNaN(result)); // true
-console.log(Number.isNaN('I am another String!')); // false
+console.log(Number.isNaN("I am another String!")); // false
 
 console.log(Number.isInteger(66)); // true
 ```
@@ -605,7 +607,7 @@ console.log(Number.isInteger(66)); // true
 ```js
 const immutableNumber = 99;
 // Just the immutablenumber is copied - Not referenced
-let referencedNumber = immutableNumber; 
+let referencedNumber = immutableNumber;
 referencedNumber = 44;
 console.log(immutableNumber); // 99
 console.log(referencedNumber); // 44
@@ -616,10 +618,10 @@ console.log(referencedNumber); // 44
 ```js
 console.log(typeof 99.66); // Number
 console.log(99 instanceof Number); // false
-console.log(Number('99') instanceof Number); // false
-console.log(new Number('99') instanceof Number); // true
+console.log(Number("99") instanceof Number); // false
+console.log(new Number("99") instanceof Number); // true
 // Most useful way of TypeChecking
-console.log(Object.prototype.toString.call(99).slice(8, -1) === 'Number'); // true
+console.log(Object.prototype.toString.call(99).slice(8, -1) === "Number"); // true
 ```
 
 ### Exploring Number Methods
@@ -640,19 +642,19 @@ console.log(new Number(99).valueOf()); // 99
 ```js
 console.log('Pizza "Hello!"'); // Pizza "Hello!"
 
-const pizza = 'Pepperoni';
-console.log('Pizza is: ' + pizza + '!'); // Pizza is: Pepperoni!
+const pizza = "Pepperoni";
+console.log("Pizza is: " + pizza + "!"); // Pizza is: Pepperoni!
 
-/* Pizza is: 
+/* Pizza is:
  * Pepperoni!
  */
 console.log(`
-Pizza is: 
+Pizza is:
 ${pizza}!
 `);
 
-console.log(String(55 + 11), 55 + '11'); // 66 5511
-console.log(String({ name: 'Pepperoni' })); // [object Object]
+console.log(String(55 + 11), 55 + "11"); // 66 5511
+console.log(String({ name: "Pepperoni" })); // [object Object]
 console.log(String([1, 2, 3, 4])); // 1,2,3,4
 
 console.log(new String(55)); //  String {"55"}
@@ -662,16 +664,16 @@ console.log(new String(55)); //  String {"55"}
 
 ```js
 console.log(new String(5599)); // String {"5599"}
-console.log('Pepperoni'.length); // 9
+console.log("Pepperoni".length); // 9
 
-const pizza = 'P e p p e r o n i';
+const pizza = "P e p p e r o n i";
 console.log(pizza[0], pizza[pizza.length - 1], pizza.length); // P i 17
 ```
 
 ### Strings and Immutability
 
 ```js
-const immutableString = 'I shall not change!';
+const immutableString = "I shall not change!";
 const uppercaseString = immutableString.toUpperCase();
 
 console.log(immutableString, uppercaseString); // I shall not change! I SHALL NOT CHANGE!
@@ -680,11 +682,11 @@ console.log(immutableString, uppercaseString); // I shall not change! I SHALL NO
 ### Correctly Type-Checking Strings
 
 ```js
-console.log(typeof 'Pepperoni'); // string
-console.log('Pepperoni' instanceof String); // false
-console.log(new String('Pepperoni') instanceof String); // true
-console.log(String('Pepperoni') instanceof String); // false
-console.log(Object.prototype.toString.call('Pepperoni')); // [object string]
+console.log(typeof "Pepperoni"); // string
+console.log("Pepperoni" instanceof String); // false
+console.log(new String("Pepperoni") instanceof String); // true
+console.log(String("Pepperoni") instanceof String); // false
+console.log(Object.prototype.toString.call("Pepperoni")); // [object string]
 ```
 
 ### Exploring String Methods
@@ -692,21 +694,21 @@ console.log(Object.prototype.toString.call('Pepperoni')); // [object string]
 ```js
 console.log(String.prototype); // String Object
 
-console.log('Pepperoni'.indexOf('P')); // 0
-console.log('Pepperoni'.includes('P')); // true
+console.log("Pepperoni".indexOf("P")); // 0
+console.log("Pepperoni".includes("P")); // true
 
-console.log('Pepperoni'.replace('oni', 'fire')); // Pepperfire
-console.log('Pepperoni'.replace(/oni$/, 'fire')); // Pepperfire
+console.log("Pepperoni".replace("oni", "fire")); // Pepperfire
+console.log("Pepperoni".replace(/oni$/, "fire")); // Pepperfire
 
-console.log('Pepperoni'.slice(2, -3)); // pper
+console.log("Pepperoni".slice(2, -3)); // pper
 
-console.log('Pepperoni~Plain'.split('~')[1]); // Plain
-console.log('Pepperoni~Plain'.split(/~/)[1]); // Plain
+console.log("Pepperoni~Plain".split("~")[1]); // Plain
+console.log("Pepperoni~Plain".split(/~/)[1]); // Plain
 
-console.log('Pepperoni~Plain'.split('~')[1]); // (15) ["P", "e", "p", "p", "e", "r", "o", "n", "i", "~", "P", "l", "a", "i", "n"]
+console.log("Pepperoni~Plain".split("~")[1]); // (15) ["P", "e", "p", "p", "e", "r", "o", "n", "i", "~", "P", "l", "a", "i", "n"]
 
-console.log('  4444 5555 6666 7777  '.trim()); // 4444 5555 6666 7777
-console.log('  4444 5555 6666 7777  '.replace(/\s/g, "")); // 444455556666 7777
+console.log("  4444 5555 6666 7777  ".trim()); // 4444 5555 6666 7777
+console.log("  4444 5555 6666 7777  ".replace(/\s/g, "")); // 444455556666 7777
 ```
 
 ## Boolean In-Depth
@@ -718,7 +720,7 @@ console.log('  4444 5555 6666 7777  '.replace(/\s/g, "")); // 444455556666 7777
 ```js
 console.log(true, false); // true false
 
-const arg = 'X';
+const arg = "X";
 console.log(Boolean(arg)); // true
 console.log(!!arg); // true
 console.log(Boolean([])); // true
@@ -732,7 +734,7 @@ console.log(new Boolean(arg)); // true
 ```js
 console.log(typeof false); // boolean
 console.log(true instanceof Boolean); // false
-console.log(new Boolean('X') instanceof Boolean); //  true
+console.log(new Boolean("X") instanceof Boolean); //  true
 console.log(Object.prototype.toString.call(true)); // [object Boolean]
 ```
 
@@ -751,7 +753,7 @@ console.log(makeCarArrowShorthand); // undefined
 
 // 1: Function Declaration
 function makeCar() {
-  console.log('Making car...');
+  console.log("Making car...");
 }
 makeCar(); // Making car...
 
@@ -762,12 +764,12 @@ console.log(makeCarExpression.name); // makeCarExpression
 
 // 3: Arrow Function
 const makeCarArrow = () => {
-  console.log('Making car inside Arrow...');
+  console.log("Making car inside Arrow...");
 };
 
 makeCarArrow(); // Making car inside Arrow...
 
-const makeCarArrowShorthand = () => console.log('Short');
+const makeCarArrowShorthand = () => console.log("Short");
 
 makeCarArrowShorthand(); // Short
 ```
@@ -776,7 +778,7 @@ makeCarArrowShorthand(); // Short
 
 ```js
 // name = parameter
-function makeCar(name = 'Porsche') {
+function makeCar(name = "Porsche") {
   // name = name || 'Porsche';
 
   // if (!name) {
@@ -786,8 +788,8 @@ function makeCar(name = 'Porsche') {
 }
 
 // strings = arguments
-makeCar('Porsche'); // Making car: PORSCHE
-makeCar('Ferrari'); // Making car: FERRARI
+makeCar("Porsche"); // Making car: PORSCHE
+makeCar("Ferrari"); // Making car: FERRARI
 makeCar(); // Making car: PORSCHE
 ```
 
@@ -838,15 +840,15 @@ function makeCarPartID(id) {
   };
 }
 
-const carPartId = makeCarPartID('x8YdsZ12');
-console.log(carPartId('Left Door')); // CAR_PART_x8YdsZ12_LEFT DOOR
-console.log(carPartId('Right Door')); // CAR_PART_x8YdsZ12_RIGHT DOOR
-console.log(carPartId('Windscreen')); // CAR_PART_x8YdsZ12_WINDSCREEN
+const carPartId = makeCarPartID("x8YdsZ12");
+console.log(carPartId("Left Door")); // CAR_PART_x8YdsZ12_LEFT DOOR
+console.log(carPartId("Right Door")); // CAR_PART_x8YdsZ12_RIGHT DOOR
+console.log(carPartId("Windscreen")); // CAR_PART_x8YdsZ12_WINDSCREEN
 
-const anotherCarPartId = makeCarPartID('7hs9zSaq0');
-console.log(anotherCarPartId('Left Door')); // CAR_PART_7hs9zSaq0_LEFT DOOR
-console.log(anotherCarPartId('Right Door')); // CAR_PART_7hs9zSaq0_RIGHT DOOR
-console.log(anotherCarPartId('Windscreen')); // CAR_PART_7hs9zSaq0_WINDSCREEN
+const anotherCarPartId = makeCarPartID("7hs9zSaq0");
+console.log(anotherCarPartId("Left Door")); // CAR_PART_7hs9zSaq0_LEFT DOOR
+console.log(anotherCarPartId("Right Door")); // CAR_PART_7hs9zSaq0_RIGHT DOOR
+console.log(anotherCarPartId("Windscreen")); // CAR_PART_7hs9zSaq0_WINDSCREEN
 ```
 
 ### Immediately-Invoked Function Expressions (IIFE)
@@ -857,11 +859,11 @@ const carPartId = (function(id) {
   return function(name) {
     return `${theId}_${name}`;
   };
-})('x8YdsZ12');
+})("x8YdsZ12");
 
-console.log(carPartId('Left Door')); // CAR_PART_x8YdsZ12_LEFT DOOR
-console.log(carPartId('Right Door')); // CAR_PART_x8YdsZ12_RIGHT DOOR
-console.log(carPartId('Windscreen')); // CAR_PART_x8YdsZ12_WINDSCREEN
+console.log(carPartId("Left Door")); // CAR_PART_x8YdsZ12_LEFT DOOR
+console.log(carPartId("Right Door")); // CAR_PART_x8YdsZ12_RIGHT DOOR
+console.log(carPartId("Windscreen")); // CAR_PART_x8YdsZ12_WINDSCREEN
 ```
 
 ### Functions and Callbacks
@@ -872,7 +874,7 @@ function carPartId(name, fn) {
   return fn(`${theId}_${name}`);
 }
 
-const carPart = carPartId('Left Door', function(id) {
+const carPart = carPartId("Left Door", function(id) {
   return `Car Part ID: ${id}`;
 });
 
@@ -882,22 +884,22 @@ console.log(carPart);
 ### Functions and “this”
 
 ```js
-const firstCar = { id: 'x8KszK0' };
-const secondCar = { id: 'bc90slqa' };
-const thirdCar = { id: 'h9sNsa' };
+const firstCar = { id: "x8KszK0" };
+const secondCar = { id: "bc90slqa" };
+const thirdCar = { id: "h9sNsa" };
 
 function carPartId(name, quantity) {
   console.log(`${this.id}_${name}_${quantity}`);
 }
 
 const boundThirdCar = carPartId.bind(thirdCar);
-boundThirdCar('Windscreen', 99); // h9sNsa_Windscreen_99
-boundThirdCar('Exhaust', 9); // h9sNsa_Exhaust_9
+boundThirdCar("Windscreen", 99); // h9sNsa_Windscreen_99
+boundThirdCar("Exhaust", 9); // h9sNsa_Exhaust_9
 
 // call = c = commas
-carPartId.call(firstCar, 'Left Door', 12); // x8KszK0_Left Door_12
+carPartId.call(firstCar, "Left Door", 12); // x8KszK0_Left Door_12
 // apply = a = array
-carPartId.apply(secondCar, ['Right Door', 21]); // bc90slqa_Right Door_21
+carPartId.apply(secondCar, ["Right Door", 21]); // bc90slqa_Right Door_21
 ```
 
 ## Objects In-Depth
@@ -908,17 +910,17 @@ carPartId.apply(secondCar, ['Right Door', 21]); // bc90slqa_Right Door_21
 
 ```js
 const drink = {
-  id: 'xhs8Pla',
-  name: 'Lemonade',
+  id: "xhs8Pla",
+  name: "Lemonade",
   price: {
     sale: 99,
-    full: 129,
-  },
+    full: 129
+  }
 };
 
 // Mutable - Referenced to the original
 const drinkReference = drink;
-drinkReference.name = 'Peach';
+drinkReference.name = "Peach";
 
 // Referencing the same object
 console.log(drink === drinkReference); // true
@@ -935,33 +937,33 @@ console.log({} instanceof Object); // true
 
 ```js
 const drink = {
-  id: 'xhs8Pla',
-  name: 'Lemonade',
+  id: "xhs8Pla",
+  name: "Lemonade",
   price: 99,
   getDrinkDetails() {
     return `Drink ${this.name} (${this.price})`;
   },
-  'abc 123': 'I am the value!',
-  100: 'I am a number!',
+  "abc 123": "I am the value!",
+  100: "I am a number!"
 };
 
-const myId = 'id';
+const myId = "id";
 
 console.log(drink[myId]); // xhs8Pla
 console.log(drink.name); // Lemonade
 console.log(drink.price); // 99
-console.log(drink['abc 123']); // I am the value!
+console.log(drink["abc 123"]); // I am the value!
 console.log(drink[100]); // I am a number!
 ```
 
 ### Shorthand Properties and Methods
 
 ```js
-const id = 'xhs8Pla';
-const name = 'Lemonade';
+const id = "xhs8Pla";
+const name = "Lemonade";
 const price = 99;
 
-const someKey = 'name';
+const someKey = "name";
 
 const drink = {
   id,
@@ -969,7 +971,7 @@ const drink = {
   price,
   getDrinkDetails() {
     return `Drink ${this.name} (${this.price})`;
-  },
+  }
 };
 
 console.log(drink); // {id: "xhs8Pla", name: "Lemonade", price: 99, getDrinkDetails: ƒ}
@@ -979,18 +981,18 @@ console.log(drink); // {id: "xhs8Pla", name: "Lemonade", price: 99, getDrinkDeta
 
 ```js
 const drink = {
-  id: 'xhs8Pla',
-  name: 'Lemonade',
+  id: "xhs8Pla",
+  name: "Lemonade",
   price: {
     sale: 99,
-    full: 129,
-  },
+    full: 129
+  }
 };
 
 const myDrinkId = drink.id;
 const myDrinkName = drink.name;
 const myDrinkSalePrice = drink.price.sale;
-console.log(myDrinkId, myDrinkName, myDrinkSalePrice); 
+console.log(myDrinkId, myDrinkName, myDrinkSalePrice);
 // xhs8Pla Lemonade 99
 
 // const id = 1234;
@@ -1001,9 +1003,9 @@ const {
   ...rest
 } = drink;
 
-const { sale, full: fullPrice } = drink.price; 
+const { sale, full: fullPrice } = drink.price;
 console.log(sale, fullPrice); // 99 129
-console.log(myId, name, full, rest); 
+console.log(myId, name, full, rest);
 // xhs8Pla previewFrame 129 {name: "Lemonade"}
 ```
 
@@ -1011,12 +1013,12 @@ console.log(myId, name, full, rest);
 
 ```js
 const drink = {
-  id: 'xhs8Pla',
-  name: 'Lemonade',
+  id: "xhs8Pla",
+  name: "Lemonade",
   price: {
     sale: 99,
-    full: 129,
-  },
+    full: 129
+  }
   // hasOwnProperty() {
   //   return false;
   // },
@@ -1029,30 +1031,30 @@ if (drink.id) {
 }
 
 for (const prop in drink) {
-  if (drink[prop] === 'Lemonade') {
+  if (drink[prop] === "Lemonade") {
     console.log(drink[prop]); // Lemonade
   }
 }
 
-const hasLemonade = Object.values(drink).includes('Lemonade');
+const hasLemonade = Object.values(drink).includes("Lemonade");
 console.log(hasLemonade); // true
 
 // property exists
-console.log(drink.hasOwnProperty('name')); // true
-console.log(Object.prototype.hasOwnProperty.call(drink, 'name')); // true
-console.log(Object.keys(drink).includes('name')); // true
+console.log(drink.hasOwnProperty("name")); // true
+console.log(Object.prototype.hasOwnProperty.call(drink, "name")); // true
+console.log(Object.keys(drink).includes("name")); // true
 ```
 
 ### Adding and Updating Object Properties
 
 ```js
 const drink = {
-  id: 'xhs8Pla',
-  name: 'Lemonade',
+  id: "xhs8Pla",
+  name: "Lemonade",
   price: {
     sale: 99,
-    full: 129,
-  },
+    full: 129
+  }
 };
 
 // drink.brand = 'My Drinks Co.';
@@ -1062,8 +1064,8 @@ function propUpdate(prop, value) {
   drink[prop] = value;
 }
 
-propUpdate('brand', 'My Drinks Co.');
-propUpdate('name', 'Lime');
+propUpdate("brand", "My Drinks Co.");
+propUpdate("name", "Lime");
 
 console.log(drink);
 // {id: "xhs8Pla", name: "Lime", price: {…}, brand: "My Drinks Co."}
@@ -1073,12 +1075,12 @@ console.log(drink);
 
 ```js
 const drink = {
-  id: 'xhs8Pla',
-  name: 'Lemonade',
+  id: "xhs8Pla",
+  name: "Lemonade",
   price: {
     sale: 99,
-    full: 129,
-  },
+    full: 129
+  }
 };
 
 // slow
@@ -1087,13 +1089,13 @@ const drink = {
 drink.id = undefined;
 
 if (drink.id) {
-  console.log('Has ID...');
+  console.log("Has ID...");
 }
 
-console.log(drink.hasOwnProperty('id')); // true
+console.log(drink.hasOwnProperty("id")); // true
 
 const { price, ...rest } = drink;
-console.log(price, rest, drink); 
+console.log(price, rest, drink);
 // {sale: 99, full: 129} {id: undefined, name: "Lemonade"} {id: undefined, name: "Lemonade", price: {…}}
 ```
 
@@ -1101,12 +1103,12 @@ console.log(price, rest, drink);
 
 ```js
 const drink = {
-  id: 'xhs8Pla',
-  name: 'Lemonade',
+  id: "xhs8Pla",
+  name: "Lemonade",
   price: {
     sale: 99,
-    full: 129,
-  },
+    full: 129
+  }
 };
 
 // shallow copies
@@ -1117,29 +1119,30 @@ const drink = {
 const drinkStringified = JSON.stringify(drink);
 const drinkClone = JSON.parse(drinkStringified);
 
-drinkClone.id = 'abcd';
+drinkClone.id = "abcd";
 drinkClone.price.sale = 79;
 
 console.log(drink);
 // {id: "xhs8Pla", name: "Lemonade", price: {…}}
 ```
+
 ### Merging Objects
 
 ```js
 const drink = {
-  id: 'xhs8Pla',
-  name: 'Lemonade',
+  id: "xhs8Pla",
+  name: "Lemonade"
 };
 
 const price = {
   sale: 99,
-  full: 129,
+  full: 129
 };
 
 // const mergedDrink = Object.assign({}, drink, { price });
 const mergedDrink = { ...drink, ...{ price } };
 
-console.log(drink, price); 
+console.log(drink, price);
 // {id: "xhs8Pla", name: "Lemonade"} {sale: 99, full: 129}
 console.log(mergedDrink);
 // {id: "xhs8Pla", name: "Lemonade", price: {…}}
@@ -1149,12 +1152,12 @@ console.log(mergedDrink);
 
 ```js
 const drink = {
-  id: 'xhs8Pla',
-  name: 'Lemonade',
+  id: "xhs8Pla",
+  name: "Lemonade",
   price: {
     sale: 99,
-    full: 129,
-  },
+    full: 129
+  }
 };
 
 function getType(obj) {
@@ -1181,17 +1184,17 @@ console.log(getType([])); // array
 
 ```js
 const drink = {
-  name: 'Lemonade',
+  name: "Lemonade",
   price: {
     sale: 99,
-    full: 129,
-  },
+    full: 129
+  }
 };
 
 const drinkWithId = Object.create(drink);
-drinkWithId.id = 'xhs8Pla';
+drinkWithId.id = "xhs8Pla";
 
-console.log('name' in drinkWithId);
+console.log("name" in drinkWithId);
 
 for (const prop in drinkWithId) {
   if (drinkWithId.hasOwnProperty(prop)) {
@@ -1199,14 +1202,14 @@ for (const prop in drinkWithId) {
   }
 }
 
-console.log('-----');
+console.log("-----");
 
 // for..in
 for (const prop in drink) {
   const value = drink[prop];
-  if (Object.prototype.toString.call(value) === '[object Object]') {
+  if (Object.prototype.toString.call(value) === "[object Object]") {
     for (const key in value) {
-      console.log(key); 
+      console.log(key);
     }
   }
 }
@@ -1215,18 +1218,19 @@ for (const prop in drink) {
  * ---
  * sale
  * full
+ */
 ```
 
 ### Declarative Object Iteration
 
 ```js
 const drink = {
-  id: 'xhs8Pla',
-  name: 'Lemonade',
+  id: "xhs8Pla",
+  name: "Lemonade",
   price: {
     sale: 99,
-    full: 129,
-  },
+    full: 129
+  }
 };
 
 Object.keys(drink).forEach(prop => console.log(drink[prop]));
@@ -1235,28 +1239,175 @@ Object.keys(drink).forEach(prop => console.log(drink[prop]));
  * {sale: 99, full: 129}
  */
 
-console.log(Object.entries(drink)); 
+console.log(Object.entries(drink));
 // (3) [Array(2), Array(2), Array(2)]
 
-console.log(drink); 
+console.log(drink);
 // {id: "xhs8Pla", name: "Lemonade", price: {…}}
 ```
 
-###
-
-```js
-
-```
-
-###
-
-```js
-
-```
-
-### Arrays In-Depth
+## Arrays In-Depth
 
 ![Arrays In-Depth](images/36.png)
+
+### Array Literal, Function and Constructor Syntax
+
+```js
+const drinks = ["Lemonade", "Lime", "Peach"];
+const drinksReference = drinks;
+
+console.log(drinks); // Array(3)
+
+// Mutated
+console.log(drinks === drinksReference); // true
+
+console.log(new Array("Lemonade", "Lime", "Peach")); // Array(3)
+console.log(Array("Lemonade", "Lime", "Peach")); // Array(3)
+```
+
+### Properties, Indexes and Elements
+
+```js
+const drinks = ["Lemonade", "Lime", "Peach"];
+
+drinks[0] = "Diet Lemonade";
+// drinks['favourite'] = 'Cola';
+
+console.log(drinks); // (3) ["Diet Lemonade", "Lime", "Peach"]
+console.log(drinks[0]); // Diet Lemonade
+console.log(drinks[drinks.length - 1]); // Peach
+
+drinks.length = 0;
+// drinks.splice(0, drinks.length);
+console.log(drinks); // []
+```
+
+### Multi-dimensional Arrays
+
+```js
+const drinks = [["Lemonade", 99], ["Lime", 99], ["Peach", 89]];
+
+console.log(`Drink: ${drinks[0][0]}, Price: ${drinks[0][1]}`);
+// Drink: Lemonade, Price: 99
+```
+
+### Destructuring Arrays
+
+```js
+const drinks = [["Lemonade", 99], ["Lime", 99], ["Peach", 89]];
+
+const [one, [, b], ...rest] = drinks;
+
+console.log(one, b, rest); // ["Lemonade", 99] 99 [Array(2)]
+```
+
+### Adding Array Elements
+
+```js
+const drinks = ["Lemonade", "Lime", "Peach"];
+
+// beginning
+// drinks.unshift('Water'); // mutable
+// newDrinksArray.length = 0;
+console.log(["Water", ...drinks]); // immutable
+// ["Water", "Lemonade", "Lime", "Peach"]
+
+// middle
+const index = 1;
+// drinks.splice(index, 0, 'Cola'); // mutable
+console.log([
+  ...drinks.splice(0, index),
+  "Mojito",
+  ...drinks.splice(index - 1)
+]);
+// ["Lemonade", "Mojito", "Lime", "Peach"]
+
+// end
+// drinks.push('Cola'); // mutable
+console.log([...drinks, "Beer"]); // immutable // ["Beer"]
+console.log(drinks); // []
+```
+
+### Removing Array Elements
+
+```js
+const drinks = ["Lemonade", "Lime", "Peach"];
+
+// beginning
+// const removed = drinks.shift();
+
+// end
+const removed = drinks.pop();
+console.log(removed); // Peach
+
+// slice = anywhere
+const index = drinks.length - 1;
+const newDrinks = [...drinks.slice(0, index), ...drinks.slice(index + 1)];
+console.log(newDrinks);
+console.log(drinks);
+```
+
+### Shallow and Deep Array Cloning
+
+```js
+const drinks = [["Lemonade", 99], ["Lime", 99], ["Peach", 89]];
+
+// const drinksClone = [...drinks];
+// const drinksClone = drinks.slice();
+// const drinksClone = Array.from(drinks);
+
+const drinksClone = JSON.parse(JSON.stringify(drinks));
+
+drinksClone[0][1] = 1000;
+
+console.log(drinks);
+/* 0: (2) ["Lemonade", 99]
+ * 1: (2) ["Lime", 99]
+ * 2: (2) ["Peach", 89]
+ */
+```
+
+### Merging Arrays
+
+```js
+const drinks = [["Lemonade", 99], ["Lime", 99]];
+const newDrinks = ["Peach", 89];
+
+// const merged = drinks.concat(newDrinks); // Immutable
+const merged = [newDrinks, ...drinks];
+console.log(merged);
+console.log(drinks);
+console.log(newDrinks);
+```
+
+### Reversing and Sorting Arrays
+
+```js
+const drinks = [
+  { name: "Lemonade", price: 79 },
+  { name: "Peach", price: 99 },
+  { name: "Lime", price: 89 }
+];
+
+console.log(drinks.reverse());
+// 0: {name: "Lime", price: 89}
+// 1: {name: "Peach", price: 99}
+// 2: {name: "Lemonade", price: 79}
+console.log(drinks.sort((a, b) => b.price - a.price));
+// 0: {name: "Peach", price: 99}
+// 1: {name: "Lime", price: 89}
+// 2: {name: "Lemonade", price: 79}
+```
+
+### Correctly Type-Checking Arrays
+
+```js
+console.log(typeof []); // object
+console.log([] instanceof Array); // true
+console.log(new Array() instanceof Array); // true
+console.log(Array.isArray([1, 2, 3, 4])); // true
+console.log(Object.prototype.toString.call([])); // [object Array]
+```
 
 ### Modules and JavaScript (Coming Soon)
 
