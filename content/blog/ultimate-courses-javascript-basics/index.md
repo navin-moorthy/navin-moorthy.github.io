@@ -1,6 +1,6 @@
 ---
 title: Ultimate Courses - JavaScript Basics
-date: "2019-07-30"
+date: "2019-07-31"
 description: Ultimate Courses - JavaScript Basics Notes
 ---
 

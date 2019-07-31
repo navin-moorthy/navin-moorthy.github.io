@@ -1,7 +1,31 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-30"
+date: "2019-07-31"
 description: Round 2 of 100 Days of Code
+---
+
+## 37.JavaScript Basics - Ultimate Courses
+
+### Day 37: July 30, 2019 - Wednesday
+
+**Project:** Course Completed
+
+![JavaScript Basics](../ultimate-courses-javascript-basics/images/2.png)
+
+**Live Post:** [String, Objects and Arrays](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#conditional-logic)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Conditional Logic](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#conditional-logic)
+- [Numbers In-Depth](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#numbers-in-depth)
+- [Strings In-Depth](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#boolean-in-depth)
+- [Boolean In-Depth](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#boolean-in-depth)
+- [Functions In-Depth](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#functions-in-depth)
+- [Objects In-Depth](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#objects-in-depth)
+- [Arrays In-Depth](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#arrays-in-depth)
+
 ---
 
 ## 36.JavaScript Basics - Ultimate Courses
@@ -29,7 +53,7 @@ description: Round 2 of 100 Days of Code
 
 **Project:** JavaScript History and Starter Application Walkthrough
 
-![JavaScript Basics](../ultimate-courses-javascript-basics/images/2.png)
+![JavaScript Basics](../ultimate-courses-javascript-basics/images/4.png)
 
 **Live Post:** https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/
 
