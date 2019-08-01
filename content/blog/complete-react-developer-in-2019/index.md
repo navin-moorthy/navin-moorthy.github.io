@@ -1,6 +1,8 @@
-# Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
-
-complete-react-developer-in-2019
+---
+title: Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
+date: "2019-07-31"
+description: Notes taken while learning Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
+---
 
 ![Hero Image](images/1.jpg)
 
@@ -595,33 +597,33 @@ yarn-error.log*
 
 
 
-### Section 4: Master Project: SettingUp E-commerce Project
-### Section 5: Master Project: ReactRouter and Routing
-### Section 6: Master Project: Forms +Components
-### Section 7: Master Project: Firebase +User Authentication
-### Section 8: Master Project: Redux 1
-### Section 9: Master Project: SessionStorage + Persistence
-### Section 10: Master Project: Redux 2
-### Section 11: Master Project:Advanced Routing
-### Section 12: Master Project: StateNormalization
-### Section 13: Master Project: StripePayments Part 1
-### Section 14: Master Project:Deploying To Production
-### Section 15: Master Project: CSS in JS- styled-components
-### Section 16: Master Project:Advanced Redux + Firebase
-### Section 17: Master Project: HOCPatterns
-### Section 18: Master Project: Asynchronous Redux
-### Section 19: Master Project:Container Pattern
-### Section 20: Master Project:Redux-Saga
-### Section 21: Master Project: ReactHooks
-### Section 22: Master Project: StripePayments Part 2 - Backend
-### Section 23: Master Project: ContextAPI
-### Section 24: Master Project: GraphQL+ Apollo
-### Section 25: Master Project: MobileSupport
-### Section 26: Master Project: ReactPerformance
-### Section 27: React Interview Questions + Advice
-### Section 28: Bonus: Progressive Web App
-### Section 29: Bonus: Testing
-### Section 30: Bonus: Webpack + Babel
-### Section 31: Bonus: Build a GatsbyJSBlog
-### Section 32: Appendix 1: KeyDeveloper Concepts
-### Section 33: Bonus: Coupon Codes +Freebies
+## Section 4: Master Project: SettingUp E-commerce Project
+## Section 5: Master Project: ReactRouter and Routing
+## Section 6: Master Project: Forms +Components
+## Section 7: Master Project: Firebase +User Authentication
+## Section 8: Master Project: Redux 1
+## Section 9: Master Project: SessionStorage + Persistence
+## Section 10: Master Project: Redux 2
+## Section 11: Master Project:Advanced Routing
+## Section 12: Master Project: StateNormalization
+## Section 13: Master Project: StripePayments Part 1
+## Section 14: Master Project:Deploying To Production
+## Section 15: Master Project: CSS in JS- styled-components
+## Section 16: Master Project:Advanced Redux + Firebase
+## Section 17: Master Project: HOCPatterns
+## Section 18: Master Project: Asynchronous Redux
+## Section 19: Master Project:Container Pattern
+## Section 20: Master Project:Redux-Saga
+## Section 21: Master Project: ReactHooks
+## Section 22: Master Project: StripePayments Part 2 - Backend
+## Section 23: Master Project: ContextAPI
+## Section 24: Master Project: GraphQL+ Apollo
+## Section 25: Master Project: MobileSupport
+## Section 26: Master Project: ReactPerformance
+## Section 27: React Interview Questions + Advice
+## Section 28: Bonus: Progressive Web App
+## Section 29: Bonus: Testing
+## Section 30: Bonus: Webpack + Babel
+## Section 31: Bonus: Build a GatsbyJSBlog
+## Section 32: Appendix 1: KeyDeveloper Concepts
+## Section 33: Bonus: Coupon Codes +Freebies
