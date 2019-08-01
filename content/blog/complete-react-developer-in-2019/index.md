@@ -117,7 +117,7 @@ Declarative - This is where React is developed for, we just need say the state a
 
 ![Job of a React Developer](images/18.png)
 
-### Section 3: React Basics
+## Section 3: React Basics
 
 ![React Basics](images/19.png)
 
@@ -289,7 +289,7 @@ Declarative - This is where React is developed for, we just need say the state a
 </html>
 ```
 
-*public folder also contains `favicon.ico` and `manifest.json` for PWA
+*public folder also contains `favicon.ico` and `manifest.json` for PWA*
 
 *`index.html` is referenced by our React app at `src/index.js`*
 
@@ -457,15 +457,62 @@ yarn-error.log*
 
 ### 18. React Project Setup
 
-
+![Project Setup](images/24.png)
 
 ### 19. Don't Eject
 
+`npm run eject`
 
+Gives the Webpack and other configuration that are created under-hood when creating a new react app using `creat-react-app`
 
 ### 20. Class Components
 
+`React.Component`
 
+[React.Component Documentation](https://reactjs.org/docs/react-component.html)
+
+![Class Components 2](images/25.png)
+
+`src/App.js`
+
+```js{1,5-13,18-19}
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      string: "Navin"
+    };
+  }
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>{this.state.string} is editing this App</p>
+          <button onClick={() => this.setState({ string: "Navi" })}>
+            Dont like Navin - Click Me
+          </button>
+        </header>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+![Class Components 1](images/26.png)
+
+- Import `{Component}` from `react`
+- Change the `App` function into a class extending `Component
+- Utilize the `state` from Component by a `contructor` function with `super()`.
+- Initialize a variable in the state using `this.state`
+- Change the state using `this.setState()` when button clicked `onClick()`
 
 ### 21. Thinking In JSX
 
