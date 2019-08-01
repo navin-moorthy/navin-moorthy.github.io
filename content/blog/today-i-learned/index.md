@@ -1,7 +1,27 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-07-31"
-description: Round 2 of 100 Days of Code
+date: "2019-08-01"
+description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 38.Complete React Developer in 2019
+
+### Day 38: August 01, 2019 - Wednesday
+
+**Project:** Course Started
+
+![React Context](../complete-react-developer-in-2019/images/3.png)
+
+**Live Post:** [React Basics](https://navin-navi.github.io/blog/complete-react-developer-in-2019/)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [React Introduction](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-1-introduction)
+- [React KeyComponents](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-2-react-key-concepts)
+- [React Basics](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-3-react-basics)
+
 ---
 
 ## 37.JavaScript Basics - Ultimate Courses

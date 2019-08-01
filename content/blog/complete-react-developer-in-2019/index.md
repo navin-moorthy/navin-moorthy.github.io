@@ -1,6 +1,6 @@
 ---
 title: Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
-date: "2019-07-31"
+date: "2019-08-01"
 description: Notes taken while learning Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
 ---
 
@@ -14,12 +14,10 @@ Twitter : [Andrei Neagoie](https://twitter.com/AndreiNeagoie)
 
 Udemy Link - [Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)](https://www.udemy.com/complete-react-developer-zero-to-mastery)
 
+_Get all the Sections from the Udemy Course_
 
-*Get all the Sections from the Udemy Course*
 ```js
-[...document.getElementsByClassName("section--title--eCwjX")].forEach(title=>{
-	console.log(title.textContent);
-})
+$$(".section--title--eCwjX").map(sections => sections.textContent);
 ```
 
 > Images pasted here are captured using Chrome's Capture Screenshot Feature
@@ -30,11 +28,12 @@ Udemy Link - [Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)](https
 
 ![Introduction](images/2.png)
 
-*Get titles for Section 1 & 2*
+_Get titles for Section 1 & 2_
+
 ```js
-[...document.getElementsByClassName("curriculum-item-link--curriculum-item--KX9MD")].forEach(title=>{
-	console.log(title.textContent);
-})
+$$(".curriculum-item-link--curriculum-item--KX9MD").map(
+  title => title.textContent
+);
 ```
 
 ### 1. Course Outline
@@ -59,27 +58,27 @@ Introduce yourself in the Discord Community
 
 ### 5. The Birth of React.js
 
-*Traditional HTML, CSS and JavaScript with less cross-browser support*
+_Traditional HTML, CSS and JavaScript with less cross-browser support_
 
-*Files are requested and served from the browser every time*
+_Files are requested and served from the browser every time_
 
 ![Traditional](images/7.png)
 
-*JQuery and Backbone JS along with AJAX provided the cross-browser support and handling JS much easier*
+_JQuery and Backbone JS along with AJAX provided the cross-browser support and handling JS much easier_
 
 ![JQuery and BackBoneJS](images/8.png)
 
-*In `2010`, Google introduced SPA(Single Page Application) with AngularJS using concepts of MVC - Model View Controller and containers*
+_In `2010`, Google introduced SPA(Single Page Application) with AngularJS using concepts of MVC - Model View Controller and containers_
 
-*As the size of the application grows, it becomes harder to manage the flow with many container.*
+_As the size of the application grows, it becomes harder to manage the flow with many container._
 
 ![AngularJS](images/9.png)
 
-*In `2013`, Facebook comes with React Framework to improving the drawbacks of AngularJS*
+_In `2013`, Facebook comes with React Framework to improving the drawbacks of AngularJS_
 
 ![Birth Of React](images/10.png)
 
-*Since then AngularJS evolved to Angular(Now Angular 8) and React with lots of new features.*
+_Since then AngularJS evolved to Angular(Now Angular 8) and React with lots of new features._
 
 ![React Concepts](images/15.png)
 
@@ -121,11 +120,14 @@ Declarative - This is where React is developed for, we just need say the state a
 
 ![React Basics](images/19.png)
 
-*Script used to get all the titles under this topic*
+_Script used to get all the titles under this topic_
+
 ```js
-[...document.getElementsByClassName("curriculum-item-link--title--zI5QT")].forEach(title=>{
-	console.log(title.textContent);
-})
+[
+  ...document.getElementsByClassName("curriculum-item-link--title--zI5QT")
+].forEach(title => {
+  console.log(title.textContent);
+});
 ```
 
 ### 11. Section Overview
@@ -150,30 +152,29 @@ Declarative - This is where React is developed for, we just need say the state a
 - Install [NVM-Node](https://github.com/nvm-sh/nvm) indirectly(I personally prefer this)
 - Install [Yarn](https://yarnpkg.com/)
 
-
 ### 14. NPM vs YARN
 
-*Install dependencies from package.json*
+_Install dependencies from package.json_
 
 `npm install` == `yarn`
 
-*Install a package and add to package.json*
+_Install a package and add to package.json_
 
 `npm install package --save` == `yarn add package`
 
-*Install a devDependency to package.json*
+_Install a devDependency to package.json_
 
 `npm install package --save-dev` == `yarn add package --dev`
 
-*Remove a dependency from package.json*
+_Remove a dependency from package.json_
 
 `npm uninstall package --save` == `yarn remove package`
 
-*Upgrade a package to its latest version*
+_Upgrade a package to its latest version_
 
 `npm update --save` == `yarn upgrade`
 
-*Install a package globally*
+_Install a package globally_
 
 `npm install package -g` == `yarn global add package`
 
@@ -188,7 +189,7 @@ Declarative - This is where React is developed for, we just need say the state a
 
 ### 16. Create React App
 
-*[Basic app](https://zhangmyihua.github.io/monsters-rolodex/) that we are going to build*
+_[Basic app](https://zhangmyihua.github.io/monsters-rolodex/) that we are going to build_
 
 ![Basic app](images/22.png)
 
@@ -231,11 +232,7 @@ Declarative - This is where React is developed for, we just need say the state a
     "extends": "react-app"
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -245,9 +242,10 @@ Declarative - This is where React is developed for, we just need say the state a
 }
 ```
 
-*App start from index.html*
+_App start from index.html_
 
 `public/index.html`
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -289,20 +287,20 @@ Declarative - This is where React is developed for, we just need say the state a
 </html>
 ```
 
-*public folder also contains `favicon.ico` and `manifest.json` for PWA*
+_public folder also contains `favicon.ico` and `manifest.json` for PWA_
 
-*`index.html` is referenced by our React app at `src/index.js`*
+_`index.html` is referenced by our React app at `src/index.js`_
 
 `src/index.js`
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
@@ -310,18 +308,18 @@ ReactDOM.render(<App />, document.getElementById('root'));
 serviceWorker.unregister();
 ```
 
-*`ReactDOM` renders our `<App />` by replacing the element with id `root`*
+_`ReactDOM` renders our `<App />` by replacing the element with id `root`_
 
-*Global Styles and Service Workers are imported here*
+_Global Styles and Service Workers are imported here_
 
 `src/index.css`
 
 ```css
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -363,9 +361,9 @@ function App() {
 export default App;
 ```
 
-*Root of our React Component*
+_Root of our React Component_
 
-*App.css and logo.svg are imported here*
+_App.css and logo.svg are imported here_
 
 `src/App.css`
 
@@ -407,21 +405,21 @@ export default App;
 
 `src/App.test.js`
 
-*It is used for testing*
+_It is used for testing_
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
+it("renders without crashing", () => {
+  const div = document.createElement("div");
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 ```
 
-*Extras*
+_Extras_
 
 `.gitignore`
 
@@ -516,161 +514,124 @@ export default App;
 
 ### 21. Thinking In JSX
 
-
-
 ### 22. Dynamic Content
-
-
 
 ### 23. Optional: map() + key attribute
 
-
-
 ### 24. Single Page Application
-
-
 
 ### 25. Fetching Content
 
-
-
 ### 26. Optional: Promises
-
-
 
 ### 27. Architecting Our App
 
-
-
 ### 28. Card List Component
-
-
 
 ### 29. Card Component
 
-
-
 ### 30. Exercise: Breaking IntoComponents
-
-
 
 ### 31. State vs Props
 
-
-
 ### 32. SearchField State
-
-
 
 ### 33. React Events
 
-
-
 ### 34. Filtering State
-
-
 
 ### 35. Optional: filter(), includes()
 
-
-
 ### 36. Search Box Component
-
-
 
 ### 37. Exercise: Where To Put State?
 
-
-
 ### 38. Class Methods and ArrowFunctions
-
-
 
 ### 39. Exercise: Event Binding
 
-
-
 ### 40. Quick Note: Binding in React
-
-
 
 ### 41. Optional: Git + Github
 
-
-
 ### 42. Optional: Connecting With SSH ToGithub
-
-
 
 ### 43. Deploying Our App
 
-
-
 ### 44. React and ReactDOM
-
-
 
 ### 45. Revisiting VirtualDOM +Unidirectional Data Flow
 
-
-
 ### 46. Asynchronous setState
-
-
 
 ### 47. Introducing Lifecycle Methods
 
-
-
 ### 48. React Lifecycle Methods - Mounting
-
-
 
 ### 49. React Lifecycle Methods - Updating
 
-
-
 ### 50. React Lifecycle Methods -Unmounting
-
-
 
 ### Quiz 1: When should we use afunctional component vs a class com
 
-
-
 ### 51. Section Review
 
-
-
-
-
 ## Section 4: Master Project: SettingUp E-commerce Project
+
 ## Section 5: Master Project: ReactRouter and Routing
+
 ## Section 6: Master Project: Forms +Components
+
 ## Section 7: Master Project: Firebase +User Authentication
+
 ## Section 8: Master Project: Redux 1
+
 ## Section 9: Master Project: SessionStorage + Persistence
+
 ## Section 10: Master Project: Redux 2
+
 ## Section 11: Master Project:Advanced Routing
+
 ## Section 12: Master Project: StateNormalization
+
 ## Section 13: Master Project: StripePayments Part 1
+
 ## Section 14: Master Project:Deploying To Production
+
 ## Section 15: Master Project: CSS in JS- styled-components
+
 ## Section 16: Master Project:Advanced Redux + Firebase
+
 ## Section 17: Master Project: HOCPatterns
+
 ## Section 18: Master Project: Asynchronous Redux
+
 ## Section 19: Master Project:Container Pattern
+
 ## Section 20: Master Project:Redux-Saga
+
 ## Section 21: Master Project: ReactHooks
+
 ## Section 22: Master Project: StripePayments Part 2 - Backend
+
 ## Section 23: Master Project: ContextAPI
+
 ## Section 24: Master Project: GraphQL+ Apollo
+
 ## Section 25: Master Project: MobileSupport
+
 ## Section 26: Master Project: ReactPerformance
+
 ## Section 27: React Interview Questions + Advice
+
 ## Section 28: Bonus: Progressive Web App
+
 ## Section 29: Bonus: Testing
+
 ## Section 30: Bonus: Webpack + Babel
+
 ## Section 31: Bonus: Build a GatsbyJSBlog
+
 ## Section 32: Appendix 1: KeyDeveloper Concepts
+
 ## Section 33: Bonus: Coupon Codes +Freebies
