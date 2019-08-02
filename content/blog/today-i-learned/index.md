@@ -1,7 +1,21 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-01"
+date: "2019-08-02"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 39.Interview Preparation
+
+### Day 39: August 02, 2019 - Wednesday
+
+**Project:** Interview Preparation
+
+**Brief Description:**
+
+- Today I concentrated to refresh my javascript skills.
+- Mostly learned about React, Angular & Javascript.
+- Not much of a coding.
+
 ---
 
 ## 38.Complete React Developer in 2019
