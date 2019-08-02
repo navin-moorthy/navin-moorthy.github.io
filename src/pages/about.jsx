@@ -128,7 +128,7 @@ const Avatar = tw.img`rounded-full w-56 h-56 shadow-lg m-5`;
 
 const IconContainer = tw.div`m-5`;
 
-const Icon = tw.img`inline m-0 w-12 h-12 m-4`;
+const Icon = tw.img`inline m-0 w-4 h-4 m-4`;
 
 const IntroContainer = tw.div`my-5 font-sans`;
 

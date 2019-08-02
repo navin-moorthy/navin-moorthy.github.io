@@ -6,7 +6,7 @@ description: Round 2 of 100 Days of Code where I log daily activities of my codi
 
 ## 39.Interview Preparation
 
-### Day 39: August 02, 2019 - Wednesday
+### Day 39: August 02, 2019 - Friday
 
 **Project:** Interview Preparation
 
@@ -20,7 +20,7 @@ description: Round 2 of 100 Days of Code where I log daily activities of my codi
 
 ## 38.Complete React Developer in 2019
 
-### Day 38: August 01, 2019 - Wednesday
+### Day 38: August 01, 2019 - Thursday
 
 **Project:** Course Started
 
