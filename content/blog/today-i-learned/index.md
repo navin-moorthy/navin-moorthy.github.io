@@ -1,7 +1,24 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-02"
+date: "2019-08-03"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 40.Watch Later
+
+### Day 40: August 03, 2019 - Saturday
+
+**Project:** See one by one watch later videos
+
+**Brief Description:**
+
+- Today I thought to look into the new prespective of Procrastination called Watch Later and do something about it.
+- [Why I won't work a developer job anymore | #grindreel #entrepreneurship](https://www.youtube.com/watch?v=MbUvTbD9q4A&list=WL&index=56)
+- [REST vs. GraphQL](https://www.youtube.com/watch?v=UnHGlHXglJQ)
+- [GraphQL vs REST - What is GraphQL and Why You Should Choose It](https://www.youtube.com/watch?v=6H7-3_Wgwu4)
+- [GraphQL: The Documentary](https://www.youtube.com/watch?v=783ccP__No8)
+- [Introducing Gatsby Themes](https://www.youtube.com/watch?v=wX84vXBpMR8)
+
 ---
 
 ## 39.Interview Preparation
