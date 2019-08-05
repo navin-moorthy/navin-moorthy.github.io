@@ -1,7 +1,23 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-03"
+date: "2019-08-04"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 41.Watch Later
+
+### Day 41: August 04, 2019 - Sunday
+
+**Project:** See watch later videos one by one
+
+**Brief Description:**
+
+- [Gatsby Themes](https://www.youtube.com/watch?v=wX84vXBpMR8)
+- [Gatsby Intro by Kyle Mathews](https://www.youtube.com/watch?v=U6SWCTrPtn8)
+- [When should you use Gatsby](https://www.youtube.com/watch?v=VoscwJ6MGsU)
+- [Gatsby with GraphQL and Apollo](https://www.youtube.com/watch?v=wNUg1jpj9T0)
+- [GraphQL V1 First Look](https://www.youtube.com/watch?v=CSemYFzHAtU)
+
 ---
 
 ## 40.Watch Later
