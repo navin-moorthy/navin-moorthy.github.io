@@ -4,6 +4,50 @@ date: "2019-08-04"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+## 43. React Assignment
+
+### Day 43: August 06, 2019 - Tuesday
+
+**Project:** Build a React App with GitHub API - Redux Version
+
+![Github Commits History Chart](images/38.redux-github-commits-history-chart.png)
+
+**Brief Description:**
+
+- Basic React App built using Redux.
+- Shows the weekly commits count.
+- Planned to improve the app after completing the React Course.
+
+**Links:**
+
+- [Source Code](https://github.com/navin-navi/redux-github-commits-history-chart)
+- [Live Application](https://navin-navi.github.io/redux-github-commits-history-chart/)
+- [CodeSandbox](https://codesandbox.io/s/github/navin-navi/redux-github-commits-history-chart)
+
+---
+
+## 42. React Assignment
+
+### Day 42: August 05, 2019 - Monday
+
+**Project:** Build a React App with GitHub API - Hooks Version
+
+![Github Commits History Chart](images/37.github-commits-history-chart.png)
+
+**Brief Description:**
+
+- Basic React App built using hooks.
+- Shows the weekly commits count.
+- Planned to improve the app after completing the React Course.
+
+**Links:**
+
+- [Source Code](https://github.com/navin-navi/github-commits-history-chart)
+- [Live Application](https://navin-navi.github.io/github-commits-history-chart/)
+- [CodeSandbox](https://codesandbox.io/s/github/navin-navi/github-commits-history-chart/)
+
+---
+
 ## 41.Watch Later
 
 ### Day 41: August 04, 2019 - Sunday

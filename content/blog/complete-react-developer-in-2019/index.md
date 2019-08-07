@@ -514,21 +514,179 @@ export default App;
 
 ### 21. Thinking In JSX
 
+Learned about how state rerenders the components on an event trigger.
+
 ### 22. Dynamic Content
+
+_Learned about displaying dynamic contents using map()_
+
+`src/App.js`
+
+```js
+import React, { Component } from "react";
+// import logo from "./logo.svg";
+import "./App.css";
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      mosters: [
+        { name: "Frankenstein", id: 1 },
+        { name: "Dracula", id: 2 },
+        { name: "Zombie", id: 3 }
+      ]
+    };
+  }
+  render() {
+    return (
+      <div className="App">
+        {this.state.mosters.map(moster => {
+          return <h1 key={moster.id}>{moster.name}</h1>;
+        })}
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+![Class Components 1](images/27.png)
 
 ### 23. Optional: map() + key attribute
 
+Will be explained in `Appendix 1: Key Developer Concepts`
+
 ### 24. Single Page Application
+
+![Class Components 1](images/28.png)
+
+[What is JSON?](https://www.w3schools.com/whatis/whatis_json.asp)
+[JSON Placeholder](https://jsonplaceholder.typicode.com/)
 
 ### 25. Fetching Content
 
+_Learned about fetching JSON content from JSON Placeholder and update the state_
+
+`src/App.js`
+
+```js
+import React, { Component } from "react";
+// import logo from "./logo.svg";
+import "./App.css";
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      monsters: []
+    };
+  }
+
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(res => res.json())
+      .then(users => this.setState({ monsters: users }));
+  }
+
+  render() {
+    return (
+      <div className="App">
+        {this.state.monsters.map(monster => {
+          return <h1 key={monster.id}>{monster.name}</h1>;
+        })}
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+![Class Components 1](images/29.png)
+
 ### 26. Optional: Promises
 
-### 27. Architecting Our App
+Will be explained in `Appendix 1: Key Developer Concepts`
+
+### 27. Architecture Our App
+
+_Learned about how to file structure components and styles_
 
 ### 28. Card List Component
 
+[A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+[Intro to Grid Layout](https://gridbyexample.com/learn/)
+
 ### 29. Card Component
+
+`src/components/card-list/card-list.component.jsx`
+
+```js
+import React from "react";
+import "./card-list.styles.css";
+
+export const CardList = props => {
+  return <div className="card-list">{props.children}</div>;
+};
+```
+`src/components/card-list/card-list.styles.css`
+
+```css
+.card-list {
+  width: 85vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+```
+
+`src/App.js`
+
+```js{4-6, 25-29}
+import React, { Component } from "react";
+import "./App.css";
+
+// Components
+import { CardList } from "./components/card-list/card-list.component";
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      monsters: []
+    };
+  }
+
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(res => res.json())
+      .then(users => this.setState({ monsters: users }));
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <CardList>
+          {this.state.monsters.map(monster => {
+            return <h1 key={monster.id}>{monster.name}</h1>;
+          })}
+        </CardList>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+![Class Components 1](images/30.png)
 
 ### 30. Exercise: Breaking IntoComponents
 
