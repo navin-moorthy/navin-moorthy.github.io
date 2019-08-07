@@ -1,6 +1,6 @@
 ---
 title: Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
-date: "2019-08-01"
+date: "2019-08-06"
 description: Notes taken while learning Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
 ---
 
@@ -618,33 +618,12 @@ _Learned about how to file structure components and styles_
 
 ### 28. Card List Component
 
+![Class Components 1](images/30.png)
+
 [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
 [Intro to Grid Layout](https://gridbyexample.com/learn/)
 
-### 29. Card Component
-
-`src/components/card-list/card-list.component.jsx`
-
-```js
-import React from "react";
-import "./card-list.styles.css";
-
-export const CardList = props => {
-  return <div className="card-list">{props.children}</div>;
-};
-```
-`src/components/card-list/card-list.styles.css`
-
-```css
-.card-list {
-  width: 85vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
-}
-```
 
 `src/App.js`
 
@@ -686,11 +665,142 @@ class App extends Component {
 export default App;
 ```
 
-![Class Components 1](images/30.png)
+`src/components/card-list/card-list.component.jsx`
 
-### 30. Exercise: Breaking IntoComponents
+```js
+import React from "react";
+import "./card-list.styles.css";
+
+export const CardList = props => {
+  return <div className="card-list">{props.children}</div>;
+};
+```
+`src/components/card-list/card-list.styles.css`
+
+```css
+.card-list {
+  width: 85vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+```
+
+### 29. Card Component
+
+![Class Components 1](images/31.png)
+
+`src/App.js`
+
+```js{25}
+import React, { Component } from "react";
+import "./App.css";
+
+// Components
+import { CardList } from "./components/card-list/card-list.component";
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      monsters: []
+    };
+  }
+
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(res => res.json())
+      .then(users => this.setState({ monsters: users }));
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <CardList monsters={this.state.monsters} />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+`src/components/card-list/card-list.component.jsx`
+
+```js{3,6-12}
+import React from "react";
+import "./card-list.styles.css";
+import { Card } from "../card/card.component";
+
+export const CardList = props => {
+  return (
+    <div className="card-list">
+      {props.monsters.map(monster => (
+        <Card key={monster.id} monster={monster} />
+      ))}
+    </div>
+  );
+};
+```
+
+`src/components/card/card.component.jsx`
+
+```js
+import React from "react";
+import "./card.styles.css";
+
+export const Card = props => (
+  <div className="card-container">
+    <img
+      src={`https://robohash.org/${props.monster.id}?set=set2&size=180x180`}
+      alt="monster"
+    />
+    <h2>{props.monster.name}</h2>
+    <p>{props.monster.email}</p>
+  </div>
+);
+```
+
+`src/components/card/card.styles.css`
+
+```css
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #95dada;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 25px;
+  cursor: pointer;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+}
+```
+
+[Random Robo Image Generator](https://robohash.org/)
+
+### 30. Exercise: Breaking Into Components
+
+![Breaking Into Components](images/32.png)
+
+- Make the Component as small as possible.
+- Re-usability
+- Flexibility
+- Each component does one login makes it easier to use in other place
+- Easier Testing
+- With better naming we can identify the functionality of each component.
 
 ### 31. State vs Props
+
+- Learned to use [React Developer Tool](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) for seeing components, states, props and keys.
+- Learned about how state from one component affects other components when passed as props.
+- If state changes, then all the child component will rerender.
 
 ### 32. SearchField State
 
