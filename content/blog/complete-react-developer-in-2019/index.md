@@ -624,7 +624,6 @@ _Learned about how to file structure components and styles_
 
 [Intro to Grid Layout](https://gridbyexample.com/learn/)
 
-
 `src/App.js`
 
 ```js{4-6, 25-29}
@@ -675,6 +674,7 @@ export const CardList = props => {
   return <div className="card-list">{props.children}</div>;
 };
 ```
+
 `src/components/card-list/card-list.styles.css`
 
 ```css
@@ -804,27 +804,542 @@ export const Card = props => (
 
 ### 32. SearchField State
 
+Learned about [setState](https://reactjs.org/docs/react-component.html#setstate).
+
+_Added Search Field to the App_
+
+`src/App.js`
+
+```js{12-13,26-30}
+import React, { Component } from "react";
+import "./App.css";
+
+// Components
+import { CardList } from "./components/card-list/card-list.component";
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      monsters: [],
+      searchField: ""
+    };
+  }
+
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(res => res.json())
+      .then(users => this.setState({ monsters: users }));
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <input
+          type="search"
+          placeholder="Search monsters"
+          onChange={e => this.setState({ searchField: e.target.value })}
+        />
+        <CardList monsters={this.state.monsters} />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
 ### 33. React Events
+
+Learned about React Synthetic Events and how they intercept HTML events.
+
+[Introduction to events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+
+[HTML onchange event](https://www.w3schools.com/jsref/event_onchange.asp)
+
+[React's Synthetic Events](https://reactjs.org/docs/events.html)
 
 ### 34. Filtering State
 
+![Filtering State](images/33.png)
+
+`src/App.js`
+
+```js{24-28,36}
+import React, { Component } from "react";
+import "./App.css";
+
+// Components
+import { CardList } from "./components/card-list/card-list.component";
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      monsters: [],
+      searchField: ""
+    };
+  }
+
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(res => res.json())
+      .then(users => this.setState({ monsters: users }));
+  }
+
+  render() {
+    const { monsters, searchField } = this.state;
+    const filteredMonsters = monsters.filter(monster =>
+      monster.name.toLowerCase().includes(searchField.toLowerCase())
+    );
+
+    return (
+      <div className="App">
+        <input
+          type="search"
+          placeholder="Search monsters"
+          onChange={e => this.setState({ searchField: e.target.value })}
+        />
+        <CardList monsters={filteredMonsters} />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
 ### 35. Optional: filter(), includes()
+
+Will be explained in `Appendix 1: Key Developer Concepts`
 
 ### 36. Search Box Component
 
+![Search Box Component](images/34.png)
+
+`src/App.js`
+
+```js{6,32,34}
+import React, { Component } from "react";
+import "./App.css";
+
+// Components
+import { CardList } from "./components/card-list/card-list.component";
+import { SearchBox } from "./components/search-box/search-box.component";
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      monsters: [],
+      searchField: ""
+    };
+  }
+
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(res => res.json())
+      .then(users => this.setState({ monsters: users }));
+  }
+
+  render() {
+    const { monsters, searchField } = this.state;
+    const filteredMonsters = monsters.filter(monster =>
+      monster.name.toLowerCase().includes(searchField.toLowerCase())
+    );
+
+    return (
+      <div className="App">
+        <SearchBox
+          placeholder="Search monsters"
+          handleChange={e => this.setState({ searchField: e.target.value })}
+        />
+        <CardList monsters={filteredMonsters} />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+`src/components/search-box/search-box.component.jsx`
+
+```js
+import React from "react";
+import "./search-box.styles.css";
+
+export const SearchBox = ({ placeholder, handleChange }) => (
+  <input
+    className="search"
+    type="search"
+    placeholder={placeholder}
+    onChange={handleChange}
+  />
+);
+```
+
+`src/components/search-box/search-box.styles.css`
+
+```css
+.search {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 150px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+```
+
 ### 37. Exercise: Where To Put State?
+
+_Learned on where to put the state because of the one way data flow_
 
 ### 38. Class Methods and ArrowFunctions
 
+[Handling Events](https://reactjs.org/docs/handling-events.html)
+
+_Learned about how `this` is bind to normal function and how JavaScript binds this to arrow function automatically to its context when the component gets created_
+
+`src/App.js`
+
+```js{18-21,38}
+import React, { Component } from "react";
+import "./App.css";
+
+// Components
+import { CardList } from "./components/card-list/card-list.component";
+import { SearchBox } from "./components/search-box/search-box.component";
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      monsters: [],
+      searchField: ""
+    };
+  }
+
+  handleChange = e => {
+    this.setState({ searchField: e.target.value });
+  };
+
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(res => res.json())
+      .then(users => this.setState({ monsters: users }));
+  }
+
+  render() {
+    const { monsters, searchField } = this.state;
+    const filteredMonsters = monsters.filter(monster =>
+      monster.name.toLowerCase().includes(searchField.toLowerCase())
+    );
+
+    return (
+      <div className="App">
+        <SearchBox
+          placeholder="Search monsters"
+          handleChange={this.handleChange}
+        />
+        <CardList monsters={filteredMonsters} />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
 ### 39. Exercise: Event Binding
+
+_Learned about Event Binding and how this works through a simple exercise_
 
 ### 40. Quick Note: Binding in React
 
-### 41. Optional: Git + Github
+we learned about arrow functions and binding in React. A good rule of thumb is this: Use arrow functions on any class methods you define and aren't part
+of React (i.e. render(), componentDidMount()).
 
-### 42. Optional: Connecting With SSH ToGithub
+If you want to learn more about this, [have a read here ](https://reactjs.org/docs/handling-events.html)
+
+### 41. Optional: Git + GitHub
+
+Will be explained in `Appendix 1: Key Developer Concepts`
+
+### 42. Optional: Connecting With SSH To Github
+
+There are two ways to connect to a Github repository, through HTTPS and SSH. You can switch between the two options by clicking the switch https/ssh button after clicking clone. HTTPS does not require setup.
+
+![Git Clone](images/35.png)
+
+It is recommended by Github to clone using HTTPS according to their [official documentation here](https://help.github.com/en/articles/which-remote-url-should-i-use). However, if you do end up using SSH and have never set it up before, there are a couple steps you must take first!
+
+Firstly, SSH is like a unique fingerprint you generate for your computer in your terminal, which you then let your github account know about so it knows that requests from this computer using SSH (cloning/ pushing/ pulling) are safe to do.
+
+In order to generate an SSH, [please follow the instructions here](https://help.github.com/en/enterprise/2.15/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 ### 43. Deploying Our App
+
+![Monsters Rolodex](images/36.png)
+
+`package.json`
+
+```json{5,7,17-18}
+{
+  "name": "monsters-rolodex",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://navin-navi.github.io/monsters-rolodex",
+  "dependencies": {
+    "gh-pages": "^2.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build --git git"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
+```
+
+`public/index.html`
+
+```html{13-16}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bigelow+Rules&display=swap"
+      rel="stylesheet"
+    />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
+```
+
+`src/index.css`
+
+```css{8-12}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+    to left,
+    rgba(7, 27, 82, 1) 0%,
+    rgba(0, 128, 128, 1) 100%
+  );
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+```
+
+`src/App.js`
+
+```js{36}
+import React, { Component } from "react";
+import "./App.css";
+
+// Components
+import { CardList } from "./components/card-list/card-list.component";
+import { SearchBox } from "./components/search-box/search-box.component";
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      monsters: [],
+      searchField: ""
+    };
+  }
+
+  handleChange = e => {
+    this.setState({ searchField: e.target.value });
+  };
+
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then(res => res.json())
+      .then(users => this.setState({ monsters: users }));
+  }
+
+  render() {
+    const { monsters, searchField } = this.state;
+    const filteredMonsters = monsters.filter(monster =>
+      monster.name.toLowerCase().includes(searchField.toLowerCase())
+    );
+
+    return (
+      <div className="App">
+        <h1>Monsters Rolodex</h1>
+        <SearchBox
+          placeholder="Search monsters"
+          handleChange={this.handleChange}
+        />
+        <CardList monsters={filteredMonsters} />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+`src/App.css`
+
+```css{4-9}
+.App {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Bigelow Rules";
+  font-size: 72px;
+  color: #0ccac4;
+}
+```
+
+`src/components/search-box/search-box.styles.css`
+
+```css{2,7,11-12, 15-17}
+.search {
+  font-size: 16px;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 200px;
+  line-height: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  color: white;
+  background-color: #4dd0e1;
+}
+
+.search::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+```
+
+`src/components/card/card.styles.css`
+
+```css{2,3}
+.card-container {
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  background-color: #95dada;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 25px;
+  cursor: pointer;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+}
+```
+
+`src/components/card-list/card-list.styles.css`
+
+```css{5, 9-25}
+.card-list {
+  width: 85vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .card-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .card-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1160px) {
+  .card-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+```
+
+``
+
+```css
+```
+
+- Deploying to GitHub
+- Served through gh-pages
+- Responsive to multiple screen sizes
 
 ### 44. React and ReactDOM
 
