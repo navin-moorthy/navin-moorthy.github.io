@@ -1290,17 +1290,463 @@ yarn-error.log*</code></pre></div>
 <li>If state changes, then all the child component will rerender.</li>
 </ul>
 <h3 id="32-searchfield-state"><a href="#32-searchfield-state" aria-label="32 searchfield state permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>32. SearchField State</h3>
+<p>Learned about <a href="https://reactjs.org/docs/react-component.html#setstate" target="_blank" rel="noopener">setState</a>.</p>
+<p><em>Added Search Field to the App</em></p>
+<p><code class="language-text">src/App.js</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"./App.css"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Components</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CardList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./components/card-list/card-list.component"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+<span class="gatsby-highlight-code-line">      monsters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">      searchField<span class="token punctuation">:</span> <span class="token string">""</span></span>    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://jsonplaceholder.typicode.com/users"</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=></span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">users</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> monsters<span class="token punctuation">:</span> users <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"App"</span><span class="token operator">></span>
+<span class="gatsby-highlight-code-line">        <span class="token operator">&lt;</span>input</span><span class="gatsby-highlight-code-line">          type<span class="token operator">=</span><span class="token string">"search"</span></span><span class="gatsby-highlight-code-line">          placeholder<span class="token operator">=</span><span class="token string">"Search monsters"</span></span><span class="gatsby-highlight-code-line">          onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">e</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> searchField<span class="token punctuation">:</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="gatsby-highlight-code-line">        <span class="token operator">/</span><span class="token operator">></span></span>        <span class="token operator">&lt;</span>CardList monsters<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>monsters<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
 <h3 id="33-react-events"><a href="#33-react-events" aria-label="33 react events permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>33. React Events</h3>
+<p>Learned about React Synthetic Events and how they intercept HTML events.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" target="_blank" rel="noopener">Introduction to events</a></p>
+<p><a href="https://www.w3schools.com/jsref/event_onchange.asp" target="_blank" rel="noopener">HTML onchange event</a></p>
+<p><a href="https://reactjs.org/docs/events.html" target="_blank" rel="noopener">React’s Synthetic Events</a></p>
 <h3 id="34-filtering-state"><a href="#34-filtering-state" aria-label="34 filtering state permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>34. Filtering State</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 55.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABXUlEQVQoz62STUsCURSG56f1I4I2QYuiRdCmTRREZY1itihoUUEQurGIQixnUUZFY5g4ZmgF2jSOiZKm1Drn6SpT9CXOogPvPfde3vPe83ElhOmvrxyWSpzW60TLZTLCq5UKp09PnAivFAoYLy9gWTQFLBt/mdRaVBE4l06zHI7gvb4mVDRZy+WYjcWYPo7iucmSrNXaAW8dhL4JJhp15HOVQN8Yi4cnKJUyfqPIqH+Tfu88vswd6XqjHeAsQ7PIkHeWkYVBhn3j7GXzrEeDuOReltw9rG4MoFWrtmCze4YXom+Tyj4zapiJyC4HDyar8TPkgyBLR1t4lABXdslNJyXHRA9dWoqFeBJZu2K/9MhKJstcQsOdSDF1mUKrPTsXvG002NJ1QmKaO4ZBXDygmCa7Yh8qGGzr9+RbU3YiaHUhfDUnXKn1tyyb/ImfZ/vug9u15F/BHeAkS4l/tnf5GTfXWxcT7gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Filtering State"
+        title="Filtering State"
+        src="/static/d1d6d9813b7fd6c7346dd2c720ef515e/b4fef/33.png"
+        srcset="/static/d1d6d9813b7fd6c7346dd2c720ef515e/942f4/33.png 192w,
+/static/d1d6d9813b7fd6c7346dd2c720ef515e/a7675/33.png 384w,
+/static/d1d6d9813b7fd6c7346dd2c720ef515e/b4fef/33.png 768w,
+/static/d1d6d9813b7fd6c7346dd2c720ef515e/612b6/33.png 1125w"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+    </span></p>
+<p><code class="language-text">src/App.js</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"./App.css"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Components</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CardList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./components/card-list/card-list.component"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      monsters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      searchField<span class="token punctuation">:</span> <span class="token string">""</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://jsonplaceholder.typicode.com/users"</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=></span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">users</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> monsters<span class="token punctuation">:</span> users <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="gatsby-highlight-code-line">    <span class="token keyword">const</span> <span class="token punctuation">{</span> monsters<span class="token punctuation">,</span> searchField <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">const</span> filteredMonsters <span class="token operator">=</span> monsters<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">monster</span> <span class="token operator">=></span></span><span class="gatsby-highlight-code-line">      monster<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>searchField<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span><span class="gatsby-highlight-code-line">    <span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line"></span>    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"App"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>input
+          type<span class="token operator">=</span><span class="token string">"search"</span>
+          placeholder<span class="token operator">=</span><span class="token string">"Search monsters"</span>
+          onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">e</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> searchField<span class="token punctuation">:</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">></span>
+<span class="gatsby-highlight-code-line">        <span class="token operator">&lt;</span>CardList monsters<span class="token operator">=</span><span class="token punctuation">{</span>filteredMonsters<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span></span>      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
 <h3 id="35-optional-filter-includes"><a href="#35-optional-filter-includes" aria-label="35 optional filter includes permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>35. Optional: filter(), includes()</h3>
+<p>Will be explained in <code class="language-text">Appendix 1: Key Developer Concepts</code></p>
 <h3 id="36-search-box-component"><a href="#36-search-box-component" aria-label="36 search box component permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>36. Search Box Component</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 51.2%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABU0lEQVQoz5WSX0vCYBTG/S7d9kX6LkHdFyhKpJmlGEuEIiS6MCKkyIGZmqmtwnQ6yy1KVsv/c4qlMtnTaxBJdLEdOOc8PAd+8J73mDRNw29M6x9Lm5L/zP+EaVJeej1Eq1Uk213EanVwsowM6YlWk2QLV7UaPlRVF/QbmGo0YL3PwpM4gCPHICS+ghIEOOKXcMWT8BDd/hzoB97KCmypNPx7s3AxNGipBb9UAWXdQMDqxtZbBcrAADAtSVih5hHyzmCXmsMpX4Cbvsby4jZWF/axecxAVg0AGfJkGx3E2pEfznAAYfEZvjsWS8EzmA/P4c3kII+G+oE3ZPH2QgmWaAL2PAf6vYodgYf5IgJLLAKfUEZnaACYrtdhy5JPKRYIMIcTUQTFcXCyLNbzLPGLkI0Am2ThpU4HZUXBA+lSv4+nbhePRE+SJ/5oPNYH1HOsRg77C0NS56XtEe1RAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Search Box Component"
+        title="Search Box Component"
+        src="/static/4a699d0fcc6139a8e6dead9f09acd5bf/b4fef/34.png"
+        srcset="/static/4a699d0fcc6139a8e6dead9f09acd5bf/942f4/34.png 192w,
+/static/4a699d0fcc6139a8e6dead9f09acd5bf/a7675/34.png 384w,
+/static/4a699d0fcc6139a8e6dead9f09acd5bf/b4fef/34.png 768w,
+/static/4a699d0fcc6139a8e6dead9f09acd5bf/612b6/34.png 1125w"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+    </span></p>
+<p><code class="language-text">src/App.js</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"./App.css"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Components</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CardList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./components/card-list/card-list.component"</span><span class="token punctuation">;</span>
+<span class="gatsby-highlight-code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> SearchBox <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./components/search-box/search-box.component"</span><span class="token punctuation">;</span></span>
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      monsters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      searchField<span class="token punctuation">:</span> <span class="token string">""</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://jsonplaceholder.typicode.com/users"</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=></span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">users</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> monsters<span class="token punctuation">:</span> users <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> monsters<span class="token punctuation">,</span> searchField <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> filteredMonsters <span class="token operator">=</span> monsters<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">monster</span> <span class="token operator">=></span>
+      monster<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>searchField<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"App"</span><span class="token operator">></span>
+<span class="gatsby-highlight-code-line">        <span class="token operator">&lt;</span>SearchBox</span>          placeholder<span class="token operator">=</span><span class="token string">"Search monsters"</span>
+<span class="gatsby-highlight-code-line">          handleChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">e</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> searchField<span class="token punctuation">:</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>        <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>CardList monsters<span class="token operator">=</span><span class="token punctuation">{</span>filteredMonsters<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
+<p><code class="language-text">src/components/search-box/search-box.component.jsx</code></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"./search-box.styles.css"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">SearchBox</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> placeholder<span class="token punctuation">,</span> handleChange <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>input
+    className<span class="token operator">=</span><span class="token string">"search"</span>
+    type<span class="token operator">=</span><span class="token string">"search"</span>
+    placeholder<span class="token operator">=</span><span class="token punctuation">{</span>placeholder<span class="token punctuation">}</span>
+    onChange<span class="token operator">=</span><span class="token punctuation">{</span>handleChange<span class="token punctuation">}</span>
+  <span class="token operator">/</span><span class="token operator">></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p><code class="language-text">src/components/search-box/search-box.styles.css</code></p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">.search</span> <span class="token punctuation">{</span>
+  <span class="token property">-webkit-appearance</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
 <h3 id="37-exercise-where-to-put-state"><a href="#37-exercise-where-to-put-state" aria-label="37 exercise where to put state permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>37. Exercise: Where To Put State?</h3>
+<p><em>Learned on where to put the state because of the one way data flow</em></p>
 <h3 id="38-class-methods-and-arrowfunctions"><a href="#38-class-methods-and-arrowfunctions" aria-label="38 class methods and arrowfunctions permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>38. Class Methods and ArrowFunctions</h3>
+<p><a href="https://reactjs.org/docs/handling-events.html" target="_blank" rel="noopener">Handling Events</a></p>
+<p><em>Learned about how <code class="language-text">this</code> is bind to normal function and how JavaScript binds this to arrow function automatically to its context when the component gets created</em></p>
+<p><code class="language-text">src/App.js</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"./App.css"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Components</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CardList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./components/card-list/card-list.component"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> SearchBox <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./components/search-box/search-box.component"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      monsters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      searchField<span class="token punctuation">:</span> <span class="token string">""</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+<span class="gatsby-highlight-code-line">  <span class="token function-variable function">handleChange</span> <span class="token operator">=</span> <span class="token parameter">e</span> <span class="token operator">=></span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> searchField<span class="token punctuation">:</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line"></span>  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://jsonplaceholder.typicode.com/users"</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=></span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">users</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> monsters<span class="token punctuation">:</span> users <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> monsters<span class="token punctuation">,</span> searchField <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> filteredMonsters <span class="token operator">=</span> monsters<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">monster</span> <span class="token operator">=></span>
+      monster<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>searchField<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"App"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>SearchBox
+          placeholder<span class="token operator">=</span><span class="token string">"Search monsters"</span>
+<span class="gatsby-highlight-code-line">          handleChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>handleChange<span class="token punctuation">}</span></span>        <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>CardList monsters<span class="token operator">=</span><span class="token punctuation">{</span>filteredMonsters<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
 <h3 id="39-exercise-event-binding"><a href="#39-exercise-event-binding" aria-label="39 exercise event binding permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>39. Exercise: Event Binding</h3>
+<p><em>Learned about Event Binding and how this works through a simple exercise</em></p>
 <h3 id="40-quick-note-binding-in-react"><a href="#40-quick-note-binding-in-react" aria-label="40 quick note binding in react permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>40. Quick Note: Binding in React</h3>
-<h3 id="41-optional-git--github"><a href="#41-optional-git--github" aria-label="41 optional git  github permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>41. Optional: Git + Github</h3>
-<h3 id="42-optional-connecting-with-ssh-togithub"><a href="#42-optional-connecting-with-ssh-togithub" aria-label="42 optional connecting with ssh togithub permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>42. Optional: Connecting With SSH ToGithub</h3>
+<p>we learned about arrow functions and binding in React. A good rule of thumb is this: Use arrow functions on any class methods you define and aren’t part
+of React (i.e. render(), componentDidMount()).</p>
+<p>If you want to learn more about this, <a href="https://reactjs.org/docs/handling-events.html" target="_blank" rel="noopener">have a read here </a></p>
+<h3 id="41-optional-git--github"><a href="#41-optional-git--github" aria-label="41 optional git  github permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>41. Optional: Git + GitHub</h3>
+<p>Will be explained in <code class="language-text">Appendix 1: Key Developer Concepts</code></p>
+<h3 id="42-optional-connecting-with-ssh-to-github"><a href="#42-optional-connecting-with-ssh-to-github" aria-label="42 optional connecting with ssh to github permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>42. Optional: Connecting With SSH To Github</h3>
+<p>There are two ways to connect to a Github repository, through HTTPS and SSH. You can switch between the two options by clicking the switch https/ssh button after clicking clone. HTTPS does not require setup.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 748px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.45454545454545%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAAByklEQVQoz22SW3LTQBBFs3WWwApYAHzwwQ87oFLEJsY2TrCjl/WyJEvWY0ZPH3oUQxUFU9UzUvf0nb59+65sOrquYxxHzJqmiWEYZl+j1Hz2ff+vyZ1eYqodqHVP14+0bcddqUfCMOJhsWSz/TGb+bYsm2+PKx5Xa+JTwv/WVcxNBw5RR1LeAA16WZa4rodl25J8wvOOeEefNMvw/YCjWCCPZtmZMIpI5U6qWtLPH4nfvqG9vj6glObOUKqbZr5cFBfquqbIc07xiTwvOJ+NX06J5+KPBLi4XEjSjOT9O4rFF9pxknKvKC2ArQB20pOjVOQ4LqkkuVGMLf+RJLkCYEnFB4k9vdh4EnPCGP/TB4L1iqybuP+6pGqUUG4FUDYjiOGv+wEtlKrFAnU4oPd71G6Hti2U9ULz/IRar2ke7tE/t/SGprBLpHojkjYVmm2YFb41oqkg8qHI4JwwRQGD9HJMU8YweI1dzjdZpj95ZjrmHmrdzg4nG/nutbj5xDa5sg5Hlv5IPf2t7F6wNtHILujY+B0rT5gNN1F+V1hVFV5c8HwsOOWKMFN4SYMTN5S1lnlr5/6YuYsl7sS1WIUVlhyTSkSqKAXDAP4C7C+qqWeF4JEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Git Clone"
+        title="Git Clone"
+        src="/static/ff71c67d5c46b3e3d4bdd56776b6a986/c43b4/35.png"
+        srcset="/static/ff71c67d5c46b3e3d4bdd56776b6a986/942f4/35.png 192w,
+/static/ff71c67d5c46b3e3d4bdd56776b6a986/a7675/35.png 384w,
+/static/ff71c67d5c46b3e3d4bdd56776b6a986/c43b4/35.png 748w"
+        sizes="(max-width: 748px) 100vw, 748px"
+      />
+    </span></p>
+<p>It is recommended by Github to clone using HTTPS according to their <a href="https://help.github.com/en/articles/which-remote-url-should-i-use" target="_blank" rel="noopener">official documentation here</a>. However, if you do end up using SSH and have never set it up before, there are a couple steps you must take first!</p>
+<p>Firstly, SSH is like a unique fingerprint you generate for your computer in your terminal, which you then let your github account know about so it knows that requests from this computer using SSH (cloning/ pushing/ pulling) are safe to do.</p>
+<p>In order to generate an SSH, <a href="https://help.github.com/en/enterprise/2.15/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener">please follow the instructions here</a></p>
 <h3 id="43-deploying-our-app"><a href="#43-deploying-our-app" aria-label="43 deploying our app permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>43. Deploying Our App</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 106.30096367679762%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsSAAALEgHS3X78AAAFLklEQVQ4y42U61NUdRjHD8guL2oms6Yab0xqNVlTmZWOjdNU3kBTwRADMYUFlMsusMAuLMtySa4rV0EE2RUUlmt4gQWWiyh3kMsiV8EKuvwbn34oTr7LF2fOnDnnfH7P83y/z1eS9AlI2ngkdRwOSg0OF6JxUKhxPBOO4+lwnHwjkXupcPZUITsWitN3Cpy+PovsqzPIdpxG9rE38g+8kG/xRL7pBNIK0EEAHaN0OKq0OAbH4BgQxRoBlAVocNJlIAXFISm0OKlSkB8JQbZHAHf/jHynL/JPfHD+8BTOW08+BxqQYnRIqhikC2qkgAikc+LyUSJ5nOeVUyoU+RUE5Vaw9nAw0m4fpF2+OHwu7h95Ib3vifSuB2tcTuD8FBiv51VDChsvZrExNZsN8am8EZ7Ahsgk3lYlsj0mncSaJpJrmvlMmcY7pzRs8oziLddQNh+NwMUtHJcDStbtEFVvcBfAaA1uNXWYFhdIslRxZXaWYKuNnJkZisbHKZ6b44K1A0Vji3g3SeHkEHnTM4SIQ4rEP8aJCcr+Xua4oRhpresz4JH6BvL6BjipSCG98x5hbV2kPprkSpiBMlM1+pERdPfHyL2bytWagxgnFwmrt5IxOIBXUQ4Fj6dxTypZBWrj2GcqI82kRpfny0VzMIrqKtQmMxeMSlSXowk1Wwi/eR1ziSd1hZ9ypVrPWVMDoZZyvAouEWm7hasmF2ndYQGMES1baii2j5DR307uSB+homXjw1HSRnoxjg+iv9dLVFMLecM9GPu6yertIrTOSubIEBd7e8mbsXM8caVltxWgln2VVeROTaN/0E/GuB2/xmZShh+S0iueR0ZRt4kx3LGRNjxKovgmpX8EP3MDqf1DJHeLQ0fHRIX5SK+vALWx7CopQ9PTg6q7C3VXN8fMVYQ0txHZ3k90Rx++FXV4m2rQ2O6hbmoX82vmeGYZEY1tBNfcRdPUyd7AVKQ3j6yKUtfAjeW/0NU+oHRxCaWtU7SxgOFOBjnDDSQN2kX1g+RMTJHUO0TRwjLKRhuFdjsGXTIVy3/g8UsZ0muHnrXsaqkmvcuKp7YAQ/ttzt9tIrV7iECjgtjKXGJbe4husRLVkCoEU5E1LL6xNKO/1YjuTBhp9zs5ang+Q00s+8vLiarMx/96NmEWI/71vxInhFKV2Ii+1kqEpV74rpxEm4qETm/0thQCrt8iot6C380qNK23ORyXv6ryqrFL5xfIGBqlYGqWkBahtjB0SncH2ePDJA48JMZ2nzz7POkDj4TyM09VzhoeRnenicLZaaHy1VUfCtscEi2XCtdn2Se4PDcrWm4lY2xcwOwUTE8T2/mA+O4+zH/+TvHiPIXzcyjrxeYsPqZgdgbzP0t4JL9g7J3FJUQIdYPbhb/aOnArqSBAWCeopYMQsXZe1yxsOBfLtsAEtp6LZ4uPlvVHw9nmGcPWY2rePyZ2+0t/nNa7/6ey6bcltE1Wip4sEdbaSa44vVSYuWJ8DP3QQ6TvzyF9cxZpjy/SFyJpdngjbT+J9N6PSC7urNnsgfPmE6ubUl1DrrUa7yhv8qwmQppaMdzvp+C0ltLMG0R19CI7HITsYCByEbDyvX7Idz3LQ+enefjTC3moieOA2URxXQZZ15RU1oYRWFtNcm0XiXm3yb7aQ0xlG44/BOK0PwCnb/3/J7FFha7VtVyeniN5YJTMCRFNYnbZM1PoO4Q4owPo+wZxdBXAAy8LFJ4zPVkkZyWy5kUeirUz2ie5JALi8tQUcSIc1rgFvRTwX+a5+tDrusFqAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Monsters Rolodex"
+        title="Monsters Rolodex"
+        src="/static/a1d25ce7e51909da60e6bbde8c211851/b4fef/36.png"
+        srcset="/static/a1d25ce7e51909da60e6bbde8c211851/942f4/36.png 192w,
+/static/a1d25ce7e51909da60e6bbde8c211851/a7675/36.png 384w,
+/static/a1d25ce7e51909da60e6bbde8c211851/b4fef/36.png 768w,
+/static/a1d25ce7e51909da60e6bbde8c211851/0eda4/36.png 1152w,
+/static/a1d25ce7e51909da60e6bbde8c211851/eea6f/36.png 1349w"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+    </span></p>
+<p><code class="language-text">package.json</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"monsters-rolodex"</span><span class="token punctuation">,</span>
+  <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"0.1.0"</span><span class="token punctuation">,</span>
+  <span class="token property">"private"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="gatsby-highlight-code-line">  <span class="token property">"homepage"</span><span class="token operator">:</span> <span class="token string">"http://navin-navi.github.io/monsters-rolodex"</span><span class="token punctuation">,</span></span>  <span class="token property">"dependencies"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+<span class="gatsby-highlight-code-line">    <span class="token property">"gh-pages"</span><span class="token operator">:</span> <span class="token string">"^2.1.0"</span><span class="token punctuation">,</span></span>    <span class="token property">"react"</span><span class="token operator">:</span> <span class="token string">"^16.8.6"</span><span class="token punctuation">,</span>
+    <span class="token property">"react-dom"</span><span class="token operator">:</span> <span class="token string">"^16.8.6"</span><span class="token punctuation">,</span>
+    <span class="token property">"react-scripts"</span><span class="token operator">:</span> <span class="token string">"3.0.1"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"react-scripts start"</span><span class="token punctuation">,</span>
+    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"react-scripts build"</span><span class="token punctuation">,</span>
+    <span class="token property">"test"</span><span class="token operator">:</span> <span class="token string">"react-scripts test"</span><span class="token punctuation">,</span>
+    <span class="token property">"eject"</span><span class="token operator">:</span> <span class="token string">"react-scripts eject"</span><span class="token punctuation">,</span>
+<span class="gatsby-highlight-code-line">    <span class="token property">"predeploy"</span><span class="token operator">:</span> <span class="token string">"npm run build"</span><span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">    <span class="token property">"deploy"</span><span class="token operator">:</span> <span class="token string">"gh-pages -d build --git git"</span></span>  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"eslintConfig"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"extends"</span><span class="token operator">:</span> <span class="token string">"react-app"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"browserslist"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"production"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">">0.2%"</span><span class="token punctuation">,</span> <span class="token string">"not dead"</span><span class="token punctuation">,</span> <span class="token string">"not op_mini all"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"development"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"last 1 chrome version"</span><span class="token punctuation">,</span>
+      <span class="token string">"last 1 firefox version"</span><span class="token punctuation">,</span>
+      <span class="token string">"last 1 safari version"</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><code class="language-text">public/index.html</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="html"><pre class="language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>shortcut icon<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>%PUBLIC_URL%/favicon.ico<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>theme-color<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#000000<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token comment">&lt;!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>manifest<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>%PUBLIC_URL%/manifest.json<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="gatsby-highlight-code-line">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span></span><span class="gatsby-highlight-code-line">      <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://fonts.googleapis.com/css?family=Bigelow+Rules&amp;display=swap<span class="token punctuation">"</span></span></span><span class="gatsby-highlight-code-line">      <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span></span><span class="gatsby-highlight-code-line">    <span class="token punctuation">/></span></span></span>    <span class="token comment">&lt;!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>React App<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>noscript</span><span class="token punctuation">></span></span>You need to enable JavaScript to run this app.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>noscript</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>root<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the &lt;body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre></div>
+<p><code class="language-text">src/index.css</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> -apple-system<span class="token punctuation">,</span> BlinkMacSystemFont<span class="token punctuation">,</span> <span class="token string">"Segoe UI"</span><span class="token punctuation">,</span> <span class="token string">"Roboto"</span><span class="token punctuation">,</span>
+    <span class="token string">"Oxygen"</span><span class="token punctuation">,</span> <span class="token string">"Ubuntu"</span><span class="token punctuation">,</span> <span class="token string">"Cantarell"</span><span class="token punctuation">,</span> <span class="token string">"Fira Sans"</span><span class="token punctuation">,</span> <span class="token string">"Droid Sans"</span><span class="token punctuation">,</span>
+    <span class="token string">"Helvetica Neue"</span><span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+  <span class="token property">-webkit-font-smoothing</span><span class="token punctuation">:</span> antialiased<span class="token punctuation">;</span>
+  <span class="token property">-moz-osx-font-smoothing</span><span class="token punctuation">:</span> grayscale<span class="token punctuation">;</span>
+<span class="gatsby-highlight-code-line">  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span></span><span class="gatsby-highlight-code-line">    to left<span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">    <span class="token function">rgba</span><span class="token punctuation">(</span>7<span class="token punctuation">,</span> 27<span class="token punctuation">,</span> 82<span class="token punctuation">,</span> 1<span class="token punctuation">)</span> 0%<span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">    <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 128<span class="token punctuation">,</span> 128<span class="token punctuation">,</span> 1<span class="token punctuation">)</span> 100%</span><span class="gatsby-highlight-code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">}</span>
+
+<span class="token selector">code</span> <span class="token punctuation">{</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> source-code-pro<span class="token punctuation">,</span> Menlo<span class="token punctuation">,</span> Monaco<span class="token punctuation">,</span> Consolas<span class="token punctuation">,</span> <span class="token string">"Courier New"</span><span class="token punctuation">,</span>
+    monospace<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><code class="language-text">src/App.js</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"./App.css"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Components</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CardList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./components/card-list/card-list.component"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> SearchBox <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./components/search-box/search-box.component"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      monsters<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      searchField<span class="token punctuation">:</span> <span class="token string">""</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function-variable function">handleChange</span> <span class="token operator">=</span> <span class="token parameter">e</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> searchField<span class="token punctuation">:</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://jsonplaceholder.typicode.com/users"</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=></span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">users</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> monsters<span class="token punctuation">:</span> users <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> monsters<span class="token punctuation">,</span> searchField <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> filteredMonsters <span class="token operator">=</span> monsters<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">monster</span> <span class="token operator">=></span>
+      monster<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>searchField<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"App"</span><span class="token operator">></span>
+<span class="gatsby-highlight-code-line">        <span class="token operator">&lt;</span>h1<span class="token operator">></span>Monsters Rolodex<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span></span>        <span class="token operator">&lt;</span>SearchBox
+          placeholder<span class="token operator">=</span><span class="token string">"Search monsters"</span>
+          handleChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>handleChange<span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>CardList monsters<span class="token operator">=</span><span class="token punctuation">{</span>filteredMonsters<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
+<p><code class="language-text">src/App.css</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">.App</span> <span class="token punctuation">{</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="gatsby-highlight-code-line"></span><span class="gatsby-highlight-code-line"><span class="token selector">h1</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"Bigelow Rules"</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token property">font-size</span><span class="token punctuation">:</span> 72px<span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token property">color</span><span class="token punctuation">:</span> #0ccac4<span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line"><span class="token punctuation">}</span></span></code></pre></div>
+<p><code class="language-text">src/components/search-box/search-box.styles.css</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">.search</span> <span class="token punctuation">{</span>
+<span class="gatsby-highlight-code-line">  <span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span></span>  <span class="token property">-webkit-appearance</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="gatsby-highlight-code-line">  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span></span>  <span class="token property">line-height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="gatsby-highlight-code-line">  <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token property">background-color</span><span class="token punctuation">:</span> #4dd0e1<span class="token punctuation">;</span></span><span class="token punctuation">}</span>
+
+<span class="gatsby-highlight-code-line"><span class="token selector">.search::placeholder</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 0.5<span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line"><span class="token punctuation">}</span></span></code></pre></div>
+<p><code class="language-text">src/components/card/card.styles.css</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">.card-container</span> <span class="token punctuation">{</span>
+<span class="gatsby-highlight-code-line">  <span class="token comment">/*display: flex;*/</span></span><span class="gatsby-highlight-code-line">  <span class="token comment">/*flex-direction: column;*/</span></span>  <span class="token property">background-color</span><span class="token punctuation">:</span> #95dada<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid grey<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> transform 0.25s ease-out<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.card-container:hover</span> <span class="token punctuation">{</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1.05<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><code class="language-text">src/components/card-list/card-list.styles.css</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">.card-list</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 85vw<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+<span class="gatsby-highlight-code-line">  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr<span class="token punctuation">;</span></span>  <span class="token property">grid-gap</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="gatsby-highlight-code-line"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 640px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">  <span class="token selector">.card-list</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr 1fr 1fr<span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span></span><span class="gatsby-highlight-code-line"><span class="token punctuation">}</span></span><span class="gatsby-highlight-code-line"></span><span class="gatsby-highlight-code-line"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 900px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">  <span class="token selector">.card-list</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr 1fr 1fr<span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span></span><span class="gatsby-highlight-code-line"><span class="token punctuation">}</span></span><span class="gatsby-highlight-code-line"></span><span class="gatsby-highlight-code-line"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1160px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">  <span class="token selector">.card-list</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr 1fr 1fr 1fr<span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span></span><span class="gatsby-highlight-code-line"><span class="token punctuation">}</span></span></code></pre></div>
+<p><code class="language-text"></code></p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"></code></pre></div>
+<ul>
+<li>Deploying to GitHub</li>
+<li>Served through gh-pages</li>
+<li>Responsive to multiple screen sizes</li>
+</ul>
 <h3 id="44-react-and-reactdom"><a href="#44-react-and-reactdom" aria-label="44 react and reactdom permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>44. React and ReactDOM</h3>
 <h3 id="45-revisiting-virtualdom-unidirectional-data-flow"><a href="#45-revisiting-virtualdom-unidirectional-data-flow" aria-label="45 revisiting virtualdom unidirectional data flow permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>45. Revisiting VirtualDOM +Unidirectional Data Flow</h3>
 <h3 id="46-asynchronous-setstate"><a href="#46-asynchronous-setstate" aria-label="46 asynchronous setstate permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>46. Asynchronous setState</h3>
