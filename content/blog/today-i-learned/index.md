@@ -1,7 +1,28 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-04"
+date: "2019-08-07"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 44.Complete React Developer in 2019
+
+### Day 44: August 07, 2019 - Wednesday
+
+**Project:** Yet to complete Section 3
+
+![Monster Rolodex In Works](../complete-react-developer-in-2019/images/31.png)
+
+**Live Post:** [Monster Rolodex In Works](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#29-card-component)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Created Card List Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#28-card-list-component)
+- [Created Card Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#29-card-component)
+- [Learned on why we are breaking everything into components](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#30-exercise-breaking-into-components)
+- [Deep dive into State vs Props](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#31-state-vs-props)
+
 ---
 
 ## 43. React Assignment
