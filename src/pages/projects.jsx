@@ -108,6 +108,19 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
+            href="https://navin-navi.github.io/redux-github-commits-history-chart/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github Commit History
+            <Image
+              fluid={data.githubCommitHistory.childImageSharp.fluid}
+              alt="Github Commit History"
+            />
+          </a>
+        </ProjectWrapper>
+        <ProjectWrapper>
+          <a
             href="https://navin-navi.github.io/color-game/"
             target="_blank"
             rel="noopener noreferrer"
@@ -433,6 +446,15 @@ export const query = graphql`
     }
     pricingPlanComponent: file(
       relativePath: { eq: "projects/pricing-plan-component.jpg" }
+    ) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    githubCommitHistory: file(
+      relativePath: { eq: "projects/redux-github-commits-history-chart.png" }
     ) {
       childImageSharp {
         fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
