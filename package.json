@@ -69,7 +69,7 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
-    "gh-pages": "2.1.0",
+    "gh-pages": "2.1.1",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.1",
     "eslint-config-prettier": "6.0.0",
