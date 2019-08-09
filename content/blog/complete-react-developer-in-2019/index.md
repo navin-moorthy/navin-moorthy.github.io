@@ -14,7 +14,7 @@ Twitter : [Andrei Neagoie](https://twitter.com/AndreiNeagoie)
 
 Udemy Link - [Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)](https://www.udemy.com/complete-react-developer-zero-to-mastery)
 
-_Get all the Sections from the Udemy Course_
+🌟*Get all the Sections from the Udemy Course*
 
 ```js
 $$(".section--title--eCwjX").map(sections => sections.textContent);
@@ -28,7 +28,7 @@ $$(".section--title--eCwjX").map(sections => sections.textContent);
 
 ![Introduction](images/2.png)
 
-_Get titles for Section 1 & 2_
+🌟*Get titles for Section 1 & 2*
 
 ```js
 $$(".curriculum-item-link--curriculum-item--KX9MD").map(
@@ -40,7 +40,7 @@ $$(".curriculum-item-link--curriculum-item--KX9MD").map(
 
 ![Course Outline](images/3.png)
 
-### 2. Join Our Online Classroom!
+### 2. Join Our Online Classroom
 
 Join [Zero to Mastery Discord Channel](https://discord.gg/nVmbHYY)
 
@@ -58,27 +58,27 @@ Introduce yourself in the Discord Community
 
 ### 5. The Birth of React.js
 
-_Traditional HTML, CSS and JavaScript with less cross-browser support_
+🌟*Traditional HTML, CSS and JavaScript with less cross-browser support*
 
-_Files are requested and served from the browser every time_
+🌟*Files are requested and served from the browser every time*
 
 ![Traditional](images/7.png)
 
-_JQuery and Backbone JS along with AJAX provided the cross-browser support and handling JS much easier_
+🌟*JQuery and Backbone JS along with AJAX provided the cross-browser support and handling JS much easier*
 
 ![JQuery and BackBoneJS](images/8.png)
 
-_In `2010`, Google introduced SPA(Single Page Application) with AngularJS using concepts of MVC - Model View Controller and containers_
+🌟*In `2010`, Google introduced SPA(Single Page Application) with AngularJS using concepts of MVC - Model View Controller and containers*
 
-_As the size of the application grows, it becomes harder to manage the flow with many container._
+🌟*As the size of the application grows, it becomes harder to manage the flow with many container.*
 
 ![AngularJS](images/9.png)
 
-_In `2013`, Facebook comes with React Framework to improving the drawbacks of AngularJS_
+🌟*In `2013`, Facebook comes with React Framework to improving the drawbacks of AngularJS*
 
 ![Birth Of React](images/10.png)
 
-_Since then AngularJS evolved to Angular(Now Angular 8) and React with lots of new features._
+🌟*Since then AngularJS evolved to Angular(Now Angular 8) and React with lots of new features.*
 
 ![React Concepts](images/15.png)
 
@@ -120,7 +120,7 @@ Declarative - This is where React is developed for, we just need say the state a
 
 ![React Basics](images/19.png)
 
-_Script used to get all the titles under this topic_
+🌟*Script used to get all the titles under this topic*
 
 ```js
 [
@@ -154,27 +154,27 @@ _Script used to get all the titles under this topic_
 
 ### 14. NPM vs YARN
 
-_Install dependencies from package.json_
+🌟*Install dependencies from package.json*
 
 `npm install` == `yarn`
 
-_Install a package and add to package.json_
+🌟*Install a package and add to package.json*
 
 `npm install package --save` == `yarn add package`
 
-_Install a devDependency to package.json_
+🌟*Install a devDependency to package.json*
 
 `npm install package --save-dev` == `yarn add package --dev`
 
-_Remove a dependency from package.json_
+🌟*Remove a dependency from package.json*
 
 `npm uninstall package --save` == `yarn remove package`
 
-_Upgrade a package to its latest version_
+🌟*Upgrade a package to its latest version*
 
 `npm update --save` == `yarn upgrade`
 
-_Install a package globally_
+🌟*Install a package globally*
 
 `npm install package -g` == `yarn global add package`
 
@@ -189,7 +189,7 @@ _Install a package globally_
 
 ### 16. Create React App
 
-_[Basic app](https://zhangmyihua.github.io/monsters-rolodex/) that we are going to build_
+🌟*[Basic app](https://zhangmyihua.github.io/monsters-rolodex/) that we are going to build*
 
 ![Basic app](images/22.png)
 
@@ -242,7 +242,7 @@ _[Basic app](https://zhangmyihua.github.io/monsters-rolodex/) that we are going 
 }
 ```
 
-_App start from index.html_
+🌟*App start from index.html*
 
 `public/index.html`
 
@@ -310,7 +310,7 @@ serviceWorker.unregister();
 
 _`ReactDOM` renders our `<App />` by replacing the element with id `root`_
 
-_Global Styles and Service Workers are imported here_
+🌟*Global Styles and Service Workers are imported here*
 
 `src/index.css`
 
@@ -361,9 +361,9 @@ function App() {
 export default App;
 ```
 
-_Root of our React Component_
+🌟*Root of our React Component*
 
-_App.css and logo.svg are imported here_
+🌟*App.css and logo.svg are imported here*
 
 `src/App.css`
 
@@ -405,7 +405,7 @@ _App.css and logo.svg are imported here_
 
 `src/App.test.js`
 
-_It is used for testing_
+🌟*It is used for testing*
 
 ```js
 import React from "react";
@@ -419,7 +419,7 @@ it("renders without crashing", () => {
 });
 ```
 
-_Extras_
+🌟*Extras*
 
 `.gitignore`
 
@@ -518,7 +518,7 @@ Learned about how state rerenders the components on an event trigger.
 
 ### 22. Dynamic Content
 
-_Learned about displaying dynamic contents using map()_
+🌟*Learned about displaying dynamic contents using map()*
 
 `src/App.js`
 
@@ -568,7 +568,7 @@ Will be explained in `Appendix 1: Key Developer Concepts`
 
 ### 25. Fetching Content
 
-_Learned about fetching JSON content from JSON Placeholder and update the state_
+🌟*Learned about fetching JSON content from JSON Placeholder and update the state*
 
 `src/App.js`
 
@@ -614,7 +614,7 @@ Will be explained in `Appendix 1: Key Developer Concepts`
 
 ### 27. Architecture Our App
 
-_Learned about how to file structure components and styles_
+🌟*Learned about how to file structure components and styles*
 
 ### 28. Card List Component
 
@@ -806,7 +806,7 @@ export const Card = props => (
 
 Learned about [setState](https://reactjs.org/docs/react-component.html#setstate).
 
-_Added Search Field to the App_
+🌟*Added Search Field to the App*
 
 `src/App.js`
 
@@ -996,15 +996,15 @@ export const SearchBox = ({ placeholder, handleChange }) => (
 }
 ```
 
-### 37. Exercise: Where To Put State?
+### 37. Exercise: Where To Put State
 
-_Learned on where to put the state because of the one way data flow_
+🌟*Learned on where to put the state because of the one way data flow*
 
 ### 38. Class Methods and ArrowFunctions
 
 [Handling Events](https://reactjs.org/docs/handling-events.html)
 
-_Learned about how `this` is bind to normal function and how JavaScript binds this to arrow function automatically to its context when the component gets created_
+🌟*Learned about how `this` is bind to normal function and how JavaScript binds this to arrow function automatically to its context when the component gets created*
 
 `src/App.js`
 
@@ -1059,14 +1059,14 @@ export default App;
 
 ### 39. Exercise: Event Binding
 
-_Learned about Event Binding and how this works through a simple exercise_
+🌟*Learned about Event Binding and how this works through a simple exercise*
 
 ### 40. Quick Note: Binding in React
 
 we learned about arrow functions and binding in React. A good rule of thumb is this: Use arrow functions on any class methods you define and aren't part
 of React (i.e. render(), componentDidMount()).
 
-If you want to learn more about this, [have a read here ](https://reactjs.org/docs/handling-events.html)
+If you want to learn more about this, [have a read here](https://reactjs.org/docs/handling-events.html)
 
 ### 41. Optional: Git + GitHub
 
@@ -1340,9 +1340,9 @@ h1 {
 
 ### 44. React and ReactDOM
 
-_Learned about plain React and ReactDOM in JavaScript using CDN packages_
+🌟*Learned about plain React and ReactDOM in JavaScript using CDN packages*
 
-_Learned what React Library does in the background with JSX syntax_
+🌟*Learned what React Library does in the background with JSX syntax*
 
 [React CDN Links](https://reactjs.org/docs/cdn-links.html)
 
@@ -1397,13 +1397,13 @@ _Learned what React Library does in the background with JSX syntax_
 </html>
 ```
 
-https://codepen.io/navinnavi19/pen/GVGaJR
+<https://codepen.io/navinnavi19/pen/GVGaJR>
 
 ### 45. Revisiting Virtual-DOM +Unidirectional Data Flow
 
 ![DOM vs Virtual DOM](images/37.png)
 
-_Learned the diff between Virtual DOM and DOM and how change in state changes only the affected DOM using Virtual DOM with Unidirectional Flow._
+🌟*Learned the diff between Virtual DOM and DOM and how change in state changes only the affected DOM using Virtual DOM with Unidirectional Flow.*
 
 Used `Chrome Dev Tool->More Tools->Rendering->Paint Flashing` to see the affected part of the DOM for state changes.
 
@@ -1411,7 +1411,9 @@ Used `Chrome Dev Tool->More Tools->Rendering->Paint Flashing` to see the affecte
 
 ### 46. Asynchronous setState
 
-https://codepen.io/navinnavi19/pen/KOeLxQ
+🌟*Learned about how state changes asynchrously and how we can make it change in respective to prevState.*
+
+<https://codepen.io/navinnavi19/pen/KOeLxQ>
 
 ### 47. Introducing Lifecycle Methods
 
@@ -1481,6 +1483,189 @@ https://codepen.io/navinnavi19/pen/KOeLxQ
 
 ## Section 31: Bonus: Build a GatsbyJSBlog
 
-## Section 32: Appendix 1: KeyDeveloper Concepts
+## Section 32: Appendix 1: Key Developer Concepts
+
+🌟*Got all Sub Heading by using the below Script*
+
+`$$(".curriculum-item-link--title--zI5QT").map(text => text.textContent)`
+
+### 304. map()
+
+```js
+const myArray = [1, 2, 3, 4];
+myArray.map(el => el + 1);
+// [2, 3, 4, 5]
+myArray.map(() => "b");
+// ["b", "b", "b", "b"]
+```
+
+### 305. Promises
+
+[MDN-Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+`Resolved Promise`
+
+```js
+const newPromise = new Promise((resolve, reject) => {
+  if (true) {
+    setTimeout(() => resolve("I resolved Successfully"), 1000);
+  } else {
+    reject("Error - Rejecting");
+  }
+});
+
+newPromise.then(res => console.log(res)).catch(err => console.log(err));
+// Promise {<pending>}
+// I resolved Successfully
+```
+
+`Rejected Promise`
+
+```js
+const newPromise = new Promise((resolve, reject) => {
+  if (false) {
+    setTimeout(() => resolve("I resolved Successfully"), 1000);
+  } else {
+    reject("Error - Rejecting");
+  }
+});
+
+newPromise.then(res => console.log(res)).catch(err => console.log(err));
+// Error - Rejecting
+```
+
+### 306. filter()
+
+```js
+const myArray = [1, 2, 3, 4];
+myArray.filter(el => true);
+// [1, 2, 3, 4]
+myArray.filter(el => false);
+// []
+myArray.filter(el => el > 2);
+// [3, 4]
+```
+
+### 307. includes()
+
+`includes(<value>, <index>)`
+
+`Basic`
+
+```js
+const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+myArray.includes(5);
+// true
+myArray.includes(10);
+// false
+myArray.includes(5, 6);
+// false
+myArray.includes(5, 3);
+// true
+```
+
+`Why this happens`
+
+```js
+const myArray = [{ id: 1 }, { id: 2 }, { id: 3 }];
+myArray.includes({ id: 1 });
+// false
+const ob1 = { id: 1 };
+const ob2 = { id: 2 };
+const ob3 = { id: 3 };
+const secArray = [ob1, ob2, ob3];
+secArray.includes(ob1);
+// true
+```
+
+> This behavior is because of the JavaScript's difference between Primitive Types and Object Types
+
+- Primitive Types points to the memory of that primitive types.
+- Object Types creates a new memory reference.
+
+- Primitive Types are immutable because of the above reason.
+- Object Types are mutable.
+
+`Primitve Types`
+
+![JavaScript Types](images/41.png)
+
+`Object Types` - _**Objects** & **Arrays**_
+
+### 308. CWD 2019: Git + GitHub
+
+[Refer to Git 101 Post](https://navin-navi.github.io/blog/git-101/#getting-started)
+
+### 309. CWD 2019: Git + GitHub 2
+
+[Refer to Git 101 Post](https://navin-navi.github.io/blog/git-101/#listing-all-branches)
+
+### 310. Async Await
+
+`ES6`
+
+![JavaScript Types](images/42.png)
+
+`ES7`
+
+![JavaScript Types](images/43.png)
+
+### 311. find()
+
+🌟*Unlike filter(), find() only gives the first element when the condition matches*
+
+```js
+const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+myArray.find(el => el === 5);
+// 5
+```
+
+### 312. reduce()
+
+```js
+const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+myArray.reduce((acc, currEl) => acc + currEl, 0);
+// 45
+```
+
+### 313. Memoization
+
+`caching repeatedly requested expressions`
+
+```js
+const cache = {};
+
+const memoizedfunc = n => {
+  if (n in cache) {
+    console.log("Cached");
+    return cache[n];
+  } else {
+    console.log("Not Cached");
+    cache[n] = n + 80;
+    return cache[n];
+  }
+};
+
+console.log(memoizedfunc(5));
+console.log(memoizedfunc(5));
+console.log(memoizedfunc(5));
+```
+
+### 314. Currying with Closure
+
+🌟*Function that returns another function utilizing closure to get variables out of the scope and calling them one by one*
+
+```js
+const currying = a => b => c => a * b * c;
+
+console.log(currying(5)(2)(10));
+```
 
 ## Section 33: Bonus: Coupon Codes +Freebies
+
+1. [The Complete Web Developer in 2019: Zero to Mastery](https://www.udemy.com/the-complete-web-developer-zero-to-mastery/?couponCode=EXISTINGSTUDENT138W)
+2. [The Complete Junior to Senior Web Developer Roadmap](https://www.udemy.com/the-complete-junior-to-senior-web-developer-roadmap/?couponCode=PART22873)
+3. [Advanced JavaScript Concepts](https://www.udemy.com/advanced-javascript-concepts/?couponCode=LEVELUPZTM)
+4. [Master the Coding Interview: Data Structures + Algorithms](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/?couponCode=EXISTINGSTUDENT138W)
+
+![Web Developer Roadmap](image/40.jpeg)
