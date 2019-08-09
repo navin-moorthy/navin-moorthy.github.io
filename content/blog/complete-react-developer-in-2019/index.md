@@ -1,6 +1,6 @@
 ---
 title: Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
-date: "2019-08-06"
+date: "2019-08-09"
 description: Notes taken while learning Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
 ---
 
@@ -1336,11 +1336,82 @@ h1 {
 - Served through gh-pages
 - Responsive to multiple screen sizes
 
+[Monsters Rolodex](https://navin-navi.github.io/monsters-rolodex/)
+
 ### 44. React and ReactDOM
 
-### 45. Revisiting VirtualDOM +Unidirectional Data Flow
+_Learned about plain React and ReactDOM in JavaScript using CDN packages_
+
+_Learned what React Library does in the background with JSX syntax_
+
+[React CDN Links](https://reactjs.org/docs/cdn-links.html)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>React Plain</title>
+  </head>
+  <body>
+    <div id="root">React Not Rendered</div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script>
+      const Persons = props =>
+        React.createElement("div", {}, [
+          React.createElement("h2", {}, props.name),
+          React.createElement("p", {}, props.occupation)
+        ]);
+
+      const App = () =>
+        React.createElement("div", {}, [
+          React.createElement(Persons, {
+            name: "Navin",
+            occupation: "Web Developer"
+          }),
+          React.createElement(Persons, {
+            name: "Vasanth",
+            occupation: "Mainframe Developer"
+          }),
+          React.createElement(Persons, {
+            name: "Boopalan",
+            occupation: "Python Developer"
+          })
+        ]);
+
+      ReactDOM.render(
+        React.createElement(App),
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
+```
+
+https://codepen.io/navinnavi19/pen/GVGaJR
+
+### 45. Revisiting Virtual-DOM +Unidirectional Data Flow
+
+![DOM vs Virtual DOM](images/37.png)
+
+_Learned the diff between Virtual DOM and DOM and how change in state changes only the affected DOM using Virtual DOM with Unidirectional Flow._
+
+Used `Chrome Dev Tool->More Tools->Rendering->Paint Flashing` to see the affected part of the DOM for state changes.
+
+![Unidirectional Data Flow](images/38.png)
 
 ### 46. Asynchronous setState
+
+https://codepen.io/navinnavi19/pen/KOeLxQ
 
 ### 47. Introducing Lifecycle Methods
 

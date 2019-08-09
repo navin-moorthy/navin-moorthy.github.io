@@ -68,6 +68,13 @@ module.exports = {
               wrapperStyle: "margin-bottom: 1.0725rem"
             }
           },
+          {
+            resolve: "@weknow/gatsby-remark-codepen",
+            options: {
+              theme: "dark",
+              height: 400
+            }
+          },
           `gatsby-remark-autolink-headers`,
           "gatsby-remark-prismjs",
           "gatsby-remark-copy-linked-files",
