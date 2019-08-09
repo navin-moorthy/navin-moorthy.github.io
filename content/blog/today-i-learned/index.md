@@ -4,6 +4,29 @@ date: "2019-08-07"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+## 45.Complete React Developer in 2019
+
+### Day 45: August 08, 2019 - Thursday
+
+**Project:** Yet to complete Section 3
+
+![Monster Rolodex](../complete-react-developer-in-2019/images/36.png)
+
+**Repo:** [Monster Rolodex](https://github.com/navin-navi/monsters-rolodex)
+**Live:** [Monster Rolodex](https://navin-navi.github.io/monsters-rolodex/)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Added SearchField Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#32-searchfield-state)
+- [React Events](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#33-react-events)
+- [Added Filter Login to the Search Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#34-filtering-state)
+- [Event Binding](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#38-class-methods-and-arrowfunctions)
+- [Responsive App deployed to GH Pages](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#43-deploying-our-app)
+
+---
+
 ## 44.Complete React Developer in 2019
 
 ### Day 44: August 07, 2019 - Wednesday

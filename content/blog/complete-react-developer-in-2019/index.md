@@ -1332,11 +1332,6 @@ h1 {
 }
 ```
 
-``
-
-```css
-```
-
 - Deploying to GitHub
 - Served through gh-pages
 - Responsive to multiple screen sizes
