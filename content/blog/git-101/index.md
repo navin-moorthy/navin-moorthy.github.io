@@ -156,6 +156,10 @@ To push all the committed changes done to the working directory
 
 To get all the latest commits from the GitHub repository
 
+`git remote remove origin`
+
+To remove the remote repositories from your local git
+
 Thanks to [Ian Schoonover](images/https://www.youtube.com/channel/UCqo2YWBtmFSWhuUk4WEyfGg) for the guide.
 
 ## Working with Github

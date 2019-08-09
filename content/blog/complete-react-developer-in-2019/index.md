@@ -14,7 +14,7 @@ Twitter : [Andrei Neagoie](https://twitter.com/AndreiNeagoie)
 
 Udemy Link - [Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)](https://www.udemy.com/complete-react-developer-zero-to-mastery)
 
-🌟*Get all the Sections from the Udemy Course*
+🌟 *Get all the Sections from the Udemy Course*
 
 ```js
 $$(".section--title--eCwjX").map(sections => sections.textContent);
@@ -28,7 +28,7 @@ $$(".section--title--eCwjX").map(sections => sections.textContent);
 
 ![Introduction](images/2.png)
 
-🌟*Get titles for Section 1 & 2*
+🌟 *Get titles for Section 1 & 2*
 
 ```js
 $$(".curriculum-item-link--curriculum-item--KX9MD").map(
@@ -58,27 +58,27 @@ Introduce yourself in the Discord Community
 
 ### 5. The Birth of React.js
 
-🌟*Traditional HTML, CSS and JavaScript with less cross-browser support*
+🌟 *Traditional HTML, CSS and JavaScript with less cross-browser support*
 
-🌟*Files are requested and served from the browser every time*
+🌟 *Files are requested and served from the browser every time*
 
 ![Traditional](images/7.png)
 
-🌟*JQuery and Backbone JS along with AJAX provided the cross-browser support and handling JS much easier*
+🌟 *JQuery and Backbone JS along with AJAX provided the cross-browser support and handling JS much easier*
 
 ![JQuery and BackBoneJS](images/8.png)
 
-🌟*In `2010`, Google introduced SPA(Single Page Application) with AngularJS using concepts of MVC - Model View Controller and containers*
+🌟 *In `2010`, Google introduced SPA(Single Page Application) with AngularJS using concepts of MVC - Model View Controller and containers*
 
-🌟*As the size of the application grows, it becomes harder to manage the flow with many container.*
+🌟 *As the size of the application grows, it becomes harder to manage the flow with many container.*
 
 ![AngularJS](images/9.png)
 
-🌟*In `2013`, Facebook comes with React Framework to improving the drawbacks of AngularJS*
+🌟 *In `2013`, Facebook comes with React Framework to improving the drawbacks of AngularJS*
 
 ![Birth Of React](images/10.png)
 
-🌟*Since then AngularJS evolved to Angular(Now Angular 8) and React with lots of new features.*
+🌟 *Since then AngularJS evolved to Angular(Now Angular 8) and React with lots of new features.*
 
 ![React Concepts](images/15.png)
 
@@ -120,7 +120,7 @@ Declarative - This is where React is developed for, we just need say the state a
 
 ![React Basics](images/19.png)
 
-🌟*Script used to get all the titles under this topic*
+🌟 *Script used to get all the titles under this topic*
 
 ```js
 [
@@ -154,27 +154,27 @@ Declarative - This is where React is developed for, we just need say the state a
 
 ### 14. NPM vs YARN
 
-🌟*Install dependencies from package.json*
+🌟 *Install dependencies from package.json*
 
 `npm install` == `yarn`
 
-🌟*Install a package and add to package.json*
+🌟 *Install a package and add to package.json*
 
 `npm install package --save` == `yarn add package`
 
-🌟*Install a devDependency to package.json*
+🌟 *Install a devDependency to package.json*
 
 `npm install package --save-dev` == `yarn add package --dev`
 
-🌟*Remove a dependency from package.json*
+🌟 *Remove a dependency from package.json*
 
 `npm uninstall package --save` == `yarn remove package`
 
-🌟*Upgrade a package to its latest version*
+🌟 *Upgrade a package to its latest version*
 
 `npm update --save` == `yarn upgrade`
 
-🌟*Install a package globally*
+🌟 *Install a package globally*
 
 `npm install package -g` == `yarn global add package`
 
@@ -189,7 +189,7 @@ Declarative - This is where React is developed for, we just need say the state a
 
 ### 16. Create React App
 
-🌟*[Basic app](https://zhangmyihua.github.io/monsters-rolodex/) that we are going to build*
+🌟 *[Basic app](https://zhangmyihua.github.io/monsters-rolodex/) that we are going to build*
 
 ![Basic app](images/22.png)
 
@@ -242,7 +242,7 @@ Declarative - This is where React is developed for, we just need say the state a
 }
 ```
 
-🌟*App start from index.html*
+🌟 *App start from index.html*
 
 `public/index.html`
 
@@ -310,7 +310,7 @@ serviceWorker.unregister();
 
 _`ReactDOM` renders our `<App />` by replacing the element with id `root`_
 
-🌟*Global Styles and Service Workers are imported here*
+🌟 *Global Styles and Service Workers are imported here*
 
 `src/index.css`
 
@@ -361,9 +361,9 @@ function App() {
 export default App;
 ```
 
-🌟*Root of our React Component*
+🌟 *Root of our React Component*
 
-🌟*App.css and logo.svg are imported here*
+🌟 *App.css and logo.svg are imported here*
 
 `src/App.css`
 
@@ -405,7 +405,7 @@ export default App;
 
 `src/App.test.js`
 
-🌟*It is used for testing*
+🌟 *It is used for testing*
 
 ```js
 import React from "react";
@@ -419,7 +419,7 @@ it("renders without crashing", () => {
 });
 ```
 
-🌟*Extras*
+🌟 *Extras*
 
 `.gitignore`
 
@@ -518,7 +518,7 @@ Learned about how state rerenders the components on an event trigger.
 
 ### 22. Dynamic Content
 
-🌟*Learned about displaying dynamic contents using map()*
+🌟 *Learned about displaying dynamic contents using map()*
 
 `src/App.js`
 
@@ -568,7 +568,7 @@ Will be explained in `Appendix 1: Key Developer Concepts`
 
 ### 25. Fetching Content
 
-🌟*Learned about fetching JSON content from JSON Placeholder and update the state*
+🌟 *Learned about fetching JSON content from JSON Placeholder and update the state*
 
 `src/App.js`
 
@@ -614,7 +614,7 @@ Will be explained in `Appendix 1: Key Developer Concepts`
 
 ### 27. Architecture Our App
 
-🌟*Learned about how to file structure components and styles*
+🌟 *Learned about how to file structure components and styles*
 
 ### 28. Card List Component
 
@@ -806,7 +806,7 @@ export const Card = props => (
 
 Learned about [setState](https://reactjs.org/docs/react-component.html#setstate).
 
-🌟*Added Search Field to the App*
+🌟 *Added Search Field to the App*
 
 `src/App.js`
 
@@ -998,13 +998,13 @@ export const SearchBox = ({ placeholder, handleChange }) => (
 
 ### 37. Exercise: Where To Put State
 
-🌟*Learned on where to put the state because of the one way data flow*
+🌟 *Learned on where to put the state because of the one way data flow*
 
 ### 38. Class Methods and ArrowFunctions
 
 [Handling Events](https://reactjs.org/docs/handling-events.html)
 
-🌟*Learned about how `this` is bind to normal function and how JavaScript binds this to arrow function automatically to its context when the component gets created*
+🌟 *Learned about how `this` is bind to normal function and how JavaScript binds this to arrow function automatically to its context when the component gets created*
 
 `src/App.js`
 
@@ -1059,7 +1059,7 @@ export default App;
 
 ### 39. Exercise: Event Binding
 
-🌟*Learned about Event Binding and how this works through a simple exercise*
+🌟 *Learned about Event Binding and how this works through a simple exercise*
 
 ### 40. Quick Note: Binding in React
 
@@ -1340,9 +1340,9 @@ h1 {
 
 ### 44. React and ReactDOM
 
-🌟*Learned about plain React and ReactDOM in JavaScript using CDN packages*
+🌟 *Learned about plain React and ReactDOM in JavaScript using CDN packages*
 
-🌟*Learned what React Library does in the background with JSX syntax*
+🌟 *Learned what React Library does in the background with JSX syntax*
 
 [React CDN Links](https://reactjs.org/docs/cdn-links.html)
 
@@ -1403,7 +1403,7 @@ h1 {
 
 ![DOM vs Virtual DOM](images/37.png)
 
-🌟*Learned the diff between Virtual DOM and DOM and how change in state changes only the affected DOM using Virtual DOM with Unidirectional Flow.*
+🌟 *Learned the diff between Virtual DOM and DOM and how change in state changes only the affected DOM using Virtual DOM with Unidirectional Flow.*
 
 Used `Chrome Dev Tool->More Tools->Rendering->Paint Flashing` to see the affected part of the DOM for state changes.
 
@@ -1411,7 +1411,7 @@ Used `Chrome Dev Tool->More Tools->Rendering->Paint Flashing` to see the affecte
 
 ### 46. Asynchronous setState
 
-🌟*Learned about how state changes asynchrously and how we can make it change in respective to prevState.*
+🌟 *Learned about how state changes asynchrously and how we can make it change in respective to prevState.*
 
 <https://codepen.io/navinnavi19/pen/KOeLxQ>
 
@@ -1429,9 +1429,236 @@ Used `Chrome Dev Tool->More Tools->Rendering->Paint Flashing` to see the affecte
 
 ## Section 4: Master Project: SettingUp E-commerce Project
 
+🌟 *Run the below code to get all the sub headings of this section*
+
+```js
+$$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
+```
+### 52. The Long Road Ahead
+
+![A different Road](images/44.png)
+
+![Learning to Read Projects](images/45.png)
+
+### 53. Project Overview
+
+![Project Overview](images/46.png)
+
+### 54. GitHub + Project Repositories
+### 55. Course Guideline + GitHub Links
+
+🌟 *Instructions on how to clone and follow guide for the site*
+
+[E-Commerce Lesson 1](https://github.com/ZhangMYihua/lesson-1)
+
+### 56. Quick Note About GitHub
+
+🌟 *Fork [Yihua Repo](https://github.com/ZhangMYihua/) and clone it to have our own repo*
+
+### 57. E-commerce Homepage +SASS setup
+
+`npx create-react-app crown-clothing`
+
+`Removed unused codes`
+
+`npm i -S node-sass`
+
+[Node-SASS](https://www.npmjs.com/package/node-sass)
+
+[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/35902d11137a2e80fe497d80872bdfe99489b979?diff=split)
+
+![E-commerce Homepage +SASS setup](images/47.png)
+
+### 58. Project Files + Modules
+
+🌟 *Quick intro for the project files and modules that come preinstalled with `create-react-app`*
+
+🌟 *Also learned about the troubleshooting steps when encountered an error*
+
+### 59. Project Component Architecture
+
+🌟 *Quick intro on folder structure and how to easily understand the components without getting lost*
+
+### 60. CSS and SCSS files
+
+🌟 *Note on both CSS and SCSS files will be included for use*
+
+### 61. Homepage and Directory Components
+
+![Homepage and Directory Components](images/48.png)
+
+[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/711f42d1e8e2a6b75f571efb130c8ad75662b171?diff=split)
+
+### 62. Styling Menu Items
+
+![Styling Menu Items](images/49.png)
+
+[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/e99fdec5907a7331fd8afa8103e1dff8d4edee23?diff=split)
+
+[cubic-bezier timing function - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function)
+
 ## Section 5: Master Project: ReactRouter and Routing
 
-## Section 6: Master Project: Forms +Components
+🌟 *Run the below code to get all the sub headings of this section*
+
+```js
+$$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
+```
+
+### 63. Routing In React
+
+🌟 *Quick intro to React Router on how it works on the browser*
+
+### 64. Routing In Our Project
+
+`npm install --save react-router-dom`
+
+🌟 *Brief intro to React Router on how it works via `react-router-dom`*
+
+[React Router DOM](https://www.npmjs.com/package/react-router-dom)
+
+[React Router Documentation](https://reacttraining.com/react-router/web/guides/quick-start)
+
+### 65. React Router DOM
+
+🌟 *Deep dive into React Router on how it works on via `react-router-dom` using an example repo*
+
+[React Router GitHub repo example](https://github.com/ZhangMYihua/react-router-demo)
+
+```js{10, 20-22, 30, 38-42}
+import React from 'react';
+import { Route, Link } from 'react-router-dom';
+
+import './App.css';
+
+const HomePage = props => {
+  console.log(props);
+  return (
+    <div>
+      <button onClick={() => props.history.push('/topics')}>Topics </button>
+      <h1>HOME PAGE</h1>
+    </div>
+  );
+};
+
+const TopicsList = props => {
+  return (
+    <div>
+      <h1>TOPIC LIST PAGE</h1>
+      <Link to={`${props.match.url}/13`}>TO TOPIC 13</Link>
+      <Link to={`${props.match.url}/17`}>TO TOPIC 17</Link>
+      <Link to={`${props.match.url}/21`}>TO TOPIC 21</Link>
+    </div>
+  );
+};
+
+const TopicDetail = props => {
+  return (
+    <div>
+      <h1>TOPIC DETAIL PAGE: {props.match.params.topicId}</h1>
+    </div>
+  );
+};
+
+function App() {
+  return (
+    <div>
+      <Route exact path='/' component={HomePage} />
+      <Route exact path='/blog/asdqw/topics' component={TopicsList} />
+      <Route path='/blog/asdqw/topics/:topicId' component={TopicDetail} />
+      <Route exact path='/blog/topics' component={TopicsList} />
+      <Route path='/blog/topics/:topicId' component={TopicDetail} />
+    </div>
+  );
+}
+
+export default App;
+```
+
+### 66. withRouter()
+
+```js
+import React from "react";
+import { withRouter } from "react-router-dom";
+
+import "./menu-item.styles.scss";
+
+const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => (
+  <div
+    className={`${size} menu-item`}
+    onClick={() => history.push(`${match.url}${linkUrl}`)}
+  >
+    <div
+      style={{ backgroundImage: `url(${imageUrl})` }}
+      className="background-image"
+    />
+    <div className="content">
+      <h1 className="title">{title.toUpperCase()}</h1>
+      <span className="subtitle">SHOP NOW</span>
+    </div>
+  </div>
+);
+
+export default withRouter(MenuItem);
+```
+
+[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/94c0cd723847f2ae0982a37902e77acfd689b890)
+
+[Higher Order Components](https://reactjs.org/docs/higher-order-components.html)
+
+## Section 6: Master Project: Forms + Components
+
+🌟 *Run the below code to get all the sub headings of this section*
+
+```js
+$$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
+```
+
+### 67. Shopping Data
+### 68. Shop Page
+
+`Route: /shop`
+
+![Shopping Data](images/50.png)
+
+[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/4c6c7d9efd280fcdc46ec0dc6509b38857511ebe?diff=split)
+
+### 69. Collection Item
+
+`Route: /shop`
+
+![Collection Item](images/51.png)
+
+[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/55fd08c42c1baca20a8e908f740d7edb3e27ffa4?diff=split)
+
+### 70. Header Component
+
+`Route: /`
+
+![Header Component](images/52.png)
+
+[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/cdf882537ebbda6f4aed1d54044b1dcd42be0d89?diff=split)
+
+### 71. Resources: Importing SVG In React
+
+[React Component](https://facebook.github.io/create-react-app/docs/adding-images-fonts-and-files)
+
+### 72. Introducing Forms In React
+
+🌟 *Quick intro on how sign in and sign up component works and how state is managed in these components(ONLY LOCALLY)*
+
+[HTML Form Introduction](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form)
+
+### 73. Sign In Component
+
+`Route: /signin`
+
+![Sign In Component](images/53.png)
+
+[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/d7d5fb36803cffb33b92b563b48c4ce49ff2d4ab?diff=split)
+
+### 74. Form Input Component
+### 75. Custom Button Component
 
 ## Section 7: Master Project: Firebase +User Authentication
 
@@ -1485,7 +1712,7 @@ Used `Chrome Dev Tool->More Tools->Rendering->Paint Flashing` to see the affecte
 
 ## Section 32: Appendix 1: Key Developer Concepts
 
-🌟*Got all Sub Heading by using the below Script*
+🌟 *Got all Sub Heading by using the below Script*
 
 `$$(".curriculum-item-link--title--zI5QT").map(text => text.textContent)`
 
@@ -1612,7 +1839,7 @@ secArray.includes(ob1);
 
 ### 311. find()
 
-🌟*Unlike filter(), find() only gives the first element when the condition matches*
+🌟 *Unlike filter(), find() only gives the first element when the condition matches*
 
 ```js
 const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -1653,7 +1880,7 @@ console.log(memoizedfunc(5));
 
 ### 314. Currying with Closure
 
-🌟*Function that returns another function utilizing closure to get variables out of the scope and calling them one by one*
+🌟 *Function that returns another function utilizing closure to get variables out of the scope and calling them one by one*
 
 ```js
 const currying = a => b => c => a * b * c;
@@ -1668,4 +1895,4 @@ console.log(currying(5)(2)(10));
 3. [Advanced JavaScript Concepts](https://www.udemy.com/advanced-javascript-concepts/?couponCode=LEVELUPZTM)
 4. [Master the Coding Interview: Data Structures + Algorithms](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/?couponCode=EXISTINGSTUDENT138W)
 
-![Web Developer Roadmap](image/40.jpeg)
+![Web Developer Roadmap](images/40.jpg)
