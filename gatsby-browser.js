@@ -1,11 +1,10 @@
+import config from "./config/website";
 import "typeface-cantata-one";
 import "typeface-montserrat";
 import "./src/styles/globalStyles.css";
 import "./src/styles/prism-a11y-dark.css";
 
-import config from "./config/website";
-
-export const onInitialClientRender = () => {
+const onInitialClientRender = () => {
   if (config.siteFBAppID) {
     window.fbAsyncInit = function() {
       FB.init({
@@ -26,3 +25,5 @@ export const onInitialClientRender = () => {
     })(document, "script", "facebook-jssdk");
   }
 };
+
+export default onInitialClientRender;
