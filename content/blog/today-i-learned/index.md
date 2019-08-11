@@ -1,7 +1,28 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-11"
+date: "2019-08-10"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 47.Complete React Developer in 2019
+
+### Day 47: August 10, 2019 - Saturday
+
+**Project:** Completed Section 5 and Section 6 WIP
+
+![Crown Clothing](../complete-react-developer-in-2019/images/52.png)
+
+**Live:** [Crown Clothing](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#70-header-component)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- Started building the Crown Clothing E-Commerce Site.
+- Basic Setup Done.
+- Got introduced to [React Router](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-5-master-project-reactrouter-and-routing).
+- [Form Components](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-6-master-project-forms--components)
+
 ---
 
 ## 46.Complete React Developer in 2019
@@ -12,7 +33,7 @@ description: Round 2 of 100 Days of Code where I log daily activities of my codi
 
 ![Lifecycle Events](../complete-react-developer-in-2019/images/39.png)
 
-**Live:** [React DOM and Lifecycle events](http://35.154.61.191:8080/blog/complete-react-developer-in-2019/#44-react-and-reactdom)
+**Live:** [React DOM and Lifecycle events](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#44-react-and-reactdom)
 
 **Brief Description:**
 
