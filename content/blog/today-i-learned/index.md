@@ -1,7 +1,30 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-07"
+date: "2019-08-11"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 46.Complete React Developer in 2019
+
+### Day 46: August 09, 2019 - Friday
+
+**Project:** Completed Section 4 and Appendix
+
+![Lifecycle Events](../complete-react-developer-in-2019/images/39.png)
+
+**Live:** [React DOM and Lifecycle events](http://35.154.61.191:8080/blog/complete-react-developer-in-2019/#44-react-and-reactdom)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [React and ReactDOM](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#44-react-and-reactdom)
+- [Revisiting Virtual-DOM +Unidirectional Data Flow](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#45-revisiting-virtual-dom-unidirectional-data-flow)
+- [Asynchronous setState](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#46-asynchronous-setstate)
+- [Introducing LifeCycle Methods](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#47-introducing-lifecycle-methods)
+- [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-32-appendix-1-key-developer-concepts)
+- [Update my Git101 Post](https://navin-navi.github.io/blog/git-101/#getting-started)
+
 ---
 
 ## 45.Complete React Developer in 2019
