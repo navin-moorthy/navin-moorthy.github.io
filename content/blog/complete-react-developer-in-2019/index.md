@@ -1479,7 +1479,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 [Node-SASS](https://www.npmjs.com/package/node-sass)
 
-[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/35902d11137a2e80fe497d80872bdfe99489b979?diff=split)
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/35902d11137a2e80fe497d80872bdfe99489b979?diff=split)
 
 ![E-commerce Homepage +SASS setup](images/47.png)
 
@@ -1501,13 +1501,13 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ![Homepage and Directory Components](images/48.png)
 
-[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/711f42d1e8e2a6b75f571efb130c8ad75662b171?diff=split)
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/711f42d1e8e2a6b75f571efb130c8ad75662b171?diff=split)
 
 ### 62. Styling Menu Items
 
 ![Styling Menu Items](images/49.png)
 
-[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/e99fdec5907a7331fd8afa8103e1dff8d4edee23?diff=split)
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/e99fdec5907a7331fd8afa8103e1dff8d4edee23?diff=split)
 
 [cubic-bezier timing function - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function)
 
@@ -1616,7 +1616,7 @@ const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => (
 export default withRouter(MenuItem);
 ```
 
-[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/94c0cd723847f2ae0982a37902e77acfd689b890)
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/94c0cd723847f2ae0982a37902e77acfd689b890)
 
 [Higher Order Components](https://reactjs.org/docs/higher-order-components.html)
 
@@ -1636,7 +1636,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ![Shopping Data](images/50.png)
 
-[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/4c6c7d9efd280fcdc46ec0dc6509b38857511ebe?diff=split)
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/4c6c7d9efd280fcdc46ec0dc6509b38857511ebe?diff=split)
 
 ### 69. Collection Item
 
@@ -1644,7 +1644,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ![Collection Item](images/51.png)
 
-[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/55fd08c42c1baca20a8e908f740d7edb3e27ffa4?diff=split)
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/55fd08c42c1baca20a8e908f740d7edb3e27ffa4?diff=split)
 
 ### 70. Header Component
 
@@ -1652,7 +1652,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ![Header Component](images/52.png)
 
-[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/cdf882537ebbda6f4aed1d54044b1dcd42be0d89?diff=split)
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/cdf882537ebbda6f4aed1d54044b1dcd42be0d89?diff=split)
 
 ### 71. Resources: Importing SVG In React
 
@@ -1670,13 +1670,405 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ![Sign In Component](images/53.png)
 
-[View split changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/d7d5fb36803cffb33b92b563b48c4ce49ff2d4ab?diff=split)
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/d7d5fb36803cffb33b92b563b48c4ce49ff2d4ab?diff=split)
 
 ### 74. Form Input Component
 
+`Route: /signin`
+
+![Form Input Component](images/54.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/638f73bb5546ab8ed6638fd53d4ec4b28e1a9b93?diff=split)
+
 ### 75. Custom Button Component
 
+`Route: /signin`
+
+![Custom Button Component](images/55.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/fa7c61aae7f02ce784bdcdf5fac977b8109b6267?diff=split)
+
 ## Section 7: Master Project: Firebase +User Authentication
+
+
+🌟 _Run the below code to get all the sub headings of this section_
+
+```js
+$$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
+```
+
+### 76. Section Overview
+
+🌟 _Quick intro on how Firebase is gonna be taught in this section_
+
+### 77. Firebase Introduction
+
+![Front End](images/56.png)
+
+![Back End](images/57.png)
+
+[Firebase](https://firebase.google.com/)
+
+### 78. Adding a Project to Firebase
+
+[Firebase NPM](https://www.npmjs.com/package/firebase)
+
+- Added `npm i -S firebase` to the project
+- Created a new firebase project "crown-clothing-db"
+- Created a web app "crown-clothing-db"
+- Spark plan for the web app is far more than enough
+
+### 79. Note about GitHub
+
+🌟 _**It is safe to enter the Firebase API in public**_
+
+### 80. Google Sign In Authentication
+
+`Route: /signin`
+
+![Google Sign In Authentication](images/58.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/369c729c83c2b2b8ea0afa6e5ff0eb3ab7f85c12?diff=split)
+
+### 81. Cloning From This Point On
+
+🌟 _**Nothing but a note for those who fork the original GitHub repo**_
+
+### 82. Google Sign In Authentication 2
+
+- Added state to look into the current user in `App.js`
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/1a0c601d9cb8792bc102f36a85792cdd4983ebef?diff=split)
+
+### 83. Optional: How to fix 403:restricted_client error
+
+It's possible you may encounter a google Authorization error that says 403:restricted_client. If you do, here are the instructions to fix it!
+
+There should be a Learn More link in the popup, clicking that should take you to the Google APIs console that has three tabs under the header named Credentials, OAuth Consent Screen, and Domain Verification. Go to the OAuth Consent Screen tab and update the Application Name to "crwn-clothing" or any other name you're comfortable with (i.e. the name of your project). Click on save at the bottom, then try logging into your verified Google account thereafter.
+
+### 84. Google Sign In Authentication 3
+
+`Route: /signin`
+
+![Google Sign In Authentication 3](images/59.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/f57219bd63c654a51ed9a7bc478b7814072430c3?diff=split)
+
+[CSS Border Box](https://www.w3schools.com/cssref/css3_pr_box-sizing.asp)
+
+### 85. Firebase Firestore
+
+🌟 _**Quick intro on Firebase Firestore**_
+
+Learned how to 
+- create Firebase database
+- create collections and documents
+- query for the collections and documents
+
+### 86. Optional: Async Await
+
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
+
+### 87. Storing User Data In Firebase
+
+![Storing User Data In Firebase](images/61.png)
+
+![Storing User Data In Firebase](images/63.png)
+
+![Storing User Data In Firebase](images/62.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/10bb823e334935faef107eefa2b9322c8ee558a7?diff=split)
+
+![Storing User Data In Firebase](images/60.png)
+
+### 88. Storing User Data In Our App
+
+`src/App.js`
+
+```js{24-41}
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+
+import "./App.css";
+
+import Header from "./components/header/header.component";
+import HomePage from "./pages/homepage/homepage.component";
+import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
+import ShopPage from "./pages/shop/shop.component";
+
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
+
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      currentUser: null
+    };
+  }
+
+  unSubscribeFromAuth = null;
+
+  componentDidMount() {
+    this.unSubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+
+        userRef.onSnapshot(snapShot => {
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          });
+        });
+      } else {
+        this.setState({ currentUser: userAuth });
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    this.unSubscribeFromAuth = null;
+  }
+
+  render() {
+    return (
+      <div>
+        <Header currentUser={this.state.currentUser} />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/signin" component={SignInAndSignUpPage} />
+          <Route path="/shop" component={ShopPage} />
+        </Switch>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+### 89. Sign Up Component
+
+```js
+import React from "react";
+
+import "./sign-up.styles.scss";
+
+import FormInput from "../form-input/form-input.components";
+import CustomButton from "../custom-button/custom-button.components";
+
+import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
+
+class SignUp extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      displayName: "",
+      email: "",
+      password: "",
+      confirmPassword: ""
+    };
+  }
+
+  handleSubmit = async event => {
+    event.preventDefault();
+
+    const { displayName, email, password, confirmPassword } = this.state;
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+      await createUserProfileDocument(user, { displayName });
+
+      this.setState({
+        displayName: "",
+        email: "",
+        password: "",
+        confirmPassword: ""
+      });
+    } catch (error) {
+      console.log("Error in sign up", error.message);
+    }
+  };
+
+  handelChange = event => {
+    const { name, value } = event.target;
+
+    this.setState({ [name]: value });
+  };
+
+  render() {
+    const { displayName, email, password, confirmPassword } = this.state;
+
+    return (
+      <div className="sign-up">
+        <h2 className="title">I do not have a account</h2>
+        <span>Sign up with your email and password</span>
+        <form className="sign-up" onSubmit={this.handleSubmit}>
+          <FormInput
+            type="text"
+            name="displayName"
+            value={displayName}
+            onChange={this.handelChange}
+            label="Display Name"
+            required
+          />
+          <FormInput
+            type="email"
+            name="email"
+            value={email}
+            onChange={this.handelChange}
+            label="Email"
+            required
+          />
+          <FormInput
+            type="password"
+            name="password"
+            value={password}
+            onChange={this.handelChange}
+            label="Password"
+            required
+          />
+          <FormInput
+            type="password"
+            name="confirmPassword"
+            value={confirmPassword}
+            onChange={this.handelChange}
+            label="Confirm Password"
+            required
+          />
+          <CustomButton type="Submit">Sign Up</CustomButton>
+        </form>
+      </div>
+    );
+  }
+}
+
+export default SignUp;
+```
+
+```css
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+
+  .title {
+    margin: 10px 0;
+  }
+}
+```
+
+### 90. Sign Up With Email and Password
+
+`Route: /signin`
+
+![Google Sign In Authentication 3](images/64.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/000028a45573c5ff7025e70ed5fbdfd652ef4f55?diff=split)
+
+### 91. Sign In With Email and Password
+
+```js{8,20-30}
+import React from "react";
+
+import "./sign-in.styles.scss";
+
+import FormInput from "../form-input/form-input.components";
+import CustomButton from "../custom-button/custom-button.components";
+
+import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
+
+class SignIn extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      email: "",
+      password: ""
+    };
+  }
+
+  handleSubmit = async e => {
+    e.preventDefault();
+    const { email, password } = this.state;
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: "", password: "" });
+    } catch (error) {
+      console.log("Error signing in", error.message);
+    }
+  };
+
+  handleChange = e => {
+    const { value, name } = e.target;
+
+    this.setState({ [name]: value });
+  };
+
+  render() {
+    const { email, password } = this.state;
+
+    return (
+      <div className="sign-in">
+        <h2 className="title">I already have an account</h2>
+        <span>Sign in with you email and password</span>
+
+        <form onSubmit={this.handleSubmit}>
+          <FormInput
+            type="email"
+            name="email"
+            value={email}
+            handleChange={this.handleChange}
+            label="Email"
+            required
+          />
+          <FormInput
+            type="password"
+            name="password"
+            value={password}
+            handleChange={this.handleChange}
+            label="Password"
+            required
+          />
+          <div className="buttons">
+            <CustomButton type="submit">Sign In</CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+              Sign in with Google
+            </CustomButton>
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
+
+export default SignIn;
+```
+
+### Quiz 2: Firebase unsubscribe method
+
+> Whenever we call the onAuthStateChanged() or onSnapshot() methods from our auth  library or referenceObject, we get back a function that lets us unsubscribe from the listener we just instantiated. Which lifecycle method should we use to call that unsubscribe method in?
+
+
+🌟 _**componentWillUnmount**_
+
+🌟 *Calling the unsubscribe function when the component is about to unmount is the best way to make sure we don't get any memory leaks in our application related to listeners still being open even if the component that cares about the listener is no longer on the page.*
+
+### 92. Section Review
+
+🌟 *Quick recap on this section coding*
 
 ## Section 8: Master Project: Redux 1
 
