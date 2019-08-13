@@ -2181,17 +2181,153 @@ export const setCurrentUser = user => ({
 
 ### 100. connect() and mapStateToProps
 
+`Header Component`
+
+```js{3, 35-39}
+import React from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+
+import { auth } from "../../firebase/firebase.utils";
+
+import "./header.styles.scss";
+import { ReactComponent as Logo } from "../../assets/crown.svg";
+
+const Header = ({ currentUser }) => (
+  <div className="header">
+    <Link to="/">
+      <Logo className="logo" />
+    </Link>
+    <div className="options">
+      <Link to="/shop" className="option">
+        SHOP
+      </Link>
+      <Link to="/shop" className="option">
+        CONTACT
+      </Link>
+      {currentUser ? (
+        <div className="option" onClick={() => auth.signOut()}>
+          SIGN OUT
+        </div>
+      ) : (
+        <Link className="option" to="/signin">
+          SIGN IN
+        </Link>
+      )}
+    </div>
+  </div>
+);
+
+const mapStatetoProps = state => ({
+  currentUser: state.user.currentUser
+});
+
+export default connect(mapStatetoProps)(Header);
+```
+
 ### 101. mapDispatchToProps
+
+`App Component`
+
+```js{3,5,20,27-30,33,56-63}
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import { connect } from "react-redux";
+
+import { setCurrentUser } from "./redux/user/user.action";
+
+import "./App.css";
+
+import Header from "./components/header/header.component";
+import HomePage from "./pages/homepage/homepage.component";
+import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
+import ShopPage from "./pages/shop/shop.component";
+
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
+
+class App extends React.Component {
+  unSubscribeFromAuth = null;
+
+  componentDidMount() {
+    const { setCurrentUser } = this.props;
+
+    this.unSubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+
+        userRef.onSnapshot(snapShot => {
+          setCurrentUser({
+            id: snapShot.id,
+            ...snapShot.data()
+          });
+        });
+      } else {
+        setCurrentUser(userAuth);
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    this.unSubscribeFromAuth = null;
+  }
+
+  render() {
+    return (
+      <div>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/signin" component={SignInAndSignUpPage} />
+          <Route path="/shop" component={ShopPage} />
+        </Switch>
+      </div>
+    );
+  }
+}
+
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(App);
+```
 
 ### 102. User Redirect and User Action-type
 
+[React Redirect](https://reacttraining.com/react-router/web/api/Redirect)
+
+🌟 _Added homepage redirect if the user is already logged in_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/b21099ee76cf2cc4d48dfa5bcfd46b347d0634d5?diff=split)
+
 ### 103. Cart Component
+
+![Cart Component](images/82.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/3a8867b57fb0f7e95640796712f4c8ce63a80d7f?diff=split)
 
 ### 104. Card Drop-down Component
 
+![Card Drop-down Component](images/83.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/031b6f566c985173defb6547a23de496b2ae289a?diff=split)
+
 ### 105. Implementing Redux In Cart
 
+🌟 _Conditionally render cart drop-down_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/76d66313f6e3384f0701bd6b5cee6cbd36afa947?diff=split)
+
 ### 106. Add To Cart Styling
+
+`Route: /shops/hats`
+
+![Add To Cart Styling](images/84.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/5d2dbd0f1b1c23a70c215c6b261a57f3d5ebe9bf?diff=split)
 
 ### 107. Cart Item Reducer
 
