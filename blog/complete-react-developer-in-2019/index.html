@@ -3164,12 +3164,162 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   payload<span class="token punctuation">:</span> user
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <h3 id="100-connect-and-mapstatetoprops"><a href="#100-connect-and-mapstatetoprops" aria-label="100 connect and mapstatetoprops permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>100. connect() and mapStateToProps</h3>
+<p><code class="language-text">Header Component</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Link <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-router-dom"</span><span class="token punctuation">;</span>
+<span class="gatsby-highlight-code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-redux"</span><span class="token punctuation">;</span></span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> auth <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"../../firebase/firebase.utils"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token string">"./header.styles.scss"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ReactComponent <span class="token keyword">as</span> Logo <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"../../assets/crown.svg"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Header</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> currentUser <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"header"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token string">"/"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Logo className<span class="token operator">=</span><span class="token string">"logo"</span> <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">></span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"options"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token string">"/shop"</span> className<span class="token operator">=</span><span class="token string">"option"</span><span class="token operator">></span>
+        <span class="token constant">SHOP</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">></span>
+      <span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token string">"/shop"</span> className<span class="token operator">=</span><span class="token string">"option"</span><span class="token operator">></span>
+        <span class="token constant">CONTACT</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">></span>
+      <span class="token punctuation">{</span>currentUser <span class="token operator">?</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"option"</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> auth<span class="token punctuation">.</span><span class="token function">signOut</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span>
+          <span class="token constant">SIGN</span> <span class="token constant">OUT</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+      <span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>Link className<span class="token operator">=</span><span class="token string">"option"</span> to<span class="token operator">=</span><span class="token string">"/signin"</span><span class="token operator">></span>
+          <span class="token constant">SIGN</span> <span class="token constant">IN</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">></span>
+      <span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="gatsby-highlight-code-line"><span class="token keyword">const</span> <span class="token function-variable function">mapStatetoProps</span> <span class="token operator">=</span> <span class="token parameter">state</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">  currentUser<span class="token punctuation">:</span> state<span class="token punctuation">.</span>user<span class="token punctuation">.</span>currentUser</span><span class="gatsby-highlight-code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line"></span><span class="gatsby-highlight-code-line"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">connect</span><span class="token punctuation">(</span>mapStatetoProps<span class="token punctuation">)</span><span class="token punctuation">(</span>Header<span class="token punctuation">)</span><span class="token punctuation">;</span></span></code></pre></div>
 <h3 id="101-mapdispatchtoprops"><a href="#101-mapdispatchtoprops" aria-label="101 mapdispatchtoprops permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>101. mapDispatchToProps</h3>
+<p><code class="language-text">App Component</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Switch<span class="token punctuation">,</span> Route <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-router-dom"</span><span class="token punctuation">;</span>
+<span class="gatsby-highlight-code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-redux"</span><span class="token punctuation">;</span></span>
+<span class="gatsby-highlight-code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> setCurrentUser <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./redux/user/user.action"</span><span class="token punctuation">;</span></span>
+<span class="token keyword">import</span> <span class="token string">"./App.css"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> Header <span class="token keyword">from</span> <span class="token string">"./components/header/header.component"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> HomePage <span class="token keyword">from</span> <span class="token string">"./pages/homepage/homepage.component"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SignInAndSignUpPage <span class="token keyword">from</span> <span class="token string">"./pages/sign-in-and-sign-up/sign-in-and-sign-up.component"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ShopPage <span class="token keyword">from</span> <span class="token string">"./pages/shop/shop.component"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> auth<span class="token punctuation">,</span> createUserProfileDocument <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./firebase/firebase.utils"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  unSubscribeFromAuth <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="gatsby-highlight-code-line">    <span class="token keyword">const</span> <span class="token punctuation">{</span> setCurrentUser <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span></span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>unSubscribeFromAuth <span class="token operator">=</span> auth<span class="token punctuation">.</span><span class="token function">onAuthStateChanged</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token parameter">userAuth</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>userAuth<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> userRef <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">createUserProfileDocument</span><span class="token punctuation">(</span>userAuth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        userRef<span class="token punctuation">.</span><span class="token function">onSnapshot</span><span class="token punctuation">(</span><span class="token parameter">snapShot</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<span class="gatsby-highlight-code-line">          <span class="token function">setCurrentUser</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">            id<span class="token punctuation">:</span> snapShot<span class="token punctuation">.</span>id<span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">            <span class="token operator">...</span>snapShot<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><span class="gatsby-highlight-code-line">          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+<span class="gatsby-highlight-code-line">        <span class="token function">setCurrentUser</span><span class="token punctuation">(</span>userAuth<span class="token punctuation">)</span><span class="token punctuation">;</span></span>      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentWillUnmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>unSubscribeFromAuth <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Header <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Switch<span class="token operator">></span>
+          <span class="token operator">&lt;</span>Route exact path<span class="token operator">=</span><span class="token string">"/"</span> component<span class="token operator">=</span><span class="token punctuation">{</span>HomePage<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>Route exact path<span class="token operator">=</span><span class="token string">"/signin"</span> component<span class="token operator">=</span><span class="token punctuation">{</span>SignInAndSignUpPage<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>Route path<span class="token operator">=</span><span class="token string">"/shop"</span> component<span class="token operator">=</span><span class="token punctuation">{</span>ShopPage<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Switch<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="gatsby-highlight-code-line"><span class="token keyword">const</span> <span class="token function-variable function">mapDispatchToProps</span> <span class="token operator">=</span> <span class="token parameter">dispatch</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">  <span class="token function-variable function">setCurrentUser</span><span class="token punctuation">:</span> <span class="token parameter">user</span> <span class="token operator">=></span> <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">setCurrentUser</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">)</span></span><span class="gatsby-highlight-code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line"></span><span class="gatsby-highlight-code-line"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">connect</span><span class="token punctuation">(</span></span><span class="gatsby-highlight-code-line">  <span class="token keyword">null</span><span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">  mapDispatchToProps</span><span class="gatsby-highlight-code-line"><span class="token punctuation">)</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">;</span></span></code></pre></div>
 <h3 id="102-user-redirect-and-user-action-type"><a href="#102-user-redirect-and-user-action-type" aria-label="102 user redirect and user action type permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>102. User Redirect and User Action-type</h3>
+<p><a href="https://reacttraining.com/react-router/web/api/Redirect" target="_blank" rel="noopener">React Redirect</a></p>
+<p>🌟 <em>Added homepage redirect if the user is already logged in</em></p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/b21099ee76cf2cc4d48dfa5bcfd46b347d0634d5?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
 <h3 id="103-cart-component"><a href="#103-cart-component" aria-label="103 cart component permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>103. Cart Component</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 494px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 14.17004048582996%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAAWElEQVQI142OsQrAIAxE/f+frEuVqpOJOCR6pYJSOhQPwh0ZHs/gJ7331a211XOPe/1FBGYHSES4Qhw7pYjT+wGgnOGcA5eCwgx72D3gNHgyDb/mqopaK26DKOyTvLq9pwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Cart Component"
+        title="Cart Component"
+        src="/static/71b0583792e2e333c2680f3bfbe39cd3/c3087/82.png"
+        srcset="/static/71b0583792e2e333c2680f3bfbe39cd3/942f4/82.png 192w,
+/static/71b0583792e2e333c2680f3bfbe39cd3/a7675/82.png 384w,
+/static/71b0583792e2e333c2680f3bfbe39cd3/c3087/82.png 494w"
+        sizes="(max-width: 494px) 100vw, 494px"
+      />
+    </span></p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/3a8867b57fb0f7e95640796712f4c8ce63a80d7f?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
 <h3 id="104-card-drop-down-component"><a href="#104-card-drop-down-component" aria-label="104 card drop down component permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>104. Card Drop-down Component</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 240px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 141.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAYAAABh2p9gAAAACXBIWXMAAAsSAAALEgHS3X78AAAA/0lEQVRIx+3Rv2qDUBgF8AsO1viEbRoL3dQbt2YRGtDBN3L0PcTNTXAQQQVFT3MuKEI241T84IB/7vkhn6IsS+w1tERRFOpmHEdM07Qp7HJoLSBfbJ25e4AHeIAH+F/AV/IE9n2PYRg2hd0ncI9RYFVVSNMUtm1DSrnEdV04jqOyvp6zPssuDVqi6zrEcQwhxEuhQUs0TYMkSaBpGgzDwJuuwzidYMsrzhcL39YZH5cvXKWLn9sNv/c7rM93mKYJnWcfHXZp0BJt2+72hbREXdfIskztyfO8JWpPj2fzPlVW+1uf5TsatESe57v9ZVrC931EUYQgCBCG4aawS4PWH+mbyS/VjA0vAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Card Drop-down Component"
+        title="Card Drop-down Component"
+        src="/static/9435ce76d56fd59703fab7a15ff9f057/52b41/83.png"
+        srcset="/static/9435ce76d56fd59703fab7a15ff9f057/942f4/83.png 192w,
+/static/9435ce76d56fd59703fab7a15ff9f057/52b41/83.png 240w"
+        sizes="(max-width: 240px) 100vw, 240px"
+      />
+    </span></p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/031b6f566c985173defb6547a23de496b2ae289a?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
 <h3 id="105-implementing-redux-in-cart"><a href="#105-implementing-redux-in-cart" aria-label="105 implementing redux in cart permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>105. Implementing Redux In Cart</h3>
+<p>🌟 <em>Conditionally render cart drop-down</em></p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/76d66313f6e3384f0701bd6b5cee6cbd36afa947?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
 <h3 id="106-add-to-cart-styling"><a href="#106-add-to-cart-styling" aria-label="106 add to cart styling permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>106. Add To Cart Styling</h3>
+<p><code class="language-text">Route: /shops/hats</code></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 55.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACu0lEQVQoz62S/U/MARzHvxu/+NHmKSsltiJ5bNm0plGcKCEXpe70gChDnhqiWWljhuQhWmfXrFaXc9IhY1OU6zrXg0Ojmoe4rM089L3vddfLt7P5A8xn+2yfh+219+ezt+Byufjx/Tv/GiMjI39rURQRRgcPGu6j0V73pLHuDt32AZ739OH4+YvzNXoeWzu4UlLMtox0srJ3kXMgh66XNh43tWB724e2qha93oA4NIQgOZ3k5eWijF7BsuVLyNqRhuX9B5LyC8k/mscCdQbnbxm4WnKFiIC5xPoFscjfn0eNzzhbruPstUrWq7M5XliCJDkQht3DpKs3ExoUxOKQBezdncGLvj6ikpI5ujON2F27Ka6uRVelY7b/TBaPn4gieD5G+artqk0kKMJIiFGg01Xjcg0jOJ0S69fFMH2mP8HBs0jfmsjD5yaK8vPZk55GuCIOraGOzMxMxo0dgzJyDYlb0qg3VLM/dS3a03vJil9K7uE8zx8Fh8PB6mgFc+bOIXBWAFuSNtDY2obmahm5OYeYFxLGzZpbZO87SEzEalTxKjYmpNDW8pTCwgLUajXhESsounbnD3BIHCIsfAm+06fh5T0VpTKWJzJw6fJVRK6MZvJUb8rKb6BSqQj0nkHwZB+SlcmY2ywU5aSyMzGWDfEpVFTe/gMctY3J3Mqz5maanjbR0WGlf8BOq8VCb08Pr1/ZsH/up93azt17Rl6YzHS/fMMXu11W2Yit08o7Wxdf+z/icrsRRqmDg4P8j3DKjhHcMlWSREwmEyUXL1Grr0Mc6MT1+gLu7suI1jOIn0wY6u7J+2JKS0vRaDT09vaiN9xGW1HBzcpKWs1mj8kFSZI89IKCUwiCwMLQZXyznGNEK4uvEug5JvC54QhxCWqmTJqAn58fQbLF6o1GIqKi8PLxJUDuT5w86eH8BqN5hauK5uyvAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Add To Cart Styling"
+        title="Add To Cart Styling"
+        src="/static/b78f7ad5de24e7fb08ed144314f7a790/b4fef/84.png"
+        srcset="/static/b78f7ad5de24e7fb08ed144314f7a790/942f4/84.png 192w,
+/static/b78f7ad5de24e7fb08ed144314f7a790/a7675/84.png 384w,
+/static/b78f7ad5de24e7fb08ed144314f7a790/b4fef/84.png 768w,
+/static/b78f7ad5de24e7fb08ed144314f7a790/612b6/84.png 1125w"
+        sizes="(max-width: 768px) 100vw, 768px"
+      />
+    </span></p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/5d2dbd0f1b1c23a70c215c6b261a57f3d5ebe9bf?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
 <h3 id="107-cart-item-reducer"><a href="#107-cart-item-reducer" aria-label="107 cart item reducer permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>107. Cart Item Reducer</h3>
 <h3 id="108-adding-multiple-items-to-cart"><a href="#108-adding-multiple-items-to-cart" aria-label="108 adding multiple items to cart permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>108. Adding Multiple Items To Cart</h3>
 <h3 id="109-optional-find"><a href="#109-optional-find" aria-label="109 optional find permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>109. Optional: find()</h3>
