@@ -2071,6 +2071,160 @@ export default SignIn;
 
 ## Section 8: Master Project: Redux 1
 
+🌟 _Run the below code to get all the sub headings of this section_
+
+```js
+$$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
+```
+
+### 93. Section Overview
+
+![Redux](images/65.png)
+
+### 94. Redux Introduction
+
+![React with less no. of states](images/66.png)
+
+![React with more no. of states](images/67.png)
+
+![Redux with less no. of states](images/68.png)
+
+![Redux with more no. of states](images/69.png)
+
+### 95. Redux Concepts
+
+![3 Principles](images/70.png)
+
+![Redux Flow](images/71.png)
+
+![Multiple actions and DOM changes](images/72.png)
+
+![Redux Flow with multiple actions](images/73.png)
+
+![Flux Pattern](images/74.png)
+
+![MVC Pattern](images/75.png)
+
+![Redux with local React State](images/76.png)
+
+### 96. Redux In Our Application
+
+![Prop Drilling](images/77.png)
+
+![Redux explaining Unidirectional data flow](images/78.png)
+
+### 97. Redux Actions and Reducers
+
+![Single state for all the components](images/79.png)
+
+![How actions update the state using reducers](images/80.png)
+
+### 98. Setting Up Redux 1
+
+![Redux Middleware](images/81.png)
+
+🌟 _Installed below three npm packages_
+
+[Redux Logger](https://www.npmjs.com/package/redux-logger) || [Redux](https://www.npmjs.com/package/redux) || [React Redux](https://www.npmjs.com/package/react-redux)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/c5a8767b815e544abbfe3d7c3d54c84764f3d30b?diff=split)
+
+### 99. Setting Up Redux 2
+
+`src/index.js`
+
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+
+import "./index.css";
+
+import App from "./App";
+
+import store from "./redux/store";
+
+ReactDOM.render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById("root")
+);
+```
+
+`src/redux/store.js`
+
+```js
+import { createStore, applyMiddleware } from "redux";
+import logger from "redux-logger";
+
+import rootReducer from "./root-reducer";
+
+const middlewares = [logger];
+
+const store = createStore(rootReducer, applyMiddleware(...middlewares));
+
+export default store;
+```
+
+`src/redux/user/user.action.js`
+
+```js
+export const setCurrentUser = user => ({
+  type: "SET_CURRENT_USER",
+  payload: user
+});
+```
+
+### 100. connect() and mapStateToProps
+
+### 101. mapDispatchToProps
+
+### 102. User Redirect and User Action-type
+
+### 103. Cart Component
+
+### 104. Card Drop-down Component
+
+### 105. Implementing Redux In Cart
+
+### 106. Add To Cart Styling
+
+### 107. Cart Item Reducer
+
+### 108. Adding Multiple Items To Cart
+
+### 109. Optional: find()
+
+### 110. Cart Item Component
+
+### 111. Optional: reduce()
+
+### 112. Selectors in Redux
+
+### 113. Optional: Memoization
+
+### 114. Reselect Library
+
+### 115. User Selectors
+
+### 116. Checkout Page
+
+### 117. Checkout Page 2
+
+### 118. Extensible Code
+
+### 119. Dispatch Action Shorthand
+
+### 120. Checkout Item Component
+
+### 121. Remove Items From Cart
+
+### 122. Remove Items At Checkout
+
 ## Section 9: Master Project: SessionStorage + Persistence
 
 ## Section 10: Master Project: Redux 2
