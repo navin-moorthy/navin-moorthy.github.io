@@ -1,6 +1,6 @@
 ---
 title: Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
-date: "2019-08-09"
+date: "2019-08-13"
 description: Notes taken while learning Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
 ---
 
@@ -1690,7 +1690,6 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ## Section 7: Master Project: Firebase +User Authentication
 
-
 🌟 _Run the below code to get all the sub headings of this section_
 
 ```js
@@ -1760,7 +1759,8 @@ There should be a Learn More link in the popup, clicking that should take you to
 
 🌟 _**Quick intro on Firebase Firestore**_
 
-Learned how to 
+Learned how to
+
 - create Firebase database
 - create collections and documents
 - query for the collections and documents
@@ -2059,16 +2059,15 @@ export default SignIn;
 
 ### Quiz 2: Firebase unsubscribe method
 
-> Whenever we call the onAuthStateChanged() or onSnapshot() methods from our auth  library or referenceObject, we get back a function that lets us unsubscribe from the listener we just instantiated. Which lifecycle method should we use to call that unsubscribe method in?
-
+> Whenever we call the onAuthStateChanged() or onSnapshot() methods from our auth library or referenceObject, we get back a function that lets us unsubscribe from the listener we just instantiated. Which lifecycle method should we use to call that unsubscribe method in?
 
 🌟 _**componentWillUnmount**_
 
-🌟 *Calling the unsubscribe function when the component is about to unmount is the best way to make sure we don't get any memory leaks in our application related to listeners still being open even if the component that cares about the listener is no longer on the page.*
+🌟 _Calling the unsubscribe function when the component is about to unmount is the best way to make sure we don't get any memory leaks in our application related to listeners still being open even if the component that cares about the listener is no longer on the page._
 
 ### 92. Section Review
 
-🌟 *Quick recap on this section coding*
+🌟 _Quick recap on this section coding_
 
 ## Section 8: Master Project: Redux 1
 

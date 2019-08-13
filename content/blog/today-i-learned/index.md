@@ -1,7 +1,50 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-10"
+date: "2019-08-13"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 49.Complete React Developer in 2019
+
+### Day 49: August 12, 2019 - Monday
+
+**Project:** Section 7 Complete
+
+![Crown Clothing Sign In Component](../complete-react-developer-in-2019/images/64.png)
+
+**Live:** [Crown Clothing](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-7-master-project-firebase-user-authentication)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- Created new Firebase Project
+- [Google Sign In Authentication](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#84-google-sign-in-authentication-3)
+- [Stored the Signed in user in Firestore](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#87-storing-user-data-in-firebase)
+- [Sign Up Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#89-sign-up-component)
+- [Sign In With Email and Password Authentication](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#91-sign-in-with-email-and-password)
+
+---
+
+## 48.Complete React Developer in 2019
+
+### Day 48: August 11, 2019 - Sunday
+
+**Project:** Section 6 Complete
+
+![Crown Clothing Log In Component](../complete-react-developer-in-2019/images/55.png)
+
+**Live:** [Crown Clothing](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#73-sign-in-component)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Sign In Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#73-sign-in-component)
+- [Form Input Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#74-form-input-component)
+- [Custom Button Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#75-custom-button-component)
+- Intro to Firebase Auth and Firestore
+
 ---
 
 ## 47.Complete React Developer in 2019
@@ -254,7 +297,7 @@ Learned about a couple of new things,
 
 ![JavaScript Basics](../ultimate-courses-javascript-basics/images/4.png)
 
-**Live Post:** https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/
+**Live Post:** <https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/>
 
 **Brief Description:**
 
@@ -274,7 +317,7 @@ Learned about a couple of new things,
 
 ![Jack Fitness Studio](images/34.jfs-pwa.jpg)
 
-**Live Demo:** https://jackfitnessstudio.com
+**Live Demo:** <https://jackfitnessstudio.com>
 
 **Brief Description:**
 
@@ -292,7 +335,7 @@ Learned about a couple of new things,
 
 ![Jack Fitness Studio](images/33.jfs.jpg)
 
-**Live Demo:** https://jackfitnessstudio.com
+**Live Demo:** <https://jackfitnessstudio.com>
 
 **Brief Description:**
 
@@ -458,7 +501,7 @@ Learned about a couple of new things,
 
 **Progress:** Completed Angular Express Project
 
-**Live Demo:** https://angular-express-issue-tracker.herokuapp.com/
+**Live Demo:** <https://angular-express-issue-tracker.herokuapp.com/>
 
 **Brief Description:**
 
@@ -481,7 +524,7 @@ Learned about a couple of new things,
 
 **Progress:** Completed Express Project
 
-**Live Demo:** https://express-issue-tracker.herokuapp.com/
+**Live Demo:** <https://express-issue-tracker.herokuapp.com/>
 
 **Brief Description:**
 
@@ -536,7 +579,7 @@ Learned about a couple of new things,
 
 ![About Page](images/18.about-page.jpg)
 
-**Live Demo:** https://navin-navi.github.io/about
+**Live Demo:** <https://navin-navi.github.io/about>
 
 **Progress:** Completed about Page for my blog
 
@@ -559,7 +602,7 @@ Learned about a couple of new things,
 
 ![About Page](images/17.about-page.jpg)
 
-**Live Demo:** https://navin-navi.github.io/about
+**Live Demo:** <https://navin-navi.github.io/about>
 
 **Progress:** Half completed about Page for my blog
 
@@ -583,7 +626,7 @@ Learned about a couple of new things,
 
 ![Projects Page](images/16.projects-page.jpg)
 
-**Live Demo:** https://navin-navi.github.io/projects
+**Live Demo:** <https://navin-navi.github.io/projects>
 
 **Progress:** Finished building Projects Page for my blog
 
@@ -608,7 +651,7 @@ Learned about a couple of new things,
 
 ![Angular Issue Tracker](images/15.angular-issue-tracker.png)
 
-**Live Demo:** https://navin-navi.github.io/angular-issue-tracker/
+**Live Demo:** <https://navin-navi.github.io/angular-issue-tracker/>
 
 **Progress:** Published the application in GHpages with CI
 
@@ -633,7 +676,7 @@ Learned about a couple of new things,
 
 ![100DaysOfCode-Round1](images/14.round-1-100-days-of-code.png)
 
-**Live Demo:** https://navin-navi.github.io/100-Days-of-Code-Round-1/
+**Live Demo:** <https://navin-navi.github.io/100-Days-of-Code-Round-1/>
 
 **Progress:** Made an JSON API endpoint to power a project
 
@@ -657,7 +700,7 @@ Learned about a couple of new things,
 
 ![Materialized Blog](images/13.materialized-blog.PNG)
 
-**Live Demo:** https://materialized-blog.herokuapp.com/
+**Live Demo:** <https://materialized-blog.herokuapp.com/>
 
 **Progress:** Finally the site is made public
 
@@ -683,7 +726,7 @@ Learned about a couple of new things,
 
 ![Projects Organized](images/12.old-projects-organized.jpg)
 
-**Live Demo:** https://navin-navi.github.io/
+**Live Demo:** <https://navin-navi.github.io/>
 
 **Progress:** Made Progress and today's target was achieved
 
@@ -708,7 +751,7 @@ Learned about a couple of new things,
 
 ![Projects Organized](images/11.old-projects-organized.jpg)
 
-**Live Demo:** https://navin-navi.github.io/
+**Live Demo:** <https://navin-navi.github.io/>
 
 **Progress:** Made Progress and today's target was achieved
 
@@ -734,7 +777,7 @@ Learned about a couple of new things,
 
 ![Projects Organized](images/10.projects-organized.png)
 
-**Live Demo:** https://navin-navi.github.io/
+**Live Demo:** <https://navin-navi.github.io/>
 
 **Progress:** Made Progress and today's target was achieved
 
@@ -757,7 +800,7 @@ Learned about a couple of new things,
 
 ![Added Project Section](images/9.project-section-added.jpg)
 
-**Live Demo:** https://navin-navi.github.io/
+**Live Demo:** <https://navin-navi.github.io/>
 
 **Progress:** Made Progress and today's target was achieved
 
@@ -784,7 +827,7 @@ Learned about a couple of new things,
 
 ![Light Mode with Social Share](images/8.light-mode&social-share.jpg)
 
-**Live Demo:** https://navin-navi.github.io/
+**Live Demo:** <https://navin-navi.github.io/>
 
 **Progress:** Made Progress and today's target was achieved
 
@@ -812,7 +855,7 @@ Learned about a couple of new things,
 
 ![Fira Code In Action](images/7.fira-code-in-action.png)
 
-**Live Demo:** https://navin-navi.github.io/
+**Live Demo:** <https://navin-navi.github.io/>
 
 **Progress:** Made Progress and today's target was achieved
 
