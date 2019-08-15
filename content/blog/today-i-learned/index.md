@@ -1,7 +1,49 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-13"
+date: "2019-08-15"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 51.Complete React Developer in 2019
+
+### Day 51: August 14, 2019 - Wednesday
+
+**Project:** Section 8 WIP
+
+![Redux](../complete-react-developer-in-2019/images/81.png)
+
+**Live:** [Section 8](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#101-mapdispatchtoprops)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [mapDispatchToProps](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#101-mapdispatchtoprops)
+- [User Redirect and User Action-type](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#102-user-redirect-and-user-action-type)
+- [Built the Card Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#103-cart-component)
+- [Added Add to Cart Buttom styling to the Items](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#106-add-to-cart-styling)
+
+---
+
+## 50.Complete React Developer in 2019
+
+### Day 50: August 13, 2019 - Tuesday
+
+**Project:** Section 8 WIP
+
+![Redux](../complete-react-developer-in-2019/images/65.png)
+
+**Live:** [Section 8](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-8-master-project-redux-1)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Redux Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#95-redux-concepts)
+- [Redux Actions and Reducers](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#97-redux-actions-and-reducers)
+- [Setting Up Redux in the application](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#99-setting-up-redux-2)
+- [connect() and mapStateToProps](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#100-connect-and-mapstatetoprops)
+ 
 ---
 
 ## 49.Complete React Developer in 2019

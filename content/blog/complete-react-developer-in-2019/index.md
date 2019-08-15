@@ -2331,6 +2331,10 @@ export default connect(
 
 ### 107. Cart Item Reducer
 
+🌟 _Learned how to add items to the cart and store them in Redux_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/0dd0bff9220f96d2dd0ab8ba8ade3aad0658afa3?diff=split)
+
 ### 108. Adding Multiple Items To Cart
 
 ### 109. Optional: find()
