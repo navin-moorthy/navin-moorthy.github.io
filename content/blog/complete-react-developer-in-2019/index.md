@@ -557,7 +557,7 @@ export default App;
 
 ### 23. Optional: map() + key attribute
 
-Will be explained in `Appendix 1: Key Developer Concepts`
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 24. Single Page Application
 
@@ -610,7 +610,7 @@ export default App;
 
 ### 26. Optional: Promises
 
-Will be explained in `Appendix 1: Key Developer Concepts`
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 27. Architecture Our App
 
@@ -913,7 +913,7 @@ export default App;
 
 ### 35. Optional: filter(), includes()
 
-Will be explained in `Appendix 1: Key Developer Concepts`
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 36. Search Box Component
 
@@ -1070,7 +1070,7 @@ If you want to learn more about this, [have a read here](https://reactjs.org/doc
 
 ### 41. Optional: Git + GitHub
 
-Will be explained in `Appendix 1: Key Developer Concepts`
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 42. Optional: Connecting With SSH To Github
 
@@ -2337,37 +2337,223 @@ export default connect(
 
 ### 108. Adding Multiple Items To Cart
 
+🌟 _Added the quantity value to the existing Array_
+
+```js
+export const addItemToCart = (cartItems, cartItemToAdd) => {
+  const existingCartItem = cartItems.find(
+    cartItem => cartItem.id === cartItemToAdd.id
+  );
+
+  if (existingCartItem) {
+    return cartItems.map(cartItem =>
+      cartItem.id === cartItemToAdd.id
+        ? { ...cartItem, quantity: cartItem.quantity + 1 }
+        : cartItem
+    );
+  }
+
+  return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
+};
+```
+
 ### 109. Optional: find()
+
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 110. Cart Item Component
 
+![Cart Item Component](images/85.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/522cd060a9e4b702964d0b8c95ee00eba6dacf41?diff=split)
+
 ### 111. Optional: reduce()
+
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 112. Selectors in Redux
 
+![Cart Item Component](images/86.png)
+
+Use [Reselect](https://www.npmjs.com/package/reselect) for Memoization in the states that are not changed in Redux
+
+```js{10,13,21-26,29}
+import React from "react";
+import { connect } from "react-redux";
+
+import { toggleCartHidden } from "../../redux/cart/cart.actions";
+
+import { ReactComponent as ShoppingIcon } from "../../assets/shopping-bag.svg";
+
+import "./cart-icon.styles.scss";
+
+const CartIcon = ({ toggleCartHidden, itemCount }) => (
+  <div className="cart-icon" onClick={toggleCartHidden}>
+    <ShoppingIcon className="shopping-icon" />
+    <span className="item-count">{itemCount}</span>
+  </div>
+);
+
+const mapDispatchToProps = dispatch => ({
+  toggleCartHidden: () => dispatch(toggleCartHidden())
+});
+
+const mapStateToProps = ({ cart: { cartItems } }) => ({
+  itemCount: cartItems.reduce(
+    (accumulatedQuantity, cartItem) => accumulatedQuantity + cartItem.quantity,
+    0
+  )
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CartIcon);
+```
+
 ### 113. Optional: Memoization
+
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 114. Reselect Library
 
+🌟 _**Used Memoized selectors to improve our app performance from unwanted re-renders**_
+
+`npm i -S reselect`
+
+```js
+import { createSelector } from "reselect";
+
+const selectCart = state => state.cart;
+
+export const selectCartItems = createSelector(
+  [selectCart],
+  cart => cart.cartItems
+);
+
+export const selectCartItemsCount = createSelector(
+  [selectCartItems],
+  cartItems =>
+    cartItems.reduce(
+      (accumulatedQuantity, cartItem) =>
+        accumulatedQuantity + cartItem.quantity,
+      0
+    )
+);
+```
+
 ### 115. User Selectors
+
+🌟 _**Used createStructuredSelector to pass the state to multiple selectors easy peacy**_
+
+`import { createStructuredSelector } from "reselect";`
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/f2163bc88a98ba06a2a862270adf0dcb767269e0?diff=split)
 
 ### 116. Checkout Page
 
+![Checkout Page](images/87.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/1ed6a216b8df802bc028dfba52cb2b77613c73db?diff=split)
+
 ### 117. Checkout Page 2
+
+![Checkout Page 2](images/88.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/ef5541e9a4c2e5acad6f3c9563a0416226ab5f21?diff=split)
 
 ### 118. Extensible Code
 
+🌟 _**Make code and components simple and easier that others can understand**_
+
+![Extensible Code](images/89.png)
+
 ### 119. Dispatch Action Shorthand
+
+```js{9,14,25-30}
+import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { withRouter } from "react-router-dom";
+
+import CustomButton from "../custom-button/custom-button.components";
+import CartItem from "../cart-item/cart-item.component";
+
+import { toggleCartHidden } from "../../redux/cart/cart.actions";
+import { selectCartItems } from "../../redux/cart/cart.selectors";
+
+import "./cart-dropdown.styles.scss";
+
+const CartDropDown = ({ cartItems, history, dispatch }) => (
+  <div className="cart-dropdown">
+    <div className="cart-items">
+      {cartItems.length ? (
+        cartItems.map(cartItem => (
+          <CartItem key={cartItem.id} item={cartItem} />
+        ))
+      ) : (
+        <span className="empty-message">Your card is empty</span>
+      )}
+    </div>
+    <CustomButton
+      onClick={() => {
+        history.push("/checkout");
+        dispatch(toggleCartHidden());
+      }}
+    >
+      GO TO CHECKOUT
+    </CustomButton>
+  </div>
+);
+
+const mapStateToProps = createStructuredSelector({
+  cartItems: selectCartItems
+});
+
+export default withRouter(connect(mapStateToProps)(CartDropDown));
+```
 
 ### 120. Checkout Item Component
 
+![Checkout Item Component](images/90.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/5172a8f5b5610e4bcb58187c9ea8cbf54228fe77?diff=split)
+
 ### 121. Remove Items From Cart
+
+🌟 _**Created a remove a cartItem action to remove the item on clear button in Checkout Component**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/bbb29f049729252574c3c33cf8e2f5ff88f06546?diff=split)
 
 ### 122. Remove Items At Checkout
 
+![Remove Items At Checkout](images/91.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/b7d8f27d5d1707d9bfc1f0e6c6f84126d2151457?diff=split)
+
 ## Section 9: Master Project: SessionStorage + Persistence
 
+### 123. Local Storage and Session Storage
+
+🌟 _**Brief intro on Local Storage and Session Storage**_
+
+[Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+
+[Session Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
+
+### 124. Redux Persist
+
+🌟 _**Using Redux-persist we stored our cartItems in LocalStorage to persist even after the session close.**_
+
+[Redux-persist](https://www.npmjs.com/package/redux-persist)
+
 ## Section 10: Master Project: Redux 2
+
+### 125. Directory State Into Redux
+
+🌟 _**Moved Directory State Into Redux**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/a7b869dab68526f266212a105a48d588ff98e232?diff=split)
 
 ## Section 11: Master Project:Advanced Routing
 
