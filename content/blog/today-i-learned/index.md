@@ -1,7 +1,49 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-15"
+date: "2019-08-21"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 53.Complete React Developer in 2019
+
+### Day 53: August 16, 2019 - Thursday
+
+**Project:** Section 12, 13 and 14 Done
+
+![Payment Page](../complete-react-developer-in-2019/images/94.png)
+
+**Live:** [Crown Clothing](https://navin-navi-crown-clothing.herokuapp.com/)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [State Normalization](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-12-master-project-statenormalization)
+- [Stripe Payment](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-13-master-project-stripepayments-part-1)
+- [Deploying to Heroku](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-14-master-projectdeploying-to-production)
+
+---
+
+## 52.Complete React Developer in 2019
+
+### Day 52: August 15, 2019 - Thursday
+
+**Project:** Section 8, 9, 10, 11 Done
+
+![Checkout Page](../complete-react-developer-in-2019/images/91.png)
+
+**Live:** [Section 8](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#101-mapdispatchtoprops)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Created Cart Dropdown component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#104-card-drop-down-component)
+- [Created a Checkout Page](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#116-checkout-page)
+- [Session Storage and Persistance](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-9-master-project-sessionstorage--persistence)
+- [Improve State handling in Redux](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-10-master-project-redux-2)
+- [Advanced Routing](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-11-master-projectadvanced-routing)
+
 ---
 
 ## 51.Complete React Developer in 2019
@@ -43,7 +85,7 @@ Learned about a couple of new things,
 - [Redux Actions and Reducers](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#97-redux-actions-and-reducers)
 - [Setting Up Redux in the application](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#99-setting-up-redux-2)
 - [connect() and mapStateToProps](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#100-connect-and-mapstatetoprops)
- 
+
 ---
 
 ## 49.Complete React Developer in 2019

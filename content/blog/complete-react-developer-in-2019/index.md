@@ -1,6 +1,6 @@
 ---
 title: Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
-date: "2019-08-13"
+date: "2019-08-21"
 description: Notes taken while learning Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
 ---
 
