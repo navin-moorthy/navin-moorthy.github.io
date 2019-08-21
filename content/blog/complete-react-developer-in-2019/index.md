@@ -2555,13 +2555,154 @@ export default withRouter(connect(mapStateToProps)(CartDropDown));
 
 [View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/a7b869dab68526f266212a105a48d588ff98e232?diff=split)
 
+### 126. Collection State Into Redux
+
+🌟 _**Moved Shop Data State Into Redux**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/b258d65ca5c0a1311fce85fe66e23a6684716c2e?diff=split)
+
+### 127. Collection Overview Component
+
+🌟 _**Created a Collection Overview Component for `/shop` page**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/6aba1cea901b8b1de23caeed3001937178511218?diff=split)
+
 ## Section 11: Master Project:Advanced Routing
+
+### 128. Nested Routing in Shop Page
+
+![Nested Routing in Shop Page](images/92.png)
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/31a1dbe9725c7899fccf0f5bdf800f87d3bbe509?diff=split)
+
+### 129. Improving Naming Of Component
+
+🌟 _**Changed all the naming for Category Page to Collection Page**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/6ac8d122be2b0ec60cac500856777c29a3adaaa0?diff=split)
+
+### 130. Collection Routing and Selector
+
+`Route: /shop/mens`
+
+![Collection Routing and Selector](images/95.png)
+
+🌟 _**Collections are routed to its own collection using URL params**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/b20a25446d7d220a8c38f8b8b9f744d97843fa39?diff=split)
+
+### 131. Optional: Currying
+
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ## Section 12: Master Project: StateNormalization
 
+### 132. Data Normalization + Collection Page
+
+🌟 _**Used data normalization to improve the performance by converting arrays to objects**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/fcf518c10f15e1838f2b2b49d14db2e1a9e4bb1b?diff=split)
+
+### 133. Optional: Hash Tables vs Arrays
+
+In the previous lesson we learned about Objects (Hash Table data structure) being better for searching for items than Array. This is a common computing optimization when talking about data structures. If you want to learn more about why this is, [this is a great resource for you to use](https://www.kirupa.com/html5/hashtables_vs_arrays.htm).
+
+###  134. Data Flow In Our App
+
+```js{10-13}
+import { createSelector } from "reselect";
+
+const selectShop = state => state.shop;
+
+export const selectCollections = createSelector(
+  [selectShop],
+  shop => shop.collections
+);
+
+export const selectCollectionsForPreview = createSelector(
+  [selectCollections],
+  collections => Object.keys(collections).map(key => collections[key])
+);
+
+export const selectCollection = collectionUrlParam =>
+  createSelector(
+    [selectCollections],
+    collections => collections[collectionUrlParam]
+  );
+```
+
+### 135. Thinking About Data Flow
+
+![Thinking About Data Flow](images/93.png)
+
 ## Section 13: Master Project: StripePayments Part 1
 
+### 136. Introduction To Stripe
+
+[Stripe Docs](https://stripe.com/docs)
+
+🌟 _**Quick intro on how stripe works and how they perform transactions**_
+
+### 137. Stripe Integration
+
+[React Stripe Checkout](https://github.com/azmenak/react-stripe-checkout)
+
+![Stripe Integration](images/94.png)
+
+🌟 _**Implemented stripe checkout button**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/fcf518c10f15e1838f2b2b49d14db2e1a9e4bb1b?diff=split)
+
+### 138. Cloning From This Point On
+
+🌟 _**Note for those who clone the Instructors code because of the publishableKey in StripCheckoutButton**_
+
+### 139. Finishing Touches + Look Ahead
+
+![Finishing Touches + Look Ahead](images/96.png)
+
 ## Section 14: Master Project:Deploying To Production
+
+### 140. Deploying To Heroku
+
+[Heroku Dashboard](https://dashboard.heroku.com/) || [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) || [Heroku CRA BuildPack](https://github.com/mars/create-react-app-buildpack)
+
+🌟 _Install Heroku in Ubuntu_
+
+
+`sudo snap install --classic heroku`
+
+🌟 _Check Heroku version_
+
+`heroku --version`
+
+🌟 _Login to Heroku CLI with -i login in CLI itself with credentials_
+
+`heroku login -i`
+
+🌟 _Create a new project with React Buildpack_
+
+`heroku create navin-navi-crown-clothing --buildpack https://github.com/mars/create-react-app-buildpack`
+
+🌟 _Push the repo to heroku remote_
+
+`git push heroku master`
+
+[Crown Clothing Live](https://navin-navi-crown-clothing.herokuapp.com/)
+
+### 141. Resources: Buildpack
+
+You can learn more about the buildpack we used in the previous video by following the [documentation here](https://github.com/mars/create-react-app-buildpack)
+
+### 142. Linking Github to Heroku
+
+If you would like to not manually deploy the the app like we have seen in the previous video every time, and you want the app to redeploy anytime you update MASTER in your github repository, then you can set that up through Heroku by following these steps: https://devcenter.heroku.com/articles/github-integration
+
+However, since we will be working on the project in the next sections, we recommend that you do not do this so that as you code along, even if your website breaks, your current version of the website is still live on Heroku until you decide to redeploy next.
+
+### 43. Optional: Git + Heroku commands
+
+🌟 _Quick note on how heroku and git works in both local and remote._
 
 ## Section 15: Master Project: CSS in JS- styled-components
 
