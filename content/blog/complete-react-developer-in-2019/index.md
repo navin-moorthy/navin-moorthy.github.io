@@ -2704,9 +2704,280 @@ However, since we will be working on the project in the next sections, we recomm
 
 🌟 _Quick note on how heroku and git works in both local and remote._
 
+### 144. Optimizing Production Build
+
+🌟 _Logger should only be shown in development_
+
+```js{7-11}
+import { createStore, applyMiddleware } from "redux";
+import { persistStore } from "redux-persist";
+import logger from "redux-logger";
+
+import rootReducer from "./root-reducer";
+
+const middlewares = [];
+
+if (process.env.NODE_ENV === "development") {
+  middlewares.push(logger);
+}
+
+export const store = createStore(rootReducer, applyMiddleware(...middlewares));
+
+export const persistor = persistStore(store);
+```
+
 ## Section 15: Master Project: CSS in JS- styled-components
 
+### 145. CSS in JS
+
+🌟 _**Quick intro to styled components and what it help us to solve & improve**_
+
+[Styled Components](https://www.styled-components.com/) || [BEM](http://getbem.com/)
+
+### 146. styled-components
+
+🌟 _**Quick intro to styled components with a demo code**_
+
+### 147. styled-components In Our App
+
+🌟 _**Updated two components to use Styled Components**_
+
+`npm i -S styled-components`
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/651a58188724be01af08f69f7fc8f29015b0c167?diff=split)
+
+### 148. Thinking About Trade-offs
+
+![Thinking About Trade-offs](images/97.png)
+
+### 149. styled-components In Our App 2
+
+```js{31}
+import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+
+import { auth } from "../../firebase/firebase.utils";
+
+import CartIcon from "../cart-icon/cart-icon.component";
+import CartDropDown from "../cart-dropdown/cart-dropdown.component";
+
+import { selectCurrentUser } from "../../redux/user/user.selectors";
+import { selectCartHidden } from "../../redux/cart/cart.selectors";
+
+import {
+  HeaderContainer,
+  LogoContainer,
+  OptionsContainer,
+  OptionLink
+} from "./header.styles";
+
+import { ReactComponent as Logo } from "../../assets/crown.svg";
+
+const Header = ({ currentUser, hidden }) => (
+  <HeaderContainer>
+    <LogoContainer to="/">
+      <Logo className="logo" />
+    </LogoContainer>
+    <OptionsContainer>
+      <OptionLink to="/shop">SHOP</OptionLink>
+      <OptionLink to="/shop">CONTACT</OptionLink>
+      {currentUser ? (
+        <OptionLink as="div" onClick={() => auth.signOut()}>
+          SIGN OUT
+        </OptionLink>
+      ) : (
+        <OptionLink to="/signin">SIGN IN</OptionLink>
+      )}
+      <CartIcon />
+    </OptionsContainer>
+    {hidden ? null : <CartDropDown />}
+  </HeaderContainer>
+);
+
+const mapStatetoProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden
+});
+
+export default connect(mapStatetoProps)(Header);
+```
+
+### 150. styled-components In Our App 3
+
+🌟 _**Updated difficult components styles using Styled Components**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/651a58188724be01af08f69f7fc8f29015b0c167?diff=split)
+
+### 151. Exercise: styled-components
+
+🌟 _**Updated the project to use Styled Components completely**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/597402806abb00a1e14b5c669e7b1ff8a022cfc9?diff=split)
+
 ## Section 16: Master Project:Advanced Redux + Firebase
+
+🌟 _Get titles for Section 16_
+
+```js
+$$(".curriculum-item-link--title--zI5QT").map(
+  title => title.textContent
+);
+```
+
+### 152. Section Overview
+
+🌟 _Quick intro on what we are going to solve in this section_
+
+### 153. Quick Note: Firebase
+
+Over the next couple of videos we are going to be covering some specific Firebase commands. Keep in mind that as a React Developer, you do not need to memorize these things and most of the time you can always refer to the firebase documentation for more information. We decided to include the process in the course so that you get a clear picture into what  is involved in creating a full scale application. 
+
+If for some reason you get overwhelmed with Firestore, just keep going and use our provided code since this is not the "important" part of the course.
+
+### 154. Firebase Refresher
+
+🌟 _**Quick intro to previously taught Firebase Concepts**_
+
+![Firebase Refresher](images/98.png)
+
+### 155. Firebase Refresher 2
+
+🌟 _**Quick intro to previously taught Firebase Concepts 2**_
+
+![Firebase Refresher 2](images/99.png)
+
+### 156. Moving Our Shop Data To Firebase
+
+`src/firebase/firebase.util.js`
+
+```js{37-40}
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
+
+const config = {
+  apiKey: "AIzaSyB5bIa1E55zDzEYnRe0zsw7kXxejifBsy0",
+  authDomain: "crown-clothing-db-ec57f.firebaseapp.com",
+  databaseURL: "https://crown-clothing-db-ec57f.firebaseio.com",
+  projectId: "crown-clothing-db-ec57f",
+  storageBucket: "",
+  messagingSenderId: "137189619024",
+  appId: "1:137189619024:web:1216d928d5eafe8b"
+};
+
+firebase.initializeApp(config);
+
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+  if (!userAuth) return;
+
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
+  const snapshot = await userRef.get();
+
+  if (!snapshot.exists) {
+    const { displayName, email } = userAuth;
+    const createdAt = new Date();
+
+    try {
+      await userRef.set({ displayName, email, createdAt, ...additionalData });
+    } catch (error) {
+      console.log("Error creating users", error.message);
+    }
+  }
+
+  return userRef;
+};
+
+export const addCollectionAndDocuments = (collectionKey, objectsToAdd) => {
+  const collectionRef = firestore.collection(collectionKey);
+  console.log(collectionRef);
+};
+
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+
+const provider = new firebase.auth.GoogleAuthProvider();
+provider.setCustomParameters({ prompt: "select_account" });
+
+export const signInWithGoogle = () => auth.signInWithPopup(provider);
+
+export default firebase;
+```
+### 157. Moving Our Shop Data To Firebase 2
+
+`src/firebase/firebase.util.js`
+
+```js{37-51}
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
+
+const config = {
+  apiKey: "AIzaSyB5bIa1E55zDzEYnRe0zsw7kXxejifBsy0",
+  authDomain: "crown-clothing-db-ec57f.firebaseapp.com",
+  databaseURL: "https://crown-clothing-db-ec57f.firebaseio.com",
+  projectId: "crown-clothing-db-ec57f",
+  storageBucket: "",
+  messagingSenderId: "137189619024",
+  appId: "1:137189619024:web:1216d928d5eafe8b"
+};
+
+firebase.initializeApp(config);
+
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+  if (!userAuth) return;
+
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
+  const snapshot = await userRef.get();
+
+  if (!snapshot.exists) {
+    const { displayName, email } = userAuth;
+    const createdAt = new Date();
+
+    try {
+      await userRef.set({ displayName, email, createdAt, ...additionalData });
+    } catch (error) {
+      console.log("Error creating users", error.message);
+    }
+  }
+
+  return userRef;
+};
+
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+  const collectionRef = firestore.collection(collectionKey);
+
+  const batch = firestore.batch();
+
+  objectsToAdd.forEach(obj => {
+    const newDocRef = collectionRef.doc();
+    batch.set(newDocRef, obj);
+  });
+
+  await batch.commit();
+};
+
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+
+const provider = new firebase.auth.GoogleAuthProvider();
+provider.setCustomParameters({ prompt: "select_account" });
+
+export const signInWithGoogle = () => auth.signInWithPopup(provider);
+
+export default firebase;
+```
+
+### 158. Reviewing What We Have Done
+
+![Reviewing What We Have Done](images/100.png)
+
+### 159. Bringing Shop Data To Our App
+### 160. Adding Shop Data To Redux
+
 
 ## Section 17: Master Project: HOCPatterns
 
