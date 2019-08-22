@@ -2831,7 +2831,7 @@ $$(".curriculum-item-link--title--zI5QT").map(
 
 ### 153. Quick Note: Firebase
 
-Over the next couple of videos we are going to be covering some specific Firebase commands. Keep in mind that as a React Developer, you do not need to memorize these things and most of the time you can always refer to the firebase documentation for more information. We decided to include the process in the course so that you get a clear picture into what  is involved in creating a full scale application. 
+Over the next couple of videos we are going to be covering some specific Firebase commands. Keep in mind that as a React Developer, you do not need to memorize these things and most of the time you can always refer to the firebase documentation for more information. We decided to include the process in the course so that you get a clear picture into what  is involved in creating a full scale application.
 
 If for some reason you get overwhelmed with Firestore, just keep going and use our provided code since this is not the "important" part of the course.
 
@@ -2976,16 +2976,480 @@ export default firebase;
 ![Reviewing What We Have Done](images/100.png)
 
 ### 159. Bringing Shop Data To Our App
+
+`src/firebase/firebase.utils.js`
+
+```js{53-65}
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
+
+const config = {
+  apiKey: "AIzaSyB5bIa1E55zDzEYnRe0zsw7kXxejifBsy0",
+  authDomain: "crown-clothing-db-ec57f.firebaseapp.com",
+  databaseURL: "https://crown-clothing-db-ec57f.firebaseio.com",
+  projectId: "crown-clothing-db-ec57f",
+  storageBucket: "",
+  messagingSenderId: "137189619024",
+  appId: "1:137189619024:web:1216d928d5eafe8b"
+};
+
+firebase.initializeApp(config);
+
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+  if (!userAuth) return;
+
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
+  const snapshot = await userRef.get();
+
+  if (!snapshot.exists) {
+    const { displayName, email } = userAuth;
+    const createdAt = new Date();
+
+    try {
+      await userRef.set({ displayName, email, createdAt, ...additionalData });
+    } catch (error) {
+      console.log("Error creating users", error.message);
+    }
+  }
+
+  return userRef;
+};
+
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+  const collectionRef = firestore.collection(collectionKey);
+
+  const batch = firestore.batch();
+
+  objectsToAdd.forEach(obj => {
+    const newDocRef = collectionRef.doc();
+    batch.set(newDocRef, obj);
+  });
+
+  await batch.commit();
+};
+
+export const convertCollectionsSnapshotToMap = collections => {
+  const transformedCollection = collections.docs.map(doc => {
+    const { title, items } = doc.data();
+
+    return {
+      routeName: encodeURI(title.toLowerCase()),
+      id: doc.id,
+      title,
+      items
+    };
+  });
+  console.log(transformedCollection);
+};
+
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+
+const provider = new firebase.auth.GoogleAuthProvider();
+provider.setCustomParameters({ prompt: "select_account" });
+
+export const signInWithGoogle = () => auth.signInWithPopup(provider);
+
+export default firebase;
+```
+
 ### 160. Adding Shop Data To Redux
 
+🌟 _**Updated the shop data with firestore in Redux**_
 
-## Section 17: Master Project: HOCPatterns
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/996e2d216bc73e95e3ef85bf09008aa089f3d206?diff=split)
+
+## Section 17: Master Project: HOC Patterns
+
+### 161. WithSpinner HOC
+
+`src/components/with-spinner/with-spinner.component.jsx`
+
+```js
+import React from "react";
+
+import { SpinnerContainer, SpinnerOverlay } from "./with-spinner.styles";
+
+const WithSpinner = WrapperComponent => ({ isLoading, ...props }) => {
+  return isLoading ? (
+    <SpinnerOverlay>
+      <SpinnerContainer />
+    </SpinnerOverlay>
+  ) : (
+    <WrapperComponent {...props} />
+  );
+};
+
+export default WithSpinner;
+```
+
+### 162. WithSpinner HOC 2
+
+🌟 _**Added Loading Spinner for our App**_
+
+`src/pages/shop/shop.component.jsx`
+
+```js{13,16,17,20-22,33,43,49-51,56-58}
+import React from "react";
+import { Route } from "react-router-dom";
+import { connect } from "react-redux";
+
+import { updateCollections } from "../../redux/shop/shop.actions";
+
+import {
+  firestore,
+  convertCollectionsSnapshotToMap
+} from "../../firebase/firebase.utils";
+
+import CollectionPage from "../collection/collection.component";
+import WithSpinner from "../../components/with-spinner/with-spinner.component";
+import CollectionsOverview from "../../components/collections-overview/collections-overview.components";
+
+const CollectionPageWithSpinner = WithSpinner(CollectionPage);
+const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview);
+
+class ShopPage extends React.Component {
+  state = {
+    loading: true
+  };
+
+  unsubscripbeFromSnapshot = null;
+
+  componentDidMount() {
+    const { updateCollections } = this.props;
+    const collectionRef = firestore.collection("collections");
+
+    this.unsubscripbeFromSnapshot = collectionRef.onSnapshot(snapshot => {
+      const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
+      updateCollections(collectionsMap);
+      this.setState({ loading: false });
+    });
+  }
+
+  componentWillUnmount() {
+    this.unsubscripbeFromSnapshot = null;
+  }
+
+  render() {
+    const { match } = this.props;
+    const { loading } = this.state;
+    return (
+      <div className="shop-page">
+        <Route
+          exact
+          path={`${match.path}`}
+          render={props => (
+            <CollectionsOverviewWithSpinner isLoading={loading} {...props} />
+          )}
+        />
+        <Route
+          exact
+          path={`${match.path}/:collectionId`}
+          render={props => (
+            <CollectionPageWithSpinner isLoading={loading} {...props} />
+          )}
+        />
+      </div>
+    );
+  }
+}
+
+const mapDispatchToProps = dispatch => ({
+  updateCollections: collectionsMap =>
+    dispatch(updateCollections(collectionsMap))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(ShopPage);
+```
+
+### 163. Quick Note About Next Lesson
+
+If you are still finding it difficult understanding how Higher Order Components can be useful, you have an optional video next which we explain in higher detail when HOCs are useful and how we can build them ourselves. Enjoy!
+
+### 164. Optional: How To Build HOCs
+
+[HOC Example](https://github.com/ZhangMYihua/higher-order-components-explained)
 
 ## Section 18: Master Project: Asynchronous Redux
 
+### 165. Observables + Observer Pattern
+
+![Observables + Observer Pattern](images/101.png)
+
+### 166. Promise Pattern
+
+[Firebase REST API](https://firebase.google.com/docs/firestore/use-rest-api#making_rest_calls)
+
+`src/pages/shop/shop.component.jsx`
+
+```js{28}
+import React from "react";
+import { Route } from "react-router-dom";
+import { connect } from "react-redux";
+
+import { updateCollections } from "../../redux/shop/shop.actions";
+
+import {
+  firestore,
+  convertCollectionsSnapshotToMap
+} from "../../firebase/firebase.utils";
+
+import CollectionPage from "../collection/collection.component";
+import WithSpinner from "../../components/with-spinner/with-spinner.component";
+import CollectionsOverview from "../../components/collections-overview/collections-overview.components";
+
+const CollectionPageWithSpinner = WithSpinner(CollectionPage);
+const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview);
+
+class ShopPage extends React.Component {
+  state = {
+    loading: true
+  };
+
+  componentDidMount() {
+    const { updateCollections } = this.props;
+    const collectionRef = firestore.collection("collections");
+
+    collectionRef.get().then(snapshot => {
+      const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
+      updateCollections(collectionsMap);
+      this.setState({ loading: false });
+    });
+  }
+
+  render() {
+    const { match } = this.props;
+    const { loading } = this.state;
+    return (
+      <div className="shop-page">
+        <Route
+          exact
+          path={`${match.path}`}
+          render={props => (
+            <CollectionsOverviewWithSpinner isLoading={loading} {...props} />
+          )}
+        />
+        <Route
+          exact
+          path={`${match.path}/:collectionId`}
+          render={props => (
+            <CollectionPageWithSpinner isLoading={loading} {...props} />
+          )}
+        />
+      </div>
+    );
+  }
+}
+
+const mapDispatchToProps = dispatch => ({
+  updateCollections: collectionsMap =>
+    dispatch(updateCollections(collectionsMap))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(ShopPage);
+```
+
+### 167. Redux Thunk
+
+[Redux Thunk](https://www.npmjs.com/package/redux-thunk)
+
+🌟 _**Used Redux Thunk to asynchronously fetch data from firestore and save it in Redux**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/2e0fdfecaac86516ae57a3c15312c1822483f9ed?diff=split)
+
+### 168. What Does Redux Thunk Do?
+
+🌟 _**Redux Thunk explanation by Andrei**_
+
+### 169. Debugging Our Code
+
+🌟 _**Fixed the collections fetching error in CollectionsPage Component**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/3e63d09d79f39c9a470db39b5d6b31978c0e0bd0?diff=split)
+
 ## Section 19: Master Project:Container Pattern
 
+### 170. Container Pattern
+
+`src/pages/collection/collection.container.jsx`
+
+```js
+import { compose } from "redux";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+
+import CollectionPage from "./collection.component";
+import WithSpinner from "../../components/with-spinner/with-spinner.component";
+
+import { selectIsCollectionsLoaded } from "../../redux/shop/shop.selectors";
+
+const mapStateToProps = createStructuredSelector({
+  isLoading: state => !selectIsCollectionsLoaded(state)
+});
+
+const CollectionPageContainer = compose(
+  connect(mapStateToProps),
+  WithSpinner
+)(CollectionPage);
+
+export default CollectionPageContainer;
+```
+
+### 171. Refactoring Is A Trade off
+
+![Refactoring Is A Trade off](images/102.png)
+
 ## Section 20: Master Project:Redux-Saga
+
+🌟 _**Get titles for Section 20**_
+
+```js
+$$(".curriculum-item-link--title--zI5QT").map(
+  title => title.textContent
+);
+```
+
+### 172. Introduction to Sagas
+
+![Introduction to Sagas](images/103.png)
+
+### 173. Generator Functions
+
+[Generator Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+
+![Generator Functions](images/104.png)
+
+### 174. Quick Note About Sagas
+
+These next few videos are going to be tough. Keep in mind that getting redux-sagas in one go is usually impossible and it is something you practice multiple times to fully understand. We highly recommend you code along in this section and pause or rewatch the videos whenever you feel unsure of something. Another option is to watch this section all the way through, then come back the 2nd time around and code along once you have a general idea of the concepts.
+
+Good luck!
+
+### 175. redux-saga
+
+[redux-saga](https://www.npmjs.com/package/redux-saga)
+
+`src/redux/shop/shop.sagas.js`
+
+```js
+import { takeEvery } from "redux-saga/effects";
+
+import { ShopActionTypes } from "./shop.types";
+
+export function* fetchCollectionAsync() {
+  yield console.log("I am fired");
+}
+
+export function* fetchCollectionsStart() {
+  console.log("1");
+  yield takeEvery(
+    ShopActionTypes.FETCH_COLLECTIONS_START,
+    fetchCollectionAsync
+  );
+}
+```
+
+### 176. Redux Thunk Into Saga
+
+`src/redux/shop/shop.sagas.js`
+
+```js{15-29}
+import { takeEvery, call, put } from "redux-saga/effects";
+
+import { ShopActionTypes } from "./shop.types";
+
+import {
+  fetchCollectionsSuccess,
+  fetchCollectionsFailure
+} from "./shop.actions";
+
+import {
+  firestore,
+  convertCollectionsSnapshotToMap
+} from "../../firebase/firebase.utils";
+
+export function* fetchCollectionAsync() {
+  yield console.log("I am fired");
+
+  try {
+    const collectionRef = firestore.collection("collections");
+    const snapshot = yield collectionRef.get();
+    const collectionsMap = yield call(
+      convertCollectionsSnapshotToMap,
+      snapshot
+    );
+    yield put(fetchCollectionsSuccess(collectionsMap));
+  } catch (error) {
+    yield put(fetchCollectionsFailure(error.message));
+  }
+}
+
+export function* fetchCollectionsStart() {
+  console.log("1");
+  yield takeEvery(
+    ShopActionTypes.FETCH_COLLECTIONS_START,
+    fetchCollectionAsync
+  );
+}
+```
+
+### 177. take(), takeEvery(), takeLatest()
+
+🌟 _**Deep explanation on take(), takeEvery(), takeLatest()**_
+
+[Example repo](https://github.com/ZhangMYihua/redux-saga-take-takelatest-takeevery)
+
+### 178. Root Saga
+
+`src/redux/root-saga.js`
+
+```js
+import { all, call } from "redux-saga/effects";
+
+import { fetchCollectionsStart } from "./shop/shop.sagas";
+
+export default function* rootSaga() {
+  yield all([call(fetchCollectionsStart)]);
+}
+```
+
+### 179. Planning Ahead With Sagas
+
+🌟 _**Plan to shift our Users Auth calls into Redux Saga**_
+
+### 180. Google Sign In Into Sagas
+
+🌟 _**Implemented Google Sign In Into Sagas**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/514e96506dc846f3e21d28cf039f407447396b4a?diff=split)
+
+### 181. Email Sign In Into Sagas
+
+🌟 _**Implemented Email Sign In Into Sagas**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/24c47c52c060d19e189967a22ed814ee9abca9a0?diff=split)
+
+### 182. Reviewing Our Sagas
+
+![Reviewing Our Sagas](images/105.png)
+
+
+![Reviewing Our Sagas](images/106.png)
+
+### 183. Recreating Persistence
+### 184. Sign Out With Sagas
+### 185. Clear Cart Saga
+### 186. Solution: Sign Up Saga
 
 ## Section 21: Master Project: ReactHooks
 
