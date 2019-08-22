@@ -3447,11 +3447,223 @@ export default function* rootSaga() {
 ![Reviewing Our Sagas](images/106.png)
 
 ### 183. Recreating Persistence
+
+🌟 _**Implemented User persistence recreation**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/545e99bd2efc574d7d44cf6b4e53aab26cc610e4?diff=split)
+
 ### 184. Sign Out With Sagas
+
+🌟 _**Implemented User persistence recreation**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/545e99bd2efc574d7d44cf6b4e53aab26cc610e4?diff=split)
+
 ### 185. Clear Cart Saga
+
+🌟 _**Implemented Clear Cart Saga on Sign out**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/2fd05cdb1d95d17e94f1c1df455df25956f86ef4?diff=split)
+
 ### 186. Solution: Sign Up Saga
 
+🌟 _**Implemented Sign Up Saga**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/e41cfc7d39cc7a25c05d53bb0918b332c81020f4?diff=split)
+
 ## Section 21: Master Project: ReactHooks
+
+🌟 _**Get titles for Section 21**_
+
+```js
+$$(".curriculum-item-link--title--zI5QT").map(
+  title => title.textContent
+);
+```
+
+### 187. React Hooks Introduction(useState)
+
+🌟 _**Intro to useState hook**_
+
+### 188. Why Did React Add Hooks?
+
+If you want to learn more about why the React team decided to add Hooks to the library, you can find the motivation behind their decision right from their mouth <https://reactjs.org/docs/hooks-intro.html#motivation>
+
+### 189. useEffect
+
+[useEffect](https://reactjs.org/docs/hooks-effect.html) || [JSON Placeholder](https://jsonplaceholder.typicode.com/) || [useEffect Example](https://github.com/ZhangMYihua/use-effect-example)
+
+### 190. Hook Rules
+
+🌟 _**Hooks cannot be conditionally renders in top level. Conditions should be inside the Hooks**_
+
+### 191. Converting ClassComponents With useState
+
+🌟 _**Converted SignIn Component and SignUp Component to use the State hook**_
+
+```js
+import React, { useState } from "react";
+import { connect } from "react-redux";
+
+import {
+  googleSignInStart,
+  emailSignInStart
+} from "../../redux/user/user.actions";
+
+import FormInput from "../form-input/form-input.components";
+import CustomButton from "../custom-button/custom-button.component";
+
+import {
+  SignInContainer,
+  SignInTitle,
+  ButtonsBarContainer
+} from "./sign-in.styles";
+
+const SignIn = ({ emailSignInStart, googleSignInStart }) => {
+  const [UserCredentials, setCredentials] = useState({
+    email: "",
+    password: ""
+  });
+
+  const { email, password } = UserCredentials;
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+
+    emailSignInStart(email, password);
+  };
+
+  const handleChange = e => {
+    const { value, name } = e.target;
+
+    setCredentials({ ...UserCredentials, [name]: value });
+  };
+
+  return (
+    <SignInContainer>
+      <SignInTitle>I already have an account</SignInTitle>
+      <span>Sign in with you email and password</span>
+
+      <form onSubmit={handleSubmit}>
+        <FormInput
+          type="email"
+          name="email"
+          value={email}
+          handleChange={handleChange}
+          label="Email"
+          required
+        />
+        <FormInput
+          type="password"
+          name="password"
+          value={password}
+          handleChange={handleChange}
+          label="Password"
+          required
+        />
+        <ButtonsBarContainer>
+          <CustomButton type="submit">Sign In</CustomButton>
+          <CustomButton
+            type="button"
+            onClick={googleSignInStart}
+            isGoogleSignIn
+          >
+            Sign in with Google
+          </CustomButton>
+        </ButtonsBarContainer>
+      </form>
+    </SignInContainer>
+  );
+};
+
+const mapDispatchToProps = dispatch => ({
+  googleSignInStart: () => dispatch(googleSignInStart()),
+  emailSignInStart: (email, password) =>
+    dispatch(emailSignInStart({ email, password }))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(SignIn);
+```
+
+### 192. useEffect In Our App
+
+🌟 _**Converted some Component to use useEffect hook**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/5f2b923375322608c504056038185adf66cc388f?diff=split)
+
+### 193. useEffect as ComponentWillUnmount()
+
+🌟 _**useEffect hook clean up function acts as a ComponentWillUnmount**_
+
+![useEffect as ComponentWillUnmount](images/107.png)
+
+### 194. useEffect Cheat Sheet
+
+A quick recap of what we have learned about useEffect:
+
+🌟 _**ComponentDidMount**_
+
+```js
+//Class
+componentDidMount() {
+    console.log('I just mounted!');
+}
+ 
+//Hooks
+useEffect(() => {
+    console.log('I just mounted!');
+}, [])
+```
+
+🌟 _**ComponentWillUnmount**_
+
+```js
+//Class
+componentWillUnmount() {
+    console.log('I am unmounting');
+}
+ 
+//Hooks
+useEffect(() => {
+    return () => console.log('I am unmounting');
+}, [])
+```
+
+🌟 _**ComponentWillReceiveProps**_
+
+```js
+//Class
+componentWillReceiveProps(nextProps) {
+    if (nextProps.count !== this.props.count) {
+        console.log('count changed', nextProps.count);
+    }
+}
+ 
+//Hooks
+useEffect(() => {
+    console.log('count changed', props.count);
+}, [props.count])
+```
+
+### 195. Custom Hooks
+
+[Custom Hooks Example](https://github.com/ZhangMYihua/custom-hook-example)
+
+### 196. Custom Hooks 2
+
+🌟 _**Learned more about useEffect()**_
+
+### 197. useReducer
+
+[useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer) || [useReducer example](https://github.com/ZhangMYihua/useReducer-example)
+
+### 198. useContext + useMemo + useCallback
+
+There are a few other Hooks we still need to talk about such as useContext or useMemo or useCallback However, we are covering topics like these in later sections in the course when we learn a little bit more about things like ContextAPI and Performance. 
+
+So hang on tight and you will learn about them shortly as we will continue to use hooks throughout the upcoming sections!
 
 ## Section 22: Master Project: StripePayments Part 2 - Backend
 
