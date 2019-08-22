@@ -1,12 +1,30 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-21"
+date: "2019-08-22"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
-## 53.Complete React Developer in 2019
+## 54.Complete React Developer in 2019
 
-### Day 53: August 16, 2019 - Thursday
+### Day 54: August 21, 2019 - Wednesday
+
+**Project:** Section 15 & 16 Done
+
+![Query Snapshot](../complete-react-developer-in-2019/images/99.png)
+
+**Live:** [Crown Clothing](https://navin-navi-crown-clothing.herokuapp.com/)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [CSS in JS](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-15-master-project-css-in-js--styled-components0)
+- Converted the whole Ecommerce app to use Styled Components
+- [Advanced Redux and Firebase](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-16-master-projectadvanced-redux--firebase)
+
+---
+
+### Day 53: August 16, 2019 - Friday
 
 **Project:** Section 12, 13 and 14 Done
 
