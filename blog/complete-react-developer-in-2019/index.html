@@ -3967,7 +3967,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 <h3 id="152-section-overview"><a href="#152-section-overview" aria-label="152 section overview permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>152. Section Overview</h3>
 <p>🌟 <em>Quick intro on what we are going to solve in this section</em></p>
 <h3 id="153-quick-note-firebase"><a href="#153-quick-note-firebase" aria-label="153 quick note firebase permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>153. Quick Note: Firebase</h3>
-<p>Over the next couple of videos we are going to be covering some specific Firebase commands. Keep in mind that as a React Developer, you do not need to memorize these things and most of the time you can always refer to the firebase documentation for more information. We decided to include the process in the course so that you get a clear picture into what  is involved in creating a full scale application. </p>
+<p>Over the next couple of videos we are going to be covering some specific Firebase commands. Keep in mind that as a React Developer, you do not need to memorize these things and most of the time you can always refer to the firebase documentation for more information. We decided to include the process in the course so that you get a clear picture into what  is involved in creating a full scale application.</p>
 <p>If for some reason you get overwhelmed with Firestore, just keep going and use our provided code since this is not the “important” part of the course.</p>
 <h3 id="154-firebase-refresher"><a href="#154-firebase-refresher" aria-label="154 firebase refresher permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>154. Firebase Refresher</h3>
 <p>🌟 <em><strong>Quick intro to previously taught Firebase Concepts</strong></em></p>
@@ -4137,11 +4137,469 @@ provider<span class="token punctuation">.</span><span class="token function">set
       />
     </span></p>
 <h3 id="159-bringing-shop-data-to-our-app"><a href="#159-bringing-shop-data-to-our-app" aria-label="159 bringing shop data to our app permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>159. Bringing Shop Data To Our App</h3>
+<p><code class="language-text">src/firebase/firebase.utils.js</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> firebase <span class="token keyword">from</span> <span class="token string">"firebase/app"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"firebase/firestore"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"firebase/auth"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
+  apiKey<span class="token punctuation">:</span> <span class="token string">"AIzaSyB5bIa1E55zDzEYnRe0zsw7kXxejifBsy0"</span><span class="token punctuation">,</span>
+  authDomain<span class="token punctuation">:</span> <span class="token string">"crown-clothing-db-ec57f.firebaseapp.com"</span><span class="token punctuation">,</span>
+  databaseURL<span class="token punctuation">:</span> <span class="token string">"https://crown-clothing-db-ec57f.firebaseio.com"</span><span class="token punctuation">,</span>
+  projectId<span class="token punctuation">:</span> <span class="token string">"crown-clothing-db-ec57f"</span><span class="token punctuation">,</span>
+  storageBucket<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+  messagingSenderId<span class="token punctuation">:</span> <span class="token string">"137189619024"</span><span class="token punctuation">,</span>
+  appId<span class="token punctuation">:</span> <span class="token string">"1:137189619024:web:1216d928d5eafe8b"</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+firebase<span class="token punctuation">.</span><span class="token function">initializeApp</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">createUserProfileDocument</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">userAuth<span class="token punctuation">,</span> additionalData</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>userAuth<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> userRef <span class="token operator">=</span> firestore<span class="token punctuation">.</span><span class="token function">doc</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">users/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>userAuth<span class="token punctuation">.</span>uid<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> snapshot <span class="token operator">=</span> <span class="token keyword">await</span> userRef<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>snapshot<span class="token punctuation">.</span>exists<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> displayName<span class="token punctuation">,</span> email <span class="token punctuation">}</span> <span class="token operator">=</span> userAuth<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> createdAt <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">await</span> userRef<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token punctuation">{</span> displayName<span class="token punctuation">,</span> email<span class="token punctuation">,</span> createdAt<span class="token punctuation">,</span> <span class="token operator">...</span>additionalData <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Error creating users"</span><span class="token punctuation">,</span> error<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> userRef<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">addCollectionAndDocuments</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span>
+  <span class="token parameter">collectionKey<span class="token punctuation">,</span>
+  objectsToAdd</span>
+<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> collectionRef <span class="token operator">=</span> firestore<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span>collectionKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> batch <span class="token operator">=</span> firestore<span class="token punctuation">.</span><span class="token function">batch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  objectsToAdd<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">obj</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> newDocRef <span class="token operator">=</span> collectionRef<span class="token punctuation">.</span><span class="token function">doc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    batch<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>newDocRef<span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">await</span> batch<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="gatsby-highlight-code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">convertCollectionsSnapshotToMap</span> <span class="token operator">=</span> <span class="token parameter">collections</span> <span class="token operator">=></span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">  <span class="token keyword">const</span> transformedCollection <span class="token operator">=</span> collections<span class="token punctuation">.</span>docs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">doc</span> <span class="token operator">=></span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">const</span> <span class="token punctuation">{</span> title<span class="token punctuation">,</span> items <span class="token punctuation">}</span> <span class="token operator">=</span> doc<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line"></span><span class="gatsby-highlight-code-line">    <span class="token keyword">return</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">      routeName<span class="token punctuation">:</span> <span class="token function">encodeURI</span><span class="token punctuation">(</span>title<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">      id<span class="token punctuation">:</span> doc<span class="token punctuation">.</span>id<span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">      title<span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">      items</span><span class="gatsby-highlight-code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>transformedCollection<span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span></span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> auth <span class="token operator">=</span> firebase<span class="token punctuation">.</span><span class="token function">auth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> firestore <span class="token operator">=</span> firebase<span class="token punctuation">.</span><span class="token function">firestore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> provider <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">firebase<span class="token punctuation">.</span>auth<span class="token punctuation">.</span>GoogleAuthProvider</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+provider<span class="token punctuation">.</span><span class="token function">setCustomParameters</span><span class="token punctuation">(</span><span class="token punctuation">{</span> prompt<span class="token punctuation">:</span> <span class="token string">"select_account"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">signInWithGoogle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> auth<span class="token punctuation">.</span><span class="token function">signInWithPopup</span><span class="token punctuation">(</span>provider<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> firebase<span class="token punctuation">;</span></code></pre></div>
 <h3 id="160-adding-shop-data-to-redux"><a href="#160-adding-shop-data-to-redux" aria-label="160 adding shop data to redux permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>160. Adding Shop Data To Redux</h3>
-<h2 id="section-17-master-project-hocpatterns"><a href="#section-17-master-project-hocpatterns" aria-label="section 17 master project hocpatterns permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 17: Master Project: HOCPatterns</h2>
+<p>🌟 <em><strong>Updated the shop data with firestore in Redux</strong></em></p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/996e2d216bc73e95e3ef85bf09008aa089f3d206?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
+<h2 id="section-17-master-project-hoc-patterns"><a href="#section-17-master-project-hoc-patterns" aria-label="section 17 master project hoc patterns permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 17: Master Project: HOC Patterns</h2>
+<h3 id="161-withspinner-hoc"><a href="#161-withspinner-hoc" aria-label="161 withspinner hoc permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>161. WithSpinner HOC</h3>
+<p><code class="language-text">src/components/with-spinner/with-spinner.component.jsx</code></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> SpinnerContainer<span class="token punctuation">,</span> SpinnerOverlay <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./with-spinner.styles"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">WithSpinner</span> <span class="token operator">=</span> <span class="token parameter">WrapperComponent</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> isLoading<span class="token punctuation">,</span> <span class="token operator">...</span>props <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> isLoading <span class="token operator">?</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>SpinnerOverlay<span class="token operator">></span>
+      <span class="token operator">&lt;</span>SpinnerContainer <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>SpinnerOverlay<span class="token operator">></span>
+  <span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>WrapperComponent <span class="token punctuation">{</span><span class="token operator">...</span>props<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> WithSpinner<span class="token punctuation">;</span></code></pre></div>
+<h3 id="162-withspinner-hoc-2"><a href="#162-withspinner-hoc-2" aria-label="162 withspinner hoc 2 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>162. WithSpinner HOC 2</h3>
+<p>🌟 <em><strong>Added Loading Spinner for our App</strong></em></p>
+<p><code class="language-text">src/pages/shop/shop.component.jsx</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Route <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-router-dom"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-redux"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> updateCollections <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"../../redux/shop/shop.actions"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  firestore<span class="token punctuation">,</span>
+  convertCollectionsSnapshotToMap
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"../../firebase/firebase.utils"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> CollectionPage <span class="token keyword">from</span> <span class="token string">"../collection/collection.component"</span><span class="token punctuation">;</span>
+<span class="gatsby-highlight-code-line"><span class="token keyword">import</span> WithSpinner <span class="token keyword">from</span> <span class="token string">"../../components/with-spinner/with-spinner.component"</span><span class="token punctuation">;</span></span><span class="token keyword">import</span> CollectionsOverview <span class="token keyword">from</span> <span class="token string">"../../components/collections-overview/collections-overview.components"</span><span class="token punctuation">;</span>
+
+<span class="gatsby-highlight-code-line"><span class="token keyword">const</span> CollectionPageWithSpinner <span class="token operator">=</span> <span class="token function">WithSpinner</span><span class="token punctuation">(</span>CollectionPage<span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line"><span class="token keyword">const</span> CollectionsOverviewWithSpinner <span class="token operator">=</span> <span class="token function">WithSpinner</span><span class="token punctuation">(</span>CollectionsOverview<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="token keyword">class</span> <span class="token class-name">ShopPage</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+<span class="gatsby-highlight-code-line">  state <span class="token operator">=</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    loading<span class="token punctuation">:</span> <span class="token boolean">true</span></span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span></span>
+  unsubscripbeFromSnapshot <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> updateCollections <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> collectionRef <span class="token operator">=</span> firestore<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span><span class="token string">"collections"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>unsubscripbeFromSnapshot <span class="token operator">=</span> collectionRef<span class="token punctuation">.</span><span class="token function">onSnapshot</span><span class="token punctuation">(</span><span class="token parameter">snapshot</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> collectionsMap <span class="token operator">=</span> <span class="token function">convertCollectionsSnapshotToMap</span><span class="token punctuation">(</span>snapshot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">updateCollections</span><span class="token punctuation">(</span>collectionsMap<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="gatsby-highlight-code-line">      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> loading<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentWillUnmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>unsubscripbeFromSnapshot <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> match <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+<span class="gatsby-highlight-code-line">    <span class="token keyword">const</span> <span class="token punctuation">{</span> loading <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span></span>    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"shop-page"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Route
+          exact
+          path<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>match<span class="token punctuation">.</span>path<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+<span class="gatsby-highlight-code-line">          render<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">props</span> <span class="token operator">=></span> <span class="token punctuation">(</span></span><span class="gatsby-highlight-code-line">            <span class="token operator">&lt;</span>CollectionsOverviewWithSpinner isLoading<span class="token operator">=</span><span class="token punctuation">{</span>loading<span class="token punctuation">}</span> <span class="token punctuation">{</span><span class="token operator">...</span>props<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span></span><span class="gatsby-highlight-code-line">          <span class="token punctuation">)</span><span class="token punctuation">}</span></span>        <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Route
+          exact
+          path<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>match<span class="token punctuation">.</span>path<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/:collectionId</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+<span class="gatsby-highlight-code-line">          render<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">props</span> <span class="token operator">=></span> <span class="token punctuation">(</span></span><span class="gatsby-highlight-code-line">            <span class="token operator">&lt;</span>CollectionPageWithSpinner isLoading<span class="token operator">=</span><span class="token punctuation">{</span>loading<span class="token punctuation">}</span> <span class="token punctuation">{</span><span class="token operator">...</span>props<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span></span><span class="gatsby-highlight-code-line">          <span class="token punctuation">)</span><span class="token punctuation">}</span></span>        <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">mapDispatchToProps</span> <span class="token operator">=</span> <span class="token parameter">dispatch</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">updateCollections</span><span class="token punctuation">:</span> <span class="token parameter">collectionsMap</span> <span class="token operator">=></span>
+    <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">updateCollections</span><span class="token punctuation">(</span>collectionsMap<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">connect</span><span class="token punctuation">(</span>
+  <span class="token keyword">null</span><span class="token punctuation">,</span>
+  mapDispatchToProps
+<span class="token punctuation">)</span><span class="token punctuation">(</span>ShopPage<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h3 id="163-quick-note-about-next-lesson"><a href="#163-quick-note-about-next-lesson" aria-label="163 quick note about next lesson permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>163. Quick Note About Next Lesson</h3>
+<p>If you are still finding it difficult understanding how Higher Order Components can be useful, you have an optional video next which we explain in higher detail when HOCs are useful and how we can build them ourselves. Enjoy!</p>
+<h3 id="164-optional-how-to-build-hocs"><a href="#164-optional-how-to-build-hocs" aria-label="164 optional how to build hocs permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>164. Optional: How To Build HOCs</h3>
+<p><a href="https://github.com/ZhangMYihua/higher-order-components-explained" target="_blank" rel="noopener">HOC Example</a></p>
 <h2 id="section-18-master-project-asynchronous-redux"><a href="#section-18-master-project-asynchronous-redux" aria-label="section 18 master project asynchronous redux permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 18: Master Project: Asynchronous Redux</h2>
+<h3 id="165-observables--observer-pattern"><a href="#165-observables--observer-pattern" aria-label="165 observables  observer pattern permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>165. Observables + Observer Pattern</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABYUlEQVQoz21Ti5KCMAz0/3/wPE5OR0fetOVRWqjjXlLoIQozmaSbZJuk4ZBXDWqlUckeJUmwWUQzIMkl4kuC670kTHt/ufhfc0LeoSDC0idrdNqiFB3a3kC2gw9gOy0kajnj7Oc4JhBqzakW4kNRt8iItOkGPJ9Pb7vHA9qMqCiQP44xdoJzD3BH/MlWQ7VzTl61ntQThpb9jc2qxYLVqsctqShJbfzvOf8tv87wXRhPC4UovuF8y3Zj3uM3hEELf/PgzzxLbofPAVur2j7iB2EA9WBh7Qg7TpicgzGzPU4OEwnb4dFqpTfyQShbg6IUOB4jnOIL7kmK8+WKr+MPvqMY0ekXaZbTi9uPNdud4VwhrY1U6LreixC0NrWAVMprrQdPuFa46t0Z8m4Z6zCYichHyKZHT5oxFk04z3EuQi8y27sVcisFPUQper9jJ/pT7pnw/oCz3dAcZTNXpmgv2f4DdS9GXD6btMkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Observables + Observer Pattern"
+        title="Observables + Observer Pattern"
+        src="/static/2176091f835fcab6032ea9a8f537fa5f/b4fef/101.png"
+        srcset="/static/2176091f835fcab6032ea9a8f537fa5f/942f4/101.png 192w,
+/static/2176091f835fcab6032ea9a8f537fa5f/a7675/101.png 384w,
+/static/2176091f835fcab6032ea9a8f537fa5f/b4fef/101.png 768w,
+/static/2176091f835fcab6032ea9a8f537fa5f/0eda4/101.png 1152w,
+/static/2176091f835fcab6032ea9a8f537fa5f/182cf/101.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<h3 id="166-promise-pattern"><a href="#166-promise-pattern" aria-label="166 promise pattern permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>166. Promise Pattern</h3>
+<p><a href="https://firebase.google.com/docs/firestore/use-rest-api#making_rest_calls" target="_blank" rel="noopener">Firebase REST API</a></p>
+<p><code class="language-text">src/pages/shop/shop.component.jsx</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Route <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-router-dom"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-redux"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> updateCollections <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"../../redux/shop/shop.actions"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  firestore<span class="token punctuation">,</span>
+  convertCollectionsSnapshotToMap
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"../../firebase/firebase.utils"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> CollectionPage <span class="token keyword">from</span> <span class="token string">"../collection/collection.component"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> WithSpinner <span class="token keyword">from</span> <span class="token string">"../../components/with-spinner/with-spinner.component"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> CollectionsOverview <span class="token keyword">from</span> <span class="token string">"../../components/collections-overview/collections-overview.components"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> CollectionPageWithSpinner <span class="token operator">=</span> <span class="token function">WithSpinner</span><span class="token punctuation">(</span>CollectionPage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> CollectionsOverviewWithSpinner <span class="token operator">=</span> <span class="token function">WithSpinner</span><span class="token punctuation">(</span>CollectionsOverview<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ShopPage</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    loading<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> updateCollections <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> collectionRef <span class="token operator">=</span> firestore<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span><span class="token string">"collections"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="gatsby-highlight-code-line">    collectionRef<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">snapshot</span> <span class="token operator">=></span> <span class="token punctuation">{</span></span>      <span class="token keyword">const</span> collectionsMap <span class="token operator">=</span> <span class="token function">convertCollectionsSnapshotToMap</span><span class="token punctuation">(</span>snapshot<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">updateCollections</span><span class="token punctuation">(</span>collectionsMap<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> loading<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> match <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> loading <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"shop-page"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Route
+          exact
+          path<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>match<span class="token punctuation">.</span>path<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+          render<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">props</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>CollectionsOverviewWithSpinner isLoading<span class="token operator">=</span><span class="token punctuation">{</span>loading<span class="token punctuation">}</span> <span class="token punctuation">{</span><span class="token operator">...</span>props<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+          <span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Route
+          exact
+          path<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>match<span class="token punctuation">.</span>path<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/:collectionId</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+          render<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">props</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>CollectionPageWithSpinner isLoading<span class="token operator">=</span><span class="token punctuation">{</span>loading<span class="token punctuation">}</span> <span class="token punctuation">{</span><span class="token operator">...</span>props<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+          <span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">mapDispatchToProps</span> <span class="token operator">=</span> <span class="token parameter">dispatch</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">updateCollections</span><span class="token punctuation">:</span> <span class="token parameter">collectionsMap</span> <span class="token operator">=></span>
+    <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">updateCollections</span><span class="token punctuation">(</span>collectionsMap<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">connect</span><span class="token punctuation">(</span>
+  <span class="token keyword">null</span><span class="token punctuation">,</span>
+  mapDispatchToProps
+<span class="token punctuation">)</span><span class="token punctuation">(</span>ShopPage<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h3 id="167-redux-thunk"><a href="#167-redux-thunk" aria-label="167 redux thunk permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>167. Redux Thunk</h3>
+<p><a href="https://www.npmjs.com/package/redux-thunk" target="_blank" rel="noopener">Redux Thunk</a></p>
+<p>🌟 <em><strong>Used Redux Thunk to asynchronously fetch data from firestore and save it in Redux</strong></em></p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/2e0fdfecaac86516ae57a3c15312c1822483f9ed?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
+<h3 id="168-what-does-redux-thunk-do"><a href="#168-what-does-redux-thunk-do" aria-label="168 what does redux thunk do permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>168. What Does Redux Thunk Do?</h3>
+<p>🌟 <em><strong>Redux Thunk explanation by Andrei</strong></em></p>
+<h3 id="169-debugging-our-code"><a href="#169-debugging-our-code" aria-label="169 debugging our code permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>169. Debugging Our Code</h3>
+<p>🌟 <em><strong>Fixed the collections fetching error in CollectionsPage Component</strong></em></p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/3e63d09d79f39c9a470db39b5d6b31978c0e0bd0?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
 <h2 id="section-19-master-projectcontainer-pattern"><a href="#section-19-master-projectcontainer-pattern" aria-label="section 19 master projectcontainer pattern permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 19: Master Project:Container Pattern</h2>
+<h3 id="170-container-pattern"><a href="#170-container-pattern" aria-label="170 container pattern permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>170. Container Pattern</h3>
+<p><code class="language-text">src/pages/collection/collection.container.jsx</code></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> compose <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"redux"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-redux"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createStructuredSelector <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"reselect"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> CollectionPage <span class="token keyword">from</span> <span class="token string">"./collection.component"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> WithSpinner <span class="token keyword">from</span> <span class="token string">"../../components/with-spinner/with-spinner.component"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> selectIsCollectionsLoaded <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"../../redux/shop/shop.selectors"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> mapStateToProps <span class="token operator">=</span> <span class="token function">createStructuredSelector</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">isLoading</span><span class="token punctuation">:</span> <span class="token parameter">state</span> <span class="token operator">=></span> <span class="token operator">!</span><span class="token function">selectIsCollectionsLoaded</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> CollectionPageContainer <span class="token operator">=</span> <span class="token function">compose</span><span class="token punctuation">(</span>
+  <span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  WithSpinner
+<span class="token punctuation">)</span><span class="token punctuation">(</span>CollectionPage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> CollectionPageContainer<span class="token punctuation">;</span></code></pre></div>
+<h3 id="171-refactoring-is-a-trade-off"><a href="#171-refactoring-is-a-trade-off" aria-label="171 refactoring is a trade off permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>171. Refactoring Is A Trade off</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACD0lEQVQoz1VTS2sUQRCef+XP8CJ4F8SjguJBwUMOehD05JJFvAgii4QVlfWwWYQQiBjfRgk5JNFsZl8z09OP6Xnt5LOqd2aTLHx0bXV11VdV33hRGCHRCQxBSQUZS0g+a6gaWhmCXsao5d1ZW8HjhGwkJkFqM/dI0wNLSOrgJgEX5TiOcYXj0/vG9sIgWjo4eJ4XGMoEg6nG1xlVJX9MEGIBTUltQoW1df6GTJPYMWQjjmIoqpxbi0+mxDW/xJNxioDuMq2QJwalXQBVCfc7qWhci1FkdXfedDJ1CUUkEAtmavCZ2D08ztDxDQ5HIXYOxtja9dH7foT3hFfb/9D9MsTLjwfYHwmkxrh5pzblhDMEsxCJUtg9HKPV/4MH73Zwr/sTd9Z+4GbnGy61NnG5tYELKz1cWR3ganvgzouP+hj89pkqIupQ0sy9hllMre/9neD28w3caPdwvfUWt1bf4O5TwrMe7r/o43FnHe3uB7xe38Lm9i/sH42R5SV1XiHPcpo3LYXZGScbgygUGI4CHPtTjEcTaCFgpUCuBCqeXZEDJaNAmWWwWtOCLOblnJKe0HUBT0uSADHkhDwD4zTHG1OOOW9VUgy3xBAMEbt41mZc22VRoppX8CwlcXSdzsxCi/JUwPzAiVapcwJmMLtGMk1St2X3BRCjMAjBMmJmfDLYF87Cc//P2rwDQaNq/P8BZUEu0X18nkEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Refactoring Is A Trade off"
+        title="Refactoring Is A Trade off"
+        src="/static/984984a174e5ee690a5d340a6f727c48/b4fef/102.png"
+        srcset="/static/984984a174e5ee690a5d340a6f727c48/942f4/102.png 192w,
+/static/984984a174e5ee690a5d340a6f727c48/a7675/102.png 384w,
+/static/984984a174e5ee690a5d340a6f727c48/b4fef/102.png 768w,
+/static/984984a174e5ee690a5d340a6f727c48/0eda4/102.png 1152w,
+/static/984984a174e5ee690a5d340a6f727c48/182cf/102.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
 <h2 id="section-20-master-projectredux-saga"><a href="#section-20-master-projectredux-saga" aria-label="section 20 master projectredux saga permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 20: Master Project:Redux-Saga</h2>
+<p>🌟 <em><strong>Get titles for Section 20</strong></em></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">".curriculum-item-link--title--zI5QT"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>
+  <span class="token parameter">title</span> <span class="token operator">=></span> title<span class="token punctuation">.</span>textContent
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h3 id="172-introduction-to-sagas"><a href="#172-introduction-to-sagas" aria-label="172 introduction to sagas permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>172. Introduction to Sagas</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABXElEQVQoz4VT63qDIAzd+z/irq1T6gVFQECsNkvS0tHNffuRLxJPTpJDeGp7A4P20I+OPZ2rRoFoFZzaEcpTDx9FDceyhaLqOEb/BGJO3ch5uT3lhMoEBlFMqgk6ssFCIw3HyFKM8EScGkn+Tki2rhs4H2DdNrAu3kFUKGHSeVnOMGoDIcyMlXuEEUGTCzDHM+gpPFTPjWJhXsBYBz5EMNP8u0MGoy/rAUezDx39tJRMI5M0efyBkCop47k78hSTt65k1l3yFRZPhLsabqidRl3WFUf3kbVynka6+lTkinfwehB4YXqfkAJ+PsPxU0AnFSeLZoDL5YK6Ovb6plVKLv/rsMZqz+8l7x7pWIgOEyxoG+5y5FrmGu7uIY1RCAkK/aA0VKLhW29x76gA7R99E0lcVl4x2ow/b5k6aPA8ope9gpe3A9jp2jm/Dnol+ELqTvMeWlybGBfcw2/CLyG7R2dTSekPAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Introduction to Sagas"
+        title="Introduction to Sagas"
+        src="/static/7818de3d89af10d107896e4ba1995623/b4fef/103.png"
+        srcset="/static/7818de3d89af10d107896e4ba1995623/942f4/103.png 192w,
+/static/7818de3d89af10d107896e4ba1995623/a7675/103.png 384w,
+/static/7818de3d89af10d107896e4ba1995623/b4fef/103.png 768w,
+/static/7818de3d89af10d107896e4ba1995623/0eda4/103.png 1152w,
+/static/7818de3d89af10d107896e4ba1995623/182cf/103.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<h3 id="173-generator-functions"><a href="#173-generator-functions" aria-label="173 generator functions permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>173. Generator Functions</h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*" target="_blank" rel="noopener">Generator Function</a></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABpUlEQVQoz5WSO0gDQRRFt7awsRJsFJugYhAtIjZioWAlKgjipzGFIAFFIbHQwlbwgwRERRAkvYWNjY212NjY+MtnNzHJ7s7szGx2r2/X1CYZeLyZgTnce99om/sZLCUucHp5D8kcVLJlqh98vesoFk0w24aSCq5yoZRqWNrB0R3iyQzSN48IljQlvp/f8fryhmKJgTsKrSxtYv0aA4vnSJ490NGDFBK2QcqqAowr+L5P937YmyktunaNnqULJNJPcIWDkl5C1TTBOScLLjzPaxoWAkdXptE7NY6NwyvUhAvjQ0e5VIWhBxlWUKu1CByZiaJzuB/x1A6EEMjl8zAMo241cOu3BuwajKE9EkV8N0mTVCgU9BDImED5p0yd09mm7tT5DYCdA8No645geWMzVJjN5kKoIPuMMTjcgW1LylQ0p7A3NoaOyBDWtlOhQl03KLsiwRRM04JlWajSxCsVRg8a56lNxFfRNzeLraNjcFL08fmFfL5AilxSxkKVliXgOLI5y5N7C4jtziN1ewKvRh9bitB6YJlTfsGe038UQv0NyPsf+AtYQSQVKerI+wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Generator Functions"
+        title="Generator Functions"
+        src="/static/229148aae90bbb24660c0a064c54c85c/b4fef/104.png"
+        srcset="/static/229148aae90bbb24660c0a064c54c85c/942f4/104.png 192w,
+/static/229148aae90bbb24660c0a064c54c85c/a7675/104.png 384w,
+/static/229148aae90bbb24660c0a064c54c85c/b4fef/104.png 768w,
+/static/229148aae90bbb24660c0a064c54c85c/0eda4/104.png 1152w,
+/static/229148aae90bbb24660c0a064c54c85c/182cf/104.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<h3 id="174-quick-note-about-sagas"><a href="#174-quick-note-about-sagas" aria-label="174 quick note about sagas permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>174. Quick Note About Sagas</h3>
+<p>These next few videos are going to be tough. Keep in mind that getting redux-sagas in one go is usually impossible and it is something you practice multiple times to fully understand. We highly recommend you code along in this section and pause or rewatch the videos whenever you feel unsure of something. Another option is to watch this section all the way through, then come back the 2nd time around and code along once you have a general idea of the concepts.</p>
+<p>Good luck!</p>
+<h3 id="175-redux-saga"><a href="#175-redux-saga" aria-label="175 redux saga permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>175. redux-saga</h3>
+<p><a href="https://www.npmjs.com/package/redux-saga" target="_blank" rel="noopener">redux-saga</a></p>
+<p><code class="language-text">src/redux/shop/shop.sagas.js</code></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> takeEvery <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"redux-saga/effects"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ShopActionTypes <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./shop.types"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">fetchCollectionAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">yield</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"I am fired"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">fetchCollectionsStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">yield</span> <span class="token function">takeEvery</span><span class="token punctuation">(</span>
+    ShopActionTypes<span class="token punctuation">.</span><span class="token constant">FETCH_COLLECTIONS_START</span><span class="token punctuation">,</span>
+    fetchCollectionAsync
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3 id="176-redux-thunk-into-saga"><a href="#176-redux-thunk-into-saga" aria-label="176 redux thunk into saga permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>176. Redux Thunk Into Saga</h3>
+<p><code class="language-text">src/redux/shop/shop.sagas.js</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> takeEvery<span class="token punctuation">,</span> call<span class="token punctuation">,</span> put <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"redux-saga/effects"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ShopActionTypes <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./shop.types"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  fetchCollectionsSuccess<span class="token punctuation">,</span>
+  fetchCollectionsFailure
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./shop.actions"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  firestore<span class="token punctuation">,</span>
+  convertCollectionsSnapshotToMap
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"../../firebase/firebase.utils"</span><span class="token punctuation">;</span>
+
+<span class="gatsby-highlight-code-line"><span class="token keyword">export</span> <span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">fetchCollectionAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">  <span class="token keyword">yield</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"I am fired"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line"></span><span class="gatsby-highlight-code-line">  <span class="token keyword">try</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">const</span> collectionRef <span class="token operator">=</span> firestore<span class="token punctuation">.</span><span class="token function">collection</span><span class="token punctuation">(</span><span class="token string">"collections"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">const</span> snapshot <span class="token operator">=</span> <span class="token keyword">yield</span> collectionRef<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">const</span> collectionsMap <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token function">call</span><span class="token punctuation">(</span></span><span class="gatsby-highlight-code-line">      convertCollectionsSnapshotToMap<span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">      snapshot</span><span class="gatsby-highlight-code-line">    <span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">yield</span> <span class="token function">put</span><span class="token punctuation">(</span><span class="token function">fetchCollectionsSuccess</span><span class="token punctuation">(</span>collectionsMap<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">yield</span> <span class="token function">put</span><span class="token punctuation">(</span><span class="token function">fetchCollectionsFailure</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span></span><span class="gatsby-highlight-code-line"><span class="token punctuation">}</span></span>
+<span class="token keyword">export</span> <span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">fetchCollectionsStart</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">yield</span> <span class="token function">takeEvery</span><span class="token punctuation">(</span>
+    ShopActionTypes<span class="token punctuation">.</span><span class="token constant">FETCH_COLLECTIONS_START</span><span class="token punctuation">,</span>
+    fetchCollectionAsync
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3 id="177-take-takeevery-takelatest"><a href="#177-take-takeevery-takelatest" aria-label="177 take takeevery takelatest permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>177. take(), takeEvery(), takeLatest()</h3>
+<p>🌟 <em><strong>Deep explanation on take(), takeEvery(), takeLatest()</strong></em></p>
+<p><a href="https://github.com/ZhangMYihua/redux-saga-take-takelatest-takeevery" target="_blank" rel="noopener">Example repo</a></p>
+<h3 id="178-root-saga"><a href="#178-root-saga" aria-label="178 root saga permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>178. Root Saga</h3>
+<p><code class="language-text">src/redux/root-saga.js</code></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> all<span class="token punctuation">,</span> call <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"redux-saga/effects"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> fetchCollectionsStart <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./shop/shop.sagas"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">rootSaga</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">yield</span> <span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token function">call</span><span class="token punctuation">(</span>fetchCollectionsStart<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3 id="179-planning-ahead-with-sagas"><a href="#179-planning-ahead-with-sagas" aria-label="179 planning ahead with sagas permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>179. Planning Ahead With Sagas</h3>
+<p>🌟 <em><strong>Plan to shift our Users Auth calls into Redux Saga</strong></em></p>
+<h3 id="180-google-sign-in-into-sagas"><a href="#180-google-sign-in-into-sagas" aria-label="180 google sign in into sagas permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>180. Google Sign In Into Sagas</h3>
+<p>🌟 <em><strong>Implemented Google Sign In Into Sagas</strong></em></p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/514e96506dc846f3e21d28cf039f407447396b4a?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
+<h3 id="181-email-sign-in-into-sagas"><a href="#181-email-sign-in-into-sagas" aria-label="181 email sign in into sagas permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>181. Email Sign In Into Sagas</h3>
+<p>🌟 <em><strong>Implemented Email Sign In Into Sagas</strong></em></p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/24c47c52c060d19e189967a22ed814ee9abca9a0?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
+<h3 id="182-reviewing-our-sagas"><a href="#182-reviewing-our-sagas" aria-label="182 reviewing our sagas permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>182. Reviewing Our Sagas</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABi0lEQVQoz41SSXLcMBDz/z+Wa6pySFKpLOPRQnEdLhrZJwQgrTgV5+ADSqS6iQa6+8GGgpjvWF3GYm9Eevm+H/MWEW5753nwqcJHkhmH0g6kcvTAiXSivIXiN+avJPWpnYQNpZDUB+z3p5FUj57YSfkw5L0r+B+6u78JXazITUQ76v4M5yN+Xa6Y5gXBF9iVxcJIfjehMJvYf+z3ZxgbkG6FBZ7gLOOmIrWhOFG9IOWCzqv7h1AH4zOtDqUaVK8uu5F3EtqNSm2DWTLma+hF7Frg6GBeIvw5FEP2x9nhx+NKlQGl7t2utQ6NCmVXtuevEeZbxvdPCz5++MJzwfQ5wPxkgTW9EkrNxl5NJJPs2u6saGCd75ZFKDVd7csjbcLZQ037jWWxG5f7dJVsA3uWR69k2W9t9C6P+Fib1xXTDv/ZQxHqMnEo6qNsBu5l5ioVPjBTxnQJ3YEGN62h47p4XCaLXLlmufLdwfMxLItZKrtlBcrerRcmeA2FitXrjQUFFZYj/ROJciVEin8DIfRCg99YgHsAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Reviewing Our Sagas"
+        title="Reviewing Our Sagas"
+        src="/static/58e66abbb6aaabd641220b3b970224d2/b4fef/105.png"
+        srcset="/static/58e66abbb6aaabd641220b3b970224d2/942f4/105.png 192w,
+/static/58e66abbb6aaabd641220b3b970224d2/a7675/105.png 384w,
+/static/58e66abbb6aaabd641220b3b970224d2/b4fef/105.png 768w,
+/static/58e66abbb6aaabd641220b3b970224d2/0eda4/105.png 1152w,
+/static/58e66abbb6aaabd641220b3b970224d2/182cf/105.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAB9ElEQVQoz2VSa3PTMBD0j22BDqTMwAf+ItOS0KRNyPvt2JIsyfIrSWFmWckpA/TDzvmk0+7dnqMPt5/x8dOXP3jP/OpdB9c3t7j28QU3nX/z/3D1toM3fBONZ2tMlzssN4eAxTrGdL7FbL67xBbTGeNih9nyNearPcazDTxXJLVDIjTyooFxDZQsoUSJTFXQqkYmKsiDz2uopAw1tji+grJVQJQZB60tXFHzgsWmQV4e+ZBkeYXMUEAW0EUFkRRQmuTWn19gW6SZC4hSlUPoIqhUVY1USAoYlBWV8xJJkhIC1hVt5yTRFH+BF9V5HTiEJ/x63+dhHVQKkhiS5Jduy/oEbR2ksqiacyAUB1q0toinGvHMIN278FbnDbr9EaJ9qgO798ZQbX+QUFkeRvZQ9Nj77AVEyi6zEpLxsCDZLkem2w4lOWJhEG1jhc1e8qBEUfJCKjiO5+ijK5uQexRVEzwMI7t2XEMRzUbCyFkRSKOYHcapYdvcIC80o2CHXi2RlkV5sME4vxSOd1mKJ0lCjbkQXpaSUUFaeuh/mbz9rk4/uWnG45ndPnNJJ1h75i/U0G9fRwJuf70XWBHl6Rdq1janM6LJYIRJ7xE/egNMvj9ieP+AKeO832LcHWB494ARz4d/4emuh9G3fsC428fqaYT1aovfEZ0YyIOMtmQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Reviewing Our Sagas"
+        title="Reviewing Our Sagas"
+        src="/static/b75dc8f3b883230ac4c0e2cb859ba101/b4fef/106.png"
+        srcset="/static/b75dc8f3b883230ac4c0e2cb859ba101/942f4/106.png 192w,
+/static/b75dc8f3b883230ac4c0e2cb859ba101/a7675/106.png 384w,
+/static/b75dc8f3b883230ac4c0e2cb859ba101/b4fef/106.png 768w,
+/static/b75dc8f3b883230ac4c0e2cb859ba101/0eda4/106.png 1152w,
+/static/b75dc8f3b883230ac4c0e2cb859ba101/182cf/106.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<h3 id="183-recreating-persistence"><a href="#183-recreating-persistence" aria-label="183 recreating persistence permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>183. Recreating Persistence</h3>
+<h3 id="184-sign-out-with-sagas"><a href="#184-sign-out-with-sagas" aria-label="184 sign out with sagas permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>184. Sign Out With Sagas</h3>
+<h3 id="185-clear-cart-saga"><a href="#185-clear-cart-saga" aria-label="185 clear cart saga permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>185. Clear Cart Saga</h3>
+<h3 id="186-solution-sign-up-saga"><a href="#186-solution-sign-up-saga" aria-label="186 solution sign up saga permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>186. Solution: Sign Up Saga</h3>
 <h2 id="section-21-master-project-reacthooks"><a href="#section-21-master-project-reacthooks" aria-label="section 21 master project reacthooks permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 21: Master Project: ReactHooks</h2>
 <h2 id="section-22-master-project-stripepayments-part-2---backend"><a href="#section-22-master-project-stripepayments-part-2---backend" aria-label="section 22 master project stripepayments part 2   backend permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 22: Master Project: StripePayments Part 2 - Backend</h2>
 <h2 id="section-23-master-project-contextapi"><a href="#section-23-master-project-contextapi" aria-label="section 23 master project contextapi permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 23: Master Project: ContextAPI</h2>
