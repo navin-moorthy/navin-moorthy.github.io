@@ -3664,11 +3664,624 @@ There are a few other Hooks we still need to talk about such as useContext or us
 
 So hang on tight and you will learn about them shortly as we will continue to use hooks throughout the upcoming sections!
 
-## Section 22: Master Project: StripePayments Part 2 - Backend
+## Section 22: Master Project: Stripe Payments Part 2 - Back end
+
+🌟 _**Get titles for Section 22**_
+
+```js
+$$(".curriculum-item-link--title--zI5QT").map(
+  title => title.textContent
+);
+```
+
+### 199. About This Section
+
+In order to have a fully functioning e commerce project with payments, we need to create a backend server for our Stripe payments. This section coming up does not talk about React, but instead, allows you to have a fully functioning application because our goal here is to have a project as complete as possible for you. However, this is not an important part of the course, so if you do not want to learn about the backend, you can skip this section, or you can just grab the code that we will provide in the last lecture of this section. The only thing you will be missing out on is the full ability to accept payments with Stripe (since currently the payment info the user sends on the frontend isn't doing anything).
+
+Remember, this section is completely optional!
+
+### 200. Introduction To Backend
+
+![Introduction To Backend](images/108.png)
+
+![Introduction To Backend](images/109.png)
+
+### 201. Cloning From This Point On
+
+If you do choose to skip this section and just fork and clone this repo, or any repo from this point on in the course, remember to add a file called `.env` to the root folder! In that `.env` file remember to add a `STRIPE_SECRET_KEY` value equal to your own secret key from your stripe dashboard. You can find it in the same place where you found your publishable key in the developers tab under api keys. You will have to enter the password in to reveal it!
+
+You will also need to connect your existing Heroku app to this new forked and cloned repo, or you have to create a new Heroku app and push to it. A quick refresher on how to do either of these:
+
+**Set to an existing Heroku app**
+
+To set to an existing Heroku app you already have deployed, you need to know the name of the app you want to deploy to. To see a list of all the apps you currently have on Heroku:
+
+```js
+heroku apps
+```
+
+Copy the name of the app you want to connect the project to, then run:
+
+```js
+heroku git:remote -a <PASTE_YOUR_APP_NAME_HERE>
+```
+
+And now you'll have your repo connected to the heroku app under the git remote name `heroku`.
+
+If the Heroku app you connected was deploying just a create-react-app project from earlier in the lesson, you will need to remove the `mars/create-react-app-buildpack` buildpack first. You can check if you have this buildpack by running:
+
+```js
+heroku buildpacks
+```
+
+Which will list any buildpacks you currently have, if you see `mars/create-react-app-buildpack` in the list, you can remove it by running:
+
+heroku buildpacks:remove mars/create-react-app-buildpack
+
+
+Then skip to the bottom of this article to see what to do next!
+
+**To create a new Heroku app**
+
+Create a new Heroku project by typing in your terminal:
+
+```js
+heroku create
+```
+
+This will create a new Heroku project for you. Then run:
+
+```js
+git remote -v
+```
+
+You should see `heroku https://git.heroku.com/<RANDOMLY_GENERATED_NAME_OF_YOUR_APP>` in the list. This means you have successfully connected your project to the newly created Heroku app under the git remote of `heroku`.
+
+**Deploying to Heroku**
+
+Before we deploy, you also need to set a config variable of `STRIPE_SECRET_KEY` to the same secret key value from your stripe dashboard, the same one in your `.env` file. The `.env` file is only for local development, in order for our heroku production app to have access to this secret key, we add it to our Heroku projects config variables by typing:
+
+```js
+heroku config:set STRIPE_SECRET_KEY=<YOUR_STRIPE_SECRET_KEY>
+```
+
+After that, you can deploy to heroku by running:
+
+```js
+git push heroku master
+```
+
+You will see this warning message if you are pushing to an existing app:
+
+```js
+! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://git.heroku.com/<YOUR_HEROKU_APP_NAME>'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+This is because we are pushing to an existing app that was deploying an entirely different repository from what we have now. Simply run:
+
+```js
+git push heroku master --force
+```
+
+This will overwrite the existing Heroku app with our new code.
+
+**Open our Heroku project**
+
+After heroku finishes building our project, we can simply run:
+
+```js
+heroku open
+```
+
+This will open up our browser and take us to our newly deployed Heroku project!
+
+### 202. Creating our Server Inside the Project
+
+[Nodemon](https://www.npmjs.com/package/nodemon) || [Concurrently](https://www.npmjs.com/package/concurrently)
+
+🌟 _**Backend initialized**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/70d4af77ddd8610029fb5b5cfaa8d9ac631f4cc4?diff=split)
+
+### 203. Building A Basic Server
+
+[express](https://www.npmjs.com/package/express) || [dotenv](https://www.npmjs.com/package/dotenv) || [cors](https://www.npmjs.com/package/cors) || [body-parser](https://www.npmjs.com/package/body-parser)
+
+`server.js`
+
+```js
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const path = require("path");
+
+if (process.env.NODE_ENV !== "production") require("dotenv").config();
+
+const app = express();
+const port = process.env.PORT || 8081;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client/build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  });
+}
+
+app.listen(port, error => {
+  if (error) throw error;
+  console.log(`Server running on port ${port}`);
+});
+```
+
+### 204. What We Are Building
+
+![What We Are Building](images/110.png)
+
+### 205. Backend Payment Route
+
+[stripe](https://www.npmjs.com/package/stripe)
+
+```js{25-46}
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const path = require("path");
+
+if (process.env.NODE_ENV !== "production") require("dotenv").config();
+
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+
+const app = express();
+const port = process.env.PORT || 8081;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client/build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  });
+}
+
+app.post("/payment", (req, res) => {
+  console.log(req.body);
+  const {
+    token: { id },
+    amount
+  } = req.body;
+  console.log(id);
+  console.log(amount);
+  const body = {
+    source: req.body.token.id,
+    amount: req.body.amount,
+    curreny: "usd"
+  };
+
+  stripe.charges.create(body, (stripeErr, stripeRes) => {
+    if (stripeErr) {
+      res.status(500).send({ error: stripeErr });
+    } else {
+      res.status(200).send({ success: stripeRes });
+    }
+  });
+});
+
+app.listen(port, error => {
+  if (error) throw error;
+  console.log(`Server running on port ${port}`);
+});
+```
+
+### 206. Connecting Client To Server
+
+`client/src/components/stripe-button/stripe-button.component.jsx`
+
+```js{11-26}
+import React from "react";
+import StripeCheckout from "react-stripe-checkout";
+import axios from "axios";
+
+import crown from "../../assets/crown.svg";
+
+const StripeCheckoutButton = ({ price }) => {
+  const priceForStripe = price * 100;
+  const publishableKey = "pk_test_2hJtHnCWfCA14ioo1FKhoZMS00tev3ElY9";
+
+  const onToken = token => {
+    axios({
+      url: "payment",
+      method: "post",
+      data: { amount: priceForStripe, token }
+    })
+      .then(response => {
+        alert("Payment Successful");
+      })
+      .catch(error => {
+        console.log(`Payment error: ${error}`);
+        alert(
+          "There was an issue with your payment. Please make sure use the provided credit card"
+        );
+      });
+  };
+
+  return (
+    <StripeCheckout
+      label="Pay Now"
+      name="Crown Clothing Ltd."
+      billingAddress
+      shippingAddress
+      image={crown}
+      description={`Your total is $${price}`}
+      amount={priceForStripe}
+      panelLabel="Pay Now"
+      token={onToken}
+      stripeKey={publishableKey}
+    />
+  );
+};
+
+export default StripeCheckoutButton;
+```
+
+### 207. Deploying To Production
+
+[Heroku config](https://devcenter.heroku.com/articles/config-vars)
+
+[Crown Clothing Live](https://navin-navi-crown-clothing.herokuapp.com/)
+
+Removed the old React build-pack to make the node app deploy successful.
 
 ## Section 23: Master Project: ContextAPI
 
+🌟 _**Get titles for Section 23**_
+
+```js
+$$(".curriculum-item-link--title--zI5QT").map(
+  title => title.textContent
+);
+```
+
+### 208. Quick note about cloning this repo
+
+🌟 _**Quick note about cloning this repo**_
+
+![Quick note about cloning this repo](images/111.png)
+
+### 209. Introduction To Context API
+
+[Context API](https://reactjs.org/docs/context.html)
+
+[Context API Example Start Repo](https://github.com/ZhangMYihua/react-context-lesson)
+
+This section will be taught from the an older commit before the introduction of advanced Redux concepts
+
+### 210. Context Consumer + useContextHook
+
+[useContext](https://reactjs.org/docs/hooks-reference.html#usecontext)
+
+`src/contexts/collections/collections.context.js`
+
+```js
+import { createContext } from 'react';
+
+import SHOP_DATA from './shop.data';
+
+const CollectionsContext = createContext(SHOP_DATA);
+
+export default CollectionsContext;
+```
+
+`src/pages/collection/collection.component.jsx`
+
+```js{1,5,10}
+import React, { useContext } from 'react';
+
+import CollectionItem from '../../components/collection-item/collection-item.component';
+
+import CollectionsContext from '../../contexts/collections/collections.context';
+
+import './collection.styles.scss';
+
+const CollectionPage = ({ match }) => {
+  const collections = useContext(CollectionsContext);
+  const collection = collections[match.params.collectionId];
+  const { title, items } = collection;
+
+  return (
+    <div className='collection-page'>
+      <h2 className='title'>{title}</h2>
+      <div className='items'>
+        {items.map(item => (
+          <CollectionItem key={item.id} item={item} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default CollectionPage;
+```
+
+### 211. Context Provider
+
+`src/contexts/current-user/current-user.context.js`
+
+```js
+import { createContext } from 'react';
+
+const CurrentUserContext = createContext(undefined);
+
+export default CurrentUserContext;
+```
+
+`src/App.js`
+
+```js{15,54-56}
+import React from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+
+import './App.css';
+
+import HomePage from './pages/homepage/homepage.component';
+import ShopPage from './pages/shop/shop.component';
+import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+import CheckoutPage from './pages/checkout/checkout.component';
+
+import Header from './components/header/header.component';
+
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+
+import CurrentUserContext from './contexts/current-user/current-user.context';
+
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      currentUser: null
+    };
+  }
+
+  unsubscribeFromAuth = null;
+
+  componentDidMount() {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+
+        userRef.onSnapshot(snapShot => {
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          });
+        });
+      }
+
+      this.setState({ currentUser: userAuth });
+    });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
+
+  render() {
+    return (
+      <div>
+        <CurrentUserContext.Provider value={this.state.currentUser}>
+          <Header />
+        </CurrentUserContext.Provider>
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route path='/shop' component={ShopPage} />
+          <Route exact path='/checkout' component={CheckoutPage} />
+          <Route
+            exact
+            path='/signin'
+            render={() =>
+              this.state.currentUser ? (
+                <Redirect to='/' />
+              ) : (
+                <SignInAndSignUpPage />
+              )
+            }
+          />
+        </Switch>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+`src/components/header/header.component.jsx`
+
+```js{1,15}
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import { auth } from '../../firebase/firebase.utils';
+import CartIcon from '../cart-icon/cart-icon.component';
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import CurrentUserContext from '../../contexts/current-user/current-user.context';
+import { CartContext } from '../../providers/cart/cart.provider';
+
+import { ReactComponent as Logo } from '../../assets/crown.svg';
+
+import './header.styles.scss';
+
+const Header = () => {
+  const currentUser = useContext(CurrentUserContext);
+  const { hidden } = useContext(CartContext);
+
+  return (
+    <div className='header'>
+      <Link className='logo-container' to='/'>
+        <Logo className='logo' />
+      </Link>
+      <div className='options'>
+        <Link className='option' to='/shop'>
+          SHOP
+        </Link>
+        <Link className='option' to='/shop'>
+          CONTACT
+        </Link>
+        {currentUser ? (
+          <div className='option' onClick={() => auth.signOut()}>
+            SIGN OUT
+          </div>
+        ) : (
+          <Link className='option' to='/signin'>
+            SIGN IN
+          </Link>
+        )}
+        <CartIcon />
+      </div>
+      {hidden ? null : <CartDropdown />}
+    </div>
+  );
+};
+
+export default Header;
+```
+
+### 212. Cart Context
+
+🌟 _**Created a Cart Context to leverage the hidden value for the cart dropdown**_
+
+### 213. Provider Context Pattern
+### 214. Provider Context Pattern 2
+
+[Context API Provider Example Complete](https://github.com/ZhangMYihua/react-context-complete)
+
+`src/providers/cart/cart.provider.jsx`
+
+```js
+import React, { createContext, useState, useEffect } from 'react';
+
+import {
+  addItemToCart,
+  removeItemFromCart,
+  filterItemFromCart,
+  getCartItemsCount,
+  getCartTotal
+} from './cart.utils';
+
+export const CartContext = createContext({
+  hidden: true,
+  toggleHidden: () => {},
+  cartItems: [],
+  addItem: () => {},
+  removeItem: () => {},
+  clearItemFromCart: () => {},
+  cartItemsCount: 0,
+  cartTotal: 0
+});
+
+const CartProvider = ({ children }) => {
+  const [hidden, setHidden] = useState(true);
+  const [cartItems, setCartItems] = useState([]);
+  const [cartItemsCount, setCartItemsCount] = useState(0);
+  const [cartTotal, setCartTotal] = useState(0);
+
+  const addItem = item => setCartItems(addItemToCart(cartItems, item));
+  const removeItem = item => setCartItems(removeItemFromCart(cartItems, item));
+  const toggleHidden = () => setHidden(!hidden);
+  const clearItemFromCart = item =>
+    setCartItems(filterItemFromCart(cartItems, item));
+
+  useEffect(() => {
+    setCartItemsCount(getCartItemsCount(cartItems));
+    setCartTotal(getCartTotal(cartItems));
+  }, [cartItems]);
+
+  return (
+    <CartContext.Provider
+      value={{
+        hidden,
+        toggleHidden,
+        cartItems,
+        addItem,
+        removeItem,
+        clearItemFromCart,
+        cartItemsCount,
+        cartTotal
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  );
+};
+
+export default CartProvider;
+```
+
+### 215. Redux vs Context API
+
+🌟 _**Brief explanation on when to use Redux and when to use Context API**_
+
+🌟 _**Redux-Big Projects & Context API-Small and Medium level Projects**_
+
 ## Section 24: Master Project: GraphQL+ Apollo
+
+🌟 _**Get titles for Section 24**_
+
+```js
+$$(".curriculum-item-link--title--zI5QT").map(
+  title => title.textContent
+);
+```
+
+### 216. Introduction To GraphQL
+
+![REST API](images/112.png)
+
+![GraphQL](images/113.png)
+
+### 217. Course Guideline + GitHub Links
+### 218. GraphQL Playground
+### 220. GraphQL Playground 2
+
+[Crown Clothing GraphQL playground](https://crwn-clothing.com/) || [GraphQL Basic Types](https://graphql.org/graphql-js/basic-types/) || [Prisma Server for playground](https://github.com/ZhangMYihua/crwn-clothing-prisma)
+
+![GraphQL Playground](images/114.png)
+
+### 219. Backend Code
+
+When we talk about GraphQL, it usually comes with two components: The frontend part and the backend part. As React developers, we will usually only concern ourselves with the frontend implementation of GraphQL and this is what we will be exploring over the coming videos. However, for those curious on how to best build a GraphQL server, we have provided for you the backend code that we use for this course, as well as the list of some popular options out there for building such a server:
+
+[Our Backend Implementation](https://github.com/ZhangMYihua/crwn-clothing-prisma)
+
+[Prisma](https://www.prisma.io/) (what we use in the above link)
+[Hasura ](https://hasura.io/)
+[Apollo Server](https://www.apollographql.com/docs/apollo-server/)
+
+Quick way to build a GraphQL server: [graphql-yoga](https://github.com/prisma/graphql-yoga)
+
+[A quick step by step guide on how to set up your own GraphQL server](https://blog.apollographql.com/tutorial-building-a-graphql-server-cddaa023c035)
+
+### 221. Introduction To Apollo
+
+[Apollo Client](https://www.apollographql.com/docs/react/) || [apollo-boost](https://www.npmjs.com/package/apollo-boost) || [react-apollo](https://www.npmjs.com/package/react-apollo) || [graphql-npm](https://www.npmjs.com/package/graphql)
+
+[GraphQL Lesson Starter Code](https://github.com/ZhangMYihua/graphql-lesson)
 
 ## Section 25: Master Project: MobileSupport
 
