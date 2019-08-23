@@ -5338,6 +5338,193 @@ app<span class="token punctuation">.</span><span class="token function">listen</
 <h3 id="221-introduction-to-apollo"><a href="#221-introduction-to-apollo" aria-label="221 introduction to apollo permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>221. Introduction To Apollo</h3>
 <p><a href="https://www.apollographql.com/docs/react/" target="_blank" rel="noopener">Apollo Client</a> || <a href="https://www.npmjs.com/package/apollo-boost" target="_blank" rel="noopener">apollo-boost</a> || <a href="https://www.npmjs.com/package/react-apollo" target="_blank" rel="noopener">react-apollo</a> || <a href="https://www.npmjs.com/package/graphql" target="_blank" rel="noopener">graphql-npm</a></p>
 <p><a href="https://github.com/ZhangMYihua/graphql-lesson" target="_blank" rel="noopener">GraphQL Lesson Starter Code</a></p>
+<p>Created own graphql server endpoint to tackle cors errors.</p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/82d8152443ff98c1d5395657bf7e5f47762f1337?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
+<h3 id="222-apollo-container"><a href="#222-apollo-container" aria-label="222 apollo container permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>222. Apollo Container</h3>
+<p><code class="language-text">src/components/collections-overview/collections-overview.container.jsx</code></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Query <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-apollo"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> gql <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"apollo-boost"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> CollectionsOverview <span class="token keyword">from</span> <span class="token string">"./collections-overview.component"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Spinner <span class="token keyword">from</span> <span class="token string">"../spinner/spinner.component"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token constant">GET_COLLECTIONS</span> <span class="token operator">=</span> gql<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  {
+    collections {
+      id
+      title
+      items {
+        id
+        name
+        price
+        imageUrl
+      }
+    }
+  }
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">CollectionsOverviewContainer</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>Query query<span class="token operator">=</span><span class="token punctuation">{</span><span class="token constant">GET_COLLECTIONS</span><span class="token punctuation">}</span><span class="token operator">></span>
+    <span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> loading<span class="token punctuation">,</span> error<span class="token punctuation">,</span> data <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>loading<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token operator">&lt;</span>Spinner <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token operator">&lt;</span>CollectionsOverview collections<span class="token operator">=</span><span class="token punctuation">{</span>data<span class="token punctuation">.</span>collections<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>Query<span class="token operator">></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> CollectionsOverviewContainer<span class="token punctuation">;</span></code></pre></div>
+<h3 id="223-query-with-variables"><a href="#223-query-with-variables" aria-label="223 query with variables permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>223. Query With Variables</h3>
+<p><code class="language-text">src/components/collections-overview/collections-overview.container.jsx</code></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Query <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-apollo"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> gql <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"apollo-boost"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> CollectionPage <span class="token keyword">from</span> <span class="token string">"./collection.component"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Spinner <span class="token keyword">from</span> <span class="token string">"../../components/spinner/spinner.component"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token constant">GET_COLLECTION_BY_TITLE</span> <span class="token operator">=</span> gql<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  query getCollectionsByTitle($title: String!) {
+    getCollectionsByTitle(title: $title) {
+      id
+      title
+      items {
+        id
+        name
+        price
+        imageUrl
+      }
+    }
+  }
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">CollectionPageContainer</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> match <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>Query
+    query<span class="token operator">=</span><span class="token punctuation">{</span><span class="token constant">GET_COLLECTION_BY_TITLE</span><span class="token punctuation">}</span>
+    variables<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> title<span class="token punctuation">:</span> match<span class="token punctuation">.</span>params<span class="token punctuation">.</span>collectionId <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token operator">></span>
+    <span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> loading<span class="token punctuation">,</span> data<span class="token punctuation">:</span> <span class="token punctuation">{</span> getCollectionsByTitle <span class="token punctuation">}</span> <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>loading<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token operator">&lt;</span>Spinner <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> <span class="token operator">&lt;</span>CollectionPage collection<span class="token operator">=</span><span class="token punctuation">{</span>getCollectionsByTitle<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>Query<span class="token operator">></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> CollectionPageContainer<span class="token punctuation">;</span></code></pre></div>
+<h3 id="224-graphql-vs-redux"><a href="#224-graphql-vs-redux" aria-label="224 graphql vs redux permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>224. GraphQL vs Redux</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABU0lEQVQoz31S2XLDIAz0/39dZzqdPvRIGsdgY8xp47YvWwSBOEfzoBGs0CJp1YjJQdmAySzVl/MgHbgw6Eeb/IGNOHQjvjqBrlcV56OpOc2WcEuq7IpReYhoUs/JEkFM5kJjiHmE0VvCKe+GsHjtVjgf70pjDt8w8U4xwovltwFujh/LCUpbWL/eJyRPQevm5LcdlHjB/PKDw5Hh2HG4eH7QcgA7tZarzp/QOY9gqS0fuULhaR6LYsEGnRMnDa1NxBd0ESNrmcSu7ePH5r8Z3pLW9iKpkDa9IWVbPtUKtyOohGcwXN2zSIQXxfftgPc9S2rn2LmAhlbDxPk4T4qFeM5BMfm0Nolo1GD9iI4LSGUTKe2oOc30okKpPZZlhTE2zcj7ORE9v37i6eUticL7WNHHLlnfixQfrsS8WGwqm+Sfw2/dsa2KpK6jNfKhrtG9VSP7AxU3RCRJjmVpAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Redux"
+        title="Redux"
+        src="/static/2e7f93ef3f4f024baad4e586af027f7e/b4fef/115.png"
+        srcset="/static/2e7f93ef3f4f024baad4e586af027f7e/942f4/115.png 192w,
+/static/2e7f93ef3f4f024baad4e586af027f7e/a7675/115.png 384w,
+/static/2e7f93ef3f4f024baad4e586af027f7e/b4fef/115.png 768w,
+/static/2e7f93ef3f4f024baad4e586af027f7e/0eda4/115.png 1152w,
+/static/2e7f93ef3f4f024baad4e586af027f7e/182cf/115.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABU0lEQVQoz31S2XLDIAz0/39dZzqdPvRIGsdgY8xp47YvWwSBOEfzoBGs0CJp1YjJQdmAySzVl/MgHbgw6Eeb/IGNOHQjvjqBrlcV56OpOc2WcEuq7IpReYhoUs/JEkFM5kJjiHmE0VvCKe+GsHjtVjgf70pjDt8w8U4xwovltwFujh/LCUpbWL/eJyRPQevm5LcdlHjB/PKDw5Hh2HG4eH7QcgA7tZarzp/QOY9gqS0fuULhaR6LYsEGnRMnDa1NxBd0ESNrmcSu7ePH5r8Z3pLW9iKpkDa9IWVbPtUKtyOohGcwXN2zSIQXxfftgPc9S2rn2LmAhlbDxPk4T4qFeM5BMfm0Nolo1GD9iI4LSGUTKe2oOc30okKpPZZlhTE2zcj7ORE9v37i6eUticL7WNHHLlnfixQfrsS8WGwqm+Sfw2/dsa2KpK6jNfKhrtG9VSP7AxU3RCRJjmVpAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Apollo &amp; GraphQL"
+        title="Apollo &amp; GraphQL"
+        src="/static/2e7f93ef3f4f024baad4e586af027f7e/b4fef/115.png"
+        srcset="/static/2e7f93ef3f4f024baad4e586af027f7e/942f4/115.png 192w,
+/static/2e7f93ef3f4f024baad4e586af027f7e/a7675/115.png 384w,
+/static/2e7f93ef3f4f024baad4e586af027f7e/b4fef/115.png 768w,
+/static/2e7f93ef3f4f024baad4e586af027f7e/0eda4/115.png 1152w,
+/static/2e7f93ef3f4f024baad4e586af027f7e/182cf/115.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<h3 id="225-mutations-on-the-client"><a href="#225-mutations-on-the-client" aria-label="225 mutations on the client permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>225. Mutations On The Client</h3>
+<h3 id="227-mutations-on-the-client-2"><a href="#227-mutations-on-the-client-2" aria-label="227 mutations on the client 2 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>227. Mutations On The Client 2</h3>
+<p><a href="https://www.apollographql.com/docs/react/advanced/caching/" target="_blank" rel="noopener">Apollo Cache</a> || <a href="https://www.apollographql.com/docs/react/essentials/local-state/#local-resolvers" target="_blank" rel="noopener">Apollo Local Resolver</a></p>
+<p><code class="language-text">src/graphql/resolvers.js</code></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> gql <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"apollo-boost"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> typeDefs <span class="token operator">=</span> gql<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  extend type Mutation {
+    ToggleCartHidden: Boolean!
+  }
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token constant">GET_CART_HIDDEN</span> <span class="token operator">=</span> gql<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  {
+    cartHidden @client
+  }
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> resolvers <span class="token operator">=</span> <span class="token punctuation">{</span>
+  Mutation<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">toggleCartHidden</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token parameter">_root<span class="token punctuation">,</span> _args<span class="token punctuation">,</span> <span class="token punctuation">{</span> cache <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> cartHidden <span class="token punctuation">}</span> <span class="token operator">=</span> cache<span class="token punctuation">.</span><span class="token function">readQuery</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        query<span class="token punctuation">:</span> <span class="token constant">GET_CART_HIDDEN</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      cache<span class="token punctuation">.</span><span class="token function">writeQuery</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        query<span class="token punctuation">:</span> <span class="token constant">GET_CART_HIDDEN</span><span class="token punctuation">,</span>
+        data<span class="token punctuation">:</span> <span class="token punctuation">{</span> cartHidden<span class="token punctuation">:</span> <span class="token operator">!</span>cartHidden <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">return</span> <span class="token operator">!</span>cartHidden<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/fb3bccbc31ec233511089b4805ca03e56c0485ec?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
+<h3 id="226-resources-mutations"><a href="#226-resources-mutations" aria-label="226 resources mutations permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>226. Resources: Mutations</h3>
+<p>To learn more about mutations, we recommend checking out the Apollo documentation <a href="https://www.apollographql.com/docs/react/essentials/mutations/" target="_blank" rel="noopener">here</a>. Mutations are hard to grasp at first, but as with anything, once you get used to the syntax, it becomes nice and easy!</p>
+<h3 id="228-adding-items-with-apollo"><a href="#228-adding-items-with-apollo" aria-label="228 adding items with apollo permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>228. Adding Items With Apollo</h3>
+<h3 id="229-adding-items-with-apollo-2"><a href="#229-adding-items-with-apollo-2" aria-label="229 adding items with apollo 2 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>229. Adding Items With Apollo 2</h3>
+<p>🌟 <em><strong>Added cartItems using Apollo</strong></em></p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/fb3bccbc31ec233511089b4805ca03e56c0485ec?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
+<h3 id="230-note-compose-in-next-lesson"><a href="#230-note-compose-in-next-lesson" aria-label="230 note compose in next lesson permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>230. Note Compose in next lesson</h3>
+<p>Hello everyone! In the next lesson, we are going to use a method called <code class="language-text">compose</code> that we import from <code class="language-text">&#39;react-apollo&#39;</code>. Unfortunately with the recent React-Apollo update to v3.0.0 it’s been removed from React-Apollo and is no longer something we can import from this library. Luckily compose was just a copy of lodash’s <code class="language-text">flowRight</code>. Lodash is just a small library that gives us access to a bunch of helper functions, of which <code class="language-text">flowRight</code> is one of! In the following lesson, anyplace you see <code class="language-text">compose</code> just use lodash <code class="language-text">flowRight</code>!</p>
+<p>You can install lodash in your project by adding it as a dependency as follows:</p>
+<p>If you’re using yarn:</p>
+<p><code class="language-text">yarn add lodash</code></p>
+<p>If you’re using npm:</p>
+<p><code class="language-text">npm install lodash</code></p>
+<p>You can then import flowRight into your file like so:</p>
+<p><code class="language-text">import { flowRight } from &#39;lodash&#39;;</code></p>
+<p>and just replace any place in the lesson where we use <code class="language-text">compose</code> with <code class="language-text">flowRight</code>:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">compose</span><span class="token punctuation">(</span>
+  <span class="token comment">//...code </span>
+<span class="token punctuation">)</span><span class="token punctuation">(</span>CollectionItemContainer<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>becomes</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">flowRight</span><span class="token punctuation">(</span>
+  <span class="token comment">// ...code</span>
+<span class="token punctuation">)</span><span class="token punctuation">(</span>CollectionItemContainer<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>You can find out more about this breaking change here as well: <a href="https://github.com/apollographql/react-apollo/issues/3330" target="_blank" rel="noopener">https://github.com/apollographql/react-apollo/issues/3330</a>. So push forward with the lesson :)</p>
+<h3 id="231-cartitem-count-with-apollo"><a href="#231-cartitem-count-with-apollo" aria-label="231 cartitem count with apollo permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>231. CartItem Count With Apollo</h3>
+<p>🌟 <em><strong>Added itemCount back using Apollo</strong></em></p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/654593e7decb47af8675ad2ba781f065314b23c3?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
+<h3 id="232-exercises-adding-more-graphql"><a href="#232-exercises-adding-more-graphql" aria-label="232 exercises adding more graphql permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>232. Exercises: Adding More GraphQL</h3>
+<p>As an exercise, attempt to convert the remaining instances of redux in the application over to using our Apollo local cache!</p>
+<p>You can find a link to all the code we’ve done up to now here:</p>
+<p><a href="https://github.com/ZhangMYihua/graphql-practice" target="_blank" rel="noopener">https://github.com/ZhangMYihua/graphql-practice</a></p>
+<p>You can also find a full solution repo at this GitHub link to check your solutions:</p>
+<p><a href="https://github.com/ZhangMYihua/graphql-practice-complete" target="_blank" rel="noopener">https://github.com/ZhangMYihua/graphql-practice-complete</a></p>
+<h3 id="233-should-you-use-graphql"><a href="#233-should-you-use-graphql" aria-label="233 should you use graphql permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>233. Should You Use GraphQL?</h3>
 <h2 id="section-25-master-project-mobilesupport"><a href="#section-25-master-project-mobilesupport" aria-label="section 25 master project mobilesupport permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 25: Master Project: MobileSupport</h2>
 <h2 id="section-26-master-project-reactperformance"><a href="#section-26-master-project-reactperformance" aria-label="section 26 master project reactperformance permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 26: Master Project: ReactPerformance</h2>
 <h2 id="section-27-react-interview-questions--advice"><a href="#section-27-react-interview-questions--advice" aria-label="section 27 react interview questions  advice permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 27: React Interview Questions + Advice</h2>
