@@ -4777,9 +4777,567 @@ provider<span class="token punctuation">.</span><span class="token function">set
 <h3 id="198-usecontext--usememo--usecallback"><a href="#198-usecontext--usememo--usecallback" aria-label="198 usecontext  usememo  usecallback permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>198. useContext + useMemo + useCallback</h3>
 <p>There are a few other Hooks we still need to talk about such as useContext or useMemo or useCallback However, we are covering topics like these in later sections in the course when we learn a little bit more about things like ContextAPI and Performance.</p>
 <p>So hang on tight and you will learn about them shortly as we will continue to use hooks throughout the upcoming sections!</p>
-<h2 id="section-22-master-project-stripepayments-part-2---backend"><a href="#section-22-master-project-stripepayments-part-2---backend" aria-label="section 22 master project stripepayments part 2   backend permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 22: Master Project: StripePayments Part 2 - Backend</h2>
+<h2 id="section-22-master-project-stripe-payments-part-2---back-end"><a href="#section-22-master-project-stripe-payments-part-2---back-end" aria-label="section 22 master project stripe payments part 2   back end permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 22: Master Project: Stripe Payments Part 2 - Back end</h2>
+<p>🌟 <em><strong>Get titles for Section 22</strong></em></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">".curriculum-item-link--title--zI5QT"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>
+  <span class="token parameter">title</span> <span class="token operator">=></span> title<span class="token punctuation">.</span>textContent
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h3 id="199-about-this-section"><a href="#199-about-this-section" aria-label="199 about this section permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>199. About This Section</h3>
+<p>In order to have a fully functioning e commerce project with payments, we need to create a backend server for our Stripe payments. This section coming up does not talk about React, but instead, allows you to have a fully functioning application because our goal here is to have a project as complete as possible for you. However, this is not an important part of the course, so if you do not want to learn about the backend, you can skip this section, or you can just grab the code that we will provide in the last lecture of this section. The only thing you will be missing out on is the full ability to accept payments with Stripe (since currently the payment info the user sends on the frontend isn’t doing anything).</p>
+<p>Remember, this section is completely optional!</p>
+<h3 id="200-introduction-to-backend"><a href="#200-introduction-to-backend" aria-label="200 introduction to backend permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>200. Introduction To Backend</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABs0lEQVQoz2VSi3KCMBDk/7+wtYoooBKeIQ9ewe3dUWmdOrNzMSSb29uNxnFCCCuWEDYsAWEN8G5BUbQoVAnnhu3MEt4wLwvW5xNlWUHROe9HREWlUXcOdWupWlRSHdreCzozSm30Lzoz0N6w7/Od173oUXYoGwvVGKklfdDGwxhaNz3itMAlV4QSZ1p/nq74OF4E8fUh+0XVCxmTRq228MMM6ye4YUL2qKFqDUftq7pHkm1kjIQIT5cbDqdUapIVOMQ5rrfql9API/7+Wu2kS9VsMliytuNPndATuPL/3k1EViKnWXc0AiG0NPBhGKhLHnzY52jsQIc8dXKnLjLEVL+oflJ3LPWcKtyKBmyq88RBdZxmRCytbTtk+V1c45lWNDt+xDovco7JTcBSD/EmdyNs6dyIum6he0Pk83/JmhysxHX37ixJYndfckUyrVN6MKdO+dsumaKEdV0JT3mVozRTznrjRIojw9jh87UQyYyvcyaG/TNF0eWGO+q2HKnaiDHzHFCSFGO9pIAvsavHJBf5p4RlP5DeK0nDK4sS7Kp1+8YLnMkttG5fM7ZA/0C/B5vxDdFARBoQ2YNHAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Introduction To Backend"
+        title="Introduction To Backend"
+        src="/static/028bf8f730f9e0f7a24f645b9deaf4b9/b4fef/108.png"
+        srcset="/static/028bf8f730f9e0f7a24f645b9deaf4b9/942f4/108.png 192w,
+/static/028bf8f730f9e0f7a24f645b9deaf4b9/a7675/108.png 384w,
+/static/028bf8f730f9e0f7a24f645b9deaf4b9/b4fef/108.png 768w,
+/static/028bf8f730f9e0f7a24f645b9deaf4b9/0eda4/108.png 1152w,
+/static/028bf8f730f9e0f7a24f645b9deaf4b9/182cf/108.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABv0lEQVQoz2VSiXbiMAzM/39hSyFALnJhx1fuMJUUaOlu3puMJbAyIykaxwnrumFZV8FKmKcV5U2jqhs4H/bfl/U/bA9AKY2iKNEPI5pWIapag3sXcNee2KMVDujcAG17KEOgWJnw5P4NYb/b+ScCorLp0CiPWjliJ2fjenjv6WxwvN4QpxXipMQ5rXGIM3wcr8JxUuGc1SifolhMpI1HP84Iw0SyZ+SlAqv2YaA/OGQUc+7FSd7gQh+4ZBWKSuNwLnClHBdsuGDoR7w/HdnkL7HSVrOd3V7nRoHx0w45j0iKFkWtpUVsO2IlIQRp/rIs0he2bn0PY4OgqBROZP3zlOKLrDKO51zyPFS+G/oe07SwwgHOeZziCyUm1HcD7qu1Dlp30F0nOS4oxc4ZTpcCx0suLRhoulobWKoxTvOv5ce28ZusDNIPbQeyPwi/LFuyasMkzLZdmMUy95cty1CcH/B4PLBtO1hdUStSTatjHFl2xJ6GUJO6HAeyfYhTfB4TiT8o5qI/U9738Ll/PAwZiCWrFndaG2alLdJbiysVZeunayHF2Hac3Kgl7t+Ce/CL18LuaN8WWj/b8APT/7n7DbiuQ8iHLqn7AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Introduction To Backend"
+        title="Introduction To Backend"
+        src="/static/26224d68d840b3af04379dc2bfdc0b8f/b4fef/109.png"
+        srcset="/static/26224d68d840b3af04379dc2bfdc0b8f/942f4/109.png 192w,
+/static/26224d68d840b3af04379dc2bfdc0b8f/a7675/109.png 384w,
+/static/26224d68d840b3af04379dc2bfdc0b8f/b4fef/109.png 768w,
+/static/26224d68d840b3af04379dc2bfdc0b8f/0eda4/109.png 1152w,
+/static/26224d68d840b3af04379dc2bfdc0b8f/182cf/109.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<h3 id="201-cloning-from-this-point-on"><a href="#201-cloning-from-this-point-on" aria-label="201 cloning from this point on permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>201. Cloning From This Point On</h3>
+<p>If you do choose to skip this section and just fork and clone this repo, or any repo from this point on in the course, remember to add a file called <code class="language-text">.env</code> to the root folder! In that <code class="language-text">.env</code> file remember to add a <code class="language-text">STRIPE_SECRET_KEY</code> value equal to your own secret key from your stripe dashboard. You can find it in the same place where you found your publishable key in the developers tab under api keys. You will have to enter the password in to reveal it!</p>
+<p>You will also need to connect your existing Heroku app to this new forked and cloned repo, or you have to create a new Heroku app and push to it. A quick refresher on how to do either of these:</p>
+<p><strong>Set to an existing Heroku app</strong></p>
+<p>To set to an existing Heroku app you already have deployed, you need to know the name of the app you want to deploy to. To see a list of all the apps you currently have on Heroku:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">heroku apps</code></pre></div>
+<p>Copy the name of the app you want to connect the project to, then run:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">heroku git<span class="token punctuation">:</span>remote <span class="token operator">-</span>a <span class="token operator">&lt;</span><span class="token constant">PASTE_YOUR_APP_NAME_HERE</span><span class="token operator">></span></code></pre></div>
+<p>And now you’ll have your repo connected to the heroku app under the git remote name <code class="language-text">heroku</code>.</p>
+<p>If the Heroku app you connected was deploying just a create-react-app project from earlier in the lesson, you will need to remove the <code class="language-text">mars/create-react-app-buildpack</code> buildpack first. You can check if you have this buildpack by running:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">heroku buildpacks</code></pre></div>
+<p>Which will list any buildpacks you currently have, if you see <code class="language-text">mars/create-react-app-buildpack</code> in the list, you can remove it by running:</p>
+<p>heroku buildpacks:remove mars/create-react-app-buildpack</p>
+<p>Then skip to the bottom of this article to see what to do next!</p>
+<p><strong>To create a new Heroku app</strong></p>
+<p>Create a new Heroku project by typing in your terminal:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">heroku create</code></pre></div>
+<p>This will create a new Heroku project for you. Then run:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">git remote <span class="token operator">-</span>v</code></pre></div>
+<p>You should see <code class="language-text">heroku https://git.heroku.com/&lt;RANDOMLY_GENERATED_NAME_OF_YOUR_APP&gt;</code> in the list. This means you have successfully connected your project to the newly created Heroku app under the git remote of <code class="language-text">heroku</code>.</p>
+<p><strong>Deploying to Heroku</strong></p>
+<p>Before we deploy, you also need to set a config variable of <code class="language-text">STRIPE_SECRET_KEY</code> to the same secret key value from your stripe dashboard, the same one in your <code class="language-text">.env</code> file. The <code class="language-text">.env</code> file is only for local development, in order for our heroku production app to have access to this secret key, we add it to our Heroku projects config variables by typing:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">heroku config<span class="token punctuation">:</span><span class="token keyword">set</span> <span class="token constant">STRIPE_SECRET_KEY</span><span class="token operator">=</span><span class="token operator">&lt;</span><span class="token constant">YOUR_STRIPE_SECRET_KEY</span><span class="token operator">></span></code></pre></div>
+<p>After that, you can deploy to heroku by running:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">git push heroku master</code></pre></div>
+<p>You will see this warning message if you are pushing to an existing app:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token operator">!</span> <span class="token punctuation">[</span>rejected<span class="token punctuation">]</span>        master <span class="token operator">-</span><span class="token operator">></span> <span class="token function">master</span> <span class="token punctuation">(</span>fetch first<span class="token punctuation">)</span>
+error<span class="token punctuation">:</span> failed to push some refs to <span class="token string">'https://git.heroku.com/&lt;YOUR_HEROKU_APP_NAME>'</span>
+hint<span class="token punctuation">:</span> Updates were rejected because the remote contains work that you <span class="token keyword">do</span>
+hint<span class="token punctuation">:</span> not have locally<span class="token punctuation">.</span> This is usually caused by another repository pushing
+hint<span class="token punctuation">:</span> to the same ref<span class="token punctuation">.</span> You may want to first integrate the remote changes
+hint<span class="token punctuation">:</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>g<span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token string">'git pull ...'</span><span class="token punctuation">)</span> before pushing again<span class="token punctuation">.</span>
+hint<span class="token punctuation">:</span> See the <span class="token string">'Note about fast-forwards'</span> <span class="token keyword">in</span> <span class="token string">'git push --help'</span> <span class="token keyword">for</span> details<span class="token punctuation">.</span></code></pre></div>
+<p>This is because we are pushing to an existing app that was deploying an entirely different repository from what we have now. Simply run:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">git push heroku master <span class="token operator">--</span>force</code></pre></div>
+<p>This will overwrite the existing Heroku app with our new code.</p>
+<p><strong>Open our Heroku project</strong></p>
+<p>After heroku finishes building our project, we can simply run:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">heroku open</code></pre></div>
+<p>This will open up our browser and take us to our newly deployed Heroku project!</p>
+<h3 id="202-creating-our-server-inside-the-project"><a href="#202-creating-our-server-inside-the-project" aria-label="202 creating our server inside the project permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>202. Creating our Server Inside the Project</h3>
+<p><a href="https://www.npmjs.com/package/nodemon" target="_blank" rel="noopener">Nodemon</a> || <a href="https://www.npmjs.com/package/concurrently" target="_blank" rel="noopener">Concurrently</a></p>
+<p>🌟 <em><strong>Backend initialized</strong></em></p>
+<p><a href="https://github.com/navin-navi/crown-clothing-react/commit/70d4af77ddd8610029fb5b5cfaa8d9ac631f4cc4?diff=split" target="_blank" rel="noopener">View file changes in GitHub</a></p>
+<h3 id="203-building-a-basic-server"><a href="#203-building-a-basic-server" aria-label="203 building a basic server permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>203. Building A Basic Server</h3>
+<p><a href="https://www.npmjs.com/package/express" target="_blank" rel="noopener">express</a> || <a href="https://www.npmjs.com/package/dotenv" target="_blank" rel="noopener">dotenv</a> || <a href="https://www.npmjs.com/package/cors" target="_blank" rel="noopener">cors</a> || <a href="https://www.npmjs.com/package/body-parser" target="_blank" rel="noopener">body-parser</a></p>
+<p><code class="language-text">server.js</code></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"express"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> cors <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"cors"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> bodyParser <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"body-parser"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">"production"</span><span class="token punctuation">)</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"dotenv"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> port <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token number">8081</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>bodyParser<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>bodyParser<span class="token punctuation">.</span><span class="token function">urlencoded</span><span class="token punctuation">(</span><span class="token punctuation">{</span> extended<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">cors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">"production"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">static</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">"client/build"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"*"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">sendFile</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">"client/build"</span><span class="token punctuation">,</span> <span class="token string">"index.html"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token parameter">error</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token keyword">throw</span> error<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Server running on port </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h3 id="204-what-we-are-building"><a href="#204-what-we-are-building" aria-label="204 what we are building permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>204. What We Are Building</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABDklEQVQoz52SzXKEIBCE9/3fL4dNVbTWdaOLoig/gnvoDFgYQ9TDHqYGKPzsbubybAdwodH2KvS4FnKCcy9oQ31+QWqLplP/7qZ1OQKOaoK1Fm3bQWtNYPcu8PejfjSoG/Hn7C2FnNZ+3w0GZd2RMrkLSl3tArf99mC4ft2RFRUYH9fzWHvwU6BXlpcMFdnegrZAn+v2m33La4YTZTis9n35sz6slzuKHmtUNAHnCiNc4skadNTLiuMzu+PjmiMv6rA3doYxyzRI7Y4VRkWsFcjyIijwGRbfTYA9ag5GcQiaAusIOrlV8SFwCIM90/zZ0L01LhbL/mepq1gng20JRln1gmwZAtrwSOmjpNn/AGxGRd8pZQU+AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="What We Are Building"
+        title="What We Are Building"
+        src="/static/80e204e13005eb05a3bf85b2e021d311/b4fef/110.png"
+        srcset="/static/80e204e13005eb05a3bf85b2e021d311/942f4/110.png 192w,
+/static/80e204e13005eb05a3bf85b2e021d311/a7675/110.png 384w,
+/static/80e204e13005eb05a3bf85b2e021d311/b4fef/110.png 768w,
+/static/80e204e13005eb05a3bf85b2e021d311/0eda4/110.png 1152w,
+/static/80e204e13005eb05a3bf85b2e021d311/182cf/110.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<h3 id="205-backend-payment-route"><a href="#205-backend-payment-route" aria-label="205 backend payment route permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>205. Backend Payment Route</h3>
+<p><a href="https://www.npmjs.com/package/stripe" target="_blank" rel="noopener">stripe</a></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"express"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> cors <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"cors"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> bodyParser <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"body-parser"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">"production"</span><span class="token punctuation">)</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"dotenv"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> stripe <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"stripe"</span><span class="token punctuation">)</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">STRIPE_SECRET_KEY</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> port <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token number">8081</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>bodyParser<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>bodyParser<span class="token punctuation">.</span><span class="token function">urlencoded</span><span class="token punctuation">(</span><span class="token punctuation">{</span> extended<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">cors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">"production"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">static</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">"client/build"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"*"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">sendFile</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">"client/build"</span><span class="token punctuation">,</span> <span class="token string">"index.html"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="gatsby-highlight-code-line">app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">"/payment"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    token<span class="token punctuation">:</span> <span class="token punctuation">{</span> id <span class="token punctuation">}</span><span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">    amount</span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span> <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token keyword">const</span> body <span class="token operator">=</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    source<span class="token punctuation">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>token<span class="token punctuation">.</span>id<span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">    amount<span class="token punctuation">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>amount<span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">    curreny<span class="token punctuation">:</span> <span class="token string">"usd"</span></span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line"></span><span class="gatsby-highlight-code-line">  stripe<span class="token punctuation">.</span>charges<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>body<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">stripeErr<span class="token punctuation">,</span> stripeRes</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">if</span> <span class="token punctuation">(</span>stripeErr<span class="token punctuation">)</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">      res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span> error<span class="token punctuation">:</span> stripeErr <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">      res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span> success<span class="token punctuation">:</span> stripeRes <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">    <span class="token punctuation">}</span></span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token parameter">error</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token keyword">throw</span> error<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Server running on port </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h3 id="206-connecting-client-to-server"><a href="#206-connecting-client-to-server" aria-label="206 connecting client to server permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>206. Connecting Client To Server</h3>
+<p><code class="language-text">client/src/components/stripe-button/stripe-button.component.jsx</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> StripeCheckout <span class="token keyword">from</span> <span class="token string">"react-stripe-checkout"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">"axios"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> crown <span class="token keyword">from</span> <span class="token string">"../../assets/crown.svg"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">StripeCheckoutButton</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> price <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> priceForStripe <span class="token operator">=</span> price <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> publishableKey <span class="token operator">=</span> <span class="token string">"pk_test_2hJtHnCWfCA14ioo1FKhoZMS00tev3ElY9"</span><span class="token punctuation">;</span>
+
+<span class="gatsby-highlight-code-line">  <span class="token keyword">const</span> <span class="token function-variable function">onToken</span> <span class="token operator">=</span> <span class="token parameter">token</span> <span class="token operator">=></span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    <span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">      url<span class="token punctuation">:</span> <span class="token string">"payment"</span><span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">      method<span class="token punctuation">:</span> <span class="token string">"post"</span><span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">      data<span class="token punctuation">:</span> <span class="token punctuation">{</span> amount<span class="token punctuation">:</span> priceForStripe<span class="token punctuation">,</span> token <span class="token punctuation">}</span></span><span class="gatsby-highlight-code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span></span><span class="gatsby-highlight-code-line">      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=></span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Payment Successful"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">      <span class="token punctuation">}</span><span class="token punctuation">)</span></span><span class="gatsby-highlight-code-line">      <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=></span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Payment error: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>error<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">        <span class="token function">alert</span><span class="token punctuation">(</span></span><span class="gatsby-highlight-code-line">          <span class="token string">"There was an issue with your payment. Please make sure use the provided credit card"</span></span><span class="gatsby-highlight-code-line">        <span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span></span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>StripeCheckout
+      label<span class="token operator">=</span><span class="token string">"Pay Now"</span>
+      name<span class="token operator">=</span><span class="token string">"Crown Clothing Ltd."</span>
+      billingAddress
+      shippingAddress
+      image<span class="token operator">=</span><span class="token punctuation">{</span>crown<span class="token punctuation">}</span>
+      description<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Your total is $</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>price<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+      amount<span class="token operator">=</span><span class="token punctuation">{</span>priceForStripe<span class="token punctuation">}</span>
+      panelLabel<span class="token operator">=</span><span class="token string">"Pay Now"</span>
+      token<span class="token operator">=</span><span class="token punctuation">{</span>onToken<span class="token punctuation">}</span>
+      stripeKey<span class="token operator">=</span><span class="token punctuation">{</span>publishableKey<span class="token punctuation">}</span>
+    <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> StripeCheckoutButton<span class="token punctuation">;</span></code></pre></div>
+<h3 id="207-deploying-to-production"><a href="#207-deploying-to-production" aria-label="207 deploying to production permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>207. Deploying To Production</h3>
+<p><a href="https://devcenter.heroku.com/articles/config-vars" target="_blank" rel="noopener">Heroku config</a></p>
+<p><a href="https://navin-navi-crown-clothing.herokuapp.com/" target="_blank" rel="noopener">Crown Clothing Live</a></p>
+<p>Removed the old React build-pack to make the node app deploy successful.</p>
 <h2 id="section-23-master-project-contextapi"><a href="#section-23-master-project-contextapi" aria-label="section 23 master project contextapi permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 23: Master Project: ContextAPI</h2>
+<p>🌟 <em><strong>Get titles for Section 23</strong></em></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">".curriculum-item-link--title--zI5QT"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>
+  <span class="token parameter">title</span> <span class="token operator">=></span> title<span class="token punctuation">.</span>textContent
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h3 id="208-quick-note-about-cloning-this-repo"><a href="#208-quick-note-about-cloning-this-repo" aria-label="208 quick note about cloning this repo permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>208. Quick note about cloning this repo</h3>
+<p>🌟 <em><strong>Quick note about cloning this repo</strong></em></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABkUlEQVQoz3VTu07DMBStxITExIIYGFj5LgY2voOBIh4DHfgBfoAVNqgQICQEahr6oEmatnk6aRwn7cFxcOWU1tLRvde59/jcG7sGZc3nc2FnsxkYy5CmDJSmwqp+mTcXVqJY0+kUtVWEWZbBdT1BQCkFTUuiJKFIGavkqn4URajJQD2pIHQ8H0FIEHIQDumHJBKHqDUVQvUEaRlXZPYHsA0TI8vChMMcGBiaFtzJBFEYriSM4zUK85wrHDvoW2N89ofQh9wfB+jaHnTLwZgk6xW2NH3xIwoUyxraODw6RuP2Ds0Rw30vwMMPwRP3HznenazSlaxraW3U1CHLD229g83tPZzVL7hchthzETiOsBFHQv5aXuosCILqDCXhd6eH3f0DXF7fiNh3XBi8kwFXYOo6HHskyPBvhnE5Q4l8IV3HxtYOTupXIvYMA9rbC760Dwy6bXgju6Lu319WbmJJ4Ac4PW+g+fwq4mIshO8R38eUF9EkwaolFNLiBajgl5ll+SJJvo5iTyLlr2i5rsghUYxfUH1I92n0EOAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Quick note about cloning this repo"
+        title="Quick note about cloning this repo"
+        src="/static/0e1e4238b8233265d3b90664aafd85d1/b4fef/111.png"
+        srcset="/static/0e1e4238b8233265d3b90664aafd85d1/942f4/111.png 192w,
+/static/0e1e4238b8233265d3b90664aafd85d1/a7675/111.png 384w,
+/static/0e1e4238b8233265d3b90664aafd85d1/b4fef/111.png 768w,
+/static/0e1e4238b8233265d3b90664aafd85d1/0eda4/111.png 1152w,
+/static/0e1e4238b8233265d3b90664aafd85d1/182cf/111.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<h3 id="209-introduction-to-context-api"><a href="#209-introduction-to-context-api" aria-label="209 introduction to context api permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>209. Introduction To Context API</h3>
+<p><a href="https://reactjs.org/docs/context.html" target="_blank" rel="noopener">Context API</a></p>
+<p><a href="https://github.com/ZhangMYihua/react-context-lesson" target="_blank" rel="noopener">Context API Example Start Repo</a></p>
+<p>This section will be taught from the an older commit before the introduction of advanced Redux concepts</p>
+<h3 id="210-context-consumer--usecontexthook"><a href="#210-context-consumer--usecontexthook" aria-label="210 context consumer  usecontexthook permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>210. Context Consumer + useContextHook</h3>
+<p><a href="https://reactjs.org/docs/hooks-reference.html#usecontext" target="_blank" rel="noopener">useContext</a></p>
+<p><code class="language-text">src/contexts/collections/collections.context.js</code></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> createContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token constant">SHOP_DATA</span> <span class="token keyword">from</span> <span class="token string">'./shop.data'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> CollectionsContext <span class="token operator">=</span> <span class="token function">createContext</span><span class="token punctuation">(</span><span class="token constant">SHOP_DATA</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> CollectionsContext<span class="token punctuation">;</span></code></pre></div>
+<p><code class="language-text">src/pages/collection/collection.component.jsx</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="gatsby-highlight-code-line"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span></span>
+<span class="token keyword">import</span> CollectionItem <span class="token keyword">from</span> <span class="token string">'../../components/collection-item/collection-item.component'</span><span class="token punctuation">;</span>
+
+<span class="gatsby-highlight-code-line"><span class="token keyword">import</span> CollectionsContext <span class="token keyword">from</span> <span class="token string">'../../contexts/collections/collections.context'</span><span class="token punctuation">;</span></span>
+<span class="token keyword">import</span> <span class="token string">'./collection.styles.scss'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">CollectionPage</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> match <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<span class="gatsby-highlight-code-line">  <span class="token keyword">const</span> collections <span class="token operator">=</span> <span class="token function">useContext</span><span class="token punctuation">(</span>CollectionsContext<span class="token punctuation">)</span><span class="token punctuation">;</span></span>  <span class="token keyword">const</span> collection <span class="token operator">=</span> collections<span class="token punctuation">[</span>match<span class="token punctuation">.</span>params<span class="token punctuation">.</span>collectionId<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> title<span class="token punctuation">,</span> items <span class="token punctuation">}</span> <span class="token operator">=</span> collection<span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'collection-page'</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>h2 className<span class="token operator">=</span><span class="token string">'title'</span><span class="token operator">></span><span class="token punctuation">{</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'items'</span><span class="token operator">></span>
+        <span class="token punctuation">{</span>items<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+          <span class="token operator">&lt;</span>CollectionItem key<span class="token operator">=</span><span class="token punctuation">{</span>item<span class="token punctuation">.</span>id<span class="token punctuation">}</span> item<span class="token operator">=</span><span class="token punctuation">{</span>item<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> CollectionPage<span class="token punctuation">;</span></code></pre></div>
+<h3 id="211-context-provider"><a href="#211-context-provider" aria-label="211 context provider permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>211. Context Provider</h3>
+<p><code class="language-text">src/contexts/current-user/current-user.context.js</code></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> createContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> CurrentUserContext <span class="token operator">=</span> <span class="token function">createContext</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> CurrentUserContext<span class="token punctuation">;</span></code></pre></div>
+<p><code class="language-text">src/App.js</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Switch<span class="token punctuation">,</span> Route<span class="token punctuation">,</span> Redirect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-router-dom'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token string">'./App.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> HomePage <span class="token keyword">from</span> <span class="token string">'./pages/homepage/homepage.component'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ShopPage <span class="token keyword">from</span> <span class="token string">'./pages/shop/shop.component'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SignInAndSignUpPage <span class="token keyword">from</span> <span class="token string">'./pages/sign-in-and-sign-up/sign-in-and-sign-up.component'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> CheckoutPage <span class="token keyword">from</span> <span class="token string">'./pages/checkout/checkout.component'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> Header <span class="token keyword">from</span> <span class="token string">'./components/header/header.component'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> auth<span class="token punctuation">,</span> createUserProfileDocument <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./firebase/firebase.utils'</span><span class="token punctuation">;</span>
+
+<span class="gatsby-highlight-code-line"><span class="token keyword">import</span> CurrentUserContext <span class="token keyword">from</span> <span class="token string">'./contexts/current-user/current-user.context'</span><span class="token punctuation">;</span></span>
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      currentUser<span class="token punctuation">:</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  unsubscribeFromAuth <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>unsubscribeFromAuth <span class="token operator">=</span> auth<span class="token punctuation">.</span><span class="token function">onAuthStateChanged</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token parameter">userAuth</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>userAuth<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> userRef <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">createUserProfileDocument</span><span class="token punctuation">(</span>userAuth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        userRef<span class="token punctuation">.</span><span class="token function">onSnapshot</span><span class="token punctuation">(</span><span class="token parameter">snapShot</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            currentUser<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+              id<span class="token punctuation">:</span> snapShot<span class="token punctuation">.</span>id<span class="token punctuation">,</span>
+              <span class="token operator">...</span>snapShot<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> currentUser<span class="token punctuation">:</span> userAuth <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">componentWillUnmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">unsubscribeFromAuth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+<span class="gatsby-highlight-code-line">        <span class="token operator">&lt;</span>CurrentUserContext<span class="token punctuation">.</span>Provider value<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>currentUser<span class="token punctuation">}</span><span class="token operator">></span></span><span class="gatsby-highlight-code-line">          <span class="token operator">&lt;</span>Header <span class="token operator">/</span><span class="token operator">></span></span><span class="gatsby-highlight-code-line">        <span class="token operator">&lt;</span><span class="token operator">/</span>CurrentUserContext<span class="token punctuation">.</span>Provider<span class="token operator">></span></span>        <span class="token operator">&lt;</span>Switch<span class="token operator">></span>
+          <span class="token operator">&lt;</span>Route exact path<span class="token operator">=</span><span class="token string">'/'</span> component<span class="token operator">=</span><span class="token punctuation">{</span>HomePage<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>Route path<span class="token operator">=</span><span class="token string">'/shop'</span> component<span class="token operator">=</span><span class="token punctuation">{</span>ShopPage<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>Route exact path<span class="token operator">=</span><span class="token string">'/checkout'</span> component<span class="token operator">=</span><span class="token punctuation">{</span>CheckoutPage<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>Route
+            exact
+            path<span class="token operator">=</span><span class="token string">'/signin'</span>
+            render<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+              <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>currentUser <span class="token operator">?</span> <span class="token punctuation">(</span>
+                <span class="token operator">&lt;</span>Redirect to<span class="token operator">=</span><span class="token string">'/'</span> <span class="token operator">/</span><span class="token operator">></span>
+              <span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>
+                <span class="token operator">&lt;</span>SignInAndSignUpPage <span class="token operator">/</span><span class="token operator">></span>
+              <span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+          <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Switch<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
+<p><code class="language-text">src/components/header/header.component.jsx</code></p>
+<div class="gatsby-highlight has-highlighted-lines" data-language="js"><pre class="language-js"><code class="language-js"><span class="gatsby-highlight-code-line"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useContext<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span></span><span class="token keyword">import</span> <span class="token punctuation">{</span> Link <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-router-dom'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> auth <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../../firebase/firebase.utils'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> CartIcon <span class="token keyword">from</span> <span class="token string">'../cart-icon/cart-icon.component'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> CartDropdown <span class="token keyword">from</span> <span class="token string">'../cart-dropdown/cart-dropdown.component'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> CurrentUserContext <span class="token keyword">from</span> <span class="token string">'../../contexts/current-user/current-user.context'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CartContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../../providers/cart/cart.provider'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ReactComponent <span class="token keyword">as</span> Logo <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../../assets/crown.svg'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token string">'./header.styles.scss'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">Header</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<span class="gatsby-highlight-code-line">  <span class="token keyword">const</span> currentUser <span class="token operator">=</span> <span class="token function">useContext</span><span class="token punctuation">(</span>CurrentUserContext<span class="token punctuation">)</span><span class="token punctuation">;</span></span>  <span class="token keyword">const</span> <span class="token punctuation">{</span> hidden <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useContext</span><span class="token punctuation">(</span>CartContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'header'</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>Link className<span class="token operator">=</span><span class="token string">'logo-container'</span> to<span class="token operator">=</span><span class="token string">'/'</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Logo className<span class="token operator">=</span><span class="token string">'logo'</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">></span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'options'</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>Link className<span class="token operator">=</span><span class="token string">'option'</span> to<span class="token operator">=</span><span class="token string">'/shop'</span><span class="token operator">></span>
+          <span class="token constant">SHOP</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">></span>
+        <span class="token operator">&lt;</span>Link className<span class="token operator">=</span><span class="token string">'option'</span> to<span class="token operator">=</span><span class="token string">'/shop'</span><span class="token operator">></span>
+          <span class="token constant">CONTACT</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">></span>
+        <span class="token punctuation">{</span>currentUser <span class="token operator">?</span> <span class="token punctuation">(</span>
+          <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">'option'</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> auth<span class="token punctuation">.</span><span class="token function">signOut</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">></span>
+            <span class="token constant">SIGN</span> <span class="token constant">OUT</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>
+          <span class="token operator">&lt;</span>Link className<span class="token operator">=</span><span class="token string">'option'</span> to<span class="token operator">=</span><span class="token string">'/signin'</span><span class="token operator">></span>
+            <span class="token constant">SIGN</span> <span class="token constant">IN</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">></span>
+        <span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span>CartIcon <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+      <span class="token punctuation">{</span>hidden <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token punctuation">:</span> <span class="token operator">&lt;</span>CartDropdown <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Header<span class="token punctuation">;</span></code></pre></div>
+<h3 id="212-cart-context"><a href="#212-cart-context" aria-label="212 cart context permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>212. Cart Context</h3>
+<p>🌟 <em><strong>Created a Cart Context to leverage the hidden value for the cart dropdown</strong></em></p>
+<h3 id="213-provider-context-pattern"><a href="#213-provider-context-pattern" aria-label="213 provider context pattern permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>213. Provider Context Pattern</h3>
+<h3 id="214-provider-context-pattern-2"><a href="#214-provider-context-pattern-2" aria-label="214 provider context pattern 2 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>214. Provider Context Pattern 2</h3>
+<p><a href="https://github.com/ZhangMYihua/react-context-complete" target="_blank" rel="noopener">Context API Provider Example Complete</a></p>
+<p><code class="language-text">src/providers/cart/cart.provider.jsx</code></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> createContext<span class="token punctuation">,</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  addItemToCart<span class="token punctuation">,</span>
+  removeItemFromCart<span class="token punctuation">,</span>
+  filterItemFromCart<span class="token punctuation">,</span>
+  getCartItemsCount<span class="token punctuation">,</span>
+  getCartTotal
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./cart.utils'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> CartContext <span class="token operator">=</span> <span class="token function">createContext</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  hidden<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">toggleHidden</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  cartItems<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">addItem</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">removeItem</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">clearItemFromCart</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  cartItemsCount<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  cartTotal<span class="token punctuation">:</span> <span class="token number">0</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">CartProvider</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>hidden<span class="token punctuation">,</span> setHidden<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>cartItems<span class="token punctuation">,</span> setCartItems<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>cartItemsCount<span class="token punctuation">,</span> setCartItemsCount<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>cartTotal<span class="token punctuation">,</span> setCartTotal<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">addItem</span> <span class="token operator">=</span> <span class="token parameter">item</span> <span class="token operator">=></span> <span class="token function">setCartItems</span><span class="token punctuation">(</span><span class="token function">addItemToCart</span><span class="token punctuation">(</span>cartItems<span class="token punctuation">,</span> item<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">removeItem</span> <span class="token operator">=</span> <span class="token parameter">item</span> <span class="token operator">=></span> <span class="token function">setCartItems</span><span class="token punctuation">(</span><span class="token function">removeItemFromCart</span><span class="token punctuation">(</span>cartItems<span class="token punctuation">,</span> item<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">toggleHidden</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setHidden</span><span class="token punctuation">(</span><span class="token operator">!</span>hidden<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">clearItemFromCart</span> <span class="token operator">=</span> <span class="token parameter">item</span> <span class="token operator">=></span>
+    <span class="token function">setCartItems</span><span class="token punctuation">(</span><span class="token function">filterItemFromCart</span><span class="token punctuation">(</span>cartItems<span class="token punctuation">,</span> item<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">setCartItemsCount</span><span class="token punctuation">(</span><span class="token function">getCartItemsCount</span><span class="token punctuation">(</span>cartItems<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setCartTotal</span><span class="token punctuation">(</span><span class="token function">getCartTotal</span><span class="token punctuation">(</span>cartItems<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>cartItems<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>CartContext<span class="token punctuation">.</span>Provider
+      value<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+        hidden<span class="token punctuation">,</span>
+        toggleHidden<span class="token punctuation">,</span>
+        cartItems<span class="token punctuation">,</span>
+        addItem<span class="token punctuation">,</span>
+        removeItem<span class="token punctuation">,</span>
+        clearItemFromCart<span class="token punctuation">,</span>
+        cartItemsCount<span class="token punctuation">,</span>
+        cartTotal
+      <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token operator">></span>
+      <span class="token punctuation">{</span>children<span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>CartContext<span class="token punctuation">.</span>Provider<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> CartProvider<span class="token punctuation">;</span></code></pre></div>
+<h3 id="215-redux-vs-context-api"><a href="#215-redux-vs-context-api" aria-label="215 redux vs context api permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>215. Redux vs Context API</h3>
+<p>🌟 <em><strong>Brief explanation on when to use Redux and when to use Context API</strong></em></p>
+<p>🌟 <em><strong>Redux-Big Projects &#x26; Context API-Small and Medium level Projects</strong></em></p>
 <h2 id="section-24-master-project-graphql-apollo"><a href="#section-24-master-project-graphql-apollo" aria-label="section 24 master project graphql apollo permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 24: Master Project: GraphQL+ Apollo</h2>
+<p>🌟 <em><strong>Get titles for Section 24</strong></em></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">$$</span><span class="token punctuation">(</span><span class="token string">".curriculum-item-link--title--zI5QT"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>
+  <span class="token parameter">title</span> <span class="token operator">=></span> title<span class="token punctuation">.</span>textContent
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h3 id="216-introduction-to-graphql"><a href="#216-introduction-to-graphql" aria-label="216 introduction to graphql permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>216. Introduction To GraphQL</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABf0lEQVQoz41T2Y6DMAzk/z9wtV1ayt1y5A4poKpe20AP9mWRRlNCMpmx3agVFqQJIPXALJA30Lu2N1CIJ7sRDIJYrWvv+yMSFDp8LFo/QrhN0CsHadVBXveQrZzkVzimFaRlw+9VoxZDq5mol44FjLsxN72FTlpwzqNrj0I9HywugpFkF/hJShamS+Jz/TQiDQoaF+D9IZFWuDVKYDZ+gksjFvfDjJgYJHTECz4ckuD9fod5npndupEcEzTi2hl000KBTsurWIBuhfJYWw8WNahElDCyHm+1DpI0h3EcUcyjgObIShvQCCrBCSN+xxkcTgXGrJaoWOMQ0JlQzEOYUHCN/Hg8mN0wclSqh8IYatf5V72WPXUjORWd4y6bnSB1tm4VOE+RqeM0OsPa6RaysoW0aPg3NeYrzvHM67Kowy5zrWxg5g9YG6k0CKmYpbJLh1EgPpcc+3DMOTqNz0eXeQ5N+BNnGeLXQG9DzWu7wd46/Bzs938K3bKv2X+wif4ClixErxhZoRYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="REST API"
+        title="REST API"
+        src="/static/427a31e9c779e363ce296d21f29b0a7f/b4fef/112.png"
+        srcset="/static/427a31e9c779e363ce296d21f29b0a7f/942f4/112.png 192w,
+/static/427a31e9c779e363ce296d21f29b0a7f/a7675/112.png 384w,
+/static/427a31e9c779e363ce296d21f29b0a7f/b4fef/112.png 768w,
+/static/427a31e9c779e363ce296d21f29b0a7f/0eda4/112.png 1152w,
+/static/427a31e9c779e363ce296d21f29b0a7f/182cf/112.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.14934114202049%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABYUlEQVQoz21Ti5KCMAzk///ybsRD6YM+0la8MZcNguDJTKa13Ww26dpdTGDjM49uCeztRNu67hE+Fg6J2IfEMVceP2A74xPncuNETVcXygGAwBmSrzZyKZWnaeJ6u4uAdMApYUiFt+/xkMOsyasqqB7GwN9nw+gGhDEmRt7VJsHQ1hmimyIpwFjPIUbuB6NKM1Wm0hj3X715tlxFLclZUfLTYGVfOeQmBeRuVYiqxjq+338VSEIYoEIChKfBafyME8eUFeuFuL94bq2xc55zJqZ6AyHx/kN1tOyesztLEpRcn/Oa51lJUHSQ4ugk5aLd4KE6JzNrMuDaZg20ZHYzBClUY4Z4hCIY4DFrnL1cseR1q232sX+1hZSUrJe2rQs679HFTfXBNiBcfhx9975CAR5lCpGtzDBLi8t9Pnh1I3w38h607mFsosLOe3UC7PLPh58IP8Xa+ixOwMPgj7D33xp/DypI+LvclHcAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="GraphQL"
+        title="GraphQL"
+        src="/static/941b138d6b598fcb11ae6b042eb76682/b4fef/113.png"
+        srcset="/static/941b138d6b598fcb11ae6b042eb76682/942f4/113.png 192w,
+/static/941b138d6b598fcb11ae6b042eb76682/a7675/113.png 384w,
+/static/941b138d6b598fcb11ae6b042eb76682/b4fef/113.png 768w,
+/static/941b138d6b598fcb11ae6b042eb76682/0eda4/113.png 1152w,
+/static/941b138d6b598fcb11ae6b042eb76682/182cf/113.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<h3 id="217-course-guideline--github-links"><a href="#217-course-guideline--github-links" aria-label="217 course guideline  github links permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>217. Course Guideline + GitHub Links</h3>
+<h3 id="218-graphql-playground"><a href="#218-graphql-playground" aria-label="218 graphql playground permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>218. GraphQL Playground</h3>
+<h3 id="220-graphql-playground-2"><a href="#220-graphql-playground-2" aria-label="220 graphql playground 2 permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>220. GraphQL Playground 2</h3>
+<p><a href="https://crwn-clothing.com/" target="_blank" rel="noopener">Crown Clothing GraphQL playground</a> || <a href="https://graphql.org/graphql-js/basic-types/" target="_blank" rel="noopener">GraphQL Basic Types</a> || <a href="https://github.com/ZhangMYihua/crwn-clothing-prisma" target="_blank" rel="noopener">Prisma Server for playground</a></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;"
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.75402635431918%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAABcUlEQVQoz3WS2VLCQBBF86aFQBKMWdBAAmYjOxAgbIJaWj6pz/7/d1x7ZlIlpfhwaiZT6ZPbmZYG1Stu4yUUJ0bbGglMFy3DwRWD9hfagLD5WUsfnoW9q9o+JCteox+voAcVbvwZzKiC5k0huxnUUY7OMMEw32I8P6B3X0Lz57j2ZsRc0Dwb0RJWXENSqEj1SyijDIorkJ2Uw/aXVoD65ROPH1/QqahfHGCmWxjpRpAQFEpvkLgkLChRii6l+Q0Tt+0YWrAgwQ7W9AnmlITZRkAShhYu4W/eSOiQ0Mu5UG4Ep3ApfdSY1FRYw8yPJHyAwaR5k5IJgyWS47tIyAudpFnPCGnVuXANM9vDLPZCxhKmIuFNtIK7eIYkM9FJsv/a1icrntLMDj8JG6HepGdtS10uEaLOmZY5rGWWji7AypmQQUnLHf2CrbiYBkkexjSDCbRxDt0r0bkL/2JH4NNA9LwKvbCCGpZQvQLqWJwz2Lh9A/mC/g/5ymQLAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="GraphQL Playground"
+        title="GraphQL Playground"
+        src="/static/23d0da9654f0797c3d7f061d021a9ac1/b4fef/114.png"
+        srcset="/static/23d0da9654f0797c3d7f061d021a9ac1/942f4/114.png 192w,
+/static/23d0da9654f0797c3d7f061d021a9ac1/a7675/114.png 384w,
+/static/23d0da9654f0797c3d7f061d021a9ac1/b4fef/114.png 768w,
+/static/23d0da9654f0797c3d7f061d021a9ac1/0eda4/114.png 1152w,
+/static/23d0da9654f0797c3d7f061d021a9ac1/182cf/114.png 1366w"
+        sizes="(max-width: 768px) 100vw, 768px"
+        loading="lazy"
+      />
+    </span></p>
+<h3 id="219-backend-code"><a href="#219-backend-code" aria-label="219 backend code permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>219. Backend Code</h3>
+<p>When we talk about GraphQL, it usually comes with two components: The frontend part and the backend part. As React developers, we will usually only concern ourselves with the frontend implementation of GraphQL and this is what we will be exploring over the coming videos. However, for those curious on how to best build a GraphQL server, we have provided for you the backend code that we use for this course, as well as the list of some popular options out there for building such a server:</p>
+<p><a href="https://github.com/ZhangMYihua/crwn-clothing-prisma" target="_blank" rel="noopener">Our Backend Implementation</a></p>
+<p><a href="https://www.prisma.io/" target="_blank" rel="noopener">Prisma</a> (what we use in the above link)
+<a href="https://hasura.io/" target="_blank" rel="noopener">Hasura </a>
+<a href="https://www.apollographql.com/docs/apollo-server/" target="_blank" rel="noopener">Apollo Server</a></p>
+<p>Quick way to build a GraphQL server: <a href="https://github.com/prisma/graphql-yoga" target="_blank" rel="noopener">graphql-yoga</a></p>
+<p><a href="https://blog.apollographql.com/tutorial-building-a-graphql-server-cddaa023c035" target="_blank" rel="noopener">A quick step by step guide on how to set up your own GraphQL server</a></p>
+<h3 id="221-introduction-to-apollo"><a href="#221-introduction-to-apollo" aria-label="221 introduction to apollo permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>221. Introduction To Apollo</h3>
+<p><a href="https://www.apollographql.com/docs/react/" target="_blank" rel="noopener">Apollo Client</a> || <a href="https://www.npmjs.com/package/apollo-boost" target="_blank" rel="noopener">apollo-boost</a> || <a href="https://www.npmjs.com/package/react-apollo" target="_blank" rel="noopener">react-apollo</a> || <a href="https://www.npmjs.com/package/graphql" target="_blank" rel="noopener">graphql-npm</a></p>
+<p><a href="https://github.com/ZhangMYihua/graphql-lesson" target="_blank" rel="noopener">GraphQL Lesson Starter Code</a></p>
 <h2 id="section-25-master-project-mobilesupport"><a href="#section-25-master-project-mobilesupport" aria-label="section 25 master project mobilesupport permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 25: Master Project: MobileSupport</h2>
 <h2 id="section-26-master-project-reactperformance"><a href="#section-26-master-project-reactperformance" aria-label="section 26 master project reactperformance permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 26: Master Project: ReactPerformance</h2>
 <h2 id="section-27-react-interview-questions--advice"><a href="#section-27-react-interview-questions--advice" aria-label="section 27 react interview questions  advice permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section 27: React Interview Questions + Advice</h2>
