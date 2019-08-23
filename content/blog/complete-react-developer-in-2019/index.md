@@ -1,6 +1,6 @@
 ---
 title: Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
-date: "2019-08-21"
+date: "2019-08-23"
 description: Notes taken while learning Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
 ---
 
@@ -2607,7 +2607,7 @@ export default withRouter(connect(mapStateToProps)(CartDropDown));
 
 In the previous lesson we learned about Objects (Hash Table data structure) being better for searching for items than Array. This is a common computing optimization when talking about data structures. If you want to learn more about why this is, [this is a great resource for you to use](https://www.kirupa.com/html5/hashtables_vs_arrays.htm).
 
-###  134. Data Flow In Our App
+### 134. Data Flow In Our App
 
 ```js{10-13}
 import { createSelector } from "reselect";
@@ -2669,7 +2669,6 @@ export const selectCollection = collectionUrlParam =>
 
 🌟 _Install Heroku in Ubuntu_
 
-
 `sudo snap install --classic heroku`
 
 🌟 _Check Heroku version_
@@ -2696,7 +2695,7 @@ You can learn more about the buildpack we used in the previous video by followin
 
 ### 142. Linking Github to Heroku
 
-If you would like to not manually deploy the the app like we have seen in the previous video every time, and you want the app to redeploy anytime you update MASTER in your github repository, then you can set that up through Heroku by following these steps: https://devcenter.heroku.com/articles/github-integration
+If you would like to not manually deploy the the app like we have seen in the previous video every time, and you want the app to redeploy anytime you update MASTER in your github repository, then you can set that up through Heroku by following these steps: <https://devcenter.heroku.com/articles/github-integration>
 
 However, since we will be working on the project in the next sections, we recommend that you do not do this so that as you code along, even if your website breaks, your current version of the website is still live on Heroku until you decide to redeploy next.
 
@@ -2903,6 +2902,7 @@ export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default firebase;
 ```
+
 ### 157. Moving Our Shop Data To Firebase 2
 
 `src/firebase/firebase.util.js`
@@ -3267,7 +3267,7 @@ export default connect(
 
 [View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/2e0fdfecaac86516ae57a3c15312c1822483f9ed?diff=split)
 
-### 168. What Does Redux Thunk Do?
+### 168. What Does Redux Thunk Do
 
 🌟 _**Redux Thunk explanation by Andrei**_
 
@@ -3443,7 +3443,6 @@ export default function* rootSaga() {
 
 ![Reviewing Our Sagas](images/105.png)
 
-
 ![Reviewing Our Sagas](images/106.png)
 
 ### 183. Recreating Persistence
@@ -3484,7 +3483,7 @@ $$(".curriculum-item-link--title--zI5QT").map(
 
 🌟 _**Intro to useState hook**_
 
-### 188. Why Did React Add Hooks?
+### 188. Why Did React Add Hooks
 
 If you want to learn more about why the React team decided to add Hooks to the library, you can find the motivation behind their decision right from their mouth <https://reactjs.org/docs/hooks-intro.html#motivation>
 
@@ -3610,7 +3609,7 @@ A quick recap of what we have learned about useEffect:
 componentDidMount() {
     console.log('I just mounted!');
 }
- 
+
 //Hooks
 useEffect(() => {
     console.log('I just mounted!');
@@ -3624,7 +3623,7 @@ useEffect(() => {
 componentWillUnmount() {
     console.log('I am unmounting');
 }
- 
+
 //Hooks
 useEffect(() => {
     return () => console.log('I am unmounting');
@@ -3640,7 +3639,7 @@ componentWillReceiveProps(nextProps) {
         console.log('count changed', nextProps.count);
     }
 }
- 
+
 //Hooks
 useEffect(() => {
     console.log('count changed', props.count);
@@ -3661,7 +3660,7 @@ useEffect(() => {
 
 ### 198. useContext + useMemo + useCallback
 
-There are a few other Hooks we still need to talk about such as useContext or useMemo or useCallback However, we are covering topics like these in later sections in the course when we learn a little bit more about things like ContextAPI and Performance. 
+There are a few other Hooks we still need to talk about such as useContext or useMemo or useCallback However, we are covering topics like these in later sections in the course when we learn a little bit more about things like ContextAPI and Performance.
 
 So hang on tight and you will learn about them shortly as we will continue to use hooks throughout the upcoming sections!
 

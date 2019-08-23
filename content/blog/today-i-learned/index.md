@@ -1,7 +1,30 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-22"
+date: "2019-08-23"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 55.Complete React Developer in 2019
+
+### Day 55: August 22, 2019 - Thursday
+
+**Project:** Section 17-21 Done
+
+![Sagas](../complete-react-developer-in-2019/images/105.png)
+
+**Live:** [Crown Clothing](https://navin-navi-crown-clothing.herokuapp.com/)
+**GitHub Repo** [Crown Clothing Source Code](https://github.com/navin-navi/crown-clothing-react)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [HOC Patterns](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-17-master-project-hoc-patterns)
+- [Asynchronous Redux](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-18-master-project-asynchronous-redux)
+- [Container Pattern](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-19-master-projectcontainer-pattern)
+- [Redux Saga](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-20-master-projectredux-saga)
+- [React Hooks](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-21-master-project-reacthooks)
+
 ---
 
 ## 54.Complete React Developer in 2019
