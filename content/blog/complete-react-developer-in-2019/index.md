@@ -4283,6 +4283,206 @@ Quick way to build a GraphQL server: [graphql-yoga](https://github.com/prisma/gr
 
 [GraphQL Lesson Starter Code](https://github.com/ZhangMYihua/graphql-lesson)
 
+Created own graphql server endpoint to tackle cors errors.
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/82d8152443ff98c1d5395657bf7e5f47762f1337?diff=split)
+
+### 222. Apollo Container
+
+`src/components/collections-overview/collections-overview.container.jsx`
+
+```js
+import React from "react";
+import { Query } from "react-apollo";
+import { gql } from "apollo-boost";
+
+import CollectionsOverview from "./collections-overview.component";
+import Spinner from "../spinner/spinner.component";
+
+const GET_COLLECTIONS = gql`
+  {
+    collections {
+      id
+      title
+      items {
+        id
+        name
+        price
+        imageUrl
+      }
+    }
+  }
+`;
+
+const CollectionsOverviewContainer = () => (
+  <Query query={GET_COLLECTIONS}>
+    {({ loading, error, data }) => {
+      if (loading) return <Spinner />;
+      return <CollectionsOverview collections={data.collections} />;
+    }}
+  </Query>
+);
+
+export default CollectionsOverviewContainer;
+```
+
+### 223. Query With Variables
+
+`src/components/collections-overview/collections-overview.container.jsx`
+
+```js
+import React from "react";
+import { Query } from "react-apollo";
+import { gql } from "apollo-boost";
+
+import CollectionPage from "./collection.component";
+import Spinner from "../../components/spinner/spinner.component";
+
+const GET_COLLECTION_BY_TITLE = gql`
+  query getCollectionsByTitle($title: String!) {
+    getCollectionsByTitle(title: $title) {
+      id
+      title
+      items {
+        id
+        name
+        price
+        imageUrl
+      }
+    }
+  }
+`;
+
+const CollectionPageContainer = ({ match }) => (
+  <Query
+    query={GET_COLLECTION_BY_TITLE}
+    variables={{ title: match.params.collectionId }}
+  >
+    {({ loading, data: { getCollectionsByTitle } }) => {
+      if (loading) return <Spinner />;
+      return <CollectionPage collection={getCollectionsByTitle} />;
+    }}
+  </Query>
+);
+
+export default CollectionPageContainer;
+```
+
+### 224. GraphQL vs Redux
+
+![Redux](images/115.png)
+
+![Apollo & GraphQL](images/115.png)
+
+### 225. Mutations On The Client
+### 227. Mutations On The Client 2
+
+[Apollo Cache](https://www.apollographql.com/docs/react/advanced/caching/) || [Apollo Local Resolver](https://www.apollographql.com/docs/react/essentials/local-state/#local-resolvers)
+
+`src/graphql/resolvers.js`
+
+```js
+import { gql } from "apollo-boost";
+
+export const typeDefs = gql`
+  extend type Mutation {
+    ToggleCartHidden: Boolean!
+  }
+`;
+
+const GET_CART_HIDDEN = gql`
+  {
+    cartHidden @client
+  }
+`;
+
+export const resolvers = {
+  Mutation: {
+    toggleCartHidden: (_root, _args, { cache }) => {
+      const { cartHidden } = cache.readQuery({
+        query: GET_CART_HIDDEN
+      });
+
+      cache.writeQuery({
+        query: GET_CART_HIDDEN,
+        data: { cartHidden: !cartHidden }
+      });
+
+      return !cartHidden;
+    }
+  }
+};
+```
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/fb3bccbc31ec233511089b4805ca03e56c0485ec?diff=split)
+
+### 226. Resources: Mutations
+
+To learn more about mutations, we recommend checking out the Apollo documentation [here](https://www.apollographql.com/docs/react/essentials/mutations/). Mutations are hard to grasp at first, but as with anything, once you get used to the syntax, it becomes nice and easy!
+
+### 228. Adding Items With Apollo
+### 229. Adding Items With Apollo 2
+
+🌟 _**Added cartItems using Apollo**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/fb3bccbc31ec233511089b4805ca03e56c0485ec?diff=split)
+
+### 230. Note Compose in next lesson
+
+Hello everyone! In the next lesson, we are going to use a method called `compose` that we import from `'react-apollo'`. Unfortunately with the recent React-Apollo update to v3.0.0 it's been removed from React-Apollo and is no longer something we can import from this library. Luckily compose was just a copy of lodash's `flowRight`. Lodash is just a small library that gives us access to a bunch of helper functions, of which `flowRight` is one of! In the following lesson, anyplace you see `compose` just use lodash `flowRight`!
+
+You can install lodash in your project by adding it as a dependency as follows:
+
+If you're using yarn:
+
+`yarn add lodash`
+
+If you're using npm:
+
+`npm install lodash`
+
+You can then import flowRight into your file like so:
+
+`import { flowRight } from 'lodash';`
+
+and just replace any place in the lesson where we use `compose` with `flowRight`:
+
+```js
+export default compose(
+  //...code 
+)(CollectionItemContainer);
+```
+
+becomes
+
+```js
+export default flowRight(
+  // ...code
+)(CollectionItemContainer);
+```
+
+You can find out more about this breaking change here as well: <https://github.com/apollographql/react-apollo/issues/3330>. So push forward with the lesson :)
+
+### 231. CartItem Count With Apollo
+
+🌟 _**Added itemCount back using Apollo**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/654593e7decb47af8675ad2ba781f065314b23c3?diff=split)
+
+### 232. Exercises: Adding More GraphQL
+
+As an exercise, attempt to convert the remaining instances of redux in the application over to using our Apollo local cache!
+
+You can find a link to all the code we've done up to now here:
+
+<https://github.com/ZhangMYihua/graphql-practice>
+
+You can also find a full solution repo at this GitHub link to check your solutions:
+
+<https://github.com/ZhangMYihua/graphql-practice-complete>
+
+### 233. Should You Use GraphQL?
+
 ## Section 25: Master Project: MobileSupport
 
 ## Section 26: Master Project: ReactPerformance
