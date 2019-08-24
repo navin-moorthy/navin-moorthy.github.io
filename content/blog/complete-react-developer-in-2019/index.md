@@ -3692,7 +3692,7 @@ If you do choose to skip this section and just fork and clone this repo, or any 
 
 You will also need to connect your existing Heroku app to this new forked and cloned repo, or you have to create a new Heroku app and push to it. A quick refresher on how to do either of these:
 
-**Set to an existing Heroku app**
+🌟 **Set to an existing Heroku app**
 
 To set to an existing Heroku app you already have deployed, you need to know the name of the app you want to deploy to. To see a list of all the apps you currently have on Heroku:
 
@@ -3718,10 +3718,9 @@ Which will list any buildpacks you currently have, if you see `mars/create-react
 
 heroku buildpacks:remove mars/create-react-app-buildpack
 
-
 Then skip to the bottom of this article to see what to do next!
 
-**To create a new Heroku app**
+🌟 **To create a new Heroku app**
 
 Create a new Heroku project by typing in your terminal:
 
@@ -3737,7 +3736,7 @@ git remote -v
 
 You should see `heroku https://git.heroku.com/<RANDOMLY_GENERATED_NAME_OF_YOUR_APP>` in the list. This means you have successfully connected your project to the newly created Heroku app under the git remote of `heroku`.
 
-**Deploying to Heroku**
+🌟 **Deploying to Heroku**
 
 Before we deploy, you also need to set a config variable of `STRIPE_SECRET_KEY` to the same secret key value from your stripe dashboard, the same one in your `.env` file. The `.env` file is only for local development, in order for our heroku production app to have access to this secret key, we add it to our Heroku projects config variables by typing:
 
@@ -3771,7 +3770,7 @@ git push heroku master --force
 
 This will overwrite the existing Heroku app with our new code.
 
-**Open our Heroku project**
+🌟 **Open our Heroku project**
 
 After heroku finishes building our project, we can simply run:
 
@@ -4167,6 +4166,7 @@ export default Header;
 🌟 _**Created a Cart Context to leverage the hidden value for the cart dropdown**_
 
 ### 213. Provider Context Pattern
+
 ### 214. Provider Context Pattern 2
 
 [Context API Provider Example Complete](https://github.com/ZhangMYihua/react-context-complete)
@@ -4256,7 +4256,9 @@ $$(".curriculum-item-link--title--zI5QT").map(
 ![GraphQL](images/113.png)
 
 ### 217. Course Guideline + GitHub Links
+
 ### 218. GraphQL Playground
+
 ### 220. GraphQL Playground 2
 
 [Crown Clothing GraphQL playground](https://crwn-clothing.com/) || [GraphQL Basic Types](https://graphql.org/graphql-js/basic-types/) || [Prisma Server for playground](https://github.com/ZhangMYihua/crwn-clothing-prisma)
@@ -4269,8 +4271,9 @@ When we talk about GraphQL, it usually comes with two components: The frontend p
 
 [Our Backend Implementation](https://github.com/ZhangMYihua/crwn-clothing-prisma)
 
-[Prisma](https://www.prisma.io/) (what we use in the above link)
-[Hasura ](https://hasura.io/)
+[Prisma](https://www.prisma.io/)
+what we use in the above link
+[Hasura](https://hasura.io/)
 [Apollo Server](https://www.apollographql.com/docs/apollo-server/)
 
 Quick way to build a GraphQL server: [graphql-yoga](https://github.com/prisma/graphql-yoga)
@@ -4375,6 +4378,7 @@ export default CollectionPageContainer;
 ![Apollo & GraphQL](images/115.png)
 
 ### 225. Mutations On The Client
+
 ### 227. Mutations On The Client 2
 
 [Apollo Cache](https://www.apollographql.com/docs/react/advanced/caching/) || [Apollo Local Resolver](https://www.apollographql.com/docs/react/essentials/local-state/#local-resolvers)
@@ -4421,6 +4425,7 @@ export const resolvers = {
 To learn more about mutations, we recommend checking out the Apollo documentation [here](https://www.apollographql.com/docs/react/essentials/mutations/). Mutations are hard to grasp at first, but as with anything, once you get used to the syntax, it becomes nice and easy!
 
 ### 228. Adding Items With Apollo
+
 ### 229. Adding Items With Apollo 2
 
 🌟 _**Added cartItems using Apollo**_
@@ -4449,7 +4454,7 @@ and just replace any place in the lesson where we use `compose` with `flowRight`
 
 ```js
 export default compose(
-  //...code 
+  //...code
 )(CollectionItemContainer);
 ```
 
@@ -4481,7 +4486,7 @@ You can also find a full solution repo at this GitHub link to check your solutio
 
 <https://github.com/ZhangMYihua/graphql-practice-complete>
 
-### 233. Should You Use GraphQL?
+### 233. Should You Use GraphQL
 
 ## Section 25: Master Project: MobileSupport
 

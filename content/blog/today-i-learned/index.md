@@ -1,7 +1,28 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-23"
+date: "2019-08-24"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 56.Complete React Developer in 2019
+
+### Day 56: August 23, 2019 - Friday
+
+**Project:** Section 22-24 Done
+
+![Sagas](../complete-react-developer-in-2019/images/115.png)
+
+**Live:** [Crown Clothing](https://navin-navi-crown-clothing.herokuapp.com/)
+**GitHub Repo** [Crown Clothing Source Code](https://github.com/navin-navi/crown-clothing-react)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Stripe Payments - Back end](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-22-master-project-stripe-payments-part-2---back-end)
+- [Context API](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-23-master-project-contextapi)
+- [GraphQL+ Apollo](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-24-master-project-graphql-apollo)
+
 ---
 
 ## 55.Complete React Developer in 2019
