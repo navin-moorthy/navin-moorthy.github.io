@@ -1,6 +1,6 @@
 ---
 title: Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
-date: "2019-08-23"
+date: "2019-08-26"
 description: Notes taken while learning Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)
 ---
 
@@ -4879,6 +4879,8 @@ For further information on the topics covered in the previous video:
 ### 264. Converting Our App To PWA
 
 [Express-sslify](https://www.npmjs.com/package/express-sslify) || [Lighthouse Chrome Extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) || [crwn-clothing EndGame](https://crwn-live.herokuapp.com/)
+
+![Progressive Web App Requirement](images/135.png)
 
 ## Section 29: Bonus: Testing
 

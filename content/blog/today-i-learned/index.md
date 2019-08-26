@@ -1,7 +1,48 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-24"
+date: "2019-08-26"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 58.Complete React Developer in 2019
+
+### Day 58: August 25, 2019 - Sunday
+
+**Project:** Section 29-30 Done
+
+![Enzyme Testing/Snapshot Testing](../complete-react-developer-in-2019/images/125.png)
+
+**GitHub Repo** [Complete React Developer Zero To Mastery](https://github.com/navin-navi/complete-react-developer-zero-to-mastery)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Testing](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-29-bonus-testing)
+- [Webpack & Babel Config](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-30-bonus-web-pack--babel)
+
+---
+
+## 57.Complete React Developer in 2019
+
+### Day 57: August 24, 2019 - Saturday
+
+**Project:** Section 25-28 Done
+
+![Crown Clothing PWA](images/57.crown-clothing-pwa.png)
+
+**Live:** [Crown Clothing](https://navin-navi-crown-clothing.herokuapp.com/)
+**GitHub Repo** [Crown Clothing Source Code](https://github.com/navin-navi/crown-clothing-react)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Mobile Support](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-25-master-project-mobile-support)
+- [React Performance](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-26-master-project-react-performance)
+- [React Interview Questions + Advice](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-27-react-interview-questions--advice)
+- [Progressive Web App](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-28-bonus-progressive-web-app)
+
 ---
 
 ## 56.Complete React Developer in 2019
