@@ -46,6 +46,19 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
+            href="https://navin-navi-crown-clothing.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Crown Clothing</span>
+            <Image
+              fluid={data.crownClothing.childImageSharp.fluid}
+              alt="Crown Clothing"
+            />
+          </a>
+        </ProjectWrapper>
+        <ProjectWrapper>
+          <a
             href="https://angular-express-issue-tracker.herokuapp.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -311,6 +324,13 @@ export const query = graphql`
     jackFitnessStudio: file(
       relativePath: { eq: "projects/jack-fitness-studio.jpg" }
     ) {
+      childImageSharp {
+        fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    crownClothing: file(relativePath: { eq: "projects/crown-clothing.png" }) {
       childImageSharp {
         fluid(traceSVG: { blackOnWhite: true }, quality: 100) {
           ...GatsbyImageSharpFluid
