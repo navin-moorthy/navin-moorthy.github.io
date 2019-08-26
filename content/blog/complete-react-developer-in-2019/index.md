@@ -4488,17 +4488,1017 @@ You can also find a full solution repo at this GitHub link to check your solutio
 
 ### 233. Should You Use GraphQL
 
-## Section 25: Master Project: MobileSupport
+🌟 _**Tradeoff in using GraphQl over Redux**_
 
-## Section 26: Master Project: ReactPerformance
+## Section 25: Master Project: Mobile Support
+
+### 234. Mobile Responsiveness
+
+`src/global.styles.js`
+
+```js
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Open Sans Condensed", sans-serif;
+    padding: 20px 60px;
+
+    @media screen and (max-width: 800px){
+      padding: 10px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+`;
+```
+
+### 235. Mobile Responsiveness 2
+
+🌟 _**Responsive design for Mobiles**_
+
+[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/70d4af77ddd8610029fb5b5cfaa8d9ac631f4cc4?diff=split)
+
+[Grid Sheet](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+### 236. Exercise: Mobile Friendly App
+
+As a bonus exercise for those that want to try, you can continue to play around with our shopping application and customize it to your liking on mobile! Beyond that, from this point forward, you can customize and add any additional features you want in this app. As with any programming project, the opportunities to improve upon it are endless.
+
+The rest of the sections  will close out some of the lessons we learned, as well as introduce you to some bonus topics like Testing and PWAs (we will even convert our master project to a PWA so all of these mobile changes we made will now make our app behave like a mobile app), but are only optional for you to take. Enjoy!
+
+Resources for this lecture
+[Github: Code up to now](https://github.com/ZhangMYihua/lesson-32)
+[Github: Solution](https://github.com/ZhangMYihua/lesson-32-complete)
+
+## Section 26: Master Project: React Performance
+
+🌟 _**Get titles for Section 22**_
+
+ ```js
+$$(".curriculum-item-link--title--zI5QT").map(
+  title => title.textContent
+);
+```
+
+### 237. Code Splitting Introduction
+
+[Code Splitting](https://create-react-app.dev/docs/code-splitting)
+
+### 238. Introducing React Lazy
+
+### 239. React Lazy + Suspense
+
+[React Lazy](https://reactjs.org/docs/code-splitting.html#reactlazy)
+
+[React Suspense](https://reactjs.org/docs/code-splitting.html#suspense)
+
+`App.js`
+
+```js{1,7,14-19,31,42}
+import React, { useEffect, lazy, Suspense } from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+
+import Header from "./components/header/header.component";
+import Spinner from "./components/spinner/spinner.component";
+
+import { selectCurrentUser } from "./redux/user/user.selectors";
+import { checkUserSession } from "./redux/user/user.actions";
+
+import { GlobalStyle } from "./global.styles";
+
+const HomePage = lazy(() => import("./pages/homepage/homepage.component"));
+const ShopPage = lazy(() => import("./pages/shop/shop.component"));
+const SignInAndSignUpPage = lazy(() =>
+  import("./pages/sign-in-and-sign-up/sign-in-and-sign-up.component")
+);
+const CheckoutPage = lazy(() => import("./pages/checkout/checkout.component"));
+
+const App = ({ checkUserSession, currentUser }) => {
+  useEffect(() => {
+    checkUserSession();
+  }, [checkUserSession]);
+
+  return (
+    <div>
+      <GlobalStyle />
+      <Header />
+      <Switch>
+        <Suspense fallback={<Spinner />}>
+          <Route exact path="/" component={HomePage} />
+          <Route
+            exact
+            path="/signin"
+            render={() =>
+              currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
+            }
+          />
+          <Route path="/shop" component={ShopPage} />
+          <Route exact path="/checkout" component={CheckoutPage} />
+        </Suspense>
+      </Switch>
+    </div>
+  );
+};
+
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
+});
+
+const mapDispatchToProps = dispatch => ({
+  checkUserSession: () => dispatch(checkUserSession())
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
+```
+
+### 240. Error Boundaries
+
+[Error Boundaries](https://reactjs.org/docs/error-boundaries.html) || [404 Illustrations](https://www.kapwing.com/404-illustrations?ref=producthunt)
+
+`src/components/error-boundary/error-boundary.component.jsx`
+
+```js
+import React from "react";
+
+import {
+  ErrorImageOverlay,
+  ErrorImageContainer,
+  ErrorImageText
+} from "./error-boundary.styles";
+
+class ErrorBoundary extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      hasErrored: false
+    };
+  }
+
+  static getDerivedStateFromError(error) {
+    // process the error here
+    return { hasErrored: true };
+  }
+
+  componentDidCatch(error, info) {
+    console.log(error);
+  }
+
+  render() {
+    if (this.state.hasErrored) {
+      return (
+        <ErrorImageOverlay>
+          <ErrorImageContainer imageUrl="https://i.imgur.com/A040Lxr.png" />
+          <ErrorImageText>Sorry This Page is Lost in Space</ErrorImageText>
+        </ErrorImageOverlay>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;
+```
+
+### 241. React.memo, PureComponent,shouldComponentUpdate
+
+[React.memo](https://reactjs.org/docs/react-api.html#reactmemo) || [React.PureComponent](https://reactjs.org/docs/react-api.html#reactpurecomponent) || [React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+
+### 242. Performance In Our App
+
+🌟 _**Learned how to use the Profiler from React Dev tools**_
+
+### 243. useCallback
+
+### 244. useMemo
+
+[useCallback Doc](https://reactjs.org/docs/hooks-reference.html#usecallback)
+
+[useMemo Doc](https://reactjs.org/docs/hooks-reference.html#usememo)
+
+[useCallback & useMemo Demo](https://github.com/ZhangMYihua/useMemo-useCallback)
+
+```js
+import React, { useState, useCallback, useMemo } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+const App = () => {
+  const [count1, setCount1] = useState(0);
+  const [count2, setCount2] = useState(0);
+
+  const incrementCount1 = useCallback(() => setCount1(count1 + 1), [count1]);
+  const incrementCount2 = useCallback(() => setCount2(count2 + 1), [count2]);
+
+  const doSomethingComplicated = useMemo(() => {
+    console.log('I am computing something complex');
+    return ((count1 * 1000) % 12.4) * 51000 - 4000;
+  }, [count1]);
+
+  return (
+    <div className='App'>
+      <header className='App-header'>
+        <img src={logo} className='App-logo' alt='logo' />
+        Count1: {count1}
+        <button onClick={incrementCount1}>Increase Count1</button>
+        Count2: {count2}
+        <button onClick={incrementCount2}>Increase Count2</button>
+        complexValue: {doSomethingComplicated}
+      </header>
+    </div>
+  );
+};
+
+export default App;
+```
+
+### 245. Gzipping and Compression
+
+[compression - npm](https://www.npmjs.com/package/compression)
+
+🌟 _**Build Files Size**_
+
+```bash
+File sizes after gzip:
+
+remote:          225.01 KB  build/static/js/2.16332b27.chunk.js
+remote:          7.71 KB    build/static/js/main.1424a885.chunk.js
+remote:          7.21 KB    build/static/js/3.941ee3f8.chunk.js
+remote:          2.15 KB    build/static/js/9.54c4bca4.chunk.js
+remote:          1.57 KB    build/static/js/6.2b158ef5.chunk.js
+remote:          1.48 KB    build/static/js/4.ff8f2bb2.chunk.js
+remote:          1.36 KB    build/static/js/5.7b8abb52.chunk.js
+remote:          1.23 KB    build/static/js/runtime~main.09f6eda3.js
+remote:          1.09 KB    build/static/js/7.8eac9c54.chunk.js
+remote:          451 B      build/static/js/8.79499474.chunk.js
+remote:          277 B      build/static/css/main.795991f2.chunk.css
+```
 
 ## Section 27: React Interview Questions + Advice
 
+### 246. Don't Overcomplicate
+
+![Don't Overcomplicate](images/117.png)
+
+### 247. Be A Late Follower
+
+![Be A Late Follower](images/118.png)
+
+### 248. Break Things Down
+
+![Break Things Down](images/119.png)
+
+### 249. It Will Never Be Perfect
+
+![It Will Never Be Perfect](images/120.png)
+
+### 250. Learning Guideline
+
+Since I get this question a lot, I've added an info graph to help you decide what skills you should focus on and what you need to learn to succeed as a programmer.
+
+![Learning Guideline](images/121.jpg)
+
+### 251. Endorsements On LinkedIn
+
+If you are looking to create a LinkedIn profile or you already have one, you can join our [LinkedIn group here](https://www.linkedin.com/groups/12121940/). This group is meant for you to increase your LinkedIn connections, meet other coders, and also endorse each other's skills.
+
+You can [join the group here](https://www.linkedin.com/groups/12121940/) and then go ahead and endorse some of the member's skills (other people will do the same for you as they join).
+
+If you have any questions, reach out in our private Discord chat community in the #job-hunting channel!
+
+[Zero to Mastery Website](https://zerotomastery.io/)
+
+### 252. Become An Alumni
+
+I have created the #alumni channel on Discord as well as the Alumni role so you can network with other graduates. Please let myself or the management team know that you have finished the course so you can get the alumni badge in the community! Simply post your completion certificate in the #alumni channel and tag the @Management Team. If you have finished the course I highly recommend you join the channel and stay up to date and network throughout your career. You never know how it may come in handy in the future.
+
+It would be great to have the alumni follow up on their career journey such as: *Did they find a new job?* or *Did they enroll in some further study?* or even *Did they launch their own business/product?*
+
+Many students would benefit from this and I hope you give back a bit to the community :)
+
+### 253. Common React InterviewQuestions
+
+[Can you answer all of these?](https://github.com/sudheerj/reactjs-interview-questions)
+
 ## Section 28: Bonus: Progressive Web App
+
+### 254. Note About This Section
+
+This upcoming section is all about PWAs and part of it is from Andrei's course The Complete Junior to Senior Web Developer Roadmap. HOWEVER, Yihua will come in at the end and actually demonstrate how to implement our app from this course as a Progressive Web App. If you already know about PWAs, then you can go straight to the Converting Our App To PWA lesson!
+
+Enjoy :)
+
+### 255. Progressive Web Apps
+
+🌟 _**Short intro on PWA**_
+
+![Progressive Web Apps](images/121.png)
+
+### 256. Resources: Progressive Web Apps
+
+In case you want further reading on Progressive Web Apps:
+
+[Submitting PWA to 3 app stores](http://debuggerdotbreak.judahgabriel.com/2018/04/13/i-built-a-pwa-and-published-it-in-3-app-stores-heres-what-i-learned/)
+
+[PWA Android vs iOS](https://medium.com/@firt/progressive-web-apps-on-ios-are-here-d00430dee3a7)
+
+Finally, [here is the link to the robofriends-redux github repository](https://github.com/aneagoie/robofriends-redux) which I will be referencing in the next couple of videos which is very similar to our Monsters Rolodex App we built in this course.
+
+Ps You can explore some of the top PWAs from around the world: <https://appsco.pe/>
+
+### 257. Progressive Web Apps Examples
+
+![Progressive Web App Requirement](images/122.png)
+
+### 258. PWA - HTTPS
+
+🌟 _**Short intro on PWA HTTPS**_
+
+### 259. Resources: PWA - HTTPS
+
+First, in case you have never put a website online using Github Pages, you can use this tutorial to have your Github website up and running in 5 minutes: [GitHub Pages](https://pages.github.com/) Please note that this is only for simple websites. If you want to have github pages work with create react app, we cover this in the upcoming video: Deploying Our React App
+
+Progressive Web Apps Checklist: [PWA Checklist](https://developers.google.com/web/progressive-web-apps/checklist)
+
+Finally, if you would like to implement HTTPS yourself, I recommend you use [Let's Encrypt](https://letsencrypt.org/docs/)
+
+### 260. PWA - App Manifest
+
+```json
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
+```
+
+[Real Favicon Generator](https://realfavicongenerator.net/)
+
+### 261. PWA - Service Workers
+
+![Progressive Web App Requirement](images/123.png)
+
+### 262. Resources: PWA - Service Workers
+
+Service Worker is implemented very easily into a react based project. You can see [this Git Diff](https://github.com/jeffposnick/create-react-pwa/compare/starting-point...pwa) to see what you would need to do to add service worker into an existing create react app project without the default service worker.
+
+For further information on the topics covered in the previous video:
+
+[isServiceWorkerReady?](https://jakearchibald.github.io/isserviceworkerready/)
+
+[More information on push notifications for those who want to see how it is implemented](https://auth0.com/blog/introduction-to-progressive-web-apps-push-notifications-part-3/)
+
+### 263. PWA - Final Thoughts
+
+🌟 _**Final thoughts on when and where to use the PWA**_
+
+### 264. Converting Our App To PWA
+
+[Express-sslify](https://www.npmjs.com/package/express-sslify) || [Lighthouse Chrome Extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) || [crwn-clothing EndGame](https://crwn-live.herokuapp.com/)
 
 ## Section 29: Bonus: Testing
 
-## Section 30: Bonus: Webpack + Babel
+🌟 _**Get titles for Section 29**_
+
+ ```js
+$$(".curriculum-item-link--title--zI5QT").map(
+  title => title.textContent
+);
+```
+
+### 265. Note About This Section
+
+This upcoming section is all about testing and it is from Andrei's course [The Complete Junior to Senior Web Developer Roadmap](https://www.udemy.com/course/the-complete-junior-to-senior-web-developer-roadmap/?couponCode=LEVELUPZTM). Although this isn't a required part of this course, testing is something that will be important in your career so I have decided to include it on here. If you are new to testing, then you can watch all of the videos. If you know about testing and only want to focus on React specific testing, you can start from halfway at the lesson titled Note: Testing React Apps and watch from there. If you already know everything about testing and you just want to see how tests are implemented in our Master Project, go straight to Testing In Our Master Project!
+
+Enjoy :)
+
+### 266. Section Overview
+
+![Section Overview](images/124.png)
+
+### 267. Types of Tests
+
+![Types of Tests](images/125.png)
+
+### 268. Testing Libraries
+
+![Testing Libraries](images/126.png)
+
+![Testing Libraries](images/127.png)
+
+![Testing Libraries](images/128.png)
+
+![Testing Libraries](images/129.png)
+
+### 269. Note: The Next Videos
+
+I know we are waiting a long time to write tests, but we are getting there. The next videos will cover a few more topics that you may have to revisit after you have finished this section. Don't worry if you don't fully understand them yet. I want to make sure that we have a basic understanding of testing before we dive into coding to finish off this section.
+
+Again, watch the next few videos but don't get hung up if you don't understand everything. Come back to them once you are done this section and you will see that they will be a lot clearer for you.
+
+### 270. Unit Tests
+
+![Unit Tests](images/130.png)
+
+### 271. Integration Tests
+
+![Integration Tests](images/131.png)
+
+### 272. Automation Testing
+
+![Automation Testing](images/132.png)
+
+![Automation Testing](images/133.png)
+
+### 273. Final Note On Testing
+
+![Final Note On Testing](images/134.png)
+
+### 274. Setting Up Jest
+
+`npm i -D jest`
+
+### 275. Our First Tests
+
+```js
+const googleDatabase = [
+  "cats.com",
+  "souprecipes.com",
+  "flowers.com",
+  "animals.com",
+  "catpictures.com",
+  "myanimalscats.com",
+  "ilovecats.com"
+];
+
+const googleSearch = (searchInput, db) => {
+  const matches = db.filter(website => {
+    return website.includes(searchInput);
+  });
+
+  return matches.length > 3 ? matches.slice(0, 3) : matches;
+};
+
+// console.log(googleSearch("cat", googleDatabase));
+
+module.exports = googleSearch;
+```
+
+### 276. Writing Tests
+
+```js
+const googleSearch = require("./script.js");
+
+const dbMock = [
+  "dog.com",
+  "cheese.com",
+  "ratpoison.com",
+  "ilovedogs.com",
+  "dogpictures.com",
+  "disney.com"
+];
+
+describe("googleSearch", () => {
+  it("silly test", () => {
+    expect("hello").toBe("hello");
+  });
+
+  it("this is a test", () => {
+    expect(googleSearch("testtest", dbMock)).toEqual([]);
+    expect(googleSearch("dog", dbMock)).toEqual([
+      "dog.com",
+      "ilovedogs.com",
+      "dogpictures.com"
+    ]);
+  });
+
+  it("work with undefined and null", () => {
+    expect(googleSearch(undefined, dbMock)).toEqual([]);
+    expect(googleSearch(null, dbMock)).toEqual([]);
+  });
+
+  it("does not return more than 3 matches", () => {
+    expect(googleSearch(".com", dbMock).length).toEqual(3);
+  });
+});
+```
+
+### 277. Asynchronous Tests
+
+```js
+const fetch = require("node-fetch");
+
+// const getPeoplePromise = fetch => {
+//   return fetch("https://swapi.co/api/people")
+//     .then(res => res.json())
+//     .then(data => {
+//       console.log(data);
+//       return {
+//         count: data.count,
+//         results: data.results
+//       };
+//     });
+// };
+
+const getPeople = async fetch => {
+  const result = await fetch("https://swapi.co/api/people");
+  const data = await result.json();
+  console.log(data);
+  return {
+    count: data.count,
+    results: data.results
+  };
+};
+
+console.log(getPeople(fetch));
+
+module.exports = {
+  getPeople,
+  getPeoplePromise
+};
+```
+
+### 278. Asynchronous Tests 2
+
+```js
+const fetch = require("node-fetch");
+const swapi = require("./script2");
+
+it("call swapi to get people", done => {
+  expect.assertions(1);
+  swapi.getPeople(fetch).then(data => {
+    expect(data.count).toEqual(87);
+    done();
+  });
+});
+
+it("call swapi to get people with promise", () => {
+  expect.assertions(2);
+  return swapi.getPeoplePromise(fetch).then(data => {
+    expect(data.count).toEqual(87);
+    expect(data.results.length).toBeGreaterThan(6);
+  });
+});
+```
+
+### 279. Resources: Jest Cheat Sheet
+
+Moving forward, you should use the [Jest Cheat Sheet](https://github.com/sapegin/jest-cheat-sheet) to help you along as you write tests if you are coding along in the videos. It will also come in handy at the end of this course where you will have to write tests for our robofriends app.
+
+### 280. Mocks and Spies
+
+```js{20-37}
+const fetch = require("node-fetch");
+const swapi = require("./script2");
+
+it("call swapi to get people", done => {
+  expect.assertions(1);
+  swapi.getPeople(fetch).then(data => {
+    expect(data.count).toEqual(87);
+    done();
+  });
+});
+
+it("call swapi to get people with promise", () => {
+  expect.assertions(2);
+  return swapi.getPeoplePromise(fetch).then(data => {
+    expect(data.count).toEqual(87);
+    expect(data.results.length).toBeGreaterThan(6);
+  });
+});
+
+it("get people return count and results", () => {
+  const mockFetch = jest.fn().mockReturnValue(
+    Promise.resolve({
+      json: () =>
+        Promise.resolve({
+          count: 87,
+          results: [0, 1, 2, 3, 4, 5]
+        })
+    })
+  );
+
+  return swapi.getPeoplePromise(mockFetch).then(data => {
+    expect(mockFetch.mock.calls.length).toBe(1);
+    expect(mockFetch).toBeCalledWith("https://swapi.co/api/people");
+    expect(data.count).toEqual(87);
+    expect(data.results.length).toBeGreaterThan(4);
+  });
+});
+```
+
+### 281. Note: Testing React Apps
+
+In the next videos we will be using the robofriends-pwa GitHub repo as an example for you. You can use [my GitHub repository](https://github.com/aneagoie/robofriends-pwa) with all of the code here to get started and follow along as we write tests
+
+### 282. Introduction To Enzyme
+
+[Airbnb Enzyme](https://airbnb.io/enzyme/)
+
+`npm i --save-dev enzyme enzyme-adapter-react-16`
+
+`setupTests.js`
+
+```js
+import { configure } from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+
+configure({ adapter: new Adapter() });
+```
+
+### 283. Snapshot Testing
+
+`npm test` -  To run the test files
+
+`npm test -- --coverage` - To see the coverage
+
+```js
+import { shallow } from "enzyme";
+
+import React from "react";
+import Card from "./Card";
+
+it("expect to render Card component", () => {
+  const cardComponent = shallow(<Card />);
+  expect(cardComponent.debug()).toMatchSnapshot();
+});
+```
+
+### 284. Snapshot Testing + CodeCoverage
+
+```js
+import { shallow } from "enzyme";
+
+import React from "react";
+import CardList from "./CardList";
+
+it("expect to render CardList component", () => {
+  const mockRobots = [
+    {
+      id: 1,
+      name: "John Snow",
+      username: "JohnJohn",
+      email: "john@gmail.com"
+    }
+  ];
+  const cardComponent = shallow(<CardList robots={mockRobots} />);
+  expect(cardComponent.debug()).toMatchSnapshot();
+});
+```
+
+### 285. Testing Stateful Components
+
+```js
+import { shallow } from "enzyme";
+
+import React from "react";
+import CounterButton from "./CounterButton";
+
+it("expect to render CounterButton component", () => {
+  const mockColor = "red";
+  const counterButtonComponent = shallow(<CounterButton color={mockColor} />);
+  expect(counterButtonComponent.debug()).toMatchSnapshot();
+});
+
+it("expect to render CounterButton component", () => {
+  const mockColor = "red";
+  const counterButtonComponent = shallow(<CounterButton color={mockColor} />);
+
+  counterButtonComponent.find("[id='counter']").simulate("click");
+  counterButtonComponent.find("[id='counter']").simulate("click");
+  counterButtonComponent.find("[id='counter']").simulate("click");
+  expect(counterButtonComponent.state()).toEqual({ count: 4 });
+  expect(counterButtonComponent.props().color).toEqual("red");
+});
+```
+
+### 286. Quick Recap
+
+🌟 _**Quick recap on the testing libraries**_
+
+### 287. Testing Connected Components
+
+### 288. Testing Connected Components 2
+
+🌟 _**Separate the Connected component into a Pure component**_
+
+```js
+import { shallow } from "enzyme";
+import React from "react";
+import MainPage from "./MainPage";
+
+let MainPageComponent;
+
+beforeEach(() => {
+  const mockProps = {
+    onRequestRobots: jest.fn(),
+    robots: [],
+    searchField: "",
+    isPending: false
+  };
+
+  MainPageComponent = shallow(<MainPage {...mockProps} />);
+});
+
+it("expect to render MainPage component", () => {
+  expect(MainPageComponent.debug()).toMatchSnapshot();
+});
+
+it("filter robots correctly", () => {
+  const mockProps2 = {
+    onRequestRobots: jest.fn(),
+    robots: [
+      {
+        id: "1",
+        name: "John",
+        email: "john@email.com"
+      }
+    ],
+    searchField: "john",
+    isPending: false
+  };
+  const MainPageComponent2 = shallow(<MainPage {...mockProps2} />);
+  expect(MainPageComponent2.instance().filteredRobots()).toEqual([
+    {
+      id: "1",
+      name: "John",
+      email: "john@email.com"
+    }
+  ]);
+});
+
+it("filter robots correctly 2", () => {
+  const mockProps3 = {
+    onRequestRobots: jest.fn(),
+    robots: [
+      {
+        id: "1",
+        name: "John",
+        email: "john@email.com"
+      }
+    ],
+    searchField: "a",
+    isPending: false
+  };
+
+  const filteredRobots = [];
+  const MainPageComponent3 = shallow(<MainPage {...mockProps3} />);
+  expect(MainPageComponent3.instance().filteredRobots()).toEqual(
+    filteredRobots
+  );
+});
+```
+
+### 289. Testing Reducers
+
+ ```js
+ import * as reducers from "./reducers";
+
+describe("searchRobots", () => {
+  const initialStateSearch = {
+    searchField: ""
+  };
+
+  it("should return the initial state", () => {
+    expect(reducers.searchRobots(undefined, {})).toEqual({ searchField: "" });
+  });
+
+  it("should handle CHANGE_SEARCHFIELD", () => {
+    expect(
+      reducers.searchRobots(initialStateSearch, {
+        type: "CHANGE_SEARCHFIELD",
+        payload: "abc"
+      })
+    ).toEqual({
+      searchField: "abc"
+    });
+  });
+});
+
+describe("requestRobots", () => {
+  const initialRequestRobots = {
+    robots: [],
+    isPending: false
+  };
+
+  it("should return the initial state", () => {
+    expect(reducers.requestRobots(undefined, {})).toEqual(initialRequestRobots);
+  });
+
+  it("should handle REQUEST_ROBOTS_PENDING", () => {
+    expect(
+      reducers.requestRobots(initialRequestRobots, {
+        type: "REQUEST_ROBOTS_PENDING"
+      })
+    ).toEqual({
+      robots: [],
+      isPending: true
+    });
+  });
+
+  it("should handle REQUEST_ROBOTS_SUCCESS", () => {
+    expect(
+      reducers.requestRobots(initialRequestRobots, {
+        type: "REQUEST_ROBOTS_SUCCESS",
+        payload: ["abc"]
+      })
+    ).toEqual({
+      robots: ["abc"],
+      isPending: false
+    });
+  });
+
+  it("should handle REQUEST_ROBOTS_FAILED", () => {
+    expect(
+      reducers.requestRobots(initialRequestRobots, {
+        type: "REQUEST_ROBOTS_FAILED",
+        payload: "Oops..! Encountered an Error"
+      })
+    ).toEqual({
+      robots: [],
+      isPending: false,
+      error: "Oops..! Encountered an Error"
+    });
+  });
+});
+```
+
+### 290. Testing Actions
+
+`npm i -D redux-mock-store`
+
+```js
+import * as actions from "./actions";
+import { CHANGE_SEARCHFIELD, REQUEST_ROBOTS_PENDING } from "./constants";
+
+import configureMockStore from "redux-mock-store";
+import thunkMiddleware from "redux-thunk";
+
+const mockStore = configureMockStore([thunkMiddleware]);
+
+it("should create an action to search robots", () => {
+  const text = "BayWatch";
+
+  expect(actions.setSearchField(text)).toEqual({
+    type: CHANGE_SEARCHFIELD,
+    payload: "BayWatch"
+  });
+});
+
+it("should create an action to request robots", () => {
+  const store = mockStore();
+  store.dispatch(actions.requestRobots());
+  const action = store.getActions();
+  console.log(action);
+  expect(action[0]).toEqual({ type: REQUEST_ROBOTS_PENDING });
+});
+```
+
+### 291. Section Review
+
+🌟 _**Testing Section overall Review**_
+
+### 292. Testing In Our Master Project
+
+Now that you learned about testing, it's time to write your own tests now for our Mastery Project!
+
+You can always refer to the github repo in the resources that has tests written for the app (which we have written for you) to see how you might tackle writing tests for certain components, or testing certain features! We have also linked the enzyme documentation in the resources as well for you to refer to, this way you can see what methods you may want to use to test specific features!
+
+One caveat to note, if you want to use the selector based methods in enzyme to target styled-components in a component, just add the `.displayName` prop to the styled component where it's equal to the name of the const. Then you can target that displayName as a string that you pass as the selector value. For example:
+
+```js
+// header.styles.jsx
+
+export const OptionLink = styled(Link)`
+  padding: 10px 15px;
+  cursor: pointer;
+`;
+
+OptionLink.displayName = 'OptionLink';
+
+
+// Header.test.js
+
+describe('test for OptionLink', () => {
+    wrapper.find('OptionLink') // <= finds OptionLink styled components in wrapper
+});
+```
+
+Good luck!
+
+[Testing Solutions in our App](https://github.com/ZhangMYihua/lesson-34)
+
+## Section 30: Bonus: Web-pack + Babel
+
+### 293. Introduction to Webpack + Babel
+
+[Webpack from scratch](https://github.com/ZhangMYihua/webpack-from-scratch) || [WebPack Doc](https://webpack.js.org/concepts/) || [Regex Buddy](https://www.regexbuddy.com/regex.html) || [Babel Doc](https://babeljs.io/docs/en/usage) || [Babel Loader](https://github.com/babel/babel-loader)
+
+`npm i webpack webpack-cli`
+
+`package.json`
+
+🌟 _**New Build Script**_
+
+```json
+"scripts": {
+    "build": "webpack --mode production"
+  },
+```
+
+`npm i @babel/core @babel/preset-env @babel/preset-react babel-loader`
+
+`webpack.config.js`
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      }
+    ]
+  }
+};
+```
+
+`.babelrc`
+
+```js
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+```
+
+### 294. Webpack Config
+
+[Style Loader](https://github.com/webpack-contrib/style-loader#style-loader) || [CSS Loader](https://github.com/webpack-contrib/css-loader#css-loader) || [HTML Webpack Plugin](https://webpack.js.org/plugins/html-webpack-plugin/#installation) || [Webpack Final Lesson Repo](https://github.com/ZhangMYihua/webpack-final)
+
+`npm i style-loader css-loader html-loader html-webpack-plugin`
+
+```js
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.html$/,
+        use: ["html-loader"]
+      }
+    ]
+  },
+  plugins: [new HTMLWebpackPlugin({ template: "./index.html" })]
+};
+```
+
+🌟 _**Import react and react-dom error from Webpack?**_
+
+- Delete package-lock.json
+- Delete node_modules
+- `npm i`
+- `npm start`
+
+🌟 _**NOTE**_ : For some unknown reason, npm might have failed to pull those dependencies
 
 ## Section 31: Bonus: Build a GatsbyJSBlog
 
