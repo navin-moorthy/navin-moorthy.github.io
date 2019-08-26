@@ -10,7 +10,7 @@ Become a Senior [React](https://reactjs.org/) Developer! Build a massive E-comme
 
 Created by [Andrei Neagoie](https://www.udemy.com/user/andrei-neagoie/), [Yihua Zhang](https://www.udemy.com/user/yihua-zhang-5/)
 
-Twitter : [Andrei Neagoie](https://twitter.com/AndreiNeagoie)
+Twitter - [Andrei Neagoie](https://twitter.com/AndreiNeagoie)
 
 Udemy Link - [Complete React Developer in 2019 (w/ Redux, Hooks, GraphQL)](https://www.udemy.com/complete-react-developer-zero-to-mastery)
 
