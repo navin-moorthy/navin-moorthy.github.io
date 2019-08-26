@@ -5504,6 +5504,271 @@ module.exports = {
 
 ## Section 31: Bonus: Build a GatsbyJSBlog
 
+🌟 _**Get titles for Section 31**_
+
+```js
+$$(".curriculum-item-link--title--zI5QT").map(title => title.textContent);
+```
+
+### 295. Quick Note About This Section
+
+Here's the truth: I (Andrei) am not the biggest fan of GatsbyJS. The reason is that it involves a lot of configuration and setup. It's one of those libraries that feels like you're learning something completely new instead of just writing Javascript. As you go through these videos, you might find yourself saying "this is so different than anything I have done before as a React developer". Don't get discouraged. GatsbyJS is a type of library that requires you to go through the documentation and sometimes learn a completely different way of structuring your code which is unique to Gastby. We decided to add this as a bonus to the course, but by no means should you feel let down if you don't get everything in these videos. Like I said, Gatsby is all about the "GastbyJS way", and if you don't understand it completely, it won't affect you outside of using GatsbyJS.
+
+So focus more on creating a blog as a fun way to end the course instead of understanding every detail. As a professional React developer, you won't encounter these problems unless you are working directly with Gatsby.
+
+### 296. Introduction to Gatsby.js
+
+🌟 _**[Gatsby](https://www.gatsbyjs.org/)**_
+
+![Normal React with Webpack & Babel](images/136.png)
+
+![Create React App](images/137.png)
+
+![Next.js](images/138.png)
+
+![Introduction to Gatsby.js](images/139.png)
+
+### 297. Starting a Gatsby Project
+
+![Starting a Gatsby Project](images/140.png)
+
+[Gatsby CLI](https://www.gatsbyjs.org/docs/gatsby-cli/) || [Gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) || [Gatsby Plugins](https://www.gatsbyjs.org/plugins/)
+
+`npm i -g gatsby-cli`
+
+`gatsby new gatsby-blog` / `npx gatsby new gatsby-blog`
+
+`npm run develop`
+
+[New Gatsby Blog Starter Repo](https://github.com/navin-navi/gatsby-starter-blog.git)
+
+### 298. Gatsby Pages
+
+🌟 _**Gatsby starter blog walkthrough of components on how things work**_
+
+[Gatsby Pages Intro](https://www.gatsbyjs.org/docs/creating-and-modifying-pages/)
+
+[useStatisQuery](https://www.gatsbyjs.org/docs/use-static-query/)
+
+### 299. Gatsby GraphQL + Markdown
+
+[Markdown Cheetsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+`gatsby-config.js`
+
+```js{16-22}
+module.exports = {
+  siteMetadata: {
+    title: `Gatsby Default Starter`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@gatsbyjs`,
+  },
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/markdown-pages`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
+  ],
+}
+```
+
+### 300. Building Our Blog 1
+
+![Building Our Blog 1](images/141.png)
+
+`src/pages/index.js`
+
+```js
+import React from "react"
+import { graphql, Link } from "gatsby"
+
+import Layout from "../components/layout"
+import Image from "../components/image"
+import SEO from "../components/seo"
+
+const IndexPage = ({
+  data: {
+    allMarkdownRemark: { totalCount, edges },
+  },
+}) => (
+  <Layout>
+    <SEO title="Home" />
+    <div>
+      <h1>Navin's Blog</h1>
+    </div>
+    {edges.map(
+      ({
+        node: {
+          id,
+          frontmatter: { date, description, title },
+          excerpt,
+        },
+      }) => (
+        <div key={id}>
+          <h2>
+            {title}-{date}
+          </h2>
+          <p>{excerpt}</p>
+        </div>
+      )
+    )}
+  </Layout>
+)
+
+export default IndexPage
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            date
+            description
+            title
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
+```
+
+### 301. Building Our Blog 2
+
+🌟 _**Created a node field for Markdown Files**_
+
+[Node API](https://www.gatsbyjs.org/docs/node-apis/) || [createFilePath](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/#createfilepath)
+
+`gatsby-node.js`
+
+```js
+const { createFilePath } = require("gatsby-source-filesystem")
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === "MarkdownRemark") {
+    const slug = createFilePath({ node, getNode })
+    createNodeField({
+      node,
+      name: "slug",
+      value: slug,
+    })
+  }
+}
+```
+
+### 302. Building Our Blog 3
+
+[createPages](https://www.gatsbyjs.org/docs/node-apis/#createPages) || [createPage](https://www.gatsbyjs.org/docs/actions/#createPage) || [Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates)
+
+`gatsby-node.js`
+
+```js
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  return graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `).then(({ data }) => {
+    data.allMarkdownRemark.edges.forEach(({ node }) => {
+      createPage({
+        path: node.field.slug,
+        template: "",
+      })
+    })
+  })
+}
+```
+
+### 303. Building Our Blog 4
+
+[dangerouslysetinnerhtml](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml) || [path](https://nodejs.org/api/path.html)
+
+`src/templates/blog-post.js`
+
+```js
+import React from "react"
+import { graphql } from "gatsby"
+
+import Layout from "../components/layout"
+
+export default ({ data }) => {
+  const post = data.markdownRemark
+  return (
+    <Layout>
+      <div>
+        <h2>{post.frontmatter.title}</h2>
+        <div dangerouslySetInnerHTML={{ __html: post.html }}>{}</div>
+      </div>
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+      }
+    }
+  }
+`
+```
+
+### 304. Building Our Blog 5
+
+[styled-components](https://www.npmjs.com/package/styled-components) || [gatsby-plugin-styled-components](https://www.npmjs.com/package/gatsby-plugin-styled-components) || [babel-plugin-styled-components](https://www.npmjs.com/package/babel-plugin-styled-components) || [Netlify](https://www.netlify.com/) || [Finished Gatsby Blog by Andrei](https://github.com/ZhangMYihua/gatsby-blog-netlify)
+
+`npm i gatsby-plugin-styled-components styled-components babel-plugin-styled-components`
+
+![Building Our Blog 5](images/142.png)
+
+[My Site in GitHub](https://github.com/navin-navi/gatsby-starter-blog)
+
+[Site Live with Netlify](https://sharp-lovelace-611c99.netlify.com/)
+
 ## Section 32: Appendix 1: Key Developer Concepts
 
 🌟 _Got all Sub Heading by using the below Script_
