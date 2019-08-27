@@ -1,12 +1,11 @@
 ---
 title: Learn while you poop
 date: "2019-08-27"
-description: Notes taken while learning react
-
-Seperation of Concernsfrom https://learnwhileyoupoop.com/
+description: Notes taken while learning react from https://learnwhileyoupoop.com/
 ---
 
 ## IMAGINE WHAT YOU COULD BUILD 🏗
+
 ## IF YOU HAD TIME TO LEARN ALL OF REACT 👩‍🎓
 
 Learn While You Poop! 💩
@@ -55,7 +54,7 @@ Really loved the intro for the site!!!
 
 ### MODULE 1: REACT ESSENTIALS
 
-https://www.youtube.com/watch?v=JnMXuWy2t8A
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JnMXuWy2t8A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ![Seperation of Concerns](images/1.png)
 
