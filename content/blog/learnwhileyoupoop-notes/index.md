@@ -54,6 +54,8 @@ Really loved the intro for the site!!!
 
 ### MODULE 1: REACT ESSENTIALS
 
+### Introduction
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JnMXuWy2t8A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ![Seperation of Concerns](images/1.png)
@@ -63,9 +65,9 @@ Really loved the intro for the site!!!
 ```js
 // Togglable paragraph in old JavaScript
 <div>
-	<button id="showhide">Show paragraph</button>
+  <button id="showhide">Show paragraph</button>
 
-	<p id="toggleMe">This is the paragraph that is only displayed on request.</p>
+  <p id="toggleMe">This is the paragraph that is only displayed on request.</p>
 </div>
 
 <script>
@@ -92,23 +94,23 @@ Really loved the intro for the site!!!
 ```js
 // Togglable paragraph in jQuery
 <div>
-	<button id="showhide">Show paragraph</button>
+  <button id="showhide">Show paragraph</button>
 
-	<p id="toggleMe">This is the paragraph that is only displayed on request.</p>
+  <p id="toggleMe">This is the paragraph that is only displayed on request.</p>
 </div>
 
 <script>
-	$("#showhide").on("click", function (e) {
-		e.preventDefault();
+  $("#showhide").on("click", function (e) {
+    e.preventDefault();
 
-		if ($("#toggleMe").is(":visible")) {
-			$(this).html("Show paragraph");
-			$("#toggleMe").hide();
-		}else{
-			$(this).html("Hide paragraph");
-			$("#toggleMe").show();
-		}
-	})
+    if ($("#toggleMe").is(":visible")) {
+      $(this).html("Show paragraph");
+      $("#toggleMe").hide();
+    }else{
+      $(this).html("Hide paragraph");
+      $("#toggleMe").show();
+    }
+  })
 </script>
 ```
 
@@ -127,13 +129,25 @@ class Toggled extends React.Component {
     const { show } = this.state;
 
     return (
-	    <div>
-	      <button onClick={this.onToggle}>
-	        {show ? "Hide paragraph" : "Show paragraph}
-	      </button>
-	      {show && <p>This is the paragraph that is only displayed on request.</p>}
-	    </div>
-	)
+      <div>
+        <button onClick={this.onToggle}>
+          {show ? "Hide paragraph" : "Show paragraph}
+        </button>
+        {show && <p>This is the paragraph that is only displayed on request.</p>}
+      </div>
+  )
   }
 }
 ```
+
+### WHY ARE COMPONENTS SO GREAT 🤔
+
+🌟 _**You can think of components as LEGO blocks for your app.**_
+
+Just keep in mind that components give you 👇
+
+- composability, building blocks you can assemble into anything
+- encapsulation, components have clear APIs so you never have to worry about internals
+- reusability, build it once, use it everywhere
+
+<!-- 🌟 _****_ -->
