@@ -142,6 +142,8 @@ class Toggled extends React.Component {
 
 ### WHY ARE COMPONENTS SO GREAT 🤔
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MuAhztaKmZ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 🌟 _**You can think of components as LEGO blocks for your app.**_
 
 Just keep in mind that components give you 👇

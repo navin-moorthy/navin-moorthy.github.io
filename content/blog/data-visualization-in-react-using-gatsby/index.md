@@ -24,7 +24,13 @@ Youtube Link - [Data Visualization in React Using Gatsby (with Swizec Teller) â€
 
 ## Notes
 
-`gatsby new . gatsbyjs/gatsby-starter-hello-world`
+New Gatsby site - `gatsby new . gatsbyjs/gatsby-starter-hello-world`
+
+Run a development serve - `npm run develop`
+
+Build the site to 'public' folder - `npm run build`
+
+Serve the files from 'public folder' - `npm run serve`
 
 `yarn add d3`
 
