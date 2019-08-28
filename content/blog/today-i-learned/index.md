@@ -1,7 +1,50 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-26"
+date: "2019-08-28"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 60.Complete React Developer in 2019
+
+### Day 60: August 27, 2019 - Tuesday
+
+**Project:** Explore MDX and its capabilities
+
+![Gatsby Blog](../gatsby-mdx-intro/1.png)
+
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/gatsby-mdx-intro)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Intro to MDX in Gatsby](https://navin-navi.github.io/blog/gatsby-mdx-intro/)
+- [25+ JavaScript Shorthand Coding Techniques](https://navin-navi.github.io/blog/25-javascript-shorthand-coding-techniques-sitepoint/)
+- [Learn while you poop 2](https://navin-navi.github.io/blog/learnwhileyoupoop-notes/#why-are-components-so-great-)
+- [Explored about MDX-Deck](https://github.com/jxnblk/mdx-deck)
+- [Explored about Code Surfer and it's v2 & v3](https://github.com/pomber/code-surfer)
+
+---
+
+## 59.Complete React Developer in 2019
+
+### Day 59: August 26, 2019 - Monday
+
+**Project:** Section 31 Done
+
+![Gatsby Blog](../complete-react-developer-in-2019/images/142.png)
+
+**GitHub Repo** [Gatsby Starter Blog](https://github.com/navin-navi/gatsby-starter-blog)
+**Blog Live** [Gatsby Starter Blog](https://sharp-lovelace-611c99.netlify.com/)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Building a Gatsby Blog](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-31-bonus-build-a-gatsbyjsblog)
+- [Data Visualization in React Using Gatsby](https://navin-navi.github.io/blog/data-visualization-in-react-using-gatsby/)
+- [Learn while you poop 1](https://navin-navi.github.io/blog/learnwhileyoupoop-notes/#module-1-react-essentials)
+
 ---
 
 ## 58.Complete React Developer in 2019
@@ -1209,3 +1252,5 @@ With this I am going to start over my #100DaysOfCode Rounds with just counting t
 
 - [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
 - [Original Inspiration Repo Link from LekoArts](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
+
+## [Go to Round 1](https://navin-navi.github.io/blog)

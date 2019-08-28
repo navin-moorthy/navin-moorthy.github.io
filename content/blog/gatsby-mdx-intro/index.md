@@ -4,9 +4,11 @@ date: "2019-08-27"
 description: Notes taken while learning MDX with Gatsby from Alligator
 ---
 
+![Hero Image](1.png)
+
 Blog - [Alligator](https://alligator.io/gatsbyjs/mdx-in-gatsby/)
 
-Authors - [Daniel Stout](https://alligator.io/author/daniel-stout) 
+Authors - [Daniel Stout](https://alligator.io/author/daniel-stout)
 
 ## Notes
 
@@ -42,13 +44,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages/`,
-      },
+        path: `${__dirname}/src/pages/`
+      }
     },
-    `gatsby-plugin-mdx`,
+    `gatsby-plugin-mdx`
     // ... other plugins
-  ],
-}
+  ]
+};
 ```
 
 Import components like we do in react but after the frontmatter
@@ -66,9 +68,9 @@ import PostSignature from "../../components/postSignature.mdx"
 
 <Layout  location={props.location} title="Gatsby Starter Blog">
   <TitleBar
-    size={"32px"} 
-    bkgdColor={"#4aae9b"} 
-    text={props.pageContext.frontmatter.title} 
+    size={"32px"}
+    bkgdColor={"#4aae9b"}
+    text={props.pageContext.frontmatter.title}
   />
 
 This will be like turbo-charged Markdown!
@@ -119,18 +121,18 @@ export const myReviews = [
 
 <Layout  location={props.location} title="Gatsby Starter Blog">
   <TitleBar
-    size={"32px"} 
-    bkgdColor={"#4aae9b"} 
-    text={props.pageContext.frontmatter.title} 
+    size={"32px"}
+    bkgdColor={"#4aae9b"}
+    text={props.pageContext.frontmatter.title}
   />
 
 This will be like turbo-charged Markdown!
 
 #### My Food Reviews:
 
-<BarChart 
-  data={myReviews} 
-  bars={["overall", "variety", "price", "taste"]} 
+<BarChart
+  data={myReviews}
+  bars={["overall", "variety", "price", "taste"]}
 />
 <PostSignature />
 </Layout>
@@ -146,6 +148,7 @@ This will be like turbo-charged Markdown!
 - [Custom Remark Plugins collection](https://github.com/remarkjs/remark/blob/master/doc/plugins.md)
 - [Custom Rehype Plugins](https://github.com/rehypejs/rehype/blob/master/doc/plugins.md)
 - [MDX](https://mdxjs.com/)
+- [Spectacle Repo](https://github.com/FormidableLabs/spectacle)
 - [recharts](http://recharts.org/)
 - [StaticGen](https://www.staticgen.com/)
 - [Static Site Generators](https://staticsitegenerators.net/)
