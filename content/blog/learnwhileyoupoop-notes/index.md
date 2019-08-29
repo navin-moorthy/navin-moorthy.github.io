@@ -1,6 +1,6 @@
 ---
 title: Learn while you poop
-date: "2019-08-27"
+date: "2019-08-28"
 description: Notes taken while learning react from https://learnwhileyoupoop.com/
 ---
 
@@ -151,5 +151,11 @@ Just keep in mind that components give you 👇
 - composability, building blocks you can assemble into anything
 - encapsulation, components have clear APIs so you never have to worry about internals
 - reusability, build it once, use it everywhere
+
+### HOW JSX MAKES YOUR LIFE EASIER
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YoGTu2GkNbc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[Notes](https://learnwhileyoupoop.com/react/how-jsx-makes-your-life-easier)
 
 <!-- 🌟 _****_ -->

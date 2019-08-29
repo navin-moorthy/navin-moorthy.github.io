@@ -1,8 +1,12 @@
 ---
 title: 25+ JavaScript Shorthand Coding Techniques
-date: "2019-08-27"
+date: "2019-08-28"
 description: Notes taken while learning JavaScript from 25+ JavaScript Shorthand Coding Techniques By Michael Wanyoike By Sam Deering
 ---
+
+![MDX-Deck Slide](1.png)
+
+[Click here](https://modest-haibt-c12a49.netlify.com/) to see the Presentation version of this blog
 
 Website - [SitePoint](https://www.sitepoint.com/shorthand-javascript-techniques/)
 Authors - [Michael Wanyoike](https://www.sitepoint.com/author/mwanyoike/) & [Sam Deering](https://www.sitepoint.com/author/sdeering/)
@@ -62,10 +66,12 @@ Example:
 ```js
 let variable1;
 let variable2 = variable1 || "bar";
+
 console.log(variable2 === "bar"); // prints true
 
 variable1 = "foo";
 variable2 = variable1 || "bar";
+
 console.log(variable2); // prints foo
 ```
 
@@ -133,20 +139,22 @@ for (let i = 0; i < fruits.length; i++)
 Shorthand:
 
 ```js
+const fruits = ['mango', 'peach', 'banana'];
 for (let fruit of fruits)
 ```
 
-For accessing 'key' in objects:
+For accessing 'index' in an array:
 
 ```js
+const fruits = ['mango', 'peach', 'banana'];
 for (let index in fruits)
 ```
 
-Example:
+For accessing 'keys' in an object:
 
 ```js
 const obj = { continent: "Africa", country: "Kenya", city: "Nairobi" };
-for (let key in obj) console.log(key); // output: continent, country, city
+for (let keys in obj) console.log(keys); // output: continent, country, city
 ```
 
 forEach():
@@ -161,7 +169,7 @@ function logArrayElements(element, index, array) {
 // a[2] = 9
 ```
 
-### 7. Decimal Base Exponents
+### 6. Decimal Base Exponents
 
 Longhand:
 
@@ -183,7 +191,7 @@ for (let i = 0; i < 1e7; i++) {}
 1e5 === 100000;
 ```
 
-### 8. Object Property Shorthand
+### 7. Object Property Shorthand
 
 Longhand:
 
@@ -199,7 +207,7 @@ Shorthand:
 const obj = { x, y };
 ```
 
-### 9. Arrow Functions Shorthand
+### 8. Arrow Functions Shorthand
 
 Longhand:
 
@@ -227,7 +235,7 @@ setTimeout(() => console.log("Loaded"), 2000);
 list.forEach(item => console.log(item));
 ```
 
-### 10. Implicit Return Shorthand
+### 9. Implicit Return Shorthand
 
 Longhand:
 
@@ -245,7 +253,7 @@ calcCircumference = diameter => (
 )
 ```
 
-### 11. Default Parameter Values
+### 10. Default Parameter Values
 
 Longhand:
 
@@ -255,6 +263,8 @@ function volume(l, w, h) {
   if (h === undefined) h = 4;
   return l * w * h;
 }
+
+volume(2);
 ```
 
 Shorthand:
@@ -265,7 +275,7 @@ volume = (l, w = 3, h = 4) => l * w * h;
 volume(2);
 ```
 
-### 12. Template Literals
+### 11. Template Literals
 
 Longhand:
 
@@ -283,7 +293,7 @@ const welcome = `You have logged in as ${first} ${last}`;
 const db = `http://${host}:${port}/${database}`;
 ```
 
-### 13. Destructuring Assignment Shorthand
+### 12. Destructuring Assignment Shorthand
 
 Longhand:
 
@@ -309,7 +319,7 @@ const { store, form, loading, errors, entity } = this.props;
 const { store, form, loading, errors, entity: contact } = this.props;
 ```
 
-### 14. Multi-line String Shorthand
+### 13. Multi-line String Shorthand
 
 Longhand:
 
@@ -334,7 +344,7 @@ const lorem = `Lorem ipsum dolor sit amet, consectetur
     irure dolor in reprehenderit in voluptate velit esse.`;
 ```
 
-### 15. Spread Operator Shorthand
+### 14. Spread Operator Shorthand
 
 Longhand:
 
@@ -368,7 +378,7 @@ console.log(b); // 2
 console.log(z); // { c: 3, d: 4 }
 ```
 
-### 16. Mandatory Parameter Shorthand
+### 15. Mandatory Parameter Shorthand
 
 Longhand:
 
@@ -393,7 +403,7 @@ foo = (bar = mandatory()) => {
 };
 ```
 
-### 17. Array.find Shorthand
+### 16. Array.find Shorthand
 
 Longhand:
 
@@ -420,7 +430,7 @@ pet = pets.find(pet => pet.type === "Dog" && pet.name === "Tommy");
 console.log(pet); // { type: 'Dog', name: 'Tommy' }
 ```
 
-### 18. Object [key] Shorthand(Form Validation)
+### 17. Object [key] Shorthand(Form Validation)
 
 Longhand:
 
@@ -463,7 +473,7 @@ console.log(validate(schema, { first: "Bruce" })); // false
 console.log(validate(schema, { first: "Bruce", last: "Wayne" })); // true
 ```
 
-### 19. Double Bitwise NOT Shorthand
+### 18. Double Bitwise NOT Shorthand
 
 Bitwise operators are one of those features you learn about in beginner JavaScript tutorials and you never get to implement them anywhere. Besides, who wants to work with ones and zeroes if you are not dealing with binary?
 
@@ -481,7 +491,7 @@ Shorthand:
 ~~4.9 === 4; //true
 ```
 
-### 20. Exponent Power Shorthand
+### 19. Exponent Power Shorthand
 
 Longhand:
 
@@ -499,7 +509,7 @@ Shorthand:
 4 ** 3; // 64
 ```
 
-### 21. Converting a String into a Number
+### 20. Converting a String into a Number
 
 Longhand:
 
@@ -515,7 +525,7 @@ const num1 = +"100"; // converts to int data type
 const num2 = +"100.01"; // converts to float data type
 ```
 
-### 22. Object Property Assignment
+### 21. Object Property Assignment
 
 Longhand:
 
@@ -535,25 +545,28 @@ var _extends = function(target) {
 var fname = { firstName: "Black" };
 var lname = { lastName: "Panther" };
 
-var name = _extends({}, fname, { middleName: "Magic" }, lname);
-console.log(name);
+var full_name = _extends({}, fname, { middleName: "Magic" }, lname);
+console.log(full_name);
 ```
 
 Shorthand:
 
 ```js
-let full_names = Object.assign(fname, lname);
+const fname = { firstName: "Black" };
+const lname = { lastName: "Panther" };
+
+let full_names = Object.assign({}, fname, lname);
 ```
 
 ```js
-let fname = { firstName: "Black" };
-let lname = { lastName: "Panther" };
+const fname = { firstName: "Black" };
+const lname = { lastName: "Panther" };
 
-const name = { ...fname, middleName: "Magic", ...lname };
-console.log(name);
+const full_name = { ...fname, middleName: "Magic", ...lname };
+console.log(full_name);
 ```
 
-### 23. Bitwise IndexOf Shorthand
+### 22. Bitwise IndexOf Shorthand
 
 Longhand:
 
@@ -585,7 +598,7 @@ if (arr.includes(item)) {
 }
 ```
 
-### 24. Object.entries()
+### 23. Object.entries()
 
 This is a feature that was introduced in ES8 that allows you to convert a literal object into a key/value pair array.
 
@@ -602,25 +615,29 @@ console.log(arr);
 **/
 ```
 
-### 25. Object.keys()
+### 24. Object.keys()
 
 This is also a new feature introduced in ES8 that performs a similar function to Object.entries(), but with only the key part:
 
 ```js
 const credits = { producer: "John", director: "Jane", assistant: "Peter" };
 const arr = Object.keys(credits);
+
 console.log(arr);
+/** Output:
+["producer", "director", "assistant"]
+**/
 ```
 
-### 26. Object.values()
+### 25. Object.values()
 
 This is also a new feature introduced in ES8 that performs a similar function to Object.entries(), but with only the values part:
 
 ```js
 const credits = { producer: "John", director: "Jane", assistant: "Peter" };
 const arr = Object.values(credits);
-console.log(arr);
 
+console.log(arr);
 /** Output:
 [ 'John', 'Jane', 'Peter' ]
 **/

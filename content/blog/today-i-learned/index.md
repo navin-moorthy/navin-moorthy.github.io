@@ -1,7 +1,28 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-28"
+date: "2019-08-29"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 61.Complete React Developer in 2019
+
+### Day 61: August 28, 2019 - Wednesday
+
+**Project:** Explore MDX and its capabilities
+
+![MDX-Deck](../getting-starter-with-mdx-deck/1.png)
+
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-starter)
+
+**Live** [Getting started with MDX-Deck](https://stoic-lewin-21ea98.netlify.com/)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Intro to MDX-Deck](https://github.com/jxnblk/mdx-deck)
+- [Deck I created of what I learned today](https://stoic-lewin-21ea98.netlify.com/)
+
 ---
 
 ## 60.Complete React Developer in 2019
@@ -35,6 +56,7 @@ Learned about a couple of new things,
 ![Gatsby Blog](../complete-react-developer-in-2019/images/142.png)
 
 **GitHub Repo** [Gatsby Starter Blog](https://github.com/navin-navi/gatsby-starter-blog)
+
 **Blog Live** [Gatsby Starter Blog](https://sharp-lovelace-611c99.netlify.com/)
 
 **Brief Description:**
@@ -75,6 +97,7 @@ Learned about a couple of new things,
 ![Crown Clothing PWA](images/57.crown-clothing-pwa.png)
 
 **Live:** [Crown Clothing](https://navin-navi-crown-clothing.herokuapp.com/)
+
 **GitHub Repo** [Crown Clothing Source Code](https://github.com/navin-navi/crown-clothing-react)
 
 **Brief Description:**
@@ -97,6 +120,7 @@ Learned about a couple of new things,
 ![Sagas](../complete-react-developer-in-2019/images/115.png)
 
 **Live:** [Crown Clothing](https://navin-navi-crown-clothing.herokuapp.com/)
+
 **GitHub Repo** [Crown Clothing Source Code](https://github.com/navin-navi/crown-clothing-react)
 
 **Brief Description:**
@@ -118,6 +142,7 @@ Learned about a couple of new things,
 ![Sagas](../complete-react-developer-in-2019/images/105.png)
 
 **Live:** [Crown Clothing](https://navin-navi-crown-clothing.herokuapp.com/)
+
 **GitHub Repo** [Crown Clothing Source Code](https://github.com/navin-navi/crown-clothing-react)
 
 **Brief Description:**
