@@ -4,7 +4,61 @@ date: "2019-08-29"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
-## 61.Complete React Developer in 2019
+## 64. MDX Deck from the Beginning
+
+### Day 64: August 31, 2019 - Saturday
+
+**Project:** Explore MDX-Deck and its capabilities
+
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect_)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- Not much of the coding today just one hour.
+- Added support for more default components.
+
+---
+
+## 63. MDX Deck from the Beginning
+
+### Day 63: August 30, 2019 - Friday
+
+**Project:** Explore MDX and its capabilities
+
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect_)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- Made some improvements in building the deck.
+- Removed the button movement and added key movement.
+- Added fullscreen slide.
+- Added support to Themes.
+
+---
+
+## 62. MDX Deck from the Beginning
+
+### Day 62: August 29, 2019 - Thursday
+
+**Project:** Explore MDX and its capabilities
+
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- Started following MDX Deck from its first commit to see how it is built.
+- Learned about multi slide movement.
+- Not much to say just seeing the code from github and building the app on myself to learn more.
+
+---
+
+## 61.Magic of MDX
 
 ### Day 61: August 28, 2019 - Wednesday
 
@@ -25,7 +79,7 @@ Learned about a couple of new things,
 
 ---
 
-## 60.Complete React Developer in 2019
+## 60.Magic of MDX
 
 ### Day 60: August 27, 2019 - Tuesday
 
