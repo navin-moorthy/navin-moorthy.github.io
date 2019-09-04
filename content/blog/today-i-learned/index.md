@@ -1,7 +1,58 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-08-29"
+date: '2019-09-04'
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 67. MDX Deck from the Beginning
+
+### Day 67: September 03, 2019 - Tuesday
+
+**Project:** DEV.TO Articles
+
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect)
+
+**Brief Description:**
+
+- Installed the DEV app to read some articles since I cannot code.
+- Read about Pseudo Class :hover.
+- Also read about :focus and :focuswithin.
+
+---
+
+## 66. MDX Deck from the Beginning
+
+### Day 66: September 02, 2019 - Monday
+
+**Project:** Family Time
+
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect)
+
+**Brief Description:**
+
+- No coding today.
+- Had some family time after long time in my native.
+- This is a much needed break.
+
+---
+
+## 65. MDX Deck from the Beginning
+
+### Day 65: September 01, 2019 - Sunday
+
+**Project:** Explore MDX-Deck and its capabilities
+
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect)
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- Gone through some of the commits.
+- Seems overswhelming now.
+- Planning to stop now and continue with the master
+- Think I am wasting my time with this because of no guidance.
+
 ---
 
 ## 64. MDX Deck from the Beginning
@@ -10,7 +61,7 @@ description: Round 2 of 100 Days of Code where I log daily activities of my codi
 
 **Project:** Explore MDX-Deck and its capabilities
 
-**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect_)
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect)
 
 **Brief Description:**
 
@@ -27,7 +78,7 @@ Learned about a couple of new things,
 
 **Project:** Explore MDX and its capabilities
 
-**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect_)
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect)
 
 **Brief Description:**
 
