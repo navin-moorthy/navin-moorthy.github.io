@@ -70,4 +70,10 @@ description: Notes taken while learning about 11 JavaScript Utility Libraries yo
 
 [Voca](https://github.com/panzerdp/voca) - A Javascript library for string manipulations.
 
-[Licia](https://github.com/liriliri/licia) - A simple collection of useful JavaScript snippets with high docs and test coverage
+#### Licia
+
+> [Licia](https://github.com/liriliri/licia) - A simple collection of useful JavaScript snippets with high docs and test coverage with Zero dependencies.
+
+[Licia Explanation Article](https://hackernoon.com/a-new-utility-library-designed-to-get-things-done-d203daa91429)
+
+**Other Reads:** [Brenden Eich about Javascript Ecosystem](https://www.infoworld.com/article/3048833/brendan-eich-javascript-standard-library-will-stay-small.html)
