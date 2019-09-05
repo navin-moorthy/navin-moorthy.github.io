@@ -1,7 +1,22 @@
 ---
 title: Round 2 100Days Of Code
-date: '2019-09-04'
+date: '2019-09-05'
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 68. Flexbox Zombies
+
+### Day 68: September 04, 2019 - Wednesday
+
+**Project:** Play Flexbox Zombies
+
+**Brief Description:**
+
+- Today I am back at my desk to compensate on the things I left in these previous days.
+- Started with Flexbox zombies to master the Flexbox once and for all after these many days.
+- Also done some research on how to publish an npm package and in bit.dev.
+- Learned about Lerna and Yarn workspaces. Not much clear but I understood the concepts.
+
 ---
 
 ## 67. MDX Deck from the Beginning
