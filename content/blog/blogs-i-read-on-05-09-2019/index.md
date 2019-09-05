@@ -1,6 +1,6 @@
 ---
 title: Blogs I Read on 05-09-2019
-date: '2019-09-05'
+date: "2019-09-05"
 description: Notes taken while going through Web Development Blogs
 ---
 
@@ -15,5 +15,3 @@ description: Notes taken while going through Web Development Blogs
 ---
 
 🚀 [Globalization Tools - The State of the Web](https://www.youtube.com/watch?v=F2N-evGOcxc) by [Google Chrome Developers](https://www.youtube.com/channel/UCnUYZLuoy1rq1aVMwx4aTzw)
-
----
