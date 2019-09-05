@@ -4,24 +4,16 @@ date: '2019-09-05'
 description: Notes taken while going through Web Development Blogs
 ---
 
-[Inspiration: 10 Examples of Pure CSS Animation on CodePen](https://webdesign.tutsplus.com/articles/pure-css-animation-inspiration-on-codepen--cms-30875)
+🚀 [Bit](https://bit.dev/) encapsulates components in your projects with all their files and dependencies, so they can run anywhere across your applications.
 
-By [Donovan Hutchinson](https://tutsplus.com/authors/donovan-hutchinson)
-His Website [CSS Animation](https://cssanimation.rocks/)
+[Bit Intro](https://www.youtube.com/watch?v=E5lgoz6-nfs)
 
-- [Pure CSS Biker](https://codepen.io/miocene/pen/jLzmJq)
-- [Pure CSS Saturn Hula Hooping](https://codepen.io/jcoulterdesign/pen/BrdPaw)
-- [Color Layers CSS Animation](https://codepen.io/yemon/pen/WzpXBx)
-- [Ice-Cream Loader](https://codepen.io/astrixsz/pen/RRxyKz)
-- [Pure CSS Pigeons](https://codepen.io/miocene/pen/rzmZKQ)
-- [Sleeping Cat](https://codepen.io/agoodwin/pen/ypeWYE)
-- [Black Bear](https://codepen.io/aakash_gill/pen/WOYMwW)
-- [CSS Sponge](https://codepen.io/miocene/pen/eEJKbo)
-- [Pure CSS Checkbox Mail](https://codepen.io/jh3y/pen/wmpMwp)
-- [Car Preloader](https://codepen.io/igor0ser/pen/amJkvp)
-
-More Articles
-
-- [15 Inspiring Examples of CSS Animation on CodePen](https://webdesign.tutsplus.com/articles/15-inspiring-examples-of-css-animation-on-codepen--cms-23937)
+---
 
 > Pluralsight has lot of High Quality Developement Videos
+
+---
+
+🚀 [Globalization Tools - The State of the Web](https://www.youtube.com/watch?v=F2N-evGOcxc) by [Google Chrome Developers](https://www.youtube.com/channel/UCnUYZLuoy1rq1aVMwx4aTzw)
+
+---

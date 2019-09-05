@@ -1,6 +1,7 @@
 ---
 title: Javascript Object.fromEntries vs Object.entries
-date: "2019-06-21"
+date: '2019-06-21'
+description: Notes taken while going researching Javascript Object.fromEntries vs Object.entries
 ---
 
 ![Object.fromEntries_vs_Object.entries](Object.fromEntries_vs_Object.entries.png)
@@ -10,12 +11,12 @@ In this section, you are going to learn about the newest addition to the JavaScr
 ## Object.entries
 
 ```js
-const object = { x: 42, y: 50 };
+const object = { x: 42, y: 50 }
 // "object" with two {"key":value} pair Objects
 
-const entries = Object.entries(object);
+const entries = Object.entries(object)
 
-console.log(entries);
+console.log(entries)
 // Logs:
 // (2) [Array(2), Array(2)]
 // 0: Array(2)
@@ -36,7 +37,7 @@ From the above code snippet, we can understand that `Object.entries` creates **a
 
 ```js
 for (const [key, value] of entries) {
-  console.log(`The value of ${key} is ${value}.`);
+  console.log(`The value of ${key} is ${value}.`)
 }
 // Logs:
 // The value of x is 42.
@@ -52,12 +53,12 @@ But, we did not have any built-in JavaScript API to reconstruct the objects from
 Inverse of `Object.entries`
 
 ```js
-const object = { x: 42, y: 50 };
-const entries = Object.entries(object);
+const object = { x: 42, y: 50 }
+const entries = Object.entries(object)
 // → [['x', 42], ['y', 50]]
 
-const result = Object.fromEntries(entries);
-console.log(result);
+const result = Object.fromEntries(entries)
+console.log(result)
 // → { x: 42, y: 50 }
 ```
 
@@ -66,12 +67,12 @@ Now, you can create an object from an Array of key value pairs easily.
 **An example with explanation:**
 
 ```js
-const object = { x: 42, y: 50, abc: 9001 };
+const object = { x: 42, y: 50, abc: 9001 }
 const result = Object.fromEntries(
   Object.entries(object)
     .filter(([key, value]) => key.length === 1)
     .map(([key, value]) => [key, value * 2])
-);
+)
 // → { x: 84, y: 100 }
 ```
 
@@ -79,7 +80,7 @@ const result = Object.fromEntries(
 2. Used **Array.filter** to filter only the keys with length equal to 1. `filter(([ key, value ]) => key.length === 1))`
 
 ```js
-console.log(Object.entries(object).filter(([key, value]) => key.length === 1));
+console.log(Object.entries(object).filter(([key, value]) => key.length === 1))
 // (2) [Array(2), Array(2)]
 //      0: (2) ["x", 42]
 //      1: (2) ["y", 50]
@@ -93,7 +94,7 @@ console.log(
   Object.entries(object)
     .filter(([key, value]) => key.length === 1)
     .map(([key, value]) => [key, value * 2])
-);
+)
 
 // (2) [Array(2), Array(2)]
 //     0: (2) ["x", 84]
@@ -108,27 +109,27 @@ console.log(
 We can get the most out of these API when using with `Map`s, which makes it easier to work with key value pairs.
 
 ```js
-const object = { language: "JavaScript", coolness: 9001 };
+const object = { language: 'JavaScript', coolness: 9001 }
 
 // Convert the object into a map:
-const map = new Map(Object.entries(object));
+const map = new Map(Object.entries(object))
 
-console.log(map);
+console.log(map)
 // Map(2) {"language" => "JavaScript", "coolness" => 9001}
 //     [[Entries]]: Array(2)
 //         0: {"language" => "JavaScript"}
 //         1: {"coolness" => 9001}
 
-map.get("language");
+map.get('language')
 // "Javascript"
 
-map.set("coolness", 8000);
+map.set('coolness', 8000)
 // Map(2) {"language" => "JavaScript", "coolness" => 8080}
 ```
 
 ```js
 // Convert the map back into an object:
-const objectCopy = Object.fromEntries(map);
+const objectCopy = Object.fromEntries(map)
 // → { language: 'JavaScript', coolness: 8000 }
 ```
 
@@ -139,8 +140,8 @@ This gets useful when we work with JSON file to send and request from an externa
 **Note:** Does not work best if the keys are not unique
 
 ```js
-const map = new Map([[{}, "a"], [{}, "b"]]);
-Object.fromEntries(map);
+const map = new Map([[{}, 'a'], [{}, 'b']])
+Object.fromEntries(map)
 // → { '[object Object]': 'b' }
 // Note: the value 'a' is nowhere to be found, since both keys
 // stringify to the same value of '[object Object]'.
@@ -149,16 +150,16 @@ Object.fromEntries(map);
 ### More Examples from [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
 
 ```js
-const obj = { foo: "bar", baz: 42 };
-console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
+const obj = { foo: 'bar', baz: 42 }
+console.log(Object.entries(obj)) // [ ['foo', 'bar'], ['baz', 42] ]
 
 // array like object
-const obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
+const obj = { 0: 'a', 1: 'b', 2: 'c' }
+console.log(Object.entries(obj)) // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
 
 // array like object with random key ordering
-const anObj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.entries(anObj)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
+const anObj = { 100: 'a', 2: 'b', 7: 'c' }
+console.log(Object.entries(anObj)) // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
 
 // getFoo is property which isn't enumerable
 const myObj = Object.create(
@@ -166,33 +167,33 @@ const myObj = Object.create(
   {
     getFoo: {
       value() {
-        return this.foo;
-      }
-    }
+        return this.foo
+      },
+    },
   }
-);
-myObj.foo = "bar";
-console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
+)
+myObj.foo = 'bar'
+console.log(Object.entries(myObj)) // [ ['foo', 'bar'] ]
 
 // non-object argument will be coerced to an object
-console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
+console.log(Object.entries('foo')) // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
 
 // returns an empty array for any primitive type, since primitives have no own properties
-console.log(Object.entries(100)); // [ ]
+console.log(Object.entries(100)) // [ ]
 
 // iterate through key-value gracefully
-const obj = { a: 5, b: 7, c: 9 };
+const obj = { a: 5, b: 7, c: 9 }
 for (const [key, value] of Object.entries(obj)) {
-  console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
+  console.log(`${key} ${value}`) // "a 5", "b 7", "c 9"
 }
 
 // Or, using array extras
 Object.entries(obj).forEach(([key, value]) => {
-  console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
-});
+  console.log(`${key} ${value}`) // "a 5", "b 7", "c 9"
+})
 
-const arr = [{ name: "Alice", age: 40 }, { name: "Bob", age: 36 }];
-Object.fromEntries(arr.map(({ name, age }) => [name, age]));
+const arr = [{ name: 'Alice', age: 40 }, { name: 'Bob', age: 36 }]
+Object.fromEntries(arr.map(({ name, age }) => [name, age]))
 // {Alice: 40, Bob: 36}
 ```
 
@@ -205,11 +206,11 @@ if (!Object.entries) {
   Object.entries = function(obj) {
     var ownProps = Object.keys(obj),
       i = ownProps.length,
-      resArray = new Array(i); // preallocate the Array
-    while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]];
+      resArray = new Array(i) // preallocate the Array
+    while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]]
 
-    return resArray;
-  };
+    return resArray
+  }
 }
 ```
 
@@ -221,7 +222,7 @@ Below inline code shows how this function works,
 obj = Array.from(map).reduce(
   (acc, [key, val]) => Object.assign(acc, { [key]: val }),
   {}
-);
+)
 ```
 
 ## References
