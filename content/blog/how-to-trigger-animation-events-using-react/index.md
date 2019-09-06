@@ -1,12 +1,12 @@
 ---
 title: How to Trigger Animation Events using React
-date: '2019-09-05'
+date: "2019-09-05"
 description: Notes taken while learning JavaScript from How to Trigger Animation Events using React By Sonny Recio
 ---
 
-[How to Trigger Animation Events using React](https://blog.bitsrc.io/how-to-trigger-animation-events-using-react-a6c3256b21c6)
+🚀 [How to Trigger Animation Events using React](https://blog.bitsrc.io/how-to-trigger-animation-events-using-react-a6c3256b21c6)
 
-By [Sonny Recio](https://blog.bitsrc.io/@reciosonny)
+👨‍💻 By [Sonny Recio](https://blog.bitsrc.io/@reciosonny)
 
 `How CSS animations were made?`
 
