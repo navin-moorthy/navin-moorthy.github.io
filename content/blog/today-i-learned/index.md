@@ -1,7 +1,29 @@
 ---
 title: Round 2 100Days Of Code
-date: '2019-09-05'
+date: '2019-09-06'
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 69. Medium Blogs
+
+### Day 69: September 05, 2019 - Thursday
+
+**Project:** Bit Dev Blogs
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [What is “this” in JavaScript](https://navin-navi.github.io/blog/this-in-javascript/)
+- [Inspiration-10 Examples of Pure CSS Animation on CodePen](https://navin-navi.github.io/blog/pure-css-animation-inspiration-on-codepen/)
+- [Map, Filter and Reduce – Animated](https://navin-navi.github.io/blog/map-filter-reduce-animated/)
+- [11 JavaScript Animation Libraries For 2019](https://navin-navi.github.io/blog/javascript-animation-libraries-you-should-know/)
+- [11 JavaScript Utility Libraries you Should Know in 2019](https://navin-navi.github.io/blog/javascript-utility-libraries-you-should-know/)
+- [How to Trigger Animation Events using React](https://navin-navi.github.io/blog/how-to-trigger-animation-events-using-react/)
+- [A Practical Guide to Regular Expressions (RegEx) In JavaScript](https://navin-navi.github.io/blog/a-beginners-guide-to-regular-expressions-regex-in-javascript/)
+- [S.O.L.I.D The First 5 Principles of Object Oriented Design](https://navin-navi.github.io/blog/SOLID-principles-in-OOPS/)
+- [Blogs I Read on 05-09-2019](https://navin-navi.github.io/blog/blogs-i-read-on-05-09-2019/)
+
 ---
 
 ## 68. Flexbox Zombies

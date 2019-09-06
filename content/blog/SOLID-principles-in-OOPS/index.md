@@ -4,13 +4,13 @@ date: '2019-09-05'
 description: Notes taken while learning about S.O.L.I.D The First 5 Principles of Object Oriented Design.
 ---
 
-[SOLID Principles every Developer Should Know](https://blog.bitsrc.io/solid-principles-every-developer-should-know-b3bfa96bb688)
+🚀 [SOLID Principles every Developer Should Know](https://blog.bitsrc.io/solid-principles-every-developer-should-know-b3bfa96bb688)
 
-By [Chidume Nnamdi](https://blog.bitsrc.io/@kurtwanger40)
+👨‍💻 By [Chidume Nnamdi](https://blog.bitsrc.io/@kurtwanger40)
 
-[S.O.L.I.D: The First 5 Principles of Object Oriented Design](https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
+🚀 [S.O.L.I.D: The First 5 Principles of Object Oriented Design](https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
 
-By [Samuel Oloruntoba](https://scotch.io/@kayandra) || Twitter
+👨‍💻 By [Samuel Oloruntoba](https://scotch.io/@kayandra) || Twitter
 
 ## Principles
 
