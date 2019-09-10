@@ -701,3 +701,186 @@ const Feact = {
 #### ✨ Adding a simple setState()
 
 Whenever a component wants to update, it needs to tell Feact “hey, I’d like to render again!”, and `this.setState()` is the primary way to accomplish that. `setState` updates `this.state`, and triggers a render, which will send the component through the lifecycle methods `shouldComponentUpdate` -> `componentWillUpdate` -> `render` -> `componentDidUpdate` (which Feact doesn’t have, but of course React does).
+
+#### ✨ Defining setState on the component
+
+```js
+function FeactComponent() {}
+
+FeactComponent.prototype.setState = function() {
+  // to be implemented later
+};
+
+function mixSpecIntoComponent(Constructor, spec) {
+  const proto = Constructor.prototype;
+
+  for (const key in spec) {
+    proto[key] = spec[key];
+  }
+}
+
+const Feact = {
+  createClass(spec) {
+    function Constructor(props) {
+      this.props = props;
+
+      // new lines added for state
+      const initialState = this.getInitialState ? this.getInitialState() : null;
+      this.state = initialState;
+    }
+
+    Constructor.prototype = new FeactComponent();
+
+    mixSpecIntoComponent(Constructor, spec);
+    return Constructor;
+  }
+};
+```
+
+Prototypical inheritance in action. `mixSpecIntoComponent` in React is more complicated (and robust), dealing with things like mixins and making sure users don’t accidentally clobber a React method.
+
+#### ✨ Threading setState over to updateComponent
+
+Utilizing both internal Intanse and public instance
+
+```js
+function FeactComponent() {}
+
+FeactComponent.prototype.setState = function(partialState) {
+  const internalInstance = getMyInternalInstancePlease(this);
+
+  internalInstance._pendingPartialState = partialState;
+
+  FeactReconciler.performUpdateIfNecessary(internalInstance);
+};
+```
+
+React solves the “get my internal instance” problem with an instance map, which really just stores the internal instance on the public instance
+
+```js
+const FeactInstanceMap = {
+  set(key, value) {
+    key.__feactInternalInstance = value;
+  },
+
+  get(key) {
+    return key.__feactInternalInstance;
+  }
+};
+```
+
+```js
+class FeactCompositeComponentWrapper {
+    ...
+    mountComponent(container) {
+        const Component = this._currentElement.type;
+        const componentInstance =
+            new Component(this._currentElement.props);
+        this._instance = componentInstance;
+
+        FeactInstanceMap.set(componentInstance, this);
+        ...
+    }
+}
+```
+
+We have one other unimplemented method, `FeactReconciler.performUpdateIfNecessary`, but just like other reconciler methods, it will just delegate to the instance
+
+```js
+const FeactReconciler = {
+    ...
+    performUpdateIfNecessary(internalInstance) {
+        internalInstance.performUpdateIfNecessary();
+    }
+    ...
+}
+
+class FeactCompositeComponentWrapper {
+    ...
+    performUpdateIfNecessary() {
+        this.updateComponent(this._currentElement, this._currentElement);
+    }
+}
+```
+
+Whenever `updateComponent` is called with the same element, then React knows only state is getting updated, otherwise props are updating.
+
+```js
+class FeactCompositeComponentWrapper {
+    ...
+    updateComponent(prevElement, nextElement) {
+        const nextProps = nextElement.props;
+        const inst = this._instance;
+
+        const willReceive = prevElement !== nextElement;
+
+        if (willReceive && inst.componentWillReceiveProps) {
+            inst.componentWillReceiveProps(nextProps);
+        }
+        ...
+    }
+}
+```
+
+#### ✨ Updating with the new state
+
+```js
+class FeactCompositeComponentWrapper {
+    ...
+    updateComponent(prevElement, nextElement) {
+        const nextProps = nextElement.props;
+        const inst = this._instance;
+
+        const willReceive = prevElement !== nextElement;
+
+        if (willReceive && inst.componentWillReceiveProps) {
+            inst.componentWillReceiveProps(nextProps);
+        }
+
+        let shouldUpdate = true;
+        const nextState =
+            Object.assign({}, inst.state, this._pendingPartialState);
+        this._pendingPartialState = null;
+
+        if (inst.shouldComponentUpdate) {
+            shouldUpdate =
+                inst.shouldComponentUpdate(nextProps, nextState);
+        }
+
+        if (shouldUpdate) {
+            this._performComponentUpdate(
+                nextElement, nextProps, nextState
+            );
+        } else {
+            inst.props = nextProps;
+            inst.state = nextState;
+        }
+    }
+
+    _performComponentUpdate(nextElement, nextProps, nextState) {
+        this._currentElement = nextElement;
+        const inst = this._instance;
+
+        inst.props = nextProps;
+        inst.state = nextState;
+
+        this._updateRenderedComponent();
+    }
+
+    _updateRenderedComponent() {
+        const prevComponentInstance = this._renderedComponent;
+        const inst = this._instance;
+        const nextRenderedElement = inst.render();
+
+        FeactReconciler.receiveComponent(
+            prevComponentInstance,
+            nextRenderedElement
+        );
+    }
+    ...
+}
+```
+
+https://codepen.io/navinnavi19/pen/ZEzrPjq
+
+#### ✨ Batching setState calls

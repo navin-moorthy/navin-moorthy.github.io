@@ -1,7 +1,36 @@
 ---
 title: Round 2 100Days Of Code
-date: '2019-09-06'
+date: "2019-09-06"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 71. React Internals
+
+### Day 71: September 09, 2019 - Monday
+
+**Project:** React Internals Part 3 and 4
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [React Internals](https://navin-navi.github.io/blog/react-internals/)
+
+---
+
+## 70. Medium Blogs
+
+### Day 70: September 06, 2019 - Friday
+
+**Project:** React Internals Part 1 and 2
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Blogs I Read on 06-09-2019](https://navin-navi.github.io/blog/blogs-i-read-on-05-09-2019/)
+- [React Internals](https://navin-navi.github.io/blog/react-internals/)
+
 ---
 
 ## 69. Medium Blogs

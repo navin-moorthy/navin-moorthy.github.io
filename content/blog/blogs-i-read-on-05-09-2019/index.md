@@ -1,5 +1,5 @@
 ---
-title: Notes on Blogs I Read
+title: Notes on Blogs I Read on 05-09-2019
 date: "2019-09-06"
 description: Notes taken while going through Web Development Blogs
 ---
