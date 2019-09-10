@@ -6,7 +6,7 @@ description: Notes taken while going through Web Development Blogs
 
 ## 📅 05-09-2019
 
-### 🚀 [Bit](https://bit.dev/) encapsulates components in your projects with all their files and dependencies, so they can run anywhere across your applications.
+### 🚀 [Bit](https://bit.dev/) encapsulates components in your projects with all their files and dependencies, so they can run anywhere across your applications
 
 [Bit Intro](https://www.youtube.com/watch?v=E5lgoz6-nfs)
 
@@ -58,3 +58,22 @@ description: Notes taken while going through Web Development Blogs
 
 - [React Hooks Examples](https://daveceddia.com/useeffect-hook-examples/)
 - [“Functional React: Quickstart with React Hooks, Redux and MobX” Book](https://amzn.to/2STuAMO)
+
+### 🚀 [How the useEffect Hook Works](https://daveceddia.com/useeffect-hook-examples/)
+
+With `useEffect`, you can handle lifecycle events directly inside function components. Namely, three of them: `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`.
+
+[Stackblitz Example of useEffect() render and unmount](https://stackblitz.com/edit/useeffect-render-unmount)
+
+Cleanup function you can (optionally) return from `useEffect` isn’t only called when the component is unmounted. It’s called every time before that effect runs – to clean up from the last run. This is actually more powerful than the `componentWillUnmount` lifecycle because it lets you run a side effect before and after every render, if you need to.
+
+Another way to think of this array: it should contain every variable that the effect function uses from the surrounding scope. So if it uses a prop? That goes in the array. If it uses a piece of state? That goes in the array.
+
+It will print “mounted” after the initial render, remain silent throughout its life, and print “unmounting…” on its way out.
+
+This comes with a big warning, though: passing the empty array is prone to bugs. It’s easy to forget to add an item to it if you add a dependency, and if you miss a dependency, then that value will be stale the next time useEffect runs and it might cause some strange problems.
+
+Remember that useState is stateful (read more about useState). It only uses the initial state once, the first time it renders. After that it’s ignored. So it’s safe to pass a transient value, like a prop that might change or some other variable.
+
+- [Dan’s demo from React Conf](https://www.youtube.com/watch?v=V-QO-KO90iQ&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=2&t=0s)
+- [Nik Graf’s Collection of React Hooks](https://nikgraf.github.io/react-hooks/)
