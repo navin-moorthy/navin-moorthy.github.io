@@ -1,10 +1,10 @@
 ---
-title: Notes on Blogs I Read on 05-09-2019
-date: "2019-09-06"
+title: Notes on Blogs I Read From 5th Sept to
+date: "2019-09-10"
 description: Notes taken while going through Web Development Blogs
 ---
 
-## 05-09-2019
+## 📅 05-09-2019
 
 ### 🚀 [Bit](https://bit.dev/) encapsulates components in your projects with all their files and dependencies, so they can run anywhere across your applications.
 
@@ -22,7 +22,7 @@ description: Notes taken while going through Web Development Blogs
 
 ---
 
-## 06-09-2019
+## 📅 06-09-2019
 
 ### 🚀 [How To Write Better Code in React](https://blog.bitsrc.io/how-to-write-better-code-in-react-best-practices-b8ca87d462b0)
 
@@ -47,3 +47,14 @@ description: Notes taken while going through Web Development Blogs
 - Use tools like Bit / StoryBook to improve your component development workflow
 
 ---
+
+## 📅 10-09-2019
+
+### 🚀 [How To Fetch Data From An API With React Hooks](https://codeburst.io/how-to-fetch-data-from-an-api-with-react-hooks-9e7202b8afcd)
+
+👨‍💻 By [Indrek Lasn](https://codeburst.io/@indreklasn)
+
+[useState and useEffect Simple Example](https://stackblitz.com/edit/react-usestate-useeffect)
+
+- [React Hooks Examples](https://daveceddia.com/useeffect-hook-examples/)
+- [“Functional React: Quickstart with React Hooks, Redux and MobX” Book](https://amzn.to/2STuAMO)

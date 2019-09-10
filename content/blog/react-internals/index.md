@@ -1,6 +1,6 @@
 ---
 title: React Internals
-date: "2019-09-06"
+date: "2019-09-10"
 description: Notes taken while going through React Internals by Matt Greer
 ---
 
