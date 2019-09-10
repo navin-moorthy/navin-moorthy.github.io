@@ -884,3 +884,271 @@ class FeactCompositeComponentWrapper {
 https://codepen.io/navinnavi19/pen/ZEzrPjq
 
 #### ✨ Batching setState calls
+
+Calling setState within a second render inside componentWillReceiveProps to discard 2nd render and proceed with 3rd render.
+
+https://codepen.io/navinnavi19/pen/ExYEWzy
+
+#### ✨ Batching step one, a place to store the batched state changes
+
+We need a place to store more than one state update, so we will change \_pendingPartialState into an array
+
+```js
+function FeactComponent() {
+}
+
+FeactComponent.prototype.setState = function(partialState) {
+    const internalInstance = FeactInstanceMap.get(this);
+
+    internalInstance._pendingPartialState =
+        internalInstance._pendingPartialState || [];
+
+    internalInstance._pendingPartialState.push(partialState);
+    ...
+}
+```
+
+Over in updateComponent, let’s pull the state processing out into its own method
+
+```js
+class FeactCompositeComponentWrapper {
+    ...
+    updateComponent(prevElement, nextElement) {
+        ...
+        const nextState = this._processPendingState();
+        ...
+    }
+
+    _processPendingState() {
+        const inst = this._instance;
+        if (!this._pendingPartialState) {
+            return inst.state;
+        }
+
+        let nextState = inst.state;
+
+        for (let i = 0; i < this._pendingPartialState.length; ++i) {
+            nextState =
+                Object.assign(nextState, this._pendingPartialState[i]);
+        }
+
+        this._pendingPartialState = null;
+        return nextState;
+    }
+}
+```
+
+#### ✨ Batching step two, batching up the state changes into one render
+
+For Feact, we will batch updates while rendering, otherwise, we won’t batch them. So during updateComponent, we just set a flag that tells the world we are rendering, then unset it at the end. If setState sees we are rendering, it will set the pending state, but not cause a new render, as it knows the current render that is going on will pick up this state change
+
+```js
+class FeactCompositeComponentWrapper {
+    ...
+    updateComponent(prevElement, nextElement) {
+        this._rendering = true;
+
+        // entire rest of the method
+
+        this._rendering = false;
+    }
+}
+
+function FeactComponent() {
+}
+
+FeactComponent.prototype.setState = function(partialState) {
+    const internalInstance = FeactInstanceMap.get(this);
+
+    internalInstance._pendingPartialState =
+        internalInstance._pendingPartialState || [];
+
+    internalInstance.push(partialState);
+
+    if (!internalInstance._rendering) {
+        FeactReconciler.performUpdateIfNecessary(internalInstance);
+    }
+}
+```
+
+#### ✨ setState pitfalls
+
+Now that we understand how setState works and the overall concept on how batching works, we can see there are some pitfalls in setState. The problem is it takes several steps to update a component’s state, as each pending partial state needs to get applied one by one. That means using this.state when setting state is dangerous
+
+```js
+componentWillReceiveProps(nextProps) {
+    this.setState({ counter: this.state.counter + 1 });
+    this.setState({ counter: this.state.counter + 1 });
+}
+```
+
+This contrived example shows what I mean. You might expect counter to get 2 added to it, but since states are being batched up, the second call to setState has the same values for this.state as the first call, so counter will only get incremented once.
+
+React solves this problem by allowing a callback to be passed into setState
+
+```js
+componentWillReceiveProps(nextProps) {
+    this.setState((currentState) => ({
+        counter: currentState.counter + 1
+    });
+    this.setState((currentState) => ({
+        counter: currentState.counter + 1
+    });
+}
+```
+
+By using the callback flavor of setState, you get access to the intermediate values state works through. If Feact were to implement this, it’d look like
+
+```js
+_processPendingState() {
+    const inst = this._instance;
+    if (!this._pendingPartialState) {
+        return inst.state;
+    }
+
+    let nextState = inst.state;
+
+    for (let i = 0; i < this._pendingPartialState.length; ++i) {
+        const partialState = this._pendingPartialState[i];
+
+        if (typeof partialState === 'function') {
+            nextState = partialState(nextState);
+        } else {
+            nextState = Object.assign(nextState, patialState);
+        }
+    }
+
+    this._pendingPartialState = null;
+    return nextState;
+}
+```
+
+https://codepen.io/navinnavi19/pen/KKPombg
+
+### 🎈 Part Five: Transactions
+
+#### ✨ Transactions everywhere
+
+```
+ *                       wrappers (injected at creation time)
+ *                                      +        +
+ *                                      |        |
+ *                    +-----------------|--------|--------------+
+ *                    |                 v        |              |
+ *                    |      +---------------+   |              |
+ *                    |   +--|    wrapper1   |---|----+         |
+ *                    |   |  +---------------+   v    |         |
+ *                    |   |          +-------------+  |         |
+ *                    |   |     +----|   wrapper2  |--------+   |
+ *                    |   |     |    +-------------+  |     |   |
+ *                    |   |     |                     |     |   |
+ *                    |   v     v                     v     v   | wrapper
+ *                    | +---+ +---+   +---------+   +---+ +---+ | invariants
+ * perform(anyMethod) | |   | |   |   |         |   |   | |   | | maintained
+ * +----------------->|-|---|-|---|-->|anyMethod|---|---|-|---|-|-------->
+ *                    | |   | |   |   |         |   |   | |   | |
+ *                    | |   | |   |   |         |   |   | |   | |
+ *                    | |   | |   |   |         |   |   | |   | |
+ *                    | +---+ +---+   +---------+   +---+ +---+ |
+ *                    |  initialize                    close    |
+ *                    +-----------------------------------------+
+```
+
+If Feact was to add transactions, its (very) simple take would be something like this:
+
+```js
+class Transaction {
+  constructor(wrapper) {
+    this._wrapper = wrapper;
+  }
+
+  perform(method) {
+    const wrapperValue = this._wrapper.initialize();
+
+    method();
+
+    this._wrapper.close(wrapperValue);
+  }
+}
+```
+
+#### ✨ A use case for transactions
+
+Why all the fuss? Mostly transactions enable React to do what it needs to do while keeping the browser happy.
+
+For example, consider this dumb little React app, it swaps a button and a text input every 5 seconds
+
+```js
+const MyComp = React.createClass({
+  getInitialState() {
+    return {
+      textFirst: true
+    };
+  },
+
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({
+        textFirst: !this.state.textFirst
+      });
+    }, 5000);
+  },
+
+  render() {
+    let children;
+
+    if (this.state.textFirst) {
+      children = [<input key="text" type="text" />, <button key="button" />];
+    } else {
+      children = [<button key="button" />, <input key="text" type="text" />];
+    }
+
+    return <div>{children}</div>;
+  }
+});
+
+ReactDOM.render(<MyComp />, document.body);
+```
+
+The trouble with this app is the input element. Whenever you move an input element in the DOM (for example, `parentElement.insertBefore(myInputElement, someOtherChild))`, the browser clears out its selection. So if the user has highlighted some text in the input, then something about how your app renders causes React to move the input in the DOM, that selection gets cleared, frustrating your user. To solve this problem, React component updates are done in a transaction. During the initialize phase of the transaction, React grabs the current selection state of the browser and stores it. Then in the close phase, it takes that previous value and makes sure it gets restored. The transactions that happen during a React render handle many other things such as maintaining the window’s scroll position, and a lot of other necessary book keeping. Another benefit of the transaction pattern is it becomes easy to store the state of the browser, do a whole bunch of work, then restore the state at the very end, rather than having to continually worry about accidentally scrolling the window or clearing an input selection.
+
+#### ✨ Feact transactions
+
+```js
+const SELECTION_RESTORATION = {
+    initialize() {
+        const focusedElem = document.activeElement;
+
+        return {
+            focusedElem,
+            selection: {
+                start: focusedElem.selectionStart,
+                end: focusedElem.selectionEnd
+            }
+        };
+    },
+
+    close(priorSelectionInformation) {
+        const focusedElem = priorSelectionInformation.focusedElem;
+        focusedElem.selectionStart =
+            priorSelectionInformation.selection.start;
+
+        focusedElem.selectionEnd =
+            priorSelectionInformation.selection.end;
+    }
+};
+
+const updateTransaction = new Transaction(SELECTION_RESTORATION);
+
+FeactReconciler = {
+    ...
+    receiveComponent(internalinstance, nextElement) {
+        updateTransaction.perform(function() {
+            internalInstance.receiveComponent(nextElement);
+        });
+    }
+    ...
+}
+```
+
+Learned a lot from this React Internals Series.
