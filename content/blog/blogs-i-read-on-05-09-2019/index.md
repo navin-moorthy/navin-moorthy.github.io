@@ -73,7 +73,20 @@ It will print “mounted” after the initial render, remain silent throughout i
 
 This comes with a big warning, though: passing the empty array is prone to bugs. It’s easy to forget to add an item to it if you add a dependency, and if you miss a dependency, then that value will be stale the next time useEffect runs and it might cause some strange problems.
 
-Remember that useState is stateful (read more about useState). It only uses the initial state once, the first time it renders. After that it’s ignored. So it’s safe to pass a transient value, like a prop that might change or some other variable.
+Remember that `useState` is stateful (read more about useState). It only uses the initial state once, the first time it renders. After that it’s ignored. So it’s safe to pass a transient value, like a prop that might change or some other variable.
 
 - [Dan’s demo from React Conf](https://www.youtube.com/watch?v=V-QO-KO90iQ&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=2&t=0s)
 - [Nik Graf’s Collection of React Hooks](https://nikgraf.github.io/react-hooks/)
+
+## 📅 10-09-2019
+
+### 🚀 [Red Stapler](https://redstapler.co)
+
+- [How to Create "Google Style" Login Form](https://www.youtube.com/watch?v=Dtxp3MAfz44)
+- [Nebula Cloud Particles Effect Three.js Tutorial](https://www.youtube.com/watch?v=5f5wwQb22tE)
+
+https://codepen.io/navinnavi19/pen/LYPmEZE
+
+- [Three.js Realistic Rain Effect](https://redstapler.co/three-js-realistic-rain-tutorial/)
+
+https://codepen.io/navinnavi19/pen/qBWYORJ

@@ -12,6 +12,14 @@ https://codepen.io/navinnavi19/pen/OYVeLw
 
 https://codepen.io/navinnavi19/pen/oOKXrO
 
+## Nebula Background Form Sign In
+
+https://codepen.io/navinnavi19/pen/LYPmEZE
+
+## Three.js Rain and thunder effect
+
+https://codepen.io/navinnavi19/pen/qBWYORJ
+
 ## Thanos Snap
 
 https://codepen.io/navinnavi19/pen/vwOqZj
