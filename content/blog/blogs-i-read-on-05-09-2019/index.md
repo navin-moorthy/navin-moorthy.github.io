@@ -90,3 +90,8 @@ https://codepen.io/navinnavi19/pen/LYPmEZE
 - [Three.js Realistic Rain Effect](https://redstapler.co/three-js-realistic-rain-tutorial/)
 
 https://codepen.io/navinnavi19/pen/qBWYORJ
+
+- [SketchFab free 3D Models](https://sketchfab.com)
+- [Add 3D Model to WebSite in 5 Minutes - Three.js Tutorial](https://www.youtube.com/watch?v=1TeMXIWRrqE)
+
+https://codepen.io/navinnavi19/pen/mdbLEpd

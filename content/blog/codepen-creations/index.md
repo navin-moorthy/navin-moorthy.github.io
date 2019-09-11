@@ -48,6 +48,10 @@ https://codepen.io/navinnavi19/pen/byever
 
 https://codepen.io/navinnavi19/pen/jorXRE
 
+## Three.js 3D Model 360deg camera rotation
+
+https://codepen.io/navinnavi19/pen/mdbLEpd
+
 ## Simple Profile without Bootstrap with own design.
 
 https://codepen.io/navinnavi19/pen/PvGmrP
