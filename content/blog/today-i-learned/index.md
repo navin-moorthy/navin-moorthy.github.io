@@ -1,7 +1,51 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-09-06"
+date: "2019-09-12"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 73. Three.js with RedStapler
+
+### Day 73: September 11, 2019 - Wednesday
+
+**Project:** Three.js with RedStapler
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [How to Create "Google Style" Login Form](https://www.youtube.com/watch?v=Dtxp3MAfz44)
+- [Nebula Cloud Particles Effect Three.js Tutorial](https://www.youtube.com/watch?v=5f5wwQb22tE)
+- [Three.js Realistic Rain Effect](https://redstapler.co/three-js-realistic-rain-tutorial/)
+- [Add 3D Model to WebSite in 5 Minutes - Three.js Tutorial](https://www.youtube.com/watch?v=1TeMXIWRrqE)
+
+**My Implementation**
+
+- [Nebula Cloud Particles Effect Three.js](https://codepen.io/navinnavi19/pen/LYPmEZE)
+- [Three.js Realistic Rain Effect](https://codepen.io/navinnavi19/pen/qBWYORJ)
+- [3D Model with GLTF Loader](https://codepen.io/navinnavi19/pen/mdbLEpd)
+
+---
+
+## 72. React useEffect
+
+### Day 72: September 10, 2019 - Tuesday
+
+**Project:** React useEffect
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [How the useEffect Hook Works](https://daveceddia.com/useeffect-hook-examples/)
+- [useState and useEffect Simple Example](https://stackblitz.com/edit/react-usestate-useeffect)
+- [How To Fetch Data From An API With React Hooks](https://codeburst.io/how-to-fetch-data-from-an-api-with-react-hooks-9e7202b8afcd)
+
+**Examples**
+
+- [Stackblitz Example of useEffect() render and unmount](https://stackblitz.com/edit/useeffect-render-unmount)
+- [useState and useEffect Simple Example](https://stackblitz.com/edit/react-usestate-useeffect)
+
 ---
 
 ## 71. React Internals

@@ -1,6 +1,6 @@
 ---
 title: Notes on Blogs I Read From 5th Sept to
-date: "2019-09-10"
+date: "2019-09-12"
 description: Notes taken while going through Web Development Blogs
 ---
 
@@ -78,7 +78,7 @@ Remember that `useState` is stateful (read more about useState). It only uses th
 - [Dan’s demo from React Conf](https://www.youtube.com/watch?v=V-QO-KO90iQ&list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ&index=2&t=0s)
 - [Nik Graf’s Collection of React Hooks](https://nikgraf.github.io/react-hooks/)
 
-## 📅 10-09-2019
+## 📅 11-09-2019
 
 ### 🚀 [Red Stapler](https://redstapler.co)
 
@@ -95,3 +95,7 @@ https://codepen.io/navinnavi19/pen/qBWYORJ
 - [Add 3D Model to WebSite in 5 Minutes - Three.js Tutorial](https://www.youtube.com/watch?v=1TeMXIWRrqE)
 
 https://codepen.io/navinnavi19/pen/mdbLEpd
+
+## 📅 12-09-2019
+
+### 🚀 [Color Tools For Designers 2019](https://medium.muz.li/color-tools-for-designers-2019-6ebd77a94ab)
