@@ -1,7 +1,7 @@
 ---
-title: Notes on Blogs I Read From 5th Sept to
-date: "2019-09-12"
-description: Notes taken while going through Web Development Blogs
+title: Notes on Blogs I Read From 5th Sept to 13th Sept
+date: "2019-09-13"
+description: Notes taken while going through Web Development Blogs with highlights useEffect, threejs, Array methos implementations, 9 tips for better code writing and 7 tips for to boost productivity
 ---
 
 ## 📅 05-09-2019
@@ -127,10 +127,26 @@ https://codepen.io/navinnavi19/pen/mdbLEpd
 
 ### 🚀 [Imperative vs Declarative Programming](https://tylermcginnis.com/imperative-vs-declarative-programming/)
 
+### [7 Tips to boost your productivity as a web developer 🚀](https://dev.to/mustapha/7-tips-to-boost-your-productivity-as-a-web-developer-4jh7)
+
+1. `A faster`querySelector`- Note that`querySelectorAll`returns a`NodeList`while`\$\$`returns an`array`.
+
+```js
+$(".some-class"); // instead of document.querySelector
+$$(".some-class"); // instead of document.querySelectorAll
+```
+
+2. Inspecting an element - Another useful feature you can use when you inspect an element (with the inspect tool of the devtools) is $0. After inspecting an element you can access it in the console by typing $0.
+3. console.table() - Gets the logs of Array or Objects in a table.
+4. console.dir() - This method will let you log the javascript object of a DOM element instead of its HTML.
+5.
+
+### 🚀 [CSS Grid: illustrated introduction](https://dev.to/mustapha/css-grid-illustrated-introduction-52l5)
+
+👨‍💻 By [Mustapha](https://dev.to/mustapha)
+
 ### Repls
 
 - [Memoization in JS](https://repl.it/@NavinA/memoization)
 - [Pure vs Impure Function](https://repl.it/@NavinA/pure-function-vs-impure-function)
 - [Imperative vs Declarative Programming](https://repl.it/@NavinA/imperative-vs-declarative-programming)
-
-### 🚀 [CSS Grid: illustrated introduction](https://dev.to/mustapha/css-grid-illustrated-introduction-52l5)

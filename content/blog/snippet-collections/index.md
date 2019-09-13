@@ -1,6 +1,6 @@
 ---
 title: Code Snippet Collectios
-date: "2019-09-10"
+date: "2019-09-13"
 description: Collection of code snippets I come across
 ---
 
