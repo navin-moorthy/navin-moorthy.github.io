@@ -129,17 +129,19 @@ https://codepen.io/navinnavi19/pen/mdbLEpd
 
 ### [7 Tips to boost your productivity as a web developer 🚀](https://dev.to/mustapha/7-tips-to-boost-your-productivity-as-a-web-developer-4jh7)
 
-1. `A faster`querySelector`- Note that`querySelectorAll`returns a`NodeList`while`\$\$`returns an`array`.
+1. A faster `querySelector` - Note that `querySelectorAll` returns a `NodeList` while `$$` returns an `array`.
 
 ```js
 $(".some-class"); // instead of document.querySelector
 $$(".some-class"); // instead of document.querySelectorAll
 ```
 
-2. Inspecting an element - Another useful feature you can use when you inspect an element (with the inspect tool of the devtools) is $0. After inspecting an element you can access it in the console by typing $0.
-3. console.table() - Gets the logs of Array or Objects in a table.
-4. console.dir() - This method will let you log the javascript object of a DOM element instead of its HTML.
-5.
+2. Inspecting an element - Another useful feature you can use when you inspect an element (with the inspect tool of the devtools) is `$0`. After inspecting an element you can access it in the console by typing `$0`.
+3. `console.table()` - Gets the logs of Array or Objects in a table.
+4. `console.dir()` - This method will let you log the javascript object of a DOM element instead of its HTML.
+5. `document.designMode = 'on'` - edit the text of any webpage.
+6. object destructuring
+7. [array-and-object-destructuring](https://repl.it/@NavinA/array-and-object-destructuring)
 
 ### 🚀 [CSS Grid: illustrated introduction](https://dev.to/mustapha/css-grid-illustrated-introduction-52l5)
 
@@ -150,3 +152,6 @@ $$(".some-class"); // instead of document.querySelectorAll
 - [Memoization in JS](https://repl.it/@NavinA/memoization)
 - [Pure vs Impure Function](https://repl.it/@NavinA/pure-function-vs-impure-function)
 - [Imperative vs Declarative Programming](https://repl.it/@NavinA/imperative-vs-declarative-programming)
+- [array-and-object-destructuring](https://repl.it/@NavinA/array-and-object-destructuring)
+- [filter Implementation](https://repl.it/@NavinA/filter-implementation)
+- [reduce Implementation](https://repl.it/@NavinA/reduce-implementation)
