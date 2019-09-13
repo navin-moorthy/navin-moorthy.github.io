@@ -99,3 +99,38 @@ https://codepen.io/navinnavi19/pen/mdbLEpd
 ## 📅 12-09-2019
 
 ### 🚀 [Color Tools For Designers 2019](https://medium.muz.li/color-tools-for-designers-2019-6ebd77a94ab)
+
+### 🚀 [Understand array methods by implementing them — all of them](https://dev.to/bnevilleoneill/understand-array-methods-by-implementing-them-all-of-them-iha)
+
+👨‍💻 By [Brian Neville-O'Neill](https://dev.to/bnevilleoneill)
+
+- Test Cased by Author in [this repo](https://github.com/maciejcieslar/array-methods)
+- [More JS Katas](https://github.com/loujaybee/JS-Katas)
+
+### 🚀 [value vs references](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
+
+### Repls
+
+- [Values and References](https://repl.it/@NavinA/values-and-references)
+- [forEach Implementation](https://repl.it/@NavinA/forEach-implementation)
+- [map Implementation](https://repl.it/@NavinA/map-implementation)
+
+## 📅 13-09-2019
+
+### 🚀 [Memoization in JS](https://www.carloscaballero.io/understanding-javascript-typescript-memoization)
+
+- [Original Repo for Example](https://github.com/Caballerog/blog/blob/master/memoization/index.js)
+- [Fast Memoize](https://github.com/caiogondim/fast-memoize.js)
+- [Moize](https://github.com/planttheidea/moize)
+- [Memoizee](https://github.com/medikoo/memoizee)
+- [Lodash-Decorators](https://github.com/steelsojka/lodash-decorators)
+
+### 🚀 [Imperative vs Declarative Programming](https://tylermcginnis.com/imperative-vs-declarative-programming/)
+
+### Repls
+
+- [Memoization in JS](https://repl.it/@NavinA/memoization)
+- [Pure vs Impure Function](https://repl.it/@NavinA/pure-function-vs-impure-function)
+- [Imperative vs Declarative Programming](https://repl.it/@NavinA/imperative-vs-declarative-programming)
+
+### 🚀 [CSS Grid: illustrated introduction](https://dev.to/mustapha/css-grid-illustrated-introduction-52l5)
