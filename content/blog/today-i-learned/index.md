@@ -4,6 +4,59 @@ date: "2019-09-12"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+## 75. Array Prototype Implementation
+
+### Day 75: September 13, 2019 - Friday
+
+![CSS Grid](../css-grid-collection/images/css-grid-illustrated-introduction.png)
+
+**Project:** Array Prototype Implementation
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Memoization in JS](https://www.carloscaballero.io/understanding-javascript-typescript-memoization)
+- [Imperative vs Declarative Programming](https://tylermcginnis.com/imperative-vs-declarative-programming/)
+- [7 Tips to boost your productivity as a web developer 🚀](https://dev.to/mustapha/7-tips-to-boost-your-productivity-as-a-web-developer-4jh7)
+- [CSS Grid: illustrated introduction](https://dev.to/mustapha/css-grid-illustrated-introduction-52l5)
+- [value vs references](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
+
+**My Implementation**
+
+- [Memoization in JS](https://repl.it/@NavinA/memoization)
+- [Pure vs Impure Function](https://repl.it/@NavinA/pure-function-vs-impure-function)
+- [Imperative vs Declarative Programming](https://repl.it/@NavinA/imperative-vs-declarative-programming)
+- [array-and-object-destructuring](https://repl.it/@NavinA/array-and-object-destructuring)
+- [filter Implementation](https://repl.it/@NavinA/filter-implementation)
+- [reduce Implementation](https://repl.it/@NavinA/reduce-implementation)
+
+---
+
+## 74. Array Prototype Implementation
+
+### Day 74: September 12, 2019 - Thursday
+
+![forEach Implementation](images/74.forEach-implementation.jpg)
+
+**Project:** Array Prototype Implementation
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Color Tools For Designers 2019](https://medium.muz.li/color-tools-for-designers-2019-6ebd77a94ab)
+- [Understand array methods by implementing them — all of them](https://dev.to/bnevilleoneill/understand-array-methods-by-implementing-them-all-of-them-iha)
+- [value vs references](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
+
+**My Implementation**
+
+- [Values and References](https://repl.it/@NavinA/values-and-references)
+- [forEach Implementation](https://repl.it/@NavinA/forEach-implementation)
+- [map Implementation](https://repl.it/@NavinA/map-implementation)
+
+---
+
 ## 73. Three.js with RedStapler
 
 ### Day 73: September 11, 2019 - Wednesday
