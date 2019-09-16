@@ -72,3 +72,17 @@ flex-grow: 1;
 ```css
 flex-shrink: 1;
 ```
+
+#### 🌟 Flex-Basis
+
+- Fills the width based on pixel(px)
+- `width` is completely ignored.
+- If `width` is `300px` with `flex-basis: 100px` then `flex-basis: 100px`
+- If `min-width` is `300px` with `flex-basis: 100px` then `flex-basis: 300px`
+- If `max-width` is `30px` with `flex-basis: 100px` then `flex-basis: 30px`
+- Default: `flex-basis: auto`
+- `flex-basis` is just a hypothetical size before any growing or shrinking begins.
+
+```css
+flex-basis: 100px;
+```

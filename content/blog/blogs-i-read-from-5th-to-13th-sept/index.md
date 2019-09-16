@@ -158,11 +158,11 @@ $$(".some-class"); // instead of document.querySelectorAll
 - [filter Implementation](https://repl.it/@NavinA/filter-implementation)
 - [reduce Implementation](https://repl.it/@NavinA/reduce-implementation)
 
-## 📅 14-09-2019
+## 📅 15-09-2019
 
 ### 🚀 [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
 
-## 📅 15-09-2019
+## 📅 16-09-2019
 
 ### 🚀 [Understand array methods by implementing them — all of them](https://dev.to/bnevilleoneill/understand-array-methods-by-implementing-them-all-of-them-iha)
 
@@ -178,3 +178,5 @@ $$(".some-class"); // instead of document.querySelectorAll
 - [push-implementation](https://repl.it/@NavinA/push-implementation)
 - [concat-implementation](https://repl.it/@NavinA/concat-implementation)
 - [flat-implementation](https://repl.it/@NavinA/flat-implementation)
+
+### 🚀 [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
