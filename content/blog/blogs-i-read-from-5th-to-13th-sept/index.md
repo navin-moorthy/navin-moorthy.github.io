@@ -127,7 +127,9 @@ https://codepen.io/navinnavi19/pen/mdbLEpd
 
 ### 🚀 [Imperative vs Declarative Programming](https://tylermcginnis.com/imperative-vs-declarative-programming/)
 
-### [7 Tips to boost your productivity as a web developer 🚀](https://dev.to/mustapha/7-tips-to-boost-your-productivity-as-a-web-developer-4jh7)
+### 🚀 [Understand array methods by implementing them — all of them](https://dev.to/bnevilleoneill/understand-array-methods-by-implementing-them-all-of-them-iha)
+
+### 🚀 [7 Tips to boost your productivity as a web developer 🚀](https://dev.to/mustapha/7-tips-to-boost-your-productivity-as-a-web-developer-4jh7)
 
 1. A faster `querySelector` - Note that `querySelectorAll` returns a `NodeList` while `$$` returns an `array`.
 
@@ -159,3 +161,20 @@ $$(".some-class"); // instead of document.querySelectorAll
 ## 📅 14-09-2019
 
 ### 🚀 [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
+
+## 📅 15-09-2019
+
+### 🚀 [Understand array methods by implementing them — all of them](https://dev.to/bnevilleoneill/understand-array-methods-by-implementing-them-all-of-them-iha)
+
+### Repls
+
+- [find-index-implementation](https://repl.it/@NavinA/find-index-implementation)
+- [find-implementation](https://repl.it/@NavinA/find-implementation)
+- [indexOf-implementation](https://repl.it/@NavinA/indexOf-implementation)
+- [lastIndexOf-implementation](https://repl.it/@NavinA/lastIndexOf-implementation)
+- [every-implementation](https://repl.it/@NavinA/every-implementation)
+- [some-implementation](https://repl.it/@NavinA/some-implementation)
+- [includes-implementation](https://repl.it/@NavinA/includes-implementation)
+- [push-implementation](https://repl.it/@NavinA/push-implementation)
+- [concat-implementation](https://repl.it/@NavinA/concat-implementation)
+- [flat-implementation](https://repl.it/@NavinA/flat-implementation)
