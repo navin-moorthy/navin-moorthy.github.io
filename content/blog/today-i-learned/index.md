@@ -1,6 +1,6 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-09-12"
+date: "2019-09-15"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
@@ -21,6 +21,7 @@ Learned about a couple of new things,
 - [7 Tips to boost your productivity as a web developer 🚀](https://dev.to/mustapha/7-tips-to-boost-your-productivity-as-a-web-developer-4jh7)
 - [CSS Grid: illustrated introduction](https://dev.to/mustapha/css-grid-illustrated-introduction-52l5)
 - [value vs references](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
+- [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
 
 **My Implementation**
 

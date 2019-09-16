@@ -1,6 +1,6 @@
 ---
 title: CSS Flexbox
-date: "2019-09-13"
+date: "2019-09-15"
 description: Notes taken while learning CSS Flexbox
 ---
 
@@ -63,4 +63,12 @@ align-self: flex-end;
 
 ```css
 flex-grow: 1;
+```
+
+#### 🌟 Flex-Shrink
+
+- Fills the empty space
+
+```css
+flex-shrink: 1;
 ```
