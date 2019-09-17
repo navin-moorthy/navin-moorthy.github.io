@@ -8,6 +8,8 @@ description: Round 2 of 100 Days of Code where I log daily activities of my codi
 
 ### Day 77: September 16, 2019 - Monday
 
+![Array Method Implementation](images/77.array-method-implementation.jpg)
+
 **Project:** Array Prototype Implementation
 
 **Brief Description:**
