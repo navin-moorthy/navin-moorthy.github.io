@@ -1,6 +1,6 @@
 ---
 title: CSS Grid
-date: "2019-09-13"
+date: "2019-09-17"
 description: Notes taken while learning CSS Grid
 ---
 
@@ -75,6 +75,7 @@ Row/Columss - `grid-template: 1fr auto 2fr / 1fr 1fr 1fr 1fr ;`
 ### 🌟 Repeat function
 
 Repeat - `grid-template: 1fr auto 2fr / repeat(4, 1fr);`
+Repeat multiple - `grid-template: 1fr auto 2fr / repeat(4, 100px 50px);`
 
 ### 🌟 Minmax function
 

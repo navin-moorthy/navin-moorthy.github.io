@@ -184,3 +184,7 @@ $$(".some-class"); // instead of document.querySelectorAll
 ## 📅 17-09-2019
 
 ### 🚀 [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
+
+### 🚀 [Grid Critters](https://gridcritters.com/)
+
+### 🚀 [Service Workers](https://serviceworkies.mastery.games/)

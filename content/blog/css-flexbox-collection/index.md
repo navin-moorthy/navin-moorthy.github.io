@@ -86,3 +86,13 @@ flex-shrink: 1;
 ```css
 flex-basis: 100px;
 ```
+
+#### 🌟 Order
+
+- Order on items
+- Items with no Order will be moved to front in the same flex
+- `order: -1` comes to front when other items are not in order
+
+```css
+order: 2;
+```
