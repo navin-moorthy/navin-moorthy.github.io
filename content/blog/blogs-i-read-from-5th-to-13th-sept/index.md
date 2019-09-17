@@ -1,6 +1,6 @@
 ---
 title: Notes on Blogs I Read From 5th Sept to 13th Sept
-date: "2019-09-15"
+date: "2019-09-17"
 description: Notes taken while going through Web Development Blogs with highlights useEffect, threejs, Array methos implementations, 9 tips for better code writing and 7 tips for to boost productivity
 ---
 
@@ -178,5 +178,9 @@ $$(".some-class"); // instead of document.querySelectorAll
 - [push-implementation](https://repl.it/@NavinA/push-implementation)
 - [concat-implementation](https://repl.it/@NavinA/concat-implementation)
 - [flat-implementation](https://repl.it/@NavinA/flat-implementation)
+
+### 🚀 [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
+
+## 📅 17-09-2019
 
 ### 🚀 [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)

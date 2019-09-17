@@ -1,7 +1,53 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-09-15"
+date: "2019-09-17"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 77. Array Prototype Implementation
+
+### Day 77: September 16, 2019 - Monday
+
+**Project:** Array Prototype Implementation
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Understand array methods by implementing them — all of them](https://dev.to/bnevilleoneill/understand-array-methods-by-implementing-them-all-of-them-iha)
+- [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
+- [CSS Flex Notes](https://navin-navi.github.io/blog/css-flexbox-collection/)
+
+**My Implementation**
+
+- [find-index-implementation](https://repl.it/@NavinA/find-index-implementation)
+- [find-implementation](https://repl.it/@NavinA/find-implementation)
+- [indexOf-implementation](https://repl.it/@NavinA/indexOf-implementation)
+- [lastIndexOf-implementation](https://repl.it/@NavinA/lastIndexOf-implementation)
+- [every-implementation](https://repl.it/@NavinA/every-implementation)
+- [some-implementation](https://repl.it/@NavinA/some-implementation)
+- [includes-implementation](https://repl.it/@NavinA/includes-implementation)
+- [push-implementation](https://repl.it/@NavinA/push-implementation)
+- [concat-implementation](https://repl.it/@NavinA/concat-implementation)
+- [flat-implementation](https://repl.it/@NavinA/flat-implementation)on)
+
+---
+
+## 76. Flexbox Zombies
+
+### Day 76: September 15, 2019 - Sunday
+
+![Flexbox Zombies](../css-flexbox-collection/images/fbz-banner.jpg)
+
+**Project:** Flexbox Zombies
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
+- [CSS Flex Notes](https://navin-navi.github.io/blog/css-flexbox-collection/)
+
 ---
 
 ## 75. Array Prototype Implementation

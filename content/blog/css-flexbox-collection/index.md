@@ -1,6 +1,6 @@
 ---
 title: CSS Flexbox
-date: "2019-09-15"
+date: "2019-09-17"
 description: Notes taken while learning CSS Flexbox
 ---
 
