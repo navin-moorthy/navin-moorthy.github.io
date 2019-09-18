@@ -207,3 +207,14 @@ $$(".some-class"); // instead of document.querySelectorAll
 - [values-implementation](https://repl.it/@NavinA/values-implementation)
 - [keys-implementation](https://repl.it/@NavinA/keys-implementation)
 - [entries-implementation](https://repl.it/@NavinA/entries-implementation)
+
+### CodePens
+
+- [Gradient Border Animated](https://codepen.io/navinnavi19/pen/jONeqaz)
+- [Letter A made of A](https://codepen.io/navinnavi19/pen/MWgPjXo)
+
+### 🚀 [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
+
+Chapter 9 Done
+
+### 🚀 [Service Workers](https://serviceworkies.mastery.games/)

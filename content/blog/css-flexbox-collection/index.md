@@ -96,3 +96,10 @@ flex-basis: 100px;
 ```css
 order: 2;
 ```
+
+#### 🌟 Flex-wrap
+
+```css
+flex-wrap: wrap;
+flex-wrap: wrap-reverse;
+```
