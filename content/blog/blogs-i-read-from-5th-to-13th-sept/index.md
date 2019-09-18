@@ -1,6 +1,6 @@
 ---
 title: Notes on Blogs I Read From 5th Sept to 13th Sept
-date: "2019-09-17"
+date: "2019-09-18"
 description: Notes taken while going through Web Development Blogs with highlights useEffect, threejs, Array methos implementations, 9 tips for better code writing and 7 tips for to boost productivity
 ---
 
@@ -188,3 +188,22 @@ $$(".some-class"); // instead of document.querySelectorAll
 ### 🚀 [Grid Critters](https://gridcritters.com/)
 
 ### 🚀 [Service Workers](https://serviceworkies.mastery.games/)
+
+## 📅 18-09-2019
+
+### 🚀 [Understand array methods by implementing them — all of them](https://dev.to/bnevilleoneill/understand-array-methods-by-implementing-them-all-of-them-iha)
+
+### Repls
+
+- [flatMap-implementation](https://repl.it/@NavinA/flatMap-implementation)
+- [join-implementation](https://repl.it/@NavinA/join-implementation)
+- [reverse-implementation](https://repl.it/@NavinA/reverse-implementation)
+- [shift-implementation](https://repl.it/@NavinA/shift-implementation)
+- [unshift-implementation](https://repl.it/@NavinA/unshift-implementation)
+- [slice-implementation](https://repl.it/@NavinA/slice-implementation)
+- [splice-implementation](https://repl.it/@NavinA/splice-implementation)
+- [pop-implementation](https://repl.it/@NavinA/pop-implementation)
+- [fill-implementation](https://repl.it/@NavinA/fill-implementation)
+- [values-implementation](https://repl.it/@NavinA/values-implementation)
+- [keys-implementation](https://repl.it/@NavinA/keys-implementation)
+- [entries-implementation](https://repl.it/@NavinA/entries-implementation)

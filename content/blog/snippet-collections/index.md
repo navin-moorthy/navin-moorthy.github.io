@@ -1,6 +1,6 @@
 ---
 title: Code Snippet Collectios
-date: "2019-09-13"
+date: "2019-09-18"
 description: Collection of code snippets I come across
 ---
 
@@ -13,7 +13,7 @@ description: Collection of code snippets I come across
 - [Imperative vs Declarative Programming](https://repl.it/@NavinA/imperative-vs-declarative-programming)
 - [array-and-object-destructuring](https://repl.it/@NavinA/array-and-object-destructuring)
 
-### 💡 Array Implementation
+### 💡 Array Method Implementation
 
 - [forEach Implementation](https://repl.it/@NavinA/forEach-implementation)
 - [map Implementation](https://repl.it/@NavinA/map-implementation)
@@ -29,3 +29,20 @@ description: Collection of code snippets I come across
 - [push-implementation](https://repl.it/@NavinA/push-implementation)
 - [concat-implementation](https://repl.it/@NavinA/concat-implementation)
 - [flat-implementation](https://repl.it/@NavinA/flat-implementation)
+- [flatMap-implementation](https://repl.it/@NavinA/flatMap-implementation)
+- [join-implementation](https://repl.it/@NavinA/join-implementation)
+- [reverse-implementation](https://repl.it/@NavinA/reverse-implementation)
+- [shift-implementation](https://repl.it/@NavinA/shift-implementation)
+- [unshift-implementation](https://repl.it/@NavinA/unshift-implementation)
+- [slice-implementation](https://repl.it/@NavinA/slice-implementation)
+- [splice-implementation](https://repl.it/@NavinA/splice-implementation)
+- [pop-implementation](https://repl.it/@NavinA/pop-implementation)
+- [fill-implementation](https://repl.it/@NavinA/fill-implementation)
+- [values-implementation](https://repl.it/@NavinA/values-implementation)
+- [keys-implementation](https://repl.it/@NavinA/keys-implementation)
+- [entries-implementation](https://repl.it/@NavinA/entries-implementation)
+
+## 🔆 CSS
+
+- [Gradient Border Animated](https://codepen.io/navinnavi19/pen/jONeqaz)
+- [Letter A made of A](https://codepen.io/navinnavi19/pen/MWgPjXo)
