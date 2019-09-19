@@ -1,7 +1,7 @@
 ---
 title: Notes on Blogs I Read From 5th Sept to 18th Sept
 date: "2019-09-19"
-description: Notes taken while going through Web Development Blogs with highlights useEffect, threejs, Array methos implementations, tips for better code writing and boost productivity and
+description: Notes taken while going through Web Development Blogs with highlights useEffect, threejs, Array methos implementations, tips for better code writing and boost productivity and Flexbox Zombies
 ---
 
 ## 📅 05-09-2019
