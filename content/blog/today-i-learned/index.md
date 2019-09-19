@@ -1,7 +1,62 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-09-17"
+date: "2019-09-19"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 79. Array Prototype Implementation
+
+### Day 79: September 18, 2019 - Wednesday
+
+**Project:** Array Prototype Implementation
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Understand array methods by implementing them — all of them](https://dev.to/bnevilleoneill/understand-array-methods-by-implementing-them-all-of-them-iha)
+- [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
+- Chapter 9 Done in[Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
+- Resourced in [Service Workers lifecycle resources read ](https://serviceworkies.mastery.games/)
+
+**My Array Method Implementation**
+
+- [flatMap-implementation](https://repl.it/@NavinA/flatMap-implementation)
+- [join-implementation](https://repl.it/@NavinA/join-implementation)
+- [reverse-implementation](https://repl.it/@NavinA/reverse-implementation)
+- [shift-implementation](https://repl.it/@NavinA/shift-implementation)
+- [unshift-implementation](https://repl.it/@NavinA/unshift-implementation)
+- [slice-implementation](https://repl.it/@NavinA/slice-implementation)
+- [splice-implementation](https://repl.it/@NavinA/splice-implementation)
+- [pop-implementation](https://repl.it/@NavinA/pop-implementation)
+- [fill-implementation](https://repl.it/@NavinA/fill-implementation)
+- [values-implementation](https://repl.it/@NavinA/values-implementation)
+- [keys-implementation](https://repl.it/@NavinA/keys-implementation)
+- [entries-implementation](https://repl.it/@NavinA/entries-implementation)
+
+**CodePens**
+
+- [Gradient Border Animated](https://codepen.io/navinnavi19/pen/jONeqaz)
+- [Letter A made of A](https://codepen.io/navinnavi19/pen/MWgPjXo)
+
+---
+
+## 78. Grid Chitters and Service Workers
+
+### Day 78: September 17, 2019 - Tuesday
+
+![Service Workers](../service-workers/images/service-worker.jpg)
+
+**Project:** Grid Chitters and Service Workers
+
+**Brief Description:**
+
+Learned about a couple of new things,
+
+- [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
+- [Grid Critters](https://gridcritters.com/)
+- [Service Workers](https://serviceworkies.mastery.games/)
+
 ---
 
 ## 77. Array Prototype Implementation
@@ -31,7 +86,7 @@ Learned about a couple of new things,
 - [includes-implementation](https://repl.it/@NavinA/includes-implementation)
 - [push-implementation](https://repl.it/@NavinA/push-implementation)
 - [concat-implementation](https://repl.it/@NavinA/concat-implementation)
-- [flat-implementation](https://repl.it/@NavinA/flat-implementation)on)
+- [flat-implementation](https://repl.it/@NavinA/flat-implementation)
 
 ---
 
