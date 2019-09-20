@@ -11,7 +11,7 @@ description: Notes taken while going through Web Development Blogs with highligh
 - [Floating Footer Template](https://codepen.io/navinnavi19/pen/aboQoVX)
 - [Flower Animation](https://codepen.io/navinnavi19/pen/ExYOjvO)
 
-## 📅 19-09-2019
+## 📅 20-09-2019
 
 ### 🚀 [new-es2019-javascript-features](https://blog.linguinecode.com/post/new-es2019-javascript-features)
 
@@ -28,4 +28,4 @@ description: Notes taken while going through Web Development Blogs with highligh
 ### ☀ Codepen
 
 - [Flower Animation](https://codepen.io/navinnavi19/pen/ExYOjvO)
-- [Event Bubbling vd Event Capturing](https://codepen.io/navinnavi19/pen/bGbQMKb)
+- [Event Bubbling vs Event Capturing](https://codepen.io/navinnavi19/pen/bGbQMKb)
