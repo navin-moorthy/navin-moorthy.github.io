@@ -1,7 +1,25 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-09-19"
+date: "2019-09-23"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 82. Modern React with Redux
+
+### Day 82: September 23, 2019 - Monday
+
+![Modern React with Redux](images/r2d82.jpg)
+
+**Project:** Modern React with Redux
+
+- First 3 sections done in Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
+- Learned about Firebase Security on complete-react-developer-zero-to-mastery updated course
+- Chapter 10 & 11 Done in [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
+
+**Stackblitz**
+
+- [Props Intro Project](https://stackblitz.com/edit/react-with-redux-components)
+
 ---
 
 ## 81. Event Bubbling vs Event Capturing
