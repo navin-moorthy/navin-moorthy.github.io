@@ -21,7 +21,7 @@ description: Notes taken while going through Web Development Blogs with highligh
 - With capturing, the event is first captured by the outermost element and propagated to the inner elements.
 -
 
-### Repl
+### 👨‍💻 Repl
 
 - [JS Snippet Collections](https://repl.it/@NavinA/JS-Snippet-Collections)
 
@@ -29,3 +29,16 @@ description: Notes taken while going through Web Development Blogs with highligh
 
 - [Flower Animation](https://codepen.io/navinnavi19/pen/ExYOjvO)
 - [Event Bubbling vs Event Capturing](https://codepen.io/navinnavi19/pen/bGbQMKb)
+
+## 📅 23-09-2019
+
+### 🚀 Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
+
+[Stephen Grider GitHub Code](https://github.com/StephenGrider/redux-code)
+[Rally Coding](https://www.rallycoding.com/)
+
+### 🚀 Firebase Security on complete-react-developer-zero-to-mastery updated course
+
+- [Github Final Repo with Cart on Firebase](https://github.com/ZhangMYihua/crwn-clothing-firebase-cart)
+- [where query](https://firebase.google.com/docs/firestore/query-data/get-data#get_multiple_documents_from_a_collection)
+- [resources and data keyword](https://firebase.google.com/docs/firestore/security/rules-conditions#data_validation)

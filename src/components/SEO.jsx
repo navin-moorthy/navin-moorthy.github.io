@@ -134,6 +134,11 @@ const SEO = ({ siteTitle }) => {
         {JSON.stringify(schemaOrgWebPage)}
       </script>
       <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charset="utf-8"
+      ></script>
     </Helmet>
   );
 };
