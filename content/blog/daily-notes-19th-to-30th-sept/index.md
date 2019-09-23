@@ -37,8 +37,15 @@ description: Notes taken while going through Web Development Blogs with highligh
 [Stephen Grider GitHub Code](https://github.com/StephenGrider/redux-code)
 [Rally Coding](https://www.rallycoding.com/)
 
+- 3 Sections Done
+- [Props Intro Project](https://stackblitz.com/edit/react-with-redux-components)
+
 ### 🚀 Firebase Security on complete-react-developer-zero-to-mastery updated course
 
 - [Github Final Repo with Cart on Firebase](https://github.com/ZhangMYihua/crwn-clothing-firebase-cart)
 - [where query](https://firebase.google.com/docs/firestore/query-data/get-data#get_multiple_documents_from_a_collection)
 - [resources and data keyword](https://firebase.google.com/docs/firestore/security/rules-conditions#data_validation)
+
+### 🚀 [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
+
+- Chapter 10 & 11 Done.

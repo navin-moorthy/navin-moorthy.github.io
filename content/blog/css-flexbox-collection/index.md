@@ -103,3 +103,20 @@ order: 2;
 flex-wrap: wrap;
 flex-wrap: wrap-reverse;
 ```
+
+#### 🌟 Flex-wrap
+
+```css
+align-content: flex-start;
+align-content: flex-end;
+align-content: center;
+align-content: space-between;
+align-content: space-around;
+```
+
+#### 🌟 Shorthand
+
+```css
+flex-flow: row-reverse wrap;
+flex: 1 1 auto;
+```
