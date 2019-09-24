@@ -1,7 +1,26 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-09-23"
+date: "2019-09-24"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 83. Modern React with Redux
+
+### Day 83: September 24, 2019 - Tuesday
+
+![Modern React with Redux](images/r2d83.png)
+
+**Project:** Modern React with Redux
+
+- Learned about State and Lifecyle management in Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
+- Completed in [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
+
+**Stackblitz**
+
+- [modern-react-with-redux-climate-month-app](https://stackblitz.com/edit/modern-react-with-redux-climate-month-app)
+- [modern-react-with-redux-search-image-api](https://stackblitz.com/edit/modern-react-with-redux-search-image-api)
+- [react-template-for-forking](https://stackblitz.com/edit/react-template-for-forking)
+
 ---
 
 ## 82. Modern React with Redux

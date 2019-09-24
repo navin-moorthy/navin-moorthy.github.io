@@ -1,6 +1,6 @@
 ---
 title: Notes on Blogs I Read From 18th Sept to 30th Sept
-date: "2019-09-19"
+date: "2019-09-24"
 description: Notes taken while going through Web Development Blogs with highlights
 ---
 
@@ -49,3 +49,15 @@ description: Notes taken while going through Web Development Blogs with highligh
 ### 🚀 [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
 
 - Chapter 10 & 11 Done.
+
+## 📅 24-09-2019
+
+### 🚀 Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
+
+- [modern-react-with-redux-climate-month-app](https://stackblitz.com/edit/modern-react-with-redux-climate-month-app)
+- [modern-react-with-redux-search-image-api](https://stackblitz.com/edit/modern-react-with-redux-search-image-api)
+- [react-template-for-forking](https://stackblitz.com/edit/react-template-for-forking)
+
+### 🚀 [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
+
+- Chapter 12 Done.

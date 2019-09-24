@@ -1,6 +1,6 @@
 ---
 title: Flexbox 30 by Samantha Ming
-date: "2019-09-23"
+date: "2019-09-24"
 description: Notes taken while learning CSS Flexbox from Flexbox30
 ---
 
@@ -49,3 +49,5 @@ description: Notes taken while learning CSS Flexbox from Flexbox30
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Flexbox30?src=hash&amp;ref_src=twsrc%5Etfw">#Flexbox30</a> Day 21 ✨<br><br>I mentioned in the beginning that Flexbox is great for responsive design. This is where it shines. &quot;flex-grow&quot; allows our flex item to grow if necessary. So if there is extra free space in my container, it will automatically fill that space! CRAZY 🤯 <a href="https://t.co/HlJPMYwXBO">pic.twitter.com/HlJPMYwXBO</a></p>&mdash; Samantha Ming (@samantha_ming) <a href="https://twitter.com/samantha_ming/status/1175483743898701824?ref_src=twsrc%5Etfw">September 21, 2019</a></blockquote>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Flexbox30?src=hash&amp;ref_src=twsrc%5Etfw">#Flexbox30</a> Day 22 ✨<br><br>Being able to grow &amp; fill the free space is so cool. But I always wonder how does the browser calculate the width. So let&#39;s look at the math. You don&#39;t need to know this, but if you&#39;re a nerd like me, you might find this interesting😂<a href="https://twitter.com/hashtag/CodeNewbie?src=hash&amp;ref_src=twsrc%5Etfw">#CodeNewbie</a> <a href="https://twitter.com/hashtag/CSS?src=hash&amp;ref_src=twsrc%5Etfw">#CSS</a> <a href="https://t.co/vDNDMgovJM">pic.twitter.com/vDNDMgovJM</a></p>&mdash; Samantha Ming (@samantha_ming) <a href="https://twitter.com/samantha_ming/status/1175846647714041856?ref_src=twsrc%5Etfw">September 22, 2019</a></blockquote>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Flexbox30?src=hash&amp;ref_src=twsrc%5Etfw">#Flexbox30</a> Day 23 ✨<br><br>So flex-grow will expand to fill the extra space if there is any. The opposite of that is flex-shrink. What happens when you run out of space. This is the property that controls how much your flex items should shrink to fit 👍 <a href="https://t.co/4cOdkVAk6V">pic.twitter.com/4cOdkVAk6V</a></p>&mdash; Samantha Ming (@samantha_ming) <a href="https://twitter.com/samantha_ming/status/1176150755746570242?ref_src=twsrc%5Etfw">September 23, 2019</a></blockquote>
