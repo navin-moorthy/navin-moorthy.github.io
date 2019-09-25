@@ -69,3 +69,9 @@ description: Notes taken while going through Web Development Blogs with highligh
 - [modern-react-with-redux-search-image-api](https://stackblitz.com/edit/modern-react-with-redux-search-image-api)
 - [modern-react-with-redux-youtube-video-search-api](https://stackblitz.com/edit/modern-react-with-redux-youtube-video-search-api)
 - [Redux Intro - Modern React with Redux](https://codepen.io/navinnavi19/pen/KKPEmMw)
+
+### 🚀 [react-hooks](https://wattenberger.com/blog/react-hooks)
+
+### [Making setInterval Declarative with React Hooks](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
+
+- [useInterval hook](https://stackblitz.com/edit/react-useinterval-dan)
