@@ -61,3 +61,11 @@ description: Notes taken while going through Web Development Blogs with highligh
 ### 🚀 [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
 
 - Chapter 12 Done.
+
+## 📅 25-09-2019
+
+### 🚀 Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
+
+- [modern-react-with-redux-search-image-api](https://stackblitz.com/edit/modern-react-with-redux-search-image-api)
+- [modern-react-with-redux-youtube-video-search-api](https://stackblitz.com/edit/modern-react-with-redux-youtube-video-search-api)
+- [Redux Intro - Modern React with Redux](https://codepen.io/navinnavi19/pen/KKPEmMw)
