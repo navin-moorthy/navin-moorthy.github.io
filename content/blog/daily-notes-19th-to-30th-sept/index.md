@@ -78,8 +78,13 @@ description: Notes taken while going through Web Development Blogs with highligh
 
 ## 📅 26-09-2019
 
-### 🚀 Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
-
-### 🚀 [Next Generation Virtual Scrolling](https://www.sitepen.com/blog/next-generation-virtual-scrolling/)
-
-### 🚀 [Most popular github js repositories in august and september 2019](https://itnext.io/33-26-most-popular-github-js-repositories-in-august-and-september-2019-e8f17da6af4)
+- [Next Generation Virtual Scrolling](https://www.sitepen.com/blog/next-generation-virtual-scrolling/)
+- [Most popular github js repositories in august and september 2019](https://itnext.io/33-26-most-popular-github-js-repositories-in-august-and-september-2019-e8f17da6af4)
+- [web-design-in-4-minutes](https://jgthms.com/web-design-in-4-minutes)
+- [javascript-in-14-minutes](https://jgthms.com/javascript-in-14-minutes/)
+- [finding-the-best-way-to-learn-javascript](https://blog.soshace.com/en/javascript/finding-the-best-way-to-learn-javascript/)
+- [web-developer-portfolio-the-definitive-2019-guide-with-15-portfolio-examples](https://blog.soshace.com/en/tips/web-developer-portfolio-the-definitive-2019-guide-with-15-portfolio-examples/)
+- [5-essential-seo-tips-for-web-developers](https://blog.soshace.com/en/tips/5-essential-seo-tips-for-web-developers/)
+- [the-importance-of-showing-off-your-soft-skills-plus-great-examples-of-soft-skills-to-quickly-boost-your-resume](https://blog.soshace.com/en/human-resources/the-importance-of-showing-off-your-soft-skills-plus-great-examples-of-soft-skills-to-quickly-boost-your-resume/)
+- [how-remote-workers-should-build-their-online-presence](https://blog.soshace.com/en/remote-job/how-remote-workers-should-build-their-online-presence/)
+- [examples-of-closures-in-javascript](https://medium.com/javascript-in-plain-english/examples-of-closures-in-javascript-9bc397bbf1a1)
