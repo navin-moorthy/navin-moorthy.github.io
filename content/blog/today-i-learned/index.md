@@ -4,6 +4,24 @@ date: "2019-09-24"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+## 84. React Hooks useInterval
+
+### Day 84: September 25, 2019 - Wednesday
+
+**Project:** React Hooks useInterval
+
+- Learned Redux and created a small app using Youtube API in Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
+- [React-Hooks with amazing data visualiztion](https://wattenberger.com/blog/react-hooks)
+- [Making setInterval Declarative with React Hooks](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
+
+**Stackblitz**
+
+- [modern-react-with-redux-search-image-api](https://stackblitz.com/edit/modern-react-with-redux-search-image-api)
+- [modern-react-with-redux-youtube-video-search-api](https://stackblitz.com/edit/modern-react-with-redux-youtube-video-search-api)
+- [react-useinterval-dan](https://stackblitz.com/edit/react-useinterval-dan)
+
+---
+
 ## 83. Modern React with Redux
 
 ### Day 83: September 24, 2019 - Tuesday

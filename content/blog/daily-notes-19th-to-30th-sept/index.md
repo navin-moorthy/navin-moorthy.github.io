@@ -75,3 +75,11 @@ description: Notes taken while going through Web Development Blogs with highligh
 ### [Making setInterval Declarative with React Hooks](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
 
 - [useInterval hook](https://stackblitz.com/edit/react-useinterval-dan)
+
+## 📅 26-09-2019
+
+### 🚀 Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
+
+### 🚀 [Next Generation Virtual Scrolling](https://www.sitepen.com/blog/next-generation-virtual-scrolling/)
+
+### 🚀 [Most popular github js repositories in august and september 2019](https://itnext.io/33-26-most-popular-github-js-repositories-in-august-and-september-2019-e8f17da6af4)
