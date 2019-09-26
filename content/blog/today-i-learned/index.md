@@ -18,6 +18,7 @@ description: Round 2 of 100 Days of Code where I log daily activities of my codi
 
 - [modern-react-with-redux-search-image-api](https://stackblitz.com/edit/modern-react-with-redux-search-image-api)
 - [modern-react-with-redux-youtube-video-search-api](https://stackblitz.com/edit/modern-react-with-redux-youtube-video-search-api)
+- [Redux Intro - Modern React with Redux](https://codepen.io/navinnavi19/pen/KKPEmMw)
 - [react-useinterval-dan](https://stackblitz.com/edit/react-useinterval-dan)
 
 ---
