@@ -88,3 +88,8 @@ description: Notes taken while going through Web Development Blogs with highligh
 - [the-importance-of-showing-off-your-soft-skills-plus-great-examples-of-soft-skills-to-quickly-boost-your-resume](https://blog.soshace.com/en/human-resources/the-importance-of-showing-off-your-soft-skills-plus-great-examples-of-soft-skills-to-quickly-boost-your-resume/)
 - [how-remote-workers-should-build-their-online-presence](https://blog.soshace.com/en/remote-job/how-remote-workers-should-build-their-online-presence/)
 - [examples-of-closures-in-javascript](https://medium.com/javascript-in-plain-english/examples-of-closures-in-javascript-9bc397bbf1a1)
+
+## 📅 10-01-2019
+
+- [closure-with-api-requests](https://stackblitz.com/edit/closure-with-api-requests)
+- [upcoming-bank-holidays-using-an-api](https://stackblitz.com/edit/upcoming-bank-holidays-using-an-api)
