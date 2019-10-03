@@ -93,3 +93,10 @@ description: Notes taken while going through Web Development Blogs with highligh
 
 - [closure-with-api-requests](https://stackblitz.com/edit/closure-with-api-requests)
 - [upcoming-bank-holidays-using-an-api](https://stackblitz.com/edit/upcoming-bank-holidays-using-an-api)
+
+## 📅 10-03-2019
+
+### 🚀 Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
+
+- [modern-react-with-redux-songs](https://stackblitz.com/edit/modern-react-with-redux-songs)
+- [modern-react-with-redux-blog](https://stackblitz.com/edit/modern-react-with-redux-blog)

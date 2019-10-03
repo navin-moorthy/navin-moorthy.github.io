@@ -4,6 +4,20 @@ date: "2019-09-24"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+## 85. React Redux Intro
+
+### Day 85: October 03, 2019 - Tuesday
+
+**Project:** React Redux Intro
+
+- Learned Redux with small app about song and selection in Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
+
+**Stackblitz**
+
+- [modern-react-with-redux-songs](https://stackblitz.com/edit/modern-react-with-redux-songs)
+
+---
+
 ## 84. React Hooks useInterval
 
 ### Day 84: September 25, 2019 - Wednesday
