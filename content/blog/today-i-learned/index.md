@@ -4,9 +4,23 @@ date: "2019-09-24"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+## 86. Redux Thunk Intro
+
+### Day 86: October 04, 2019 - Friday
+
+**Project:** Redux Thunk Intro
+
+- Learned Redux and Redux Thunk for asynchronous data fetching in Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
+
+**Stackblitz**
+
+- [modern-react-with-redux-blog](https://stackblitz.com/edit/modern-react-with-redux-blog)
+
+---
+
 ## 85. React Redux Intro
 
-### Day 85: October 03, 2019 - Tuesday
+### Day 85: October 03, 2019 - Thursday
 
 **Project:** React Redux Intro
 

@@ -99,4 +99,9 @@ description: Notes taken while going through Web Development Blogs with highligh
 ### 🚀 Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
 
 - [modern-react-with-redux-songs](https://stackblitz.com/edit/modern-react-with-redux-songs)
+
+## 📅 10-04-2019
+
+### 🚀 Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
+
 - [modern-react-with-redux-blog](https://stackblitz.com/edit/modern-react-with-redux-blog)
