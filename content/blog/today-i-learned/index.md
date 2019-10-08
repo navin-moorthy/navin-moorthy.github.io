@@ -1,7 +1,25 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-09-24"
+date: "2019-10-08"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 87. Redux Hooks Deep Dive
+
+### Day 87: October 08, 2019 - Tuesday
+
+**Project:** useEffect and useApi Deep Dive
+
+- https://www.robinwieruch.de/react-hooks
+- https://www.robinwieruch.de/react-hooks-fetch-data
+- https://overreacted.io/a-complete-guide-to-useeffect/
+
+**Stackblitz**
+
+- https://stackblitz.com/edit/react-useoffline
+- https://stackblitz.com/edit/react-use-data-api
+- https://stackblitz.com/edit/react-count-useeffect-dan
+
 ---
 
 ## 86. Redux Thunk Intro
