@@ -4,6 +4,22 @@ date: "2019-10-08"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+## 88. Intro to Vue JS
+
+![Course Completion](images/r2d88.png)
+
+![Intro Vue Project](images/r2d88(1).png)
+
+### Day 88: October 08, 2019 - Tuesday
+
+**Project:** Vue Mastery Intro to Vue
+
+- https://www.vuemastery.com/courses/intro-to-vue-js/tabs
+- https://css-tricks.com/prefetching-preloading-prebrowsing/
+- https://vuejs.org/v2/guide/index.html
+
+---
+
 ## 87. Redux Hooks Deep Dive
 
 ### Day 87: October 08, 2019 - Tuesday
