@@ -4,6 +4,17 @@ date: "2019-10-08"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+## 89. Intro to Laravel
+
+### Day 89: October 08, 2019 - Tuesday
+
+**Project:** Laravel Blade Templates
+
+- Laracasts Laravel Basics
+- Laravel Documentation on Installing and getting started with laravel with vscode
+
+---
+
 ## 88. Intro to Vue JS
 
 ![Course Completion](images/r2d88.png)
