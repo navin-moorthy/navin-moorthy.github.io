@@ -1,12 +1,25 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-10-08"
+date: "2019-11-12"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 90. Back to 100DaysOfCode
+
+### Day 90: November 12, 2019 - Wednesday
+
+**Title:** Getting started, plan and Review
+
+- Reviewed and recalled [Laravel 6 from scratch from Laracasts](https://github.com/navin-navi/laravel6-from-scratch-laracasts) till I completed before.
+- Reviewed and recalled [Intro to Vue JS course learned from Vue Mastery](https://github.com/navin-navi/vue-mastery-intro-to-vuejs).
+- Made the Intro to [Vue JS project live](https://navin-navi.github.io/vue-mastery-intro-to-vuejs/) in GH Pages after pushing the repo to Github.
+- Looked at some of the [Aaron Iker's](https://codepen.io/aaroniker/pens/public) pen for inspirations.
+
 ---
 
 ## 89. Intro to Laravel
 
-### Day 89: October 08, 2019 - Tuesday
+### Day 89: October 10, 2019 - Thursday
 
 **Project:** Laravel Blade Templates
 
@@ -21,7 +34,7 @@ description: Round 2 of 100 Days of Code where I log daily activities of my codi
 
 ![Intro Vue Project](images/r2d88(1).png)
 
-### Day 88: October 08, 2019 - Tuesday
+### Day 88: October 09, 2019 - Wednesday
 
 **Project:** Vue Mastery Intro to Vue
 
