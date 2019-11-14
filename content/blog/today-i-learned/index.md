@@ -1,7 +1,20 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-11-12"
+date: "2019-11-13"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 91. Review and Planning
+
+### Day 91: November 13, 2019 - Thursday
+
+**Title:** Review and planning
+
+- Nothing much today got only an half an hour of coding session today.
+- Focused on my blog improvements, updated the dependencies and explored the new capabilities.
+- Formulated a plan to update my site with better design and coding practice soon.
+- Decided to learn Vue from Scrimba tomorrow.
+
 ---
 
 ## 90. Back to 100DaysOfCode
