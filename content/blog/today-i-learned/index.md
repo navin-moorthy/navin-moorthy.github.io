@@ -1,12 +1,26 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-11-13"
+date: "2019-11-14"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 92. Vue JS Official documentation
+
+### Day 92: November 14, 2019 - Thursday
+
+**Title:** Read the Official Documentation from Vue JS
+
+Learned about a couple of topics along with Scrimba videos
+
+- Vue Js and declarative Rendering
+- Conditionals and loops
+- Handling user inputs
+
 ---
 
 ## 91. Review and Planning
 
-### Day 91: November 13, 2019 - Thursday
+### Day 91: November 13, 2019 - Wednesday
 
 **Title:** Review and planning
 
@@ -19,7 +33,7 @@ description: Round 2 of 100 Days of Code where I log daily activities of my codi
 
 ## 90. Back to 100DaysOfCode
 
-### Day 90: November 12, 2019 - Wednesday
+### Day 90: November 12, 2019 - Tuesday
 
 **Title:** Getting started, plan and Review
 
