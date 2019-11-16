@@ -1,7 +1,23 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-11-14"
+date: "2019-11-15"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## 93. Vue JS Official documentation
+
+### Day 93: November 15, 2019 - Friday
+
+![Course Completion](images/r2d93.png)
+
+**Title:** Read the Official Documentation from Vue JS
+
+Learned about a couple of topics in Vue
+
+- Vue Component Structure
+- Created a Vue Instance with data and methods.
+- Vue Lifecycle hooks to handle the data while being rendered.
+
 ---
 
 ## 92. Vue JS Official documentation
