@@ -4,6 +4,19 @@ date: "2019-11-20"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+## 95. Vue JS Official documentation
+
+### Day 95: November 21, 2019 - Wednesday
+
+**Title:** Read the Official Documentation from Vue JS
+
+Learned about a couple of topics in Vue
+
+- Class and Style Bindings
+- Conditional Rendering
+
+---
+
 ## 94. Vue JS Official documentation
 
 ### Day 94: November 20, 2019 - Wednesday
