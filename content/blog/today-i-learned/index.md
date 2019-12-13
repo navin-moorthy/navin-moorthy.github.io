@@ -1,7 +1,57 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-11-20"
+date: "2019-12-13"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## VSCode Pro
+
+### Day 97: December 13, 2019 - Friday
+
+![Image of VS Code Setting with default and user settings](images/r2d96(1).png)
+
+**BRIEF DESCRIPTION:**
+
+- Updated some VS code settings and keymaps to make coding easier with shortcuts.
+- Completed 6 videos from Module 2.
+- Never thought I could do so much with VSCode before.
+- Gone through half of interesting app and setups from [Ahmad Awais Uses Page](https://ahmadawais.com/uses/).
+- VS Code released a [new version(1.41)](https://code.visualstudio.com/updates/v1_41) today - updated the settings and keyboard shortcuts from the latest documententation.
+- Later came across [Rain Drop](https://raindrop.io/) [Chrome Extension](https://chrome.google.com/webstore/detail/raindropio/ldgfbffkinooeloadekpmfoklnobpien)- a complete app to save all your bookmark and access them everywhere.
+
+**REFERENCES:**
+
+- [VSCode.pro](https://vscode.pro/)
+- [VS Code New Feature in v1.41](https://code.visualstudio.com/updates/v1_41)
+- [Ahmad Awais Uses Page](https://ahmadawais.com/uses/)
+- [Rain Drop](https://raindrop.io/)
+- [Rain Drop Chrome Extension](https://chrome.google.com/webstore/detail/raindropio/ldgfbffkinooeloadekpmfoklnobpien)
+
+---
+
+## Shades of Purple
+
+### Day 96: December 12, 2019 - Thursday
+
+![Image of VS Code Keyboard Shortcuts](images/r2d96(2).png)
+
+**BRIEF DESCRIPTION:**
+
+- Learning VS Code shortcuts to get save a lot of developer time.
+- Updated the VS Code UI settings for better visuals.
+- Completed Module 1.
+- Installed [Shades of Purple](https://github.com/ahmadawais/shades-of-purple-vscode) Theme and customized with [Operator Mono](https://www.cufonfonts.com/font/operator-mono) with [Ligaments Font](https://github.com/kiliman/operator-mono-lig).
+- Learned about [Toby Mini](https://www.gettoby.com/) [chrome Extension](https://chrome.google.com/webstore/detail/toby-mini/gfdcgfhkelkdmglklfbndgopaihmoeci) to save your sessions and bookmark them quickly.
+
+**REFERENCES:**
+
+- [VSCode.pro](https://vscode.pro/)
+- [Shades of Purple](https://github.com/ahmadawais/shades-of-purple-vscode)
+- [Operator Mono](https://www.cufonfonts.com/font/operator-mono)
+- [Operator Mono with Ligaments Font](https://github.com/kiliman/operator-mono-lig)
+- [Toby Mini](https://www.gettoby.com/)
+- [Toby Mini Chrome Extension](https://chrome.google.com/webstore/detail/toby-mini/gfdcgfhkelkdmglklfbndgopaihmoeci)
+
 ---
 
 ## 95. Vue JS Official documentation
@@ -109,9 +159,9 @@ Learned about a couple of topics along with Scrimba videos
 
 **Project:** Vue Mastery Intro to Vue
 
-- https://www.vuemastery.com/courses/intro-to-vue-js/tabs
-- https://css-tricks.com/prefetching-preloading-prebrowsing/
-- https://vuejs.org/v2/guide/index.html
+- [https://www.vuemastery.com/courses/intro-to-vue-js/tabs](https://www.vuemastery.com/courses/intro-to-vue-js/tabs)
+- [https://css-tricks.com/prefetching-preloading-prebrowsing/](https://css-tricks.com/prefetching-preloading-prebrowsing/)
+- [https://vuejs.org/v2/guide/index.html](https://vuejs.org/v2/guide/index.html)
 
 ---
 
@@ -121,15 +171,15 @@ Learned about a couple of topics along with Scrimba videos
 
 **Project:** useEffect and useApi Deep Dive
 
-- https://www.robinwieruch.de/react-hooks
-- https://www.robinwieruch.de/react-hooks-fetch-data
-- https://overreacted.io/a-complete-guide-to-useeffect/
+- [https://www.robinwieruch.de/react-hooks](https://www.robinwieruch.de/react-hooks)
+- [https://www.robinwieruch.de/react-hooks-fetch-data](https://www.robinwieruch.de/react-hooks-fetch-data)
+- [https://overreacted.io/a-complete-guide-to-useeffect/](https://overreacted.io/a-complete-guide-to-useeffect/)
 
-**Stackblitz**
+**Stackblitz:**
 
-- https://stackblitz.com/edit/react-useoffline
-- https://stackblitz.com/edit/react-use-data-api
-- https://stackblitz.com/edit/react-count-useeffect-dan
+- [https://stackblitz.com/edit/react-useoffline](https://stackblitz.com/edit/react-useoffline)
+- [https://stackblitz.com/edit/react-use-data-api](https://stackblitz.com/edit/react-use-data-api)
+- [https://stackblitz.com/edit/react-count-useeffect-dan](https://stackblitz.com/edit/react-count-useeffect-dan)
 
 ---
 
@@ -141,7 +191,7 @@ Learned about a couple of topics along with Scrimba videos
 
 - Learned Redux and Redux Thunk for asynchronous data fetching in Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
 
-**Stackblitz**
+**Stackblitz:**
 
 - [modern-react-with-redux-blog](https://stackblitz.com/edit/modern-react-with-redux-blog)
 
@@ -155,7 +205,7 @@ Learned about a couple of topics along with Scrimba videos
 
 - Learned Redux with small app about song and selection in Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
 
-**Stackblitz**
+**Stackblitz:**
 
 - [modern-react-with-redux-songs](https://stackblitz.com/edit/modern-react-with-redux-songs)
 
@@ -171,7 +221,7 @@ Learned about a couple of topics along with Scrimba videos
 - [React-Hooks with amazing data visualiztion](https://wattenberger.com/blog/react-hooks)
 - [Making setInterval Declarative with React Hooks](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
 
-**Stackblitz**
+**Stackblitz:**
 
 - [modern-react-with-redux-search-image-api](https://stackblitz.com/edit/modern-react-with-redux-search-image-api)
 - [modern-react-with-redux-youtube-video-search-api](https://stackblitz.com/edit/modern-react-with-redux-youtube-video-search-api)
@@ -191,7 +241,7 @@ Learned about a couple of topics along with Scrimba videos
 - Learned about State and Lifecyle management in Modern React with Redux by [Stephen Grider](https://twitter.com/ste_grider)
 - Completed in [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
 
-**Stackblitz**
+**Stackblitz:**
 
 - [modern-react-with-redux-climate-month-app](https://stackblitz.com/edit/modern-react-with-redux-climate-month-app)
 - [modern-react-with-redux-search-image-api](https://stackblitz.com/edit/modern-react-with-redux-search-image-api)
@@ -211,7 +261,7 @@ Learned about a couple of topics along with Scrimba videos
 - Learned about Firebase Security on complete-react-developer-zero-to-mastery updated course
 - Chapter 10 & 11 Done in [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
 
-**Stackblitz**
+**Stackblitz:**
 
 - [Props Intro Project](https://stackblitz.com/edit/react-with-redux-components)
 
@@ -228,11 +278,11 @@ Learned about a couple of topics along with Scrimba videos
 - With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
 - With capturing, the event is first captured by the outermost element and propagated to the inner elements.
 
-**Repl**
+**Repl:**
 
 - [JS Snippet Collections](https://repl.it/@NavinA/JS-Snippet-Collections)
 
-**Codepen**
+**Codepen:**
 
 - [Flower Animation](https://codepen.io/navinnavi19/pen/ExYOjvO)
 - [Event Bubbling vs Event Capturing](https://codepen.io/navinnavi19/pen/bGbQMKb)
@@ -245,7 +295,7 @@ Learned about a couple of topics along with Scrimba videos
 
 **Project:** Floating Footer Codepen Template
 
-**CodePens**
+**CodePens:**
 
 - [Floating Footer Template](https://codepen.io/navinnavi19/pen/aboQoVX)
 - [Flower Animation](https://codepen.io/navinnavi19/pen/ExYOjvO)
@@ -265,9 +315,9 @@ Learned about a couple of new things,
 - [Understand array methods by implementing them — all of them](https://dev.to/bnevilleoneill/understand-array-methods-by-implementing-them-all-of-them-iha)
 - [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
 - Chapter 9 Done in[Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
-- Resourced in [Service Workers lifecycle resources read ](https://serviceworkies.mastery.games/)
+- Resourced in [Service Workers lifecycle resources read](https://serviceworkies.mastery.games/)
 
-**My Array Method Implementation**
+**My Array Method Implementation:**
 
 - [flatMap-implementation](https://repl.it/@NavinA/flatMap-implementation)
 - [join-implementation](https://repl.it/@NavinA/join-implementation)
@@ -282,7 +332,7 @@ Learned about a couple of new things,
 - [keys-implementation](https://repl.it/@NavinA/keys-implementation)
 - [entries-implementation](https://repl.it/@NavinA/entries-implementation)
 
-**CodePens**
+**CodePens:**
 
 - [Gradient Border Animated](https://codepen.io/navinnavi19/pen/jONeqaz)
 - [Letter A made of A](https://codepen.io/navinnavi19/pen/MWgPjXo)
@@ -323,7 +373,7 @@ Learned about a couple of new things,
 - [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
 - [CSS Flex Notes](https://navin-navi.github.io/blog/css-flexbox-collection/)
 
-**My Implementation**
+**My Implementation:**
 
 - [find-index-implementation](https://repl.it/@NavinA/find-index-implementation)
 - [find-implementation](https://repl.it/@NavinA/find-implementation)
@@ -374,7 +424,7 @@ Learned about a couple of new things,
 - [value vs references](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
 - [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
 
-**My Implementation**
+**My Implementation:**
 
 - [Memoization in JS](https://repl.it/@NavinA/memoization)
 - [Pure vs Impure Function](https://repl.it/@NavinA/pure-function-vs-impure-function)
@@ -401,7 +451,7 @@ Learned about a couple of new things,
 - [Understand array methods by implementing them — all of them](https://dev.to/bnevilleoneill/understand-array-methods-by-implementing-them-all-of-them-iha)
 - [value vs references](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
 
-**My Implementation**
+**My Implementation:**
 
 - [Values and References](https://repl.it/@NavinA/values-and-references)
 - [forEach Implementation](https://repl.it/@NavinA/forEach-implementation)
@@ -424,7 +474,7 @@ Learned about a couple of new things,
 - [Three.js Realistic Rain Effect](https://redstapler.co/three-js-realistic-rain-tutorial/)
 - [Add 3D Model to WebSite in 5 Minutes - Three.js Tutorial](https://www.youtube.com/watch?v=1TeMXIWRrqE)
 
-**My Implementation**
+**My Implementation:**
 
 - [Nebula Cloud Particles Effect Three.js](https://codepen.io/navinnavi19/pen/LYPmEZE)
 - [Three.js Realistic Rain Effect](https://codepen.io/navinnavi19/pen/qBWYORJ)
@@ -446,7 +496,7 @@ Learned about a couple of new things,
 - [useState and useEffect Simple Example](https://stackblitz.com/edit/react-usestate-useeffect)
 - [How To Fetch Data From An API With React Hooks](https://codeburst.io/how-to-fetch-data-from-an-api-with-react-hooks-9e7202b8afcd)
 
-**Examples**
+**Examples:**
 
 - [Stackblitz Example of useEffect() render and unmount](https://stackblitz.com/edit/useeffect-render-unmount)
 - [useState and useEffect Simple Example](https://stackblitz.com/edit/react-usestate-useeffect)
