@@ -1,12 +1,12 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-12-13"
+date: "2019-12-14"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
 ## Zen Mode and Macros - VS Code
 
-### Day 98: December 15, 2019 - Saturday
+### Day 98: December 14, 2019 - Saturday
 
 ![Image of react code showing two fonts in use](images/r2d98.png)
 
