@@ -4,6 +4,29 @@ date: "2019-12-13"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+## Zen Mode and Macros - VS Code
+
+### Day 98: December 15, 2019 - Saturday
+
+![Image of react code showing two fonts in use](images/r2d98.png)
+
+**BRIEF DESCRIPTION:**
+
+- Completed `Module 2`.
+- Completed first 6 videos from `Module 3`.
+- Learned about user and default keybingings/keymaps.
+- Keybinding with `macros` to automate multiple step is an overkill.
+- Like doing a couple of tasks with just one key.
+- Although I already use file navigation with `command + p`, but to navigate throught symbols within a file is something new.
+- `Zen mode` - heard about it tried out today but I feel I won't be using it for now.
+- Search with line number using `control + g`.
+
+**REFERENCES:**
+
+- [VSCode.pro](https://vscode.pro/)
+
+---
+
 ## VSCode Pro
 
 ### Day 97: December 13, 2019 - Friday
