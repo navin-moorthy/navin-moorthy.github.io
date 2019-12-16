@@ -1,7 +1,59 @@
 ---
 title: Round 2 100Days Of Code
-date: "2019-12-14"
+date: "2019-12-16"
 description: Round 2 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## Javascript Debugger in VSCode
+
+### Day 100: December 16, 2019 - Sunday
+
+![Image of README file showing the preview in GITHUB view](images/r2d100.png)
+
+**BRIEF DESCRIPTION:**
+
+- Completed `Module 6` & `Module 7` in VSCode Pro.
+- Markdown editing and previewing like [Github](http://github.com/) with [Shades of Purple](https://github.com/ahmadawais/shades-of-purple-vscode) fits.
+- Installed a bunch of extension to look up things more easier.
+- Debugger part is kind of new for me in VS code but so handy.
+- Installed [Lepton](https://electronjs.org/apps/lepton) to store some code blocks.
+- Was using [Snippet Lap](https://www.renfei.org/snippets-lab/) for a week or two but I found Lepton to be more useful for me now.
+- I always love using [SVG OMG - Preview and format SVG](https://jakearchibald.github.io/svgomg/) to view,edit, format & compress SVGs.
+
+**REFERENCES:**
+
+- [VSCode.pro](https://vscode.pro/)
+- [Shades of Purple](https://github.com/ahmadawais/shades-of-purple-vscode)
+- [VSCode Tips & Tricks](https://github.com/ahmadawais/VSCode-Tips-Tricks)
+- [Collection of project to test VSCode Debugging](https://github.com/microsoft/vscode-recipes)
+- [Lepton - Snippet Manager](https://electronjs.org/apps/lepton)
+- [Snippet Lap](https://www.renfei.org/snippets-lab/)
+- [SVG OMG - Preview and format SVG](https://jakearchibald.github.io/svgomg/)
+
+---
+
+## Code Snippets - Increase productivity
+
+### Day 99: December 15, 2019 - Sunday
+
+![Image of my snippets in VS Code](images/r2d99.png)
+
+**BRIEF DESCRIPTION:**
+
+- Completed `Module 3`,`Module 4` & `Module 5`  in VSCode Pro.
+- Learned how to create a snippet on my own.
+- Created a bunch of new keybingings to increase productivity.Daily
+- Emmet Expansion on HTML and CSS.
+- Git Pull right from VS Code is awesome.
+- Chrome open New tab with [Muzli Design Inspiration Extension](https://muz.li/) for designers.
+- Chrome open New tab with [DailyNow Extension](https://www.dailynow.co/) for developers.
+
+**REFERENCES:**
+
+- [VSCode.pro](https://vscode.pro/)
+- [Muzli Design Inspiration Chrome Extension](https://muz.li/)
+- [DailyNow Chrome Extension](https://www.dailynow.co/)
+
 ---
 
 ## Zen Mode and Macros - VS Code
