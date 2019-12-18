@@ -4,7 +4,7 @@ date: "2019-12-17"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
 ---
 
-## MOARRRR Extensions in VSCode
+## PHP setup in VSCode
 
 ### Day 1: December 17, 2019 - Tuesday
 
