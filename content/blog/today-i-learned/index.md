@@ -1,7 +1,28 @@
 ---
 title: Round 3 100Days Of Code
-date: "2019-12-18"
+date: "2019-12-19"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)
+
+### Day 3: December 19, 2019 - Thursday
+
+![Image about the things thought in Vue JS Course](images/r3d3.png)
+
+**BRIEF DESCRIPTION:**
+
+- Started the [Vue JS](http://vuejs.org/) - [course](https://www.udemy.com/course/vuejs-2-the-complete-guide/) by [Maximilian](https://twitter.com/maxedapps)
+- Not much of learning today since took some time to decide on which & best course to start.
+- Also visited some of the Dev Discord servers which has a lot of unread messages.
+- Got interested in Google's Quantum Supremacy and watching how they build it and how powerful it is.
+
+**REFERENCES:**
+
+- [Vue JS](http://vuejs.org/)
+- [Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)](https://www.udemy.com/course/vuejs-2-the-complete-guide/)
+- [Maximilian](https://twitter.com/maxedapps)
+
 ---
 
 ## MOARRR Extensions - VSCode
@@ -30,6 +51,8 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 - [The Future of Javascript](https://www.youtube.com/watch?v=f0DrPLKf6Ro&list=TLPQMTgxMjIwMTnWgbO-O42Lug&index=2)
 - [Shades of Purple](https://github.com/ahmadawais/shades-of-purple-vscode)
 - [VSCode Tips & Tricks](https://github.com/ahmadawais/VSCode-Tips-Tricks)
+
+---
 
 ## PHP setup in VSCode
 
