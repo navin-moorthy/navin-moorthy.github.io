@@ -1,7 +1,31 @@
 ---
 title: Round 3 100Days Of Code
-date: "2019-12-19"
+date: "2019-12-20"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## VS Code Tasks
+
+### Day 4: December 20, 2019 - Friday
+
+![Image about the things thought in Vue JS Course](images/r3d3.png)
+
+**BRIEF DESCRIPTION:**
+
+- Completed Section 1 in [Vue JS](http://vuejs.org/) - [course](https://www.udemy.com/course/vuejs-2-the-complete-guide/) by [Maximilian](https://twitter.com/maxedapps)
+- Spent most of my time trying to figure out how [tasks](https://code.visualstudio.com/Docs/editor/tasks) work in [VSCode](https://code.visualstudio.com/) and learned them.
+- Created a macro with keybindings to save, add, commit, pull and push the changes to the github via tasks in background.
+- This is super awesome with to possibilities I can do much more.
+
+**REFERENCES:**
+
+- [Vue JS](http://vuejs.org/)
+- [Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)](https://www.udemy.com/course/vuejs-2-the-complete-guide/)
+- [Maximilian](https://twitter.com/maxedapps)
+- [VSCode](https://code.visualstudio.com/)
+- [Tasks in VSCode](https://code.visualstudio.com/Docs/editor/tasks)
+- [Course Notes](https://github.com/navin-navi/getting-started-with-vue-js-maximilian-course)
+
 ---
 
 ## Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)
