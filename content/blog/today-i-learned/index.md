@@ -1,14 +1,46 @@
 ---
 title: Round 3 100Days Of Code
-date: "2019-12-20"
+date: "2019-12-21"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## CURLEYWEBDEV CSS Animation
+
+### Day 5: December 21, 2019 - Saturday
+
+![Love Smiley Animation](images/r3d5.gif)
+
+**BRIEF DESCRIPTION:**
+
+- Completed Section 2 in [Vue JS](http://vuejs.org/) - [course](https://www.udemy.com/course/vuejs-2-the-complete-guide/) by [Maximilian](https://twitter.com/maxedapps)
+- Learning to do Pure CSS Animation in the side.
+- I have always insipired from [CurleyWebDev](https://www.facebook.com/curleywebdev/)'s FB group, so starting with his creations in [Codepen](https://codepen.io/curley).
+- Replicated two of his creations - [Sleeping Smiley](https://codepen.io/curley/pen/JgamNv) & [Love Smiley](https://codepen.io/curley/pen/WNepqQb).
+- For a day, switched to [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/71.0a2/firstrun/) for seeing the animation values within the dev tools and loved it.
+- Hope we can get something similer to [Chrome](https://www.google.com/chrome/) as well.
+- Firefox shows unused CSS, changed CSS and lets you copy them.
+- Visually see the Grid, Flex and animation, lot more to it. Need to explore more on this.
+
+**REFERENCES:**
+
+- [Vue JS](http://vuejs.org/)
+- [Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)](https://www.udemy.com/course/vuejs-2-the-complete-guide/)
+- [Maximilian](https://twitter.com/maxedapps)
+- [CurleyWebDev](https://www.facebook.com/curleywebdev/)
+- [CurleyWebDev Codepen](https://codepen.io/curley)
+- [Sleeping Smiley Animation](https://codepen.io/curley/pen/JgamNv)
+- [Love Smiley Animation](https://codepen.io/curley/pen/WNepqQb)
+- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/71.0a2/firstrun/)
+- [Chrome](https://www.google.com/chrome/)
+- [Course Notes](https://github.com/navin-navi/getting-started-with-vue-js-maximilian-course)
+
 ---
 
 ## VS Code Tasks
 
 ### Day 4: December 20, 2019 - Friday
 
-![Image about the things thought in Vue JS Course](images/r3d3.png)
+![Image about VSCode tasks](images/r3d4.png)
 
 **BRIEF DESCRIPTION:**
 
