@@ -4,6 +4,28 @@ date: "2019-12-21"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+
+## Mozilla Developers YT
+
+### Day 6: December 22, 2019 - Sunday
+
+![Mozilla Developer watched video screenshot](images/r3d6.png)
+
+**BRIEF DESCRIPTION:**
+
+- Started watching the [Mozilla Developer](https://www.youtube.com/channel/UCh5UlGiu9d6LegIeUCW4N1w/videos) youtube videos.
+- Learned several new terms in CSS and much more about devTools.
+- Further explored the Dev tools of [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/71.0a2/firstrun/)
+- Spent most of my time going through the [Popular Pen of 2019](https://codepen.io/2019/popular/pens)
+
+**REFERENCES:**
+
+- [Mozilla Developer YT](https://www.youtube.com/channel/UCh5UlGiu9d6LegIeUCW4N1w/videos)
+- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/71.0a2/firstrun/)
+- [Popular Pen of 2019](https://codepen.io/2019/popular/pens)
+
+---
+
 ## CURLEYWEBDEV CSS Animation
 
 ### Day 5: December 21, 2019 - Saturday
