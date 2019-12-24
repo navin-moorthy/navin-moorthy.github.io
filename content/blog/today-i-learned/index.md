@@ -1,9 +1,31 @@
 ---
 title: Round 3 100Days Of Code
-date: "2019-12-21"
+date: "2019-12-23"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+## Mozilla Developer Edition DevTools
+
+### Day 7: December 23, 2019 - Monday
+
+![Mozilla Developer watched video screenshot](images/r3d7.png)
+
+**BRIEF DESCRIPTION:**
+
+- Continued watching the [Mozilla Developer](https://www.youtube.com/channel/UCh5UlGiu9d6LegIeUCW4N1w/videos) youtube videos.
+- Learned about the inbuilt screenshot feature, Font Editor & Color Picker.
+- Also, just to explore the [Edge Chromium](https://www.microsoftedgeinsider.com/en-us/), I installed the Dev Edition and tested out for sometime.
+- First impression, seems more like Chrome with some improvements.
+- Interface is good, icons are bright but will give it a try for some days.
+
+**REFERENCES:**
+
+- [Mozilla Developer YT](https://www.youtube.com/channel/UCh5UlGiu9d6LegIeUCW4N1w/videos)
+- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/71.0a2/firstrun/)
+- [Popular Pen of 2019](https://codepen.io/2019/popular/pens)
+- [Edge Chromium](https://www.microsoftedgeinsider.com/en-us/)
+
+---
 
 ## Mozilla Developers YT
 
