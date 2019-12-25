@@ -4,6 +4,29 @@ date: "2019-12-23"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+
+## Shed some light on CSS Clip-path
+
+### Day 8: December 24, 2019 - Tuesday
+
+![HTML 5 Shape Animation GIF](images/r3d8.gif)
+
+**BRIEF DESCRIPTION:**
+
+- Started again with one of the [CurleyWebDev](https://www.facebook.com/curleywebdev/) codepen on [Pure CSS HTML 5 Shape Animation](https://codepen.io/curley/pen/eYYqzrK).
+- Created a replica of the above codepen and [Rubber stamp effect](https://codepen.io/555/pen/pdwvBP) for learning about mask-image.
+- During this I learned about clip-path and mask-image and different ways of using them.
+- [MDN](https://developer.mozilla.org/en-US/) helped me a lot in learning.
+
+**REFERENCES:**
+
+- [CurleyWebDev](https://www.facebook.com/curleywebdev/)
+- [Pure CSS HTML 5 Shape Animation](https://codepen.io/curley/pen/eYYqzrK)
+- [Rubber stamp effect](https://codepen.io/555/pen/pdwvBP)
+- [MDN](https://developer.mozilla.org/en-US/)
+
+---
+
 ## Mozilla Developer Edition DevTools
 
 ### Day 7: December 23, 2019 - Monday
