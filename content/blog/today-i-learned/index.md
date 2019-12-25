@@ -1,9 +1,38 @@
 ---
 title: Round 3 100Days Of Code
-date: "2019-12-23"
+date: "2019-12-25"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
 ---
 
+## Statecharts & StateMachines
+
+### Day 9: December 25, 2019 - Wednesday
+
+![Whatsapp Fingerprint Animation GIF](images/r3d9.gif)
+
+**BRIEF DESCRIPTION:**
+
+- Started of with [Whatsapp Fingerprint Unlock](https://codepen.io/prathameshkoshti/pen/eYYjJxp) codepen to make a replica.
+- Learned how it works and recoded them to know how exactly it works.
+- Improved the JS code to have two states like lock and unlock to fix the bug in animation from the previous implements.
+- Learned about SVG's stroke-dashArray and stroke-dashOffset.
+- [MDN](https://developer.mozilla.org/en-US/) becomes the go to place directly from VSCode.
+- Spent the evening watching videos about State Machines by [David K Piano](https://twitter.com/DavidKPiano) and others explaining [Xstate](https://github.com/davidkpiano/xstate).
+- Read some intro on [Statecharts](https://statecharts.github.io/).
+- Got an overview of how the state machines work.
+- Better way to code without too many booleans in the code.
+
+**REFERENCES:**
+
+- [Whatsapp Fingerprint Unlock](https://codepen.io/prathameshkoshti/pen/eYYjJxp)
+- [MDN](https://developer.mozilla.org/en-US/)
+- [David K Piano](https://twitter.com/DavidKPiano)
+- [Xstate](https://github.com/davidkpiano/xstate)
+- [Statecharts](https://statecharts.github.io/)
+- [Introduction to XState](https://www.youtube.com/watch?v=73Ch_EL4YVc)
+- [Let’s learn state machines with David K. Piano! — Learn With Jason](https://www.youtube.com/watch?v=czi24DqUfSA)
+
+---
 
 ## Shed some light on CSS Clip-path
 
