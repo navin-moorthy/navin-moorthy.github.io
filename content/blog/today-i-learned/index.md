@@ -1,7 +1,25 @@
 ---
 title: Round 3 100Days Of Code
-date: "2019-12-25"
+date: "2019-12-26"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## Conditionals and Rendering Lists
+
+### Day 10: December 26, 2019 - Thursday
+
+![Excercise for the section 3]](images/r3d10.png)
+
+**BRIEF DESCRIPTION:**
+
+- Completed Section 3 Using Conditionals and Rendering Lists in [Vue JS](http://vuejs.org/) - [course](https://www.udemy.com/course/vuejs-2-the-complete-guide/) by [Maximilian](https://twitter.com/maxedapps)
+
+**REFERENCES:**
+
+- [Vue JS](http://vuejs.org/)
+- [Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)](https://www.udemy.com/course/vuejs-2-the-complete-guide/)
+- [Maximilian](https://twitter.com/maxedapps)
+
 ---
 
 ## Statecharts & StateMachines
