@@ -8,7 +8,7 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 
 ### Day 11: December 27, 2019 - Friday
 
-![Excercise for the section 4]](images/r3d11.png)
+![Excercise for the section 4](images/r3d11.png)
 
 **BRIEF DESCRIPTION:**
 
@@ -27,7 +27,7 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 
 ### Day 10: December 26, 2019 - Thursday
 
-![Excercise for the section 3]](images/r3d10.png)
+![Excercise for the section 3](images/r3d10.png)
 
 **BRIEF DESCRIPTION:**
 
