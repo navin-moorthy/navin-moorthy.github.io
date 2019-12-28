@@ -1,7 +1,26 @@
 ---
 title: Round 3 100Days Of Code
-date: "2019-12-26"
+date: "2019-12-27"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## Monster Slaying Project
+
+### Day 11: December 27, 2019 - Friday
+
+![Excercise for the section 4]](images/r3d11.png)
+
+**BRIEF DESCRIPTION:**
+
+- Completed Section 4 - Monster Slaying Project in [Vue JS](http://vuejs.org/) - [course](https://www.udemy.com/course/vuejs-2-the-complete-guide/) by [Maximilian](https://twitter.com/maxedapps)
+
+**REFERENCES:**
+
+- [Vue JS](http://vuejs.org/)
+- [Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)](https://www.udemy.com/course/vuejs-2-the-complete-guide/)
+- [Maximilian](https://twitter.com/maxedapps)
+- [Course Notes](https://github.com/navin-navi/getting-started-with-vue-js-maximilian-course)
+
 ---
 
 ## Conditionals and Rendering Lists
@@ -19,6 +38,7 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 - [Vue JS](http://vuejs.org/)
 - [Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)](https://www.udemy.com/course/vuejs-2-the-complete-guide/)
 - [Maximilian](https://twitter.com/maxedapps)
+- [Course Notes](https://github.com/navin-navi/getting-started-with-vue-js-maximilian-course)
 
 ---
 
