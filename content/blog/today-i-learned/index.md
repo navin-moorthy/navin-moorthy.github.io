@@ -1,7 +1,26 @@
 ---
 title: Round 3 100Days Of Code
-date: "2019-12-27"
+date: "2019-12-28"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## Vue Instance
+
+### Day 12: December 28, 2019 - Saturday
+
+![Complete section 5](images/r3d12.png)
+
+**BRIEF DESCRIPTION:**
+
+- Completed Section 5 - Understanding the VueJS Instance in [Vue JS](http://vuejs.org/) - [course](https://www.udemy.com/course/vuejs-2-the-complete-guide/) by [Maximilian](https://twitter.com/maxedapps)
+
+**REFERENCES:**
+
+- [Vue JS](http://vuejs.org/)
+- [Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)](https://www.udemy.com/course/vuejs-2-the-complete-guide/)
+- [Maximilian](https://twitter.com/maxedapps)
+- [Course Notes](https://github.com/navin-navi/getting-started-with-vue-js-maximilian-course)
+
 ---
 
 ## Monster Slaying Project
