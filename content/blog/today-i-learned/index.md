@@ -1,7 +1,27 @@
 ---
 title: Round 3 100Days Of Code
-date: "2019-12-28"
+date: "2019-12-29"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## Youtube Videos and Bookmarks Organized
+
+### Day 13: December 29, 2019 - Sunday
+
+![Bookmarks with fancy icons](images/r3d13.png)
+
+**BRIEF DESCRIPTION:**
+
+- Continued with the Youtube Videos of [Mozilla Developer YT](https://www.youtube.com/channel/UCh5UlGiu9d6LegIeUCW4N1w/videos).
+- Learned about Grid and Advanced Font editor in [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/71.0a2/firstrun/).
+- Organized some of the Bookmarks in [Raindrop](https://raindrop.io/) from Chrome.
+
+**REFERENCES:**
+
+- [Mozilla Developer YT](https://www.youtube.com/channel/UCh5UlGiu9d6LegIeUCW4N1w/videos)
+- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/71.0a2/firstrun/)
+- [Raindrop](https://raindrop.io/)
+
 ---
 
 ## Vue Instance
