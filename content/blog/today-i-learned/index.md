@@ -1,7 +1,36 @@
 ---
 title: Round 3 100Days Of Code
-date: "2019-12-29"
+date: "2019-12-30"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## Gistpad 💟
+
+### Day 14: December 30, 2019 - Monday
+
+![Snap of Gistpad in my VSCode](images/r3d14.png)
+
+**BRIEF DESCRIPTION:**
+
+- Used [Gistpad](https://github.com/vsls-contrib/gistpad) as a playground in [VSCode](https://code.visualstudio.com/) to clone some Codepen projects for learning.
+- [Jonathan Carter](https://twitter.com/LostInTangent) has done an amazing job integrating this in [VSCode](https://code.visualstudio.com/).
+- Then watched [Kevin Powell](https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw) Youtube three part series on Pseudo Elements - learned some cool Tricks.
+- Read the blog post on [CSS IRL](https://css-irl.info/) about [CSS Custom Properties](https://css-irl.info/7-uses-for-css-custom-properties/)
+- Then cloned [this](https://codepen.io/michellebarker/pen/yLLGVMQ) codepen to try out how custom properties can be used.
+- Got some inspiration from [Dark Code](https://www.youtube.com/channel/UCD3KVjbb7aq2OiOffuungzw/videos) on [text masking with textures](https://www.youtube.com/watch?v=5PVHJ_dG8T8) and cloned it.
+
+**REFERENCES:**
+
+- [Gistpad](https://github.com/vsls-contrib/gistpad)
+- [Jonathan Carter](https://twitter.com/LostInTangent)
+- [His Dark Materials TV series logo with CSS](https://codepen.io/michellebarker/pen/yLLGVMQ)
+- [Kevin Powell](https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw)
+- [CSS IRL](https://css-irl.info/)
+- [CSS Custom Properties](https://css-irl.info/7-uses-for-css-custom-properties/)
+- [Dark Code](https://www.youtube.com/channel/UCD3KVjbb7aq2OiOffuungzw/videos)
+- [Text masking with textures](https://www.youtube.com/watch?v=5PVHJ_dG8T8)
+- [VSCode](https://code.visualstudio.com/)
+
 ---
 
 ## Youtube Videos and Bookmarks Organized
