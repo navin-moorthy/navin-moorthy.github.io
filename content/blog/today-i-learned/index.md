@@ -1,7 +1,23 @@
 ---
 title: Round 3 100Days Of Code
-date: "2019-12-30"
+date: "2019-12-31"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## CSS Animation ✨
+
+### Day 15: December 31, 2019 - Tuesday
+
+![Codepen Experiments](images/r3d15.png)
+
+**BRIEF DESCRIPTION:**
+
+- Spent some time experimenting with CSS Animation on [Codepen](https://codepen.io/navinnavi19).
+
+**REFERENCES:**
+
+- [Navin Navi Codepen](https://codepen.io/navinnavi19)
+
 ---
 
 ## Gistpad 💟
