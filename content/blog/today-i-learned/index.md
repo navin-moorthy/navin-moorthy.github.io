@@ -1,7 +1,28 @@
 ---
 title: Round 3 100Days Of Code
-date: "2019-12-31"
+date: "2020-01-01"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## Javascript Info & CSS Visual Dictionary Grammar
+
+### Day 16: January 01, 2020 - Wednesday 🍾 💖
+
+![Codepen Experiments](images/r3d15.png)
+
+**BRIEF DESCRIPTION:**
+
+- Started learning JS from scratch from [Javascript Info](https://javascript.info/) to fill the gap in Vanilla JS.
+- Much needed one.
+- Also finished half of [CSS  Visual Dictionary](http://www.javascriptteacher.com/free-book.html) by [Javascript Teacher](https://twitter.com/js_tut).
+- Started this CSS Book earlier in 2019 but never finished it, but this time I am going to complete it.
+
+**REFERENCES:**
+
+- [Javascript Info](https://javascript.info/)
+- [CSS  Visual Dictionary](http://www.javascriptteacher.com/free-book.html)
+- [Javascript Teacher](https://twitter.com/js_tut)
+
 ---
 
 ## CSS Animation ✨
