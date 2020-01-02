@@ -8,7 +8,7 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 
 ### Day 16: January 01, 2020 - Wednesday 🍾 💖
 
-![Codepen Experiments](images/r3d15.png)
+![Snap of CSS Visual Dictionary](images/r3d16.png)
 
 **BRIEF DESCRIPTION:**
 
