@@ -6,7 +6,7 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 
 ## Design
 
-### Day 18: January 03, 2020 - Friday 🍾 💖
+### Day 18: January 03, 2020 - Friday
 
 ![Figma Design](images/r3d18.png)
 
@@ -24,7 +24,7 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 
 ## Javascript Info Cont.
 
-### Day 17: January 02, 2020 - Thursday 🍾 💖
+### Day 17: January 02, 2020 - Thursday
 
 ![JS Info](images/r3d17.png)
 
@@ -36,27 +36,6 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 **REFERENCES:**
 
 - [Javascript Info](https://javascript.info/).
-
----
-
-## Javascript Info & CSS Visual Dictionary Grammar
-
-### Day 16: January 01, 2020 - Wednesday 🍾 💖
-
-![Snap of CSS Visual Dictionary](images/r3d16.png)
-
-**BRIEF DESCRIPTION:**
-
-- Started learning JS from scratch from [Javascript Info](https://javascript.info/) to fill the gap in Vanilla JS.
-- Much needed one.
-- Also finished half of [CSS  Visual Dictionary](http://www.javascriptteacher.com/free-book.html) by [Javascript Teacher](https://twitter.com/js_tut).
-- Started this CSS Book earlier in 2019 but never finished it, but this time I am going to complete it.
-
-**REFERENCES:**
-
-- [Javascript Info](https://javascript.info/)
-- [CSS  Visual Dictionary](http://www.javascriptteacher.com/free-book.html)
-- [Javascript Teacher](https://twitter.com/js_tut)
 
 ---
 
