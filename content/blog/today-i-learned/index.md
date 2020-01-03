@@ -1,7 +1,63 @@
 ---
 title: Round 3 100Days Of Code
-date: "2020-01-01"
+date: "2020-01-03"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## Design
+
+### Day 18: January 03, 2020 - Friday 🍾 💖
+
+![Figma Design](images/r3d18.png)
+
+**BRIEF DESCRIPTION:**
+
+- After so many days set up 2 hours in my daily schedule to learn and improve my skill on Design aswell.
+- Started of with [Figma](https://www.figma.com/) with its own [Learn Design course](https://www.figma.com/resources/learn-design/) tools.
+
+**REFERENCES:**
+
+- [Figma](https://www.figma.com/)
+- [Learn Design course](https://www.figma.com/resources/learn-design/)
+
+---
+
+## Javascript Info Cont.
+
+### Day 17: January 02, 2020 - Thursday 🍾 💖
+
+![JS Info](images/r3d17.png)
+
+**BRIEF DESCRIPTION:**
+
+- Continue reading [Javascript Info](https://javascript.info/) in the free time.
+- Side by side practised in the Dev Tools on how JS works.
+
+**REFERENCES:**
+
+- [Javascript Info](https://javascript.info/).
+
+---
+
+## Javascript Info & CSS Visual Dictionary Grammar
+
+### Day 16: January 01, 2020 - Wednesday 🍾 💖
+
+![Snap of CSS Visual Dictionary](images/r3d16.png)
+
+**BRIEF DESCRIPTION:**
+
+- Started learning JS from scratch from [Javascript Info](https://javascript.info/) to fill the gap in Vanilla JS.
+- Much needed one.
+- Also finished half of [CSS  Visual Dictionary](http://www.javascriptteacher.com/free-book.html) by [Javascript Teacher](https://twitter.com/js_tut).
+- Started this CSS Book earlier in 2019 but never finished it, but this time I am going to complete it.
+
+**REFERENCES:**
+
+- [Javascript Info](https://javascript.info/)
+- [CSS  Visual Dictionary](http://www.javascriptteacher.com/free-book.html)
+- [Javascript Teacher](https://twitter.com/js_tut)
+
 ---
 
 ## Javascript Info & CSS Visual Dictionary Grammar
