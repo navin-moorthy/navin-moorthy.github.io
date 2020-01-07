@@ -1,7 +1,24 @@
 ---
 title: Round 3 100Days Of Code
-date: "2020-01-03"
+date: "2020-01-04"
 description: Round 3 of 100 Days of Code where I log daily activities of my coding.
+---
+
+## Design Code
+
+### Day 19: January 04, 2020 - Saturday
+
+![Design Code](images/r3d19.png)
+
+**BRIEF DESCRIPTION:**
+
+- Started the design course from [Design Code](https://designcode.io/design-system-figma).
+
+**REFERENCES:**
+
+- [Figma](https://www.figma.com/)
+- [Design Code](https://designcode.io/design-system-figma)
+
 ---
 
 ## Design
