@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="https://navin-navi.github.io">
+  <a href="https://navin-moorthy.github.io">
     <img alt="Navin | Logo" src="./static/logo.png" width="130" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/navin-navi">
+  <a href="https://github.com/navin-moorthy">
     <img
       src="https://img.shields.io/badge/navin-navi-orange.svg?colorB=40ff00&colorA=ec407a"
       alt="author badge with navin-navi written on it"
@@ -78,7 +78,7 @@
 
 <p align="center">
   <strong>
-  Checkout my site at <a href="https://navin-navi.github.io">Navin-Navi</a>
+  Checkout my site at <a href="https://navin-moorthy.github.io">Navin-Navi</a>
   </strong>
 </p>
 
@@ -89,8 +89,8 @@
 </p>
 
 <p align="center">
-  <a href="https://twitter.com/navin_navi19">
-    <img alt="Twitter: navin_navi19" src="https://img.shields.io/twitter/follow/navin_navi19.svg?style=social" target="_blank" />
+  <a href="https://twitter.com/navin_moorthy">
+    <img alt="Twitter: navin_moorthy" src="https://img.shields.io/twitter/follow/navin_moorthy.svg?style=social" target="_blank" />
   </a>
 </p>
 
@@ -109,7 +109,7 @@
 
 **Google Lighthouse Audit Result**
 
-![Google Lighthouse Audit Result of navinnavi.github.io](content/blog/intro-to-my-blog/google-lighthouse-audit.png)
+![Google Lighthouse Audit Result of navin-moorthy.github.io](content/blog/intro-to-my-blog/google-lighthouse-audit.png)
 
 - [React Spring](https://github.com/drcmda/react-spring) (Used for Parallax effect)
 - [TailwindCSS](https://tailwindcss.com/) & [styled-components](https://www.styled-components.com/) for styling
@@ -314,6 +314,6 @@ If you are currently writing in the Medium, consider migration with [medium-to-o
 
 <div align="center">
 
-<sub><sup>Project by <a href="https://github.com/navin-navi"> @Navin Navi</a></sup></sub><small>✌</small>
+<sub><sup>Project by <a href="https://github.com/navin-moorthy"> @Navin Moorthy</a></sup></sub><small>✌</small>
 
 </div>
