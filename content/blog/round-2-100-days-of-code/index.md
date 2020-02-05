@@ -208,7 +208,7 @@ Learned about a couple of topics along with Scrimba videos
 
 - Reviewed and recalled [Laravel 6 from scratch from Laracasts](https://github.com/navin-navi/laravel6-from-scratch-laracasts) till I completed before.
 - Reviewed and recalled [Intro to Vue JS course learned from Vue Mastery](https://github.com/navin-navi/vue-mastery-intro-to-vuejs).
-- Made the Intro to [Vue JS project live](https://navin-navi.github.io/vue-mastery-intro-to-vuejs/) in GH Pages after pushing the repo to Github.
+- Made the Intro to [Vue JS project live](https://navin-moorthy.github.io/vue-mastery-intro-to-vuejs/) in GH Pages after pushing the repo to Github.
 - Looked at some of the [Aaron Iker's](https://codepen.io/aaroniker/pens/public) pen for inspirations.
 
 ---
@@ -446,7 +446,7 @@ Learned about a couple of new things,
 
 - [Understand array methods by implementing them — all of them](https://dev.to/bnevilleoneill/understand-array-methods-by-implementing-them-all-of-them-iha)
 - [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
-- [CSS Flex Notes](https://navin-navi.github.io/blog/css-flexbox-collection/)
+- [CSS Flex Notes](https://navin-moorthy.github.io/blog/css-flexbox-collection/)
 
 **My Implementation:**
 
@@ -476,7 +476,7 @@ Learned about a couple of new things,
 Learned about a couple of new things,
 
 - [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
-- [CSS Flex Notes](https://navin-navi.github.io/blog/css-flexbox-collection/)
+- [CSS Flex Notes](https://navin-moorthy.github.io/blog/css-flexbox-collection/)
 
 ---
 
@@ -588,7 +588,7 @@ Learned about a couple of new things,
 
 Learned about a couple of new things,
 
-- [React Internals](https://navin-navi.github.io/blog/react-internals/)
+- [React Internals](https://navin-moorthy.github.io/blog/react-internals/)
 
 ---
 
@@ -602,8 +602,8 @@ Learned about a couple of new things,
 
 Learned about a couple of new things,
 
-- [Blogs I Read on 06-09-2019](https://navin-navi.github.io/blog/blogs-i-read-on-05-09-2019/)
-- [React Internals](https://navin-navi.github.io/blog/react-internals/)
+- [Blogs I Read on 06-09-2019](https://navin-moorthy.github.io/blog/blogs-i-read-on-05-09-2019/)
+- [React Internals](https://navin-moorthy.github.io/blog/react-internals/)
 
 ---
 
@@ -617,15 +617,15 @@ Learned about a couple of new things,
 
 Learned about a couple of new things,
 
-- [What is “this” in JavaScript](https://navin-navi.github.io/blog/this-in-javascript/)
-- [Inspiration-10 Examples of Pure CSS Animation on CodePen](https://navin-navi.github.io/blog/pure-css-animation-inspiration-on-codepen/)
-- [Map, Filter and Reduce – Animated](https://navin-navi.github.io/blog/map-filter-reduce-animated/)
-- [11 JavaScript Animation Libraries For 2019](https://navin-navi.github.io/blog/javascript-animation-libraries-you-should-know/)
-- [11 JavaScript Utility Libraries you Should Know in 2019](https://navin-navi.github.io/blog/javascript-utility-libraries-you-should-know/)
-- [How to Trigger Animation Events using React](https://navin-navi.github.io/blog/how-to-trigger-animation-events-using-react/)
-- [A Practical Guide to Regular Expressions (RegEx) In JavaScript](https://navin-navi.github.io/blog/a-beginners-guide-to-regular-expressions-regex-in-javascript/)
-- [S.O.L.I.D The First 5 Principles of Object Oriented Design](https://navin-navi.github.io/blog/SOLID-principles-in-OOPS/)
-- [Blogs I Read on 05-09-2019](https://navin-navi.github.io/blog/blogs-i-read-on-05-09-2019/)
+- [What is “this” in JavaScript](https://navin-moorthy.github.io/blog/this-in-javascript/)
+- [Inspiration-10 Examples of Pure CSS Animation on CodePen](https://navin-moorthy.github.io/blog/pure-css-animation-inspiration-on-codepen/)
+- [Map, Filter and Reduce – Animated](https://navin-moorthy.github.io/blog/map-filter-reduce-animated/)
+- [11 JavaScript Animation Libraries For 2019](https://navin-moorthy.github.io/blog/javascript-animation-libraries-you-should-know/)
+- [11 JavaScript Utility Libraries you Should Know in 2019](https://navin-moorthy.github.io/blog/javascript-utility-libraries-you-should-know/)
+- [How to Trigger Animation Events using React](https://navin-moorthy.github.io/blog/how-to-trigger-animation-events-using-react/)
+- [A Practical Guide to Regular Expressions (RegEx) In JavaScript](https://navin-moorthy.github.io/blog/a-beginners-guide-to-regular-expressions-regex-in-javascript/)
+- [S.O.L.I.D The First 5 Principles of Object Oriented Design](https://navin-moorthy.github.io/blog/SOLID-principles-in-OOPS/)
+- [Blogs I Read on 05-09-2019](https://navin-moorthy.github.io/blog/blogs-i-read-on-05-09-2019/)
 
 ---
 
@@ -784,9 +784,9 @@ Learned about a couple of new things,
 
 Learned about a couple of new things,
 
-- [Intro to MDX in Gatsby](https://navin-navi.github.io/blog/gatsby-mdx-intro/)
-- [25+ JavaScript Shorthand Coding Techniques](https://navin-navi.github.io/blog/25-javascript-shorthand-coding-techniques-sitepoint/)
-- [Learn while you poop 2](https://navin-navi.github.io/blog/learnwhileyoupoop-notes/#why-are-components-so-great-)
+- [Intro to MDX in Gatsby](https://navin-moorthy.github.io/blog/gatsby-mdx-intro/)
+- [25+ JavaScript Shorthand Coding Techniques](https://navin-moorthy.github.io/blog/25-javascript-shorthand-coding-techniques-sitepoint/)
+- [Learn while you poop 2](https://navin-moorthy.github.io/blog/learnwhileyoupoop-notes/#why-are-components-so-great-)
 - [Explored about MDX-Deck](https://github.com/jxnblk/mdx-deck)
 - [Explored about Code Surfer and it's v2 & v3](https://github.com/pomber/code-surfer)
 
@@ -808,9 +808,9 @@ Learned about a couple of new things,
 
 Learned about a couple of new things,
 
-- [Building a Gatsby Blog](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-31-bonus-build-a-gatsbyjsblog)
-- [Data Visualization in React Using Gatsby](https://navin-navi.github.io/blog/data-visualization-in-react-using-gatsby/)
-- [Learn while you poop 1](https://navin-navi.github.io/blog/learnwhileyoupoop-notes/#module-1-react-essentials)
+- [Building a Gatsby Blog](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-31-bonus-build-a-gatsbyjsblog)
+- [Data Visualization in React Using Gatsby](https://navin-moorthy.github.io/blog/data-visualization-in-react-using-gatsby/)
+- [Learn while you poop 1](https://navin-moorthy.github.io/blog/learnwhileyoupoop-notes/#module-1-react-essentials)
 
 ---
 
@@ -828,8 +828,8 @@ Learned about a couple of new things,
 
 Learned about a couple of new things,
 
-- [Testing](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-29-bonus-testing)
-- [Webpack & Babel Config](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-30-bonus-web-pack--babel)
+- [Testing](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-29-bonus-testing)
+- [Webpack & Babel Config](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-30-bonus-web-pack--babel)
 
 ---
 
@@ -849,10 +849,10 @@ Learned about a couple of new things,
 
 Learned about a couple of new things,
 
-- [Mobile Support](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-25-master-project-mobile-support)
-- [React Performance](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-26-master-project-react-performance)
-- [React Interview Questions + Advice](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-27-react-interview-questions--advice)
-- [Progressive Web App](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-28-bonus-progressive-web-app)
+- [Mobile Support](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-25-master-project-mobile-support)
+- [React Performance](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-26-master-project-react-performance)
+- [React Interview Questions + Advice](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-27-react-interview-questions--advice)
+- [Progressive Web App](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-28-bonus-progressive-web-app)
 
 ---
 
@@ -872,9 +872,9 @@ Learned about a couple of new things,
 
 Learned about a couple of new things,
 
-- [Stripe Payments - Back end](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-22-master-project-stripe-payments-part-2---back-end)
-- [Context API](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-23-master-project-contextapi)
-- [GraphQL+ Apollo](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-24-master-project-graphql-apollo)
+- [Stripe Payments - Back end](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-22-master-project-stripe-payments-part-2---back-end)
+- [Context API](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-23-master-project-contextapi)
+- [GraphQL+ Apollo](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-24-master-project-graphql-apollo)
 
 ---
 
@@ -894,11 +894,11 @@ Learned about a couple of new things,
 
 Learned about a couple of new things,
 
-- [HOC Patterns](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-17-master-project-hoc-patterns)
-- [Asynchronous Redux](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-18-master-project-asynchronous-redux)
-- [Container Pattern](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-19-master-projectcontainer-pattern)
-- [Redux Saga](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-20-master-projectredux-saga)
-- [React Hooks](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-21-master-project-reacthooks)
+- [HOC Patterns](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-17-master-project-hoc-patterns)
+- [Asynchronous Redux](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-18-master-project-asynchronous-redux)
+- [Container Pattern](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-19-master-projectcontainer-pattern)
+- [Redux Saga](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-20-master-projectredux-saga)
+- [React Hooks](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-21-master-project-reacthooks)
 
 ---
 
@@ -916,9 +916,9 @@ Learned about a couple of new things,
 
 Learned about a couple of new things,
 
-- [CSS in JS](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-15-master-project-css-in-js--styled-components0)
+- [CSS in JS](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-15-master-project-css-in-js--styled-components0)
 - Converted the whole Ecommerce app to use Styled Components
-- [Advanced Redux and Firebase](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-16-master-projectadvanced-redux--firebase)
+- [Advanced Redux and Firebase](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-16-master-projectadvanced-redux--firebase)
 
 ---
 
@@ -934,9 +934,9 @@ Learned about a couple of new things,
 
 Learned about a couple of new things,
 
-- [State Normalization](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-12-master-project-statenormalization)
-- [Stripe Payment](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-13-master-project-stripepayments-part-1)
-- [Deploying to Heroku](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-14-master-projectdeploying-to-production)
+- [State Normalization](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-12-master-project-statenormalization)
+- [Stripe Payment](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-13-master-project-stripepayments-part-1)
+- [Deploying to Heroku](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-14-master-projectdeploying-to-production)
 
 ---
 
@@ -948,17 +948,17 @@ Learned about a couple of new things,
 
 ![Checkout Page](../complete-react-developer-in-2019/images/91.png)
 
-**Live:** [Section 8](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#101-mapdispatchtoprops)
+**Live:** [Section 8](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#101-mapdispatchtoprops)
 
 **Brief Description:**
 
 Learned about a couple of new things,
 
-- [Created Cart Dropdown component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#104-card-drop-down-component)
-- [Created a Checkout Page](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#116-checkout-page)
-- [Session Storage and Persistance](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-9-master-project-sessionstorage--persistence)
-- [Improve State handling in Redux](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-10-master-project-redux-2)
-- [Advanced Routing](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-11-master-projectadvanced-routing)
+- [Created Cart Dropdown component](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#104-card-drop-down-component)
+- [Created a Checkout Page](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#116-checkout-page)
+- [Session Storage and Persistance](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-9-master-project-sessionstorage--persistence)
+- [Improve State handling in Redux](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-10-master-project-redux-2)
+- [Advanced Routing](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-11-master-projectadvanced-routing)
 
 ---
 
@@ -970,16 +970,16 @@ Learned about a couple of new things,
 
 ![Redux](../complete-react-developer-in-2019/images/81.png)
 
-**Live:** [Section 8](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#101-mapdispatchtoprops)
+**Live:** [Section 8](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#101-mapdispatchtoprops)
 
 **Brief Description:**
 
 Learned about a couple of new things,
 
-- [mapDispatchToProps](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#101-mapdispatchtoprops)
-- [User Redirect and User Action-type](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#102-user-redirect-and-user-action-type)
-- [Built the Card Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#103-cart-component)
-- [Added Add to Cart Buttom styling to the Items](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#106-add-to-cart-styling)
+- [mapDispatchToProps](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#101-mapdispatchtoprops)
+- [User Redirect and User Action-type](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#102-user-redirect-and-user-action-type)
+- [Built the Card Component](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#103-cart-component)
+- [Added Add to Cart Buttom styling to the Items](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#106-add-to-cart-styling)
 
 ---
 
@@ -991,16 +991,16 @@ Learned about a couple of new things,
 
 ![Redux](../complete-react-developer-in-2019/images/65.png)
 
-**Live:** [Section 8](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-8-master-project-redux-1)
+**Live:** [Section 8](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-8-master-project-redux-1)
 
 **Brief Description:**
 
 Learned about a couple of new things,
 
-- [Redux Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#95-redux-concepts)
-- [Redux Actions and Reducers](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#97-redux-actions-and-reducers)
-- [Setting Up Redux in the application](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#99-setting-up-redux-2)
-- [connect() and mapStateToProps](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#100-connect-and-mapstatetoprops)
+- [Redux Concepts](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#95-redux-concepts)
+- [Redux Actions and Reducers](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#97-redux-actions-and-reducers)
+- [Setting Up Redux in the application](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#99-setting-up-redux-2)
+- [connect() and mapStateToProps](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#100-connect-and-mapstatetoprops)
 
 ---
 
@@ -1012,17 +1012,17 @@ Learned about a couple of new things,
 
 ![Crown Clothing Sign In Component](../complete-react-developer-in-2019/images/64.png)
 
-**Live:** [Crown Clothing](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-7-master-project-firebase-user-authentication)
+**Live:** [Crown Clothing](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-7-master-project-firebase-user-authentication)
 
 **Brief Description:**
 
 Learned about a couple of new things,
 
 - Created new Firebase Project
-- [Google Sign In Authentication](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#84-google-sign-in-authentication-3)
-- [Stored the Signed in user in Firestore](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#87-storing-user-data-in-firebase)
-- [Sign Up Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#89-sign-up-component)
-- [Sign In With Email and Password Authentication](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#91-sign-in-with-email-and-password)
+- [Google Sign In Authentication](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#84-google-sign-in-authentication-3)
+- [Stored the Signed in user in Firestore](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#87-storing-user-data-in-firebase)
+- [Sign Up Component](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#89-sign-up-component)
+- [Sign In With Email and Password Authentication](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#91-sign-in-with-email-and-password)
 
 ---
 
@@ -1034,15 +1034,15 @@ Learned about a couple of new things,
 
 ![Crown Clothing Log In Component](../complete-react-developer-in-2019/images/55.png)
 
-**Live:** [Crown Clothing](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#73-sign-in-component)
+**Live:** [Crown Clothing](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#73-sign-in-component)
 
 **Brief Description:**
 
 Learned about a couple of new things,
 
-- [Sign In Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#73-sign-in-component)
-- [Form Input Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#74-form-input-component)
-- [Custom Button Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#75-custom-button-component)
+- [Sign In Component](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#73-sign-in-component)
+- [Form Input Component](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#74-form-input-component)
+- [Custom Button Component](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#75-custom-button-component)
 - Intro to Firebase Auth and Firestore
 
 ---
@@ -1055,7 +1055,7 @@ Learned about a couple of new things,
 
 ![Crown Clothing](../complete-react-developer-in-2019/images/52.png)
 
-**Live:** [Crown Clothing](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#70-header-component)
+**Live:** [Crown Clothing](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#70-header-component)
 
 **Brief Description:**
 
@@ -1063,8 +1063,8 @@ Learned about a couple of new things,
 
 - Started building the Crown Clothing E-Commerce Site.
 - Basic Setup Done.
-- Got introduced to [React Router](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-5-master-project-reactrouter-and-routing).
-- [Form Components](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-6-master-project-forms--components)
+- Got introduced to [React Router](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-5-master-project-reactrouter-and-routing).
+- [Form Components](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-6-master-project-forms--components)
 
 ---
 
@@ -1076,18 +1076,18 @@ Learned about a couple of new things,
 
 ![Lifecycle Events](../complete-react-developer-in-2019/images/39.png)
 
-**Live:** [React DOM and Lifecycle events](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#44-react-and-reactdom)
+**Live:** [React DOM and Lifecycle events](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#44-react-and-reactdom)
 
 **Brief Description:**
 
 Learned about a couple of new things,
 
-- [React and ReactDOM](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#44-react-and-reactdom)
-- [Revisiting Virtual-DOM +Unidirectional Data Flow](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#45-revisiting-virtual-dom-unidirectional-data-flow)
-- [Asynchronous setState](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#46-asynchronous-setstate)
-- [Introducing LifeCycle Methods](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#47-introducing-lifecycle-methods)
-- [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-32-appendix-1-key-developer-concepts)
-- [Update my Git101 Post](https://navin-navi.github.io/blog/git-101/#getting-started)
+- [React and ReactDOM](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#44-react-and-reactdom)
+- [Revisiting Virtual-DOM +Unidirectional Data Flow](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#45-revisiting-virtual-dom-unidirectional-data-flow)
+- [Asynchronous setState](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#46-asynchronous-setstate)
+- [Introducing LifeCycle Methods](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#47-introducing-lifecycle-methods)
+- [Appendix 1: Key Developer Concepts](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-32-appendix-1-key-developer-concepts)
+- [Update my Git101 Post](https://navin-moorthy.github.io/blog/git-101/#getting-started)
 
 ---
 
@@ -1100,17 +1100,17 @@ Learned about a couple of new things,
 ![Monster Rolodex](../complete-react-developer-in-2019/images/36.png)
 
 **Repo:** [Monster Rolodex](https://github.com/navin-navi/monsters-rolodex)
-**Live:** [Monster Rolodex](https://navin-navi.github.io/monsters-rolodex/)
+**Live:** [Monster Rolodex](https://navin-moorthy.github.io/monsters-rolodex/)
 
 **Brief Description:**
 
 Learned about a couple of new things,
 
-- [Added SearchField Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#32-searchfield-state)
-- [React Events](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#33-react-events)
-- [Added Filter Login to the Search Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#34-filtering-state)
-- [Event Binding](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#38-class-methods-and-arrowfunctions)
-- [Responsive App deployed to GH Pages](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#43-deploying-our-app)
+- [Added SearchField Component](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#32-searchfield-state)
+- [React Events](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#33-react-events)
+- [Added Filter Login to the Search Component](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#34-filtering-state)
+- [Event Binding](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#38-class-methods-and-arrowfunctions)
+- [Responsive App deployed to GH Pages](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#43-deploying-our-app)
 
 ---
 
@@ -1122,16 +1122,16 @@ Learned about a couple of new things,
 
 ![Monster Rolodex In Works](../complete-react-developer-in-2019/images/31.png)
 
-**Live Post:** [Monster Rolodex In Works](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#29-card-component)
+**Live Post:** [Monster Rolodex In Works](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#29-card-component)
 
 **Brief Description:**
 
 Learned about a couple of new things,
 
-- [Created Card List Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#28-card-list-component)
-- [Created Card Component](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#29-card-component)
-- [Learned on why we are breaking everything into components](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#30-exercise-breaking-into-components)
-- [Deep dive into State vs Props](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#31-state-vs-props)
+- [Created Card List Component](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#28-card-list-component)
+- [Created Card Component](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#29-card-component)
+- [Learned on why we are breaking everything into components](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#30-exercise-breaking-into-components)
+- [Deep dive into State vs Props](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#31-state-vs-props)
 
 ---
 
@@ -1152,7 +1152,7 @@ Learned about a couple of new things,
 **Links:**
 
 - [Source Code](https://github.com/navin-navi/redux-github-commits-history-chart)
-- [Live Application](https://navin-navi.github.io/redux-github-commits-history-chart/)
+- [Live Application](https://navin-moorthy.github.io/redux-github-commits-history-chart/)
 - [CodeSandbox](https://codesandbox.io/s/github/navin-navi/redux-github-commits-history-chart)
 
 ---
@@ -1174,7 +1174,7 @@ Learned about a couple of new things,
 **Links:**
 
 - [Source Code](https://github.com/navin-navi/github-commits-history-chart)
-- [Live Application](https://navin-navi.github.io/github-commits-history-chart/)
+- [Live Application](https://navin-moorthy.github.io/github-commits-history-chart/)
 - [CodeSandbox](https://codesandbox.io/s/github/navin-navi/github-commits-history-chart/)
 
 ---
@@ -1234,15 +1234,15 @@ Learned about a couple of new things,
 
 ![React Context](../complete-react-developer-in-2019/images/3.png)
 
-**Live Post:** [React Basics](https://navin-navi.github.io/blog/complete-react-developer-in-2019/)
+**Live Post:** [React Basics](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/)
 
 **Brief Description:**
 
 Learned about a couple of new things,
 
-- [React Introduction](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-1-introduction)
-- [React KeyComponents](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-2-react-key-concepts)
-- [React Basics](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#section-3-react-basics)
+- [React Introduction](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-1-introduction)
+- [React KeyComponents](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-2-react-key-concepts)
+- [React Basics](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#section-3-react-basics)
 
 ---
 
@@ -1254,19 +1254,19 @@ Learned about a couple of new things,
 
 ![JavaScript Basics](../ultimate-courses-javascript-basics/images/2.png)
 
-**Live Post:** [String, Objects and Arrays](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#conditional-logic)
+**Live Post:** [String, Objects and Arrays](https://navin-moorthy.github.io/blog/ultimate-courses-javascript-basics/#conditional-logic)
 
 **Brief Description:**
 
 Learned about a couple of new things,
 
-- [Conditional Logic](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#conditional-logic)
-- [Numbers In-Depth](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#numbers-in-depth)
-- [Strings In-Depth](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#boolean-in-depth)
-- [Boolean In-Depth](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#boolean-in-depth)
-- [Functions In-Depth](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#functions-in-depth)
-- [Objects In-Depth](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#objects-in-depth)
-- [Arrays In-Depth](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#arrays-in-depth)
+- [Conditional Logic](https://navin-moorthy.github.io/blog/ultimate-courses-javascript-basics/#conditional-logic)
+- [Numbers In-Depth](https://navin-moorthy.github.io/blog/ultimate-courses-javascript-basics/#numbers-in-depth)
+- [Strings In-Depth](https://navin-moorthy.github.io/blog/ultimate-courses-javascript-basics/#boolean-in-depth)
+- [Boolean In-Depth](https://navin-moorthy.github.io/blog/ultimate-courses-javascript-basics/#boolean-in-depth)
+- [Functions In-Depth](https://navin-moorthy.github.io/blog/ultimate-courses-javascript-basics/#functions-in-depth)
+- [Objects In-Depth](https://navin-moorthy.github.io/blog/ultimate-courses-javascript-basics/#objects-in-depth)
+- [Arrays In-Depth](https://navin-moorthy.github.io/blog/ultimate-courses-javascript-basics/#arrays-in-depth)
 
 ---
 
@@ -1278,7 +1278,7 @@ Learned about a couple of new things,
 
 ![JavaScript Basics](images/36.variables.png)
 
-**Live Post:** [Javascript Variables](https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/#understanding-var-and-hoisting)
+**Live Post:** [Javascript Variables](https://navin-moorthy.github.io/blog/ultimate-courses-javascript-basics/#understanding-var-and-hoisting)
 
 **Brief Description:**
 
@@ -1297,7 +1297,7 @@ Learned about a couple of new things,
 
 ![JavaScript Basics](../ultimate-courses-javascript-basics/images/4.png)
 
-**Live Post:** <https://navin-navi.github.io/blog/ultimate-courses-javascript-basics/>
+**Live Post:** <https://navin-moorthy.github.io/blog/ultimate-courses-javascript-basics/>
 
 **Brief Description:**
 
@@ -1579,7 +1579,7 @@ Learned about a couple of new things,
 
 ![About Page](images/18.about-page.jpg)
 
-**Live Demo:** <https://navin-navi.github.io/about>
+**Live Demo:** <https://navin-moorthy.github.io/about>
 
 **Progress:** Completed about Page for my blog
 
@@ -1590,7 +1590,7 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [About Page](https://navin-navi.github.io/about)
+- [About Page](https://navin-moorthy.github.io/about)
 
 ---
 
@@ -1602,7 +1602,7 @@ Learned about a couple of new things,
 
 ![About Page](images/17.about-page.jpg)
 
-**Live Demo:** <https://navin-navi.github.io/about>
+**Live Demo:** <https://navin-moorthy.github.io/about>
 
 **Progress:** Half completed about Page for my blog
 
@@ -1614,7 +1614,7 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [About Page](https://navin-navi.github.io/about)
+- [About Page](https://navin-moorthy.github.io/about)
 
 ---
 
@@ -1626,7 +1626,7 @@ Learned about a couple of new things,
 
 ![Projects Page](images/16.projects-page.jpg)
 
-**Live Demo:** <https://navin-navi.github.io/projects>
+**Live Demo:** <https://navin-moorthy.github.io/projects>
 
 **Progress:** Finished building Projects Page for my blog
 
@@ -1638,8 +1638,8 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [Projects Page](https://navin-navi.github.io/projects)
-- [Codepen Creations](https://navin-navi.github.io/blog/codepen-creations/)
+- [Projects Page](https://navin-moorthy.github.io/projects)
+- [Codepen Creations](https://navin-moorthy.github.io/blog/codepen-creations/)
 
 ---
 
@@ -1651,7 +1651,7 @@ Learned about a couple of new things,
 
 ![Angular Issue Tracker](images/15.angular-issue-tracker.png)
 
-**Live Demo:** <https://navin-navi.github.io/angular-issue-tracker/>
+**Live Demo:** <https://navin-moorthy.github.io/angular-issue-tracker/>
 
 **Progress:** Published the application in GHpages with CI
 
@@ -1663,7 +1663,7 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [Issue Tracker Live](https://navin-navi.github.io/angular-issue-tracker/)
+- [Issue Tracker Live](https://navin-moorthy.github.io/angular-issue-tracker/)
 - [GitHub Repository](https://github.com/navin-navi/angular-issue-tracker)
 
 ---
@@ -1676,7 +1676,7 @@ Learned about a couple of new things,
 
 ![100DaysOfCode-Round1](images/14.round-1-100-days-of-code.png)
 
-**Live Demo:** <https://navin-navi.github.io/100-Days-of-Code-Round-1/>
+**Live Demo:** <https://navin-moorthy.github.io/100-Days-of-Code-Round-1/>
 
 **Progress:** Made an JSON API endpoint to power a project
 
@@ -1687,7 +1687,7 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [Live](https://navin-navi.github.io/100-Days-of-Code-Round-1/)
+- [Live](https://navin-moorthy.github.io/100-Days-of-Code-Round-1/)
 - [GitHub Repository](https://github.com/navin-navi/100-Days-of-Code-Round-1)
 
 ---
@@ -1726,7 +1726,7 @@ Learned about a couple of new things,
 
 ![Projects Organized](images/12.old-projects-organized.jpg)
 
-**Live Demo:** <https://navin-navi.github.io/>
+**Live Demo:** <https://navin-moorthy.github.io/>
 
 **Progress:** Made Progress and today's target was achieved
 
@@ -1738,8 +1738,8 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [Live Demo WIP](https://navin-navi.github.io/projects)
-- [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
+- [Live Demo WIP](https://navin-moorthy.github.io/projects)
+- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
 
 ---
 
@@ -1751,7 +1751,7 @@ Learned about a couple of new things,
 
 ![Projects Organized](images/11.old-projects-organized.jpg)
 
-**Live Demo:** <https://navin-navi.github.io/>
+**Live Demo:** <https://navin-moorthy.github.io/>
 
 **Progress:** Made Progress and today's target was achieved
 
@@ -1764,8 +1764,8 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [Live Demo WIP](https://navin-navi.github.io/projects)
-- [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
+- [Live Demo WIP](https://navin-moorthy.github.io/projects)
+- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
 
 ---
 
@@ -1777,7 +1777,7 @@ Learned about a couple of new things,
 
 ![Projects Organized](images/10.projects-organized.png)
 
-**Live Demo:** <https://navin-navi.github.io/>
+**Live Demo:** <https://navin-moorthy.github.io/>
 
 **Progress:** Made Progress and today's target was achieved
 
@@ -1787,8 +1787,8 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [Live Demo WIP](https://navin-navi.github.io/projects)
-- [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
+- [Live Demo WIP](https://navin-moorthy.github.io/projects)
+- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
 
 ---
 
@@ -1800,7 +1800,7 @@ Learned about a couple of new things,
 
 ![Added Project Section](images/9.project-section-added.jpg)
 
-**Live Demo:** <https://navin-navi.github.io/>
+**Live Demo:** <https://navin-moorthy.github.io/>
 
 **Progress:** Made Progress and today's target was achieved
 
@@ -1814,8 +1814,8 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [Live Demo](https://navin-navi.github.io/blog)
-- [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
+- [Live Demo](https://navin-moorthy.github.io/blog)
+- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
 
 ---
 
@@ -1827,7 +1827,7 @@ Learned about a couple of new things,
 
 ![Light Mode with Social Share](images/8.light-mode&social-share.jpg)
 
-**Live Demo:** <https://navin-navi.github.io/>
+**Live Demo:** <https://navin-moorthy.github.io/>
 
 **Progress:** Made Progress and today's target was achieved
 
@@ -1842,8 +1842,8 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [Live Demo](https://navin-navi.github.io/blog)
-- [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
+- [Live Demo](https://navin-moorthy.github.io/blog)
+- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
 
 ---
 
@@ -1855,14 +1855,14 @@ Learned about a couple of new things,
 
 ![Fira Code In Action](images/7.fira-code-in-action.png)
 
-**Live Demo:** <https://navin-navi.github.io/>
+**Live Demo:** <https://navin-moorthy.github.io/>
 
 **Progress:** Made Progress and today's target was achieved
 
 **Brief Description:**
 
 - Changed Syntax Highlighting from Fira Mono to Fira Code
-- Updated [README](https://github.com/navin-navi/navin-navi.github.io/blob/dev/README.md) with tons of details.
+- Updated [README](https://github.com/navin-navi/navin-moorthy.github.io/blob/dev/README.md) with tons of details.
 - Added heartbeat animation to Footer love SVG using tailwind.
 - Added Markdown Images - Medium like Zoom on click.
 - Smooth Scroll for all post header anchor link.
@@ -1870,8 +1870,8 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [Live Demo](https://navin-navi.github.io/blog)
-- [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
+- [Live Demo](https://navin-moorthy.github.io/blog)
+- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
 
 ---
 
@@ -1957,7 +1957,7 @@ Learned about a couple of new things,
 
 ![Javascript Object.fromEntries vs Object.entries](../javascript-Object.fromEntries-vs-Object.entries/Object.fromEntries_vs_Object.entries.png)
 
-**Article Live @:** [this LINK](https://navin-navi.github.io/blog/javascript-Object.fromEntries-vs-Object.entries/)
+**Article Live @:** [this LINK](https://navin-moorthy.github.io/blog/javascript-Object.fromEntries-vs-Object.entries/)
 
 **Progress:** Wrote and published it in my site today
 
@@ -1969,7 +1969,7 @@ Then I planned for the Issue Tracker Angular Application that I need to build as
 
 **Links:**
 
-- Live - [Javascript Object.fromEntries vs Object.entries](https://navin-navi.github.io/blog/javascript-Object.fromEntries-vs-Object.entries/)
+- Live - [Javascript Object.fromEntries vs Object.entries](https://navin-moorthy.github.io/blog/javascript-Object.fromEntries-vs-Object.entries/)
 
 ---
 
@@ -2002,7 +2002,7 @@ This assignment is completely focused on Angular HTTP feature, where
 
 ### Day 1: June 19, 2019 - Wednesday
 
-**Project:** Polished my [Blog](https://navin-navi.github.io/)
+**Project:** Polished my [Blog](https://navin-moorthy.github.io/)
 
 ![Snap of my Blog HomePage](images/1-blog-home.jpg)
 
@@ -2020,7 +2020,7 @@ With this I am going to start over my #100DaysOfCode Rounds with just counting t
 
 **Links:**
 
-- [GitHub Repository](https://github.com/navin-navi/navin-navi.github.io)
+- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
 - [Original Inspiration Repo Link from LekoArts](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
 
 ## [Go to Round 1](/blog/round-1-100-days-of-code/)

@@ -4,19 +4,19 @@ date: "2019-06-19"
 description: Know the Tech Stack, Features and Functionalities used to build this blog. You can find a short tutorial on how to build and run this blog on your own. Also a brief explanation of the technologies used can be found.
 ---
 
-# [ 👨‍💻 NavinNavi 👨‍💻 ](https://navin-navi.github.io)
+# [ 👨‍💻 NavinNavi 👨‍💻 ](https://navin-moorthy.github.io)
 
-[![TravisCI](https://travis-ci.org/navin-navi/navin-navi.github.io.svg?branch=dev)](https://travis-ci.org/navin-navi/navin-navi.github.io)
+[![TravisCI](https://travis-ci.org/navin-navi/navin-moorthy.github.io.svg?branch=dev)](https://travis-ci.org/navin-navi/navin-moorthy.github.io)
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/navin-navi/navin-navi.github.io.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/navin-navi/navin-navi.github.io/alerts/)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/navin-navi/navin-moorthy.github.io.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/navin-navi/navin-moorthy.github.io/alerts/)
 
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/navin-navi/navin-navi.github.io.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/navin-navi/navin-navi.github.io/context:javascript)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/navin-navi/navin-moorthy.github.io.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/navin-navi/navin-moorthy.github.io/context:javascript)
 
 [![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100)](https://github.com/ebidel/lighthouse-badge)
 
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/navin-navi/navin-navi.github.io/issues)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/navin-navi/navin-moorthy.github.io/issues)
 
 My personal portfolio & blog. Built with Gatsby.js.
 
@@ -24,9 +24,9 @@ Playful & colorful blog with Parallax effect
 
 Developed upon [Gatsby Starter Portfolio: Cara](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
 
-**Checkout my site at [Navin-Navi](https://navin-navi.github.io)**
+**Checkout my site at [Navin-Navi](https://navin-moorthy.github.io)**
 
-[![Edit navin-navi.github.io](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/navin-navigithubio-egxzq?fontsize=14)
+[![Edit navin-moorthy.github.io](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/navin-navigithubio-egxzq?fontsize=14)
 
 [![Twitter: navin_navi19](https://img.shields.io/twitter/follow/navin_navi19.svg?style=social)](https://twitter.com/navin_navi19)
 
@@ -85,7 +85,7 @@ Check your development environment! You'll need [Node.js](https://nodejs.org/en/
 Use the Gatsby CLI to create a new site, specifying the blog starter.
 
 ```sh
-gatsby new <project-name> https://github.com/navin-navi/navin-navi.github.io
+gatsby new <project-name> https://github.com/navin-navi/navin-moorthy.github.io
 cd <project-name>
 npm start
 ```
@@ -242,7 +242,7 @@ If you are currently writing in the Medium, consider migration with [medium-to-o
 
 ## :bug: Bug reporting
 
-[Issue](https://github.com/navin-navi/navin-navi.github.io/issues)
+[Issue](https://github.com/navin-navi/navin-moorthy.github.io/issues)
 
 ## ™️ LICENSE
 

@@ -557,7 +557,7 @@ export default App;
 
 ### 23. Optional: map() + key attribute
 
-🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 24. Single Page Application
 
@@ -610,7 +610,7 @@ export default App;
 
 ### 26. Optional: Promises
 
-🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 27. Architecture Our App
 
@@ -913,7 +913,7 @@ export default App;
 
 ### 35. Optional: filter(), includes()
 
-🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 36. Search Box Component
 
@@ -1070,7 +1070,7 @@ If you want to learn more about this, [have a read here](https://reactjs.org/doc
 
 ### 41. Optional: Git + GitHub
 
-🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 42. Optional: Connecting With SSH To Github
 
@@ -1095,7 +1095,7 @@ In order to generate an SSH, [please follow the instructions here](https://help.
   "name": "monsters-rolodex",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://navin-navi.github.io/monsters-rolodex",
+  "homepage": "http://navin-moorthy.github.io/monsters-rolodex",
   "dependencies": {
     "gh-pages": "^2.1.0",
     "react": "^16.8.6",
@@ -1336,7 +1336,7 @@ h1 {
 - Served through gh-pages
 - Responsive to multiple screen sizes
 
-[Monsters Rolodex](https://navin-navi.github.io/monsters-rolodex/)
+[Monsters Rolodex](https://navin-moorthy.github.io/monsters-rolodex/)
 
 ### 44. React and ReactDOM
 
@@ -1767,7 +1767,7 @@ Learned how to
 
 ### 86. Optional: Async Await
 
-🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 87. Storing User Data In Firebase
 
@@ -2359,7 +2359,7 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
 
 ### 109. Optional: find()
 
-🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 110. Cart Item Component
 
@@ -2369,7 +2369,7 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
 
 ### 111. Optional: reduce()
 
-🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 112. Selectors in Redux
 
@@ -2413,7 +2413,7 @@ export default connect(
 
 ### 113. Optional: Memoization
 
-🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ### 114. Reselect Library
 
@@ -2593,7 +2593,7 @@ export default withRouter(connect(mapStateToProps)(CartDropDown));
 
 ### 131. Optional: Currying
 
-🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-navi.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
+🌟 _**Explained in [Appendix 1: Key Developer Concepts](https://navin-moorthy.github.io/blog/complete-react-developer-in-2019/#310-async-await)**_
 
 ## Section 12: Master Project: StateNormalization
 
@@ -5880,11 +5880,11 @@ secArray.includes(ob1);
 
 ### 308. CWD 2019: Git + GitHub
 
-[Refer to Git 101 Post](https://navin-navi.github.io/blog/git-101/#getting-started)
+[Refer to Git 101 Post](https://navin-moorthy.github.io/blog/git-101/#getting-started)
 
 ### 309. CWD 2019: Git + GitHub 2
 
-[Refer to Git 101 Post](https://navin-navi.github.io/blog/git-101/#listing-all-branches)
+[Refer to Git 101 Post](https://navin-moorthy.github.io/blog/git-101/#listing-all-branches)
 
 ### 310. Async Await
 

@@ -1,8 +1,8 @@
 {
-	"name": "navin-navi.github.io",
+	"name": "navin-moorthy.github.io",
 	"private": true,
 	"version": "2.0.0",
-	"author": "Navin <navin007.a@gmail.com> (https://navin-navi.github.io)",
+	"author": "Navin <navin007.a@gmail.com> (https://navin-moorthy.github.io)",
 	"license": "MIT",
 	"description": "Personal Website by Navin - Powered by Gatsby",
 	"scripts": {
@@ -21,12 +21,12 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/navin-navi/navin-navi.github.io.git"
+		"url": "git+https://github.com/navin-navi/navin-moorthy.github.io.git"
 	},
 	"bugs": {
-		"url": "https://github.com/navin-navi/navin-navi.github.io/issues"
+		"url": "https://github.com/navin-navi/navin-moorthy.github.io/issues"
 	},
-	"homepage": "https://github.com/navin-navi/navin-navi.github.io#readme",
+	"homepage": "https://github.com/navin-navi/navin-moorthy.github.io#readme",
 	"dependencies": {
 		"@weknow/gatsby-remark-codepen": "0.1.0",
 		"babel-plugin-macros": "2.6.1",

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-sitemap: https://navin-navi.github.io/sitemap.xml
+sitemap: https://navin-moorthy.github.io/sitemap.xml

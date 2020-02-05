@@ -121,7 +121,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/redux-github-commits-history-chart/"
+            href="https://navin-moorthy.github.io/redux-github-commits-history-chart/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -134,7 +134,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/color-game/"
+            href="https://navin-moorthy.github.io/color-game/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -160,7 +160,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/museum-of-candy/"
+            href="https://navin-moorthy.github.io/museum-of-candy/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -173,7 +173,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/shrine-material-design-demo/"
+            href="https://navin-moorthy.github.io/shrine-material-design-demo/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -186,7 +186,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/to-do-list-basic/"
+            href="https://navin-moorthy.github.io/to-do-list-basic/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -199,7 +199,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/patatap-clone/"
+            href="https://navin-moorthy.github.io/patatap-clone/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -212,7 +212,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/vue-animations/"
+            href="https://navin-moorthy.github.io/vue-animations/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -225,7 +225,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/patterns/"
+            href="https://navin-moorthy.github.io/patterns/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -235,7 +235,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/behance-clone/"
+            href="https://navin-moorthy.github.io/behance-clone/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -248,7 +248,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/vanuss-first-website/"
+            href="https://navin-moorthy.github.io/vanuss-first-website/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -258,7 +258,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/image-gallery/"
+            href="https://navin-moorthy.github.io/image-gallery/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -271,7 +271,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/purrfect-match/"
+            href="https://navin-moorthy.github.io/purrfect-match/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -284,7 +284,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/fullpage-js-demo/"
+            href="https://navin-moorthy.github.io/fullpage-js-demo/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -297,7 +297,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi.github.io/component-pricing-plans/"
+            href="https://navin-moorthy.github.io/component-pricing-plans/"
             target="_blank"
             rel="noopener noreferrer"
           >

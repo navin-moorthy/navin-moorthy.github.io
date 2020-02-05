@@ -5,7 +5,7 @@ ghpages.publish(
   "public",
   {
     branch: "master",
-    repo: "https://github.com/navin-navi/navin-navi.github.io.git"
+    repo: "https://github.com/navin-navi/navin-moorthy.github.io.git"
   },
   () => {
     console.log("Deploy Complete!");

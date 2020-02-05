@@ -21,7 +21,7 @@ const Footer = () => (
     <FooterMain>
       &copy; {new Date().getFullYear()} - Made with{" "}
       <FooterIcon src={heart} alt="love icon" /> by Navin{" "}
-      <a href="https://github.com/navin-navi/navin-navi.github.io">
+      <a href="https://github.com/navin-navi/navin-moorthy.github.io">
         {" "}
         Hosted in GHPages
       </a>{" "}
