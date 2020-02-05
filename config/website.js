@@ -13,7 +13,7 @@ module.exports = {
 
   siteFBAppID: "576603726168994", // Facebook App ID - Optional
   userTwitter: "@navin_moorthy", // Twitter Username
-  ogSiteName: "navinnavi19", // Facebook Site Name
+  ogSiteName: "navinmoorthy.a", // Facebook Site Name
   ogLanguage: "en_US", // Facebook Language
   googleAnalyticsID: "UA-142123747-1",
 
