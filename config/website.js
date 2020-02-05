@@ -14,7 +14,7 @@ module.exports = {
   github: "navin-moorthy",
   twitter: "navin_moorthy", // Twitter Username
   facebook: "navinmoorthy.a", // Facebook Site Name
-  siteFBAppID: "576603726168994", // Facebook App ID - Optional
+  fbAppId: "576603726168994", // Facebook App ID - Optional
   ogLanguage: "en_US", // Facebook Language
   googleAnalyticsID: "UA-142123747-1",
 

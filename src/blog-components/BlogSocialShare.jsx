@@ -10,7 +10,6 @@ const SocialShare = tw.div`text-right h-full`;
 const shareToFacebook = (href, text) => {
   window.FB.ui({
     method: "share",
-    mobile_iframe: true,
     href,
     quote: text
   });
@@ -31,13 +30,11 @@ const BlogSocialShare = ({ title }) => {
 
   const onClickTwitterIcon = e => {
     e.preventDefault();
-
     return shareToTwitter(window.location.href, text);
   };
 
   const onClickFacebookIcon = e => {
     e.preventDefault();
-
     return shareToFacebook(window.location.href, text);
   };
 

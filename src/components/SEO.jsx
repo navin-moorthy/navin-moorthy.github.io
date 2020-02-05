@@ -120,9 +120,7 @@ const SEO = ({ siteTitle }) => {
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:image:alt" content={description} />
-      {config.siteFBAppID && (
-        <meta property="fb:app_id" content={config.siteFBAppID} />
-      )}
+      {config.fbAppId && <meta property="fb:app_id" content={config.fbAppId} />}
       <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:creator"
