@@ -10,9 +10,9 @@ module.exports = {
     description: config.description,
     siteUrl: config.siteUrl + pathPrefix,
     social: {
-      twitter: "navin_navi19",
-      github: "navin-moorthy",
-      facebook: config.ogSiteName
+      twitter: config.twitter,
+      github: config.github,
+      facebook: config.facebook
     }
   },
   /* Plugins */

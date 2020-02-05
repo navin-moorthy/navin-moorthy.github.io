@@ -88,6 +88,7 @@ const SEO = ({ siteTitle }) => {
     <Helmet>
       <html lang={config.siteLanguage} />
       <title>{title}</title>
+      {/* Images */}
       <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
       <link
         rel="icon"
@@ -110,9 +111,10 @@ const SEO = ({ siteTitle }) => {
         content="web-development, blog, personal-site, portfolio"
       />
       <meta name="image" content={image} />
+      {/* Open Graph meta tags */}
       <meta property="og:url" content={config.siteUrl} />
       <meta property="og:locale" content={config.ogLanguage} />
-      <meta property="og:site_name" content={config.ogSiteName} />
+      <meta property="og:site_name" content={config.facebook} />
       <meta property="og:title" content={title} />
       <meta property="og:type" content="website" />
       <meta property="og:description" content={description} />
@@ -124,21 +126,23 @@ const SEO = ({ siteTitle }) => {
       <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:creator"
-        content={config.userTwitter ? config.userTwitter : ""}
+        content={config.twitter ? config.twitter : ""}
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:image:alt" content={description} />
+      {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgWebPage)}
       </script>
       <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+      {/* Twitter Widget */}
       <script
         async
         src="https://platform.twitter.com/widgets.js"
         charset="utf-8"
-      ></script>
+      />
     </Helmet>
   );
 };
