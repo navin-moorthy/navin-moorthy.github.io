@@ -11,4 +11,4 @@ description: Notes taken while exploring the capabilities of MDX Deck.
 🌟 _**References:**_
 
 - [MDX-Deck](https://github.com/jxnblk/mdx-deck)
-- [Source code](https://github.com/navin-navi/mdx-deck-starter)
+- [Source code](https://github.com/navin-moorthy/mdx-deck-starter)

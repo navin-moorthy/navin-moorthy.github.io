@@ -15,7 +15,7 @@ const Contact = ({ offset }) => (
       <ContactText>
         Find me on these platforms :{" "}
         <a href="https://twitter.com/navin_navi19">Twitter</a> &{" "}
-        <a href="https://github.com/navin-navi">Github</a>
+        <a href="https://github.com/navin-moorthy">Github</a>
       </ContactText>
       <Footer />
     </SiteBottom>

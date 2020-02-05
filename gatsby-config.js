@@ -11,7 +11,7 @@ module.exports = {
     siteUrl: config.siteUrl + pathPrefix,
     social: {
       twitter: "navin_navi19",
-      github: "navin-navi",
+      github: "navin-moorthy",
       facebook: config.ogSiteName
     }
   },

@@ -206,8 +206,8 @@ Learned about a couple of topics along with Scrimba videos
 
 **Title:** Getting started, plan and Review
 
-- Reviewed and recalled [Laravel 6 from scratch from Laracasts](https://github.com/navin-navi/laravel6-from-scratch-laracasts) till I completed before.
-- Reviewed and recalled [Intro to Vue JS course learned from Vue Mastery](https://github.com/navin-navi/vue-mastery-intro-to-vuejs).
+- Reviewed and recalled [Laravel 6 from scratch from Laracasts](https://github.com/navin-moorthy/laravel6-from-scratch-laracasts) till I completed before.
+- Reviewed and recalled [Intro to Vue JS course learned from Vue Mastery](https://github.com/navin-moorthy/vue-mastery-intro-to-vuejs).
 - Made the Intro to [Vue JS project live](https://navin-moorthy.github.io/vue-mastery-intro-to-vuejs/) in GH Pages after pushing the repo to Github.
 - Looked at some of the [Aaron Iker's](https://codepen.io/aaroniker/pens/public) pen for inspirations.
 
@@ -650,7 +650,7 @@ Learned about a couple of new things,
 
 **Project:** DEV.TO Articles
 
-**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect)
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-moorthy/mdx-deck-disect)
 
 **Brief Description:**
 
@@ -666,7 +666,7 @@ Learned about a couple of new things,
 
 **Project:** Family Time
 
-**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect)
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-moorthy/mdx-deck-disect)
 
 **Brief Description:**
 
@@ -682,7 +682,7 @@ Learned about a couple of new things,
 
 **Project:** Explore MDX-Deck and its capabilities
 
-**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect)
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-moorthy/mdx-deck-disect)
 
 **Brief Description:**
 
@@ -701,7 +701,7 @@ Learned about a couple of new things,
 
 **Project:** Explore MDX-Deck and its capabilities
 
-**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect)
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-moorthy/mdx-deck-disect)
 
 **Brief Description:**
 
@@ -718,7 +718,7 @@ Learned about a couple of new things,
 
 **Project:** Explore MDX and its capabilities
 
-**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect)
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-moorthy/mdx-deck-disect)
 
 **Brief Description:**
 
@@ -737,7 +737,7 @@ Learned about a couple of new things,
 
 **Project:** Explore MDX and its capabilities
 
-**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-disect)
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-moorthy/mdx-deck-disect)
 
 **Brief Description:**
 
@@ -757,7 +757,7 @@ Learned about a couple of new things,
 
 ![MDX-Deck](../getting-starter-with-mdx-deck/1.png)
 
-**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/mdx-deck-starter)
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-moorthy/mdx-deck-starter)
 
 **Live** [Getting started with MDX-Deck](https://stoic-lewin-21ea98.netlify.com/)
 
@@ -778,7 +778,7 @@ Learned about a couple of new things,
 
 ![Gatsby Blog](../gatsby-mdx-intro/1.png)
 
-**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-navi/gatsby-mdx-intro)
+**GitHub Repo** [Gatsby MDX Intro](https://github.com/navin-moorthy/gatsby-mdx-intro)
 
 **Brief Description:**
 
@@ -800,7 +800,7 @@ Learned about a couple of new things,
 
 ![Gatsby Blog](../complete-react-developer-in-2019/images/142.png)
 
-**GitHub Repo** [Gatsby Starter Blog](https://github.com/navin-navi/gatsby-starter-blog)
+**GitHub Repo** [Gatsby Starter Blog](https://github.com/navin-moorthy/gatsby-starter-blog)
 
 **Blog Live** [Gatsby Starter Blog](https://sharp-lovelace-611c99.netlify.com/)
 
@@ -822,7 +822,7 @@ Learned about a couple of new things,
 
 ![Enzyme Testing/Snapshot Testing](../complete-react-developer-in-2019/images/125.png)
 
-**GitHub Repo** [Complete React Developer Zero To Mastery](https://github.com/navin-navi/complete-react-developer-zero-to-mastery)
+**GitHub Repo** [Complete React Developer Zero To Mastery](https://github.com/navin-moorthy/complete-react-developer-zero-to-mastery)
 
 **Brief Description:**
 
@@ -843,7 +843,7 @@ Learned about a couple of new things,
 
 **Live:** [Crown Clothing](https://navin-navi-crown-clothing.herokuapp.com/)
 
-**GitHub Repo** [Crown Clothing Source Code](https://github.com/navin-navi/crown-clothing-react)
+**GitHub Repo** [Crown Clothing Source Code](https://github.com/navin-moorthy/crown-clothing-react)
 
 **Brief Description:**
 
@@ -866,7 +866,7 @@ Learned about a couple of new things,
 
 **Live:** [Crown Clothing](https://navin-navi-crown-clothing.herokuapp.com/)
 
-**GitHub Repo** [Crown Clothing Source Code](https://github.com/navin-navi/crown-clothing-react)
+**GitHub Repo** [Crown Clothing Source Code](https://github.com/navin-moorthy/crown-clothing-react)
 
 **Brief Description:**
 
@@ -888,7 +888,7 @@ Learned about a couple of new things,
 
 **Live:** [Crown Clothing](https://navin-navi-crown-clothing.herokuapp.com/)
 
-**GitHub Repo** [Crown Clothing Source Code](https://github.com/navin-navi/crown-clothing-react)
+**GitHub Repo** [Crown Clothing Source Code](https://github.com/navin-moorthy/crown-clothing-react)
 
 **Brief Description:**
 
@@ -1099,7 +1099,7 @@ Learned about a couple of new things,
 
 ![Monster Rolodex](../complete-react-developer-in-2019/images/36.png)
 
-**Repo:** [Monster Rolodex](https://github.com/navin-navi/monsters-rolodex)
+**Repo:** [Monster Rolodex](https://github.com/navin-moorthy/monsters-rolodex)
 **Live:** [Monster Rolodex](https://navin-moorthy.github.io/monsters-rolodex/)
 
 **Brief Description:**
@@ -1151,9 +1151,9 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [Source Code](https://github.com/navin-navi/redux-github-commits-history-chart)
+- [Source Code](https://github.com/navin-moorthy/redux-github-commits-history-chart)
 - [Live Application](https://navin-moorthy.github.io/redux-github-commits-history-chart/)
-- [CodeSandbox](https://codesandbox.io/s/github/navin-navi/redux-github-commits-history-chart)
+- [CodeSandbox](https://codesandbox.io/s/github/navin-moorthy/redux-github-commits-history-chart)
 
 ---
 
@@ -1173,9 +1173,9 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [Source Code](https://github.com/navin-navi/github-commits-history-chart)
+- [Source Code](https://github.com/navin-moorthy/github-commits-history-chart)
 - [Live Application](https://navin-moorthy.github.io/github-commits-history-chart/)
-- [CodeSandbox](https://codesandbox.io/s/github/navin-navi/github-commits-history-chart/)
+- [CodeSandbox](https://codesandbox.io/s/github/navin-moorthy/github-commits-history-chart/)
 
 ---
 
@@ -1510,7 +1510,7 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [GitHub Repository](https://github.com/navin-navi/angular-express-issue-tracker)
+- [GitHub Repository](https://github.com/navin-moorthy/angular-express-issue-tracker)
 
 ---
 
@@ -1534,7 +1534,7 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [GitHub Repository](https://github.com/navin-navi/express-issue-tracker)
+- [GitHub Repository](https://github.com/navin-moorthy/express-issue-tracker)
 
 ---
 
@@ -1664,7 +1664,7 @@ Learned about a couple of new things,
 **Links:**
 
 - [Issue Tracker Live](https://navin-moorthy.github.io/angular-issue-tracker/)
-- [GitHub Repository](https://github.com/navin-navi/angular-issue-tracker)
+- [GitHub Repository](https://github.com/navin-moorthy/angular-issue-tracker)
 
 ---
 
@@ -1688,7 +1688,7 @@ Learned about a couple of new things,
 **Links:**
 
 - [Live](https://navin-moorthy.github.io/100-Days-of-Code-Round-1/)
-- [GitHub Repository](https://github.com/navin-navi/100-Days-of-Code-Round-1)
+- [GitHub Repository](https://github.com/navin-moorthy/100-Days-of-Code-Round-1)
 
 ---
 
@@ -1714,7 +1714,7 @@ Learned about a couple of new things,
 **Links:**
 
 - [Live Demo WIP](https://materialized-blog.herokuapp.com/)
-- [GitHub Repository](https://github.com/navin-navi/material-blog-backend)
+- [GitHub Repository](https://github.com/navin-moorthy/material-blog-backend)
 
 ---
 
@@ -1739,7 +1739,7 @@ Learned about a couple of new things,
 **Links:**
 
 - [Live Demo WIP](https://navin-moorthy.github.io/projects)
-- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
+- [GitHub Repository](https://github.com/navin-moorthy/navin-moorthy.github.io)
 
 ---
 
@@ -1765,7 +1765,7 @@ Learned about a couple of new things,
 **Links:**
 
 - [Live Demo WIP](https://navin-moorthy.github.io/projects)
-- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
+- [GitHub Repository](https://github.com/navin-moorthy/navin-moorthy.github.io)
 
 ---
 
@@ -1788,7 +1788,7 @@ Learned about a couple of new things,
 **Links:**
 
 - [Live Demo WIP](https://navin-moorthy.github.io/projects)
-- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
+- [GitHub Repository](https://github.com/navin-moorthy/navin-moorthy.github.io)
 
 ---
 
@@ -1815,7 +1815,7 @@ Learned about a couple of new things,
 **Links:**
 
 - [Live Demo](https://navin-moorthy.github.io/blog)
-- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
+- [GitHub Repository](https://github.com/navin-moorthy/navin-moorthy.github.io)
 
 ---
 
@@ -1843,7 +1843,7 @@ Learned about a couple of new things,
 **Links:**
 
 - [Live Demo](https://navin-moorthy.github.io/blog)
-- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
+- [GitHub Repository](https://github.com/navin-moorthy/navin-moorthy.github.io)
 
 ---
 
@@ -1862,7 +1862,7 @@ Learned about a couple of new things,
 **Brief Description:**
 
 - Changed Syntax Highlighting from Fira Mono to Fira Code
-- Updated [README](https://github.com/navin-navi/navin-moorthy.github.io/blob/dev/README.md) with tons of details.
+- Updated [README](https://github.com/navin-moorthy/navin-moorthy.github.io/blob/dev/README.md) with tons of details.
 - Added heartbeat animation to Footer love SVG using tailwind.
 - Added Markdown Images - Medium like Zoom on click.
 - Smooth Scroll for all post header anchor link.
@@ -1871,7 +1871,7 @@ Learned about a couple of new things,
 **Links:**
 
 - [Live Demo](https://navin-moorthy.github.io/blog)
-- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
+- [GitHub Repository](https://github.com/navin-moorthy/navin-moorthy.github.io)
 
 ---
 
@@ -1898,7 +1898,7 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [GitHub Repository](https://github.com/navin-navi/Angular-Collection.git)
+- [GitHub Repository](https://github.com/navin-moorthy/Angular-Collection.git)
 
 ---
 
@@ -1922,7 +1922,7 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [GitHub Repository](https://github.com/navin-navi/Angular-Collection.git)
+- [GitHub Repository](https://github.com/navin-moorthy/Angular-Collection.git)
 
 ---
 
@@ -1945,7 +1945,7 @@ Learned about a couple of new things,
 
 **Links:**
 
-- [GitHub Repository](https://github.com/navin-navi/Angular-Collection.git)
+- [GitHub Repository](https://github.com/navin-moorthy/Angular-Collection.git)
 
 ---
 
@@ -2006,7 +2006,7 @@ This assignment is completely focused on Angular HTTP feature, where
 
 ![Snap of my Blog HomePage](images/1-blog-home.jpg)
 
-**Live Demo:** [Edit in Code Sandbox](https://codesandbox.io/s/navin-navigithubio-egxzq?fontsize=14)
+**Live Demo:** [Edit in Code Sandbox](https://codesandbox.io/s/navin-moorthygithubio-egxzq?fontsize=14)
 
 **Progress:** Completed developing my blog.
 
@@ -2020,7 +2020,7 @@ With this I am going to start over my #100DaysOfCode Rounds with just counting t
 
 **Links:**
 
-- [GitHub Repository](https://github.com/navin-navi/navin-moorthy.github.io)
+- [GitHub Repository](https://github.com/navin-moorthy/navin-moorthy.github.io)
 - [Original Inspiration Repo Link from LekoArts](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
 
 ## [Go to Round 1](/blog/round-1-100-days-of-code/)

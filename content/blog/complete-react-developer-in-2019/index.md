@@ -1479,7 +1479,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 [Node-SASS](https://www.npmjs.com/package/node-sass)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/35902d11137a2e80fe497d80872bdfe99489b979?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/35902d11137a2e80fe497d80872bdfe99489b979?diff=split)
 
 ![E-commerce Homepage +SASS setup](images/47.png)
 
@@ -1501,13 +1501,13 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ![Homepage and Directory Components](images/48.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/711f42d1e8e2a6b75f571efb130c8ad75662b171?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/711f42d1e8e2a6b75f571efb130c8ad75662b171?diff=split)
 
 ### 62. Styling Menu Items
 
 ![Styling Menu Items](images/49.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/e99fdec5907a7331fd8afa8103e1dff8d4edee23?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/e99fdec5907a7331fd8afa8103e1dff8d4edee23?diff=split)
 
 [cubic-bezier timing function - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function)
 
@@ -1616,7 +1616,7 @@ const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => (
 export default withRouter(MenuItem);
 ```
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/94c0cd723847f2ae0982a37902e77acfd689b890)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/94c0cd723847f2ae0982a37902e77acfd689b890)
 
 [Higher Order Components](https://reactjs.org/docs/higher-order-components.html)
 
@@ -1636,7 +1636,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ![Shopping Data](images/50.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/4c6c7d9efd280fcdc46ec0dc6509b38857511ebe?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/4c6c7d9efd280fcdc46ec0dc6509b38857511ebe?diff=split)
 
 ### 69. Collection Item
 
@@ -1644,7 +1644,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ![Collection Item](images/51.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/55fd08c42c1baca20a8e908f740d7edb3e27ffa4?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/55fd08c42c1baca20a8e908f740d7edb3e27ffa4?diff=split)
 
 ### 70. Header Component
 
@@ -1652,7 +1652,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ![Header Component](images/52.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/cdf882537ebbda6f4aed1d54044b1dcd42be0d89?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/cdf882537ebbda6f4aed1d54044b1dcd42be0d89?diff=split)
 
 ### 71. Resources: Importing SVG In React
 
@@ -1670,7 +1670,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ![Sign In Component](images/53.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/d7d5fb36803cffb33b92b563b48c4ce49ff2d4ab?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/d7d5fb36803cffb33b92b563b48c4ce49ff2d4ab?diff=split)
 
 ### 74. Form Input Component
 
@@ -1678,7 +1678,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ![Form Input Component](images/54.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/638f73bb5546ab8ed6638fd53d4ec4b28e1a9b93?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/638f73bb5546ab8ed6638fd53d4ec4b28e1a9b93?diff=split)
 
 ### 75. Custom Button Component
 
@@ -1686,7 +1686,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ![Custom Button Component](images/55.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/fa7c61aae7f02ce784bdcdf5fac977b8109b6267?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/fa7c61aae7f02ce784bdcdf5fac977b8109b6267?diff=split)
 
 ## Section 7: Master Project: Firebase +User Authentication
 
@@ -1727,7 +1727,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 ![Google Sign In Authentication](images/58.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/369c729c83c2b2b8ea0afa6e5ff0eb3ab7f85c12?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/369c729c83c2b2b8ea0afa6e5ff0eb3ab7f85c12?diff=split)
 
 ### 81. Cloning From This Point On
 
@@ -1737,7 +1737,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 - Added state to look into the current user in `App.js`
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/1a0c601d9cb8792bc102f36a85792cdd4983ebef?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/1a0c601d9cb8792bc102f36a85792cdd4983ebef?diff=split)
 
 ### 83. Optional: How to fix 403:restricted_client error
 
@@ -1751,7 +1751,7 @@ There should be a Learn More link in the popup, clicking that should take you to
 
 ![Google Sign In Authentication 3](images/59.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/f57219bd63c654a51ed9a7bc478b7814072430c3?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/f57219bd63c654a51ed9a7bc478b7814072430c3?diff=split)
 
 [CSS Border Box](https://www.w3schools.com/cssref/css3_pr_box-sizing.asp)
 
@@ -1777,7 +1777,7 @@ Learned how to
 
 ![Storing User Data In Firebase](images/62.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/10bb823e334935faef107eefa2b9322c8ee558a7?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/10bb823e334935faef107eefa2b9322c8ee558a7?diff=split)
 
 ![Storing User Data In Firebase](images/60.png)
 
@@ -1975,7 +1975,7 @@ export default SignUp;
 
 ![Google Sign In Authentication 3](images/64.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/000028a45573c5ff7025e70ed5fbdfd652ef4f55?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/000028a45573c5ff7025e70ed5fbdfd652ef4f55?diff=split)
 
 ### 91. Sign In With Email and Password
 
@@ -2127,7 +2127,7 @@ $$(".curriculum-item-link--title--zI5QT").map(el => el.textContent);
 
 [Redux Logger](https://www.npmjs.com/package/redux-logger) || [Redux](https://www.npmjs.com/package/redux) || [React Redux](https://www.npmjs.com/package/react-redux)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/c5a8767b815e544abbfe3d7c3d54c84764f3d30b?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/c5a8767b815e544abbfe3d7c3d54c84764f3d30b?diff=split)
 
 ### 99. Setting Up Redux 2
 
@@ -2301,25 +2301,25 @@ export default connect(
 
 🌟 _Added homepage redirect if the user is already logged in_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/b21099ee76cf2cc4d48dfa5bcfd46b347d0634d5?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/b21099ee76cf2cc4d48dfa5bcfd46b347d0634d5?diff=split)
 
 ### 103. Cart Component
 
 ![Cart Component](images/82.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/3a8867b57fb0f7e95640796712f4c8ce63a80d7f?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/3a8867b57fb0f7e95640796712f4c8ce63a80d7f?diff=split)
 
 ### 104. Card Drop-down Component
 
 ![Card Drop-down Component](images/83.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/031b6f566c985173defb6547a23de496b2ae289a?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/031b6f566c985173defb6547a23de496b2ae289a?diff=split)
 
 ### 105. Implementing Redux In Cart
 
 🌟 _Conditionally render cart drop-down_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/76d66313f6e3384f0701bd6b5cee6cbd36afa947?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/76d66313f6e3384f0701bd6b5cee6cbd36afa947?diff=split)
 
 ### 106. Add To Cart Styling
 
@@ -2327,13 +2327,13 @@ export default connect(
 
 ![Add To Cart Styling](images/84.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/5d2dbd0f1b1c23a70c215c6b261a57f3d5ebe9bf?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/5d2dbd0f1b1c23a70c215c6b261a57f3d5ebe9bf?diff=split)
 
 ### 107. Cart Item Reducer
 
 🌟 _Learned how to add items to the cart and store them in Redux_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/0dd0bff9220f96d2dd0ab8ba8ade3aad0658afa3?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/0dd0bff9220f96d2dd0ab8ba8ade3aad0658afa3?diff=split)
 
 ### 108. Adding Multiple Items To Cart
 
@@ -2365,7 +2365,7 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
 
 ![Cart Item Component](images/85.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/522cd060a9e4b702964d0b8c95ee00eba6dacf41?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/522cd060a9e4b702964d0b8c95ee00eba6dacf41?diff=split)
 
 ### 111. Optional: reduce()
 
@@ -2448,19 +2448,19 @@ export const selectCartItemsCount = createSelector(
 
 `import { createStructuredSelector } from "reselect";`
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/f2163bc88a98ba06a2a862270adf0dcb767269e0?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/f2163bc88a98ba06a2a862270adf0dcb767269e0?diff=split)
 
 ### 116. Checkout Page
 
 ![Checkout Page](images/87.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/1ed6a216b8df802bc028dfba52cb2b77613c73db?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/1ed6a216b8df802bc028dfba52cb2b77613c73db?diff=split)
 
 ### 117. Checkout Page 2
 
 ![Checkout Page 2](images/88.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/ef5541e9a4c2e5acad6f3c9563a0416226ab5f21?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/ef5541e9a4c2e5acad6f3c9563a0416226ab5f21?diff=split)
 
 ### 118. Extensible Code
 
@@ -2517,19 +2517,19 @@ export default withRouter(connect(mapStateToProps)(CartDropDown));
 
 ![Checkout Item Component](images/90.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/5172a8f5b5610e4bcb58187c9ea8cbf54228fe77?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/5172a8f5b5610e4bcb58187c9ea8cbf54228fe77?diff=split)
 
 ### 121. Remove Items From Cart
 
 🌟 _**Created a remove a cartItem action to remove the item on clear button in Checkout Component**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/bbb29f049729252574c3c33cf8e2f5ff88f06546?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/bbb29f049729252574c3c33cf8e2f5ff88f06546?diff=split)
 
 ### 122. Remove Items At Checkout
 
 ![Remove Items At Checkout](images/91.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/b7d8f27d5d1707d9bfc1f0e6c6f84126d2151457?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/b7d8f27d5d1707d9bfc1f0e6c6f84126d2151457?diff=split)
 
 ## Section 9: Master Project: SessionStorage + Persistence
 
@@ -2553,19 +2553,19 @@ export default withRouter(connect(mapStateToProps)(CartDropDown));
 
 🌟 _**Moved Directory State Into Redux**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/a7b869dab68526f266212a105a48d588ff98e232?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/a7b869dab68526f266212a105a48d588ff98e232?diff=split)
 
 ### 126. Collection State Into Redux
 
 🌟 _**Moved Shop Data State Into Redux**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/b258d65ca5c0a1311fce85fe66e23a6684716c2e?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/b258d65ca5c0a1311fce85fe66e23a6684716c2e?diff=split)
 
 ### 127. Collection Overview Component
 
 🌟 _**Created a Collection Overview Component for `/shop` page**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/6aba1cea901b8b1de23caeed3001937178511218?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/6aba1cea901b8b1de23caeed3001937178511218?diff=split)
 
 ## Section 11: Master Project:Advanced Routing
 
@@ -2573,13 +2573,13 @@ export default withRouter(connect(mapStateToProps)(CartDropDown));
 
 ![Nested Routing in Shop Page](images/92.png)
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/31a1dbe9725c7899fccf0f5bdf800f87d3bbe509?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/31a1dbe9725c7899fccf0f5bdf800f87d3bbe509?diff=split)
 
 ### 129. Improving Naming Of Component
 
 🌟 _**Changed all the naming for Category Page to Collection Page**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/6ac8d122be2b0ec60cac500856777c29a3adaaa0?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/6ac8d122be2b0ec60cac500856777c29a3adaaa0?diff=split)
 
 ### 130. Collection Routing and Selector
 
@@ -2589,7 +2589,7 @@ export default withRouter(connect(mapStateToProps)(CartDropDown));
 
 🌟 _**Collections are routed to its own collection using URL params**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/b20a25446d7d220a8c38f8b8b9f744d97843fa39?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/b20a25446d7d220a8c38f8b8b9f744d97843fa39?diff=split)
 
 ### 131. Optional: Currying
 
@@ -2601,7 +2601,7 @@ export default withRouter(connect(mapStateToProps)(CartDropDown));
 
 🌟 _**Used data normalization to improve the performance by converting arrays to objects**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/fcf518c10f15e1838f2b2b49d14db2e1a9e4bb1b?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/fcf518c10f15e1838f2b2b49d14db2e1a9e4bb1b?diff=split)
 
 ### 133. Optional: Hash Tables vs Arrays
 
@@ -2651,7 +2651,7 @@ export const selectCollection = collectionUrlParam =>
 
 🌟 _**Implemented stripe checkout button**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/fcf518c10f15e1838f2b2b49d14db2e1a9e4bb1b?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/fcf518c10f15e1838f2b2b49d14db2e1a9e4bb1b?diff=split)
 
 ### 138. Cloning From This Point On
 
@@ -2743,7 +2743,7 @@ export const persistor = persistStore(store);
 
 `npm i -S styled-components`
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/651a58188724be01af08f69f7fc8f29015b0c167?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/651a58188724be01af08f69f7fc8f29015b0c167?diff=split)
 
 ### 148. Thinking About Trade-offs
 
@@ -2806,13 +2806,13 @@ export default connect(mapStatetoProps)(Header);
 
 🌟 _**Updated difficult components styles using Styled Components**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/651a58188724be01af08f69f7fc8f29015b0c167?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/651a58188724be01af08f69f7fc8f29015b0c167?diff=split)
 
 ### 151. Exercise: styled-components
 
 🌟 _**Updated the project to use Styled Components completely**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/597402806abb00a1e14b5c669e7b1ff8a022cfc9?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/597402806abb00a1e14b5c669e7b1ff8a022cfc9?diff=split)
 
 ## Section 16: Master Project:Advanced Redux + Firebase
 
@@ -3061,7 +3061,7 @@ export default firebase;
 
 🌟 _**Updated the shop data with firestore in Redux**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/996e2d216bc73e95e3ef85bf09008aa089f3d206?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/996e2d216bc73e95e3ef85bf09008aa089f3d206?diff=split)
 
 ## Section 17: Master Project: HOC Patterns
 
@@ -3265,7 +3265,7 @@ export default connect(
 
 🌟 _**Used Redux Thunk to asynchronously fetch data from firestore and save it in Redux**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/2e0fdfecaac86516ae57a3c15312c1822483f9ed?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/2e0fdfecaac86516ae57a3c15312c1822483f9ed?diff=split)
 
 ### 168. What Does Redux Thunk Do
 
@@ -3275,7 +3275,7 @@ export default connect(
 
 🌟 _**Fixed the collections fetching error in CollectionsPage Component**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/3e63d09d79f39c9a470db39b5d6b31978c0e0bd0?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/3e63d09d79f39c9a470db39b5d6b31978c0e0bd0?diff=split)
 
 ## Section 19: Master Project:Container Pattern
 
@@ -3431,13 +3431,13 @@ export default function* rootSaga() {
 
 🌟 _**Implemented Google Sign In Into Sagas**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/514e96506dc846f3e21d28cf039f407447396b4a?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/514e96506dc846f3e21d28cf039f407447396b4a?diff=split)
 
 ### 181. Email Sign In Into Sagas
 
 🌟 _**Implemented Email Sign In Into Sagas**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/24c47c52c060d19e189967a22ed814ee9abca9a0?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/24c47c52c060d19e189967a22ed814ee9abca9a0?diff=split)
 
 ### 182. Reviewing Our Sagas
 
@@ -3449,25 +3449,25 @@ export default function* rootSaga() {
 
 🌟 _**Implemented User persistence recreation**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/545e99bd2efc574d7d44cf6b4e53aab26cc610e4?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/545e99bd2efc574d7d44cf6b4e53aab26cc610e4?diff=split)
 
 ### 184. Sign Out With Sagas
 
 🌟 _**Implemented User persistence recreation**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/545e99bd2efc574d7d44cf6b4e53aab26cc610e4?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/545e99bd2efc574d7d44cf6b4e53aab26cc610e4?diff=split)
 
 ### 185. Clear Cart Saga
 
 🌟 _**Implemented Clear Cart Saga on Sign out**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/2fd05cdb1d95d17e94f1c1df455df25956f86ef4?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/2fd05cdb1d95d17e94f1c1df455df25956f86ef4?diff=split)
 
 ### 186. Solution: Sign Up Saga
 
 🌟 _**Implemented Sign Up Saga**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/e41cfc7d39cc7a25c05d53bb0918b332c81020f4?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/e41cfc7d39cc7a25c05d53bb0918b332c81020f4?diff=split)
 
 ## Section 21: Master Project: ReactHooks
 
@@ -3590,7 +3590,7 @@ export default connect(
 
 🌟 _**Converted some Component to use useEffect hook**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/5f2b923375322608c504056038185adf66cc388f?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/5f2b923375322608c504056038185adf66cc388f?diff=split)
 
 ### 193. useEffect as ComponentWillUnmount()
 
@@ -3786,7 +3786,7 @@ This will open up our browser and take us to our newly deployed Heroku project!
 
 🌟 _**Backend initialized**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/70d4af77ddd8610029fb5b5cfaa8d9ac631f4cc4?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/70d4af77ddd8610029fb5b5cfaa8d9ac631f4cc4?diff=split)
 
 ### 203. Building A Basic Server
 
@@ -4288,7 +4288,7 @@ Quick way to build a GraphQL server: [graphql-yoga](https://github.com/prisma/gr
 
 Created own graphql server endpoint to tackle cors errors.
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/82d8152443ff98c1d5395657bf7e5f47762f1337?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/82d8152443ff98c1d5395657bf7e5f47762f1337?diff=split)
 
 ### 222. Apollo Container
 
@@ -4418,7 +4418,7 @@ export const resolvers = {
 };
 ```
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/fb3bccbc31ec233511089b4805ca03e56c0485ec?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/fb3bccbc31ec233511089b4805ca03e56c0485ec?diff=split)
 
 ### 226. Resources: Mutations
 
@@ -4430,7 +4430,7 @@ To learn more about mutations, we recommend checking out the Apollo documentatio
 
 🌟 _**Added cartItems using Apollo**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/fb3bccbc31ec233511089b4805ca03e56c0485ec?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/fb3bccbc31ec233511089b4805ca03e56c0485ec?diff=split)
 
 ### 230. Note Compose in next lesson
 
@@ -4472,7 +4472,7 @@ You can find out more about this breaking change here as well: <https://github.c
 
 🌟 _**Added itemCount back using Apollo**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/654593e7decb47af8675ad2ba781f065314b23c3?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/654593e7decb47af8675ad2ba781f065314b23c3?diff=split)
 
 ### 232. Exercises: Adding More GraphQL
 
@@ -4524,7 +4524,7 @@ export const GlobalStyle = createGlobalStyle`
 
 🌟 _**Responsive design for Mobiles**_
 
-[View file changes in GitHub](https://github.com/navin-navi/crown-clothing-react/commit/70d4af77ddd8610029fb5b5cfaa8d9ac631f4cc4?diff=split)
+[View file changes in GitHub](https://github.com/navin-moorthy/crown-clothing-react/commit/70d4af77ddd8610029fb5b5cfaa8d9ac631f4cc4?diff=split)
 
 [Grid Sheet](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
@@ -5540,7 +5540,7 @@ So focus more on creating a blog as a fun way to end the course instead of under
 
 `npm run develop`
 
-[New Gatsby Blog Starter Repo](https://github.com/navin-navi/gatsby-starter-blog.git)
+[New Gatsby Blog Starter Repo](https://github.com/navin-moorthy/gatsby-starter-blog.git)
 
 ### 298. Gatsby Pages
 
@@ -5765,7 +5765,7 @@ export const query = graphql`
 
 ![Building Our Blog 5](images/142.png)
 
-[My Site in GitHub](https://github.com/navin-navi/gatsby-starter-blog)
+[My Site in GitHub](https://github.com/navin-moorthy/gatsby-starter-blog)
 
 [Site Live with Netlify](https://sharp-lovelace-611c99.netlify.com/)
 

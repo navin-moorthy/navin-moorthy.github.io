@@ -7,24 +7,24 @@
 <p align="center">
   <a href="https://github.com/navin-moorthy">
     <img
-      src="https://img.shields.io/badge/navin-navi-orange.svg?colorB=40ff00&colorA=ec407a"
-      alt="author badge with navin-navi written on it"
+      src="https://img.shields.io/badge/navin-moorthy-orange.svg?colorB=40ff00&colorA=ec407a"
+      alt="author badge with navin-moorthy written on it"
     />
   </a>
-  <a href="https://travis-ci.org/navin-navi/navin-moorthy.github.io">
+  <a href="https://travis-ci.org/navin-moorthy/navin-moorthy.github.io">
     <img
-      src="https://travis-ci.org/navin-navi/navin-moorthy.github.io.svg?branch=dev"
+      src="https://travis-ci.org/navin-moorthy/navin-moorthy.github.io.svg?branch=dev"
       alt="TravisCI"
     />
   </a>
-  <a href="https://lgtm.com/projects/g/navin-navi/navin-moorthy.github.io/alerts/">
+  <a href="https://lgtm.com/projects/g/navin-moorthy/navin-moorthy.github.io/alerts/">
     <img
       alt="Total alerts"
-      src="https://img.shields.io/lgtm/alerts/g/navin-navi/navin-moorthy.github.io.svg?logo=lgtm&logoWidth=18"
+      src="https://img.shields.io/lgtm/alerts/g/navin-moorthy/navin-moorthy.github.io.svg?logo=lgtm&logoWidth=18"
     />
   </a>
-  <a href="https://lgtm.com/projects/g/navin-navi/navin-moorthy.github.io/context:javascript">
-    <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/navin-navi/navin-moorthy.github.io.svg?logo=lgtm&logoWidth=18"/>
+  <a href="https://lgtm.com/projects/g/navin-moorthy/navin-moorthy.github.io/context:javascript">
+    <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/navin-moorthy/navin-moorthy.github.io.svg?logo=lgtm&logoWidth=18"/>
   </a>
   <a href="https://github.com/styled-components/styled-components">
     <img
@@ -50,15 +50,15 @@
   <a href="https://renovatebot.com" target="_blank" rel="noopener">
     <img src="https://img.shields.io/badge/renovate-enabled-brightgreen.svg" alt="Renovate enabled">
   </a>
-  <a href="https://david-dm.org/navin-navi/navin-moorthy.github.io">
+  <a href="https://david-dm.org/navin-moorthy/navin-moorthy.github.io">
     <img
-      src="https://david-dm.org/navin-navi/navin-moorthy.github.io/status.svg"
+      src="https://david-dm.org/navin-moorthy/navin-moorthy.github.io/status.svg"
       alt="Dependency Update Status"
     />
   </a>
-  <a href="https://david-dm.org/navin-navi/navin-moorthy.github.io?type=dev">
+  <a href="https://david-dm.org/navin-moorthy/navin-moorthy.github.io?type=dev">
     <img
-      src="https://david-dm.org/navin-navi/navin-moorthy.github.io/dev-status.svg"
+      src="https://david-dm.org/navin-moorthy/navin-moorthy.github.io/dev-status.svg"
       alt="Dev Dependency Update Status"
     />
   </a>
@@ -78,12 +78,12 @@
 
 <p align="center">
   <strong>
-  Checkout my site at <a href="https://navin-moorthy.github.io">Navin-Navi</a>
+  Checkout my site at <a href="https://navin-moorthy.github.io">navin-moorthy</a>
   </strong>
 </p>
 
 <p align="center">
-  <a href="https://codesandbox.io/s/navin-navigithubio-egxzq?fontsize=14">
+  <a href="https://codesandbox.io/s/navin-moorthygithubio-egxzq?fontsize=14">
     <img src="https://codesandbox.io/static/img/play-codesandbox.svg"  alt="Edit on CodeSandbox" />
   </a>
 </p>
@@ -149,7 +149,7 @@ Check your development environment! You'll need [Node.js](https://nodejs.org/en/
 Use the Gatsby CLI to create a new site, specifying the blog starter.
 
 ```sh
-gatsby new <project-name> https://github.com/navin-navi/navin-moorthy.github.io
+gatsby new <project-name> https://github.com/navin-moorthy/navin-moorthy.github.io
 cd <project-name>
 npm start
 ```
@@ -306,7 +306,7 @@ If you are currently writing in the Medium, consider migration with [medium-to-o
 
 ## :bug: Bug reporting
 
-[Issue](https://github.com/navin-navi/navin-moorthy.github.io/issues)
+[Issue](https://github.com/navin-moorthy/navin-moorthy.github.io/issues)
 
 ## ™️ LICENSE
 

@@ -99,7 +99,7 @@ const IndexPage = () => (
       <AboutIndexPage offset={3}>
         <Title>About</Title>
         <AboutHero>
-          <Avatar src={avatar} alt="Navin Navi" />
+          <Avatar src={avatar} alt="Navin Moorthy" />
           <AboutSub>
             A self taught full-stack web developer with 6 months of practise in
             different areas of web Technologies from Front End Programming

@@ -89,7 +89,7 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 
 **REFERENCES:**
 
-- [Navin Navi Codepen](https://codepen.io/navinnavi19)
+- [Navin Moorthy Codepen](https://codepen.io/navinnavi19)
 
 ---
 
@@ -157,7 +157,7 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 - [Vue JS](http://vuejs.org/)
 - [Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)](https://www.udemy.com/course/vuejs-2-the-complete-guide/)
 - [Maximilian](https://twitter.com/maxedapps)
-- [Course Notes](https://github.com/navin-navi/getting-started-with-vue-js-maximilian-course)
+- [Course Notes](https://github.com/navin-moorthy/getting-started-with-vue-js-maximilian-course)
 
 ---
 
@@ -176,7 +176,7 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 - [Vue JS](http://vuejs.org/)
 - [Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)](https://www.udemy.com/course/vuejs-2-the-complete-guide/)
 - [Maximilian](https://twitter.com/maxedapps)
-- [Course Notes](https://github.com/navin-navi/getting-started-with-vue-js-maximilian-course)
+- [Course Notes](https://github.com/navin-moorthy/getting-started-with-vue-js-maximilian-course)
 
 ---
 
@@ -195,7 +195,7 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 - [Vue JS](http://vuejs.org/)
 - [Vue JS 2 - The Complete Guide (incl. Vue Router & Vuex)](https://www.udemy.com/course/vuejs-2-the-complete-guide/)
 - [Maximilian](https://twitter.com/maxedapps)
-- [Course Notes](https://github.com/navin-navi/getting-started-with-vue-js-maximilian-course)
+- [Course Notes](https://github.com/navin-moorthy/getting-started-with-vue-js-maximilian-course)
 
 ---
 
@@ -323,7 +323,7 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 - [Love Smiley Animation](https://codepen.io/curley/pen/WNepqQb)
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/71.0a2/firstrun/)
 - [Chrome](https://www.google.com/chrome/)
-- [Course Notes](https://github.com/navin-navi/getting-started-with-vue-js-maximilian-course)
+- [Course Notes](https://github.com/navin-moorthy/getting-started-with-vue-js-maximilian-course)
 
 ---
 
@@ -347,7 +347,7 @@ description: Round 3 of 100 Days of Code where I log daily activities of my codi
 - [Maximilian](https://twitter.com/maxedapps)
 - [VSCode](https://code.visualstudio.com/)
 - [Tasks in VSCode](https://code.visualstudio.com/Docs/editor/tasks)
-- [Course Notes](https://github.com/navin-navi/getting-started-with-vue-js-maximilian-course)
+- [Course Notes](https://github.com/navin-moorthy/getting-started-with-vue-js-maximilian-course)
 
 ---
 

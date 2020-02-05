@@ -46,7 +46,7 @@ const ProjectsPage = ({ data }) => (
         </ProjectWrapper>
         <ProjectWrapper>
           <a
-            href="https://navin-navi-crown-clothing.herokuapp.com/"
+            href="https://navin-moorthy-crown-clothing.herokuapp.com/"
             target="_blank"
             rel="noopener noreferrer"
           >

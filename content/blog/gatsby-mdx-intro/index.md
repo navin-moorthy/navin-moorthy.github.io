@@ -153,4 +153,4 @@ This will be like turbo-charged Markdown!
 - [StaticGen](https://www.staticgen.com/)
 - [Static Site Generators](https://staticsitegenerators.net/)
 - [Google PRPL Pattern](https://developers.google.com/web/fundamentals/performance/prpl-pattern/)
-- [Source Code Repo](https://github.com/navin-navi/gatsby-mdx-intro)
+- [Source Code Repo](https://github.com/navin-moorthy/gatsby-mdx-intro)
