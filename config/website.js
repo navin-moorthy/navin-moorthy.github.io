@@ -17,6 +17,7 @@ module.exports = {
   fbAppId: "576603726168994", // Facebook App ID - Optional
   ogLanguage: "en_US", // Facebook Language
   googleAnalyticsID: "UA-142123747-1",
+  googleTagManagerID: "GTM-K2VCJD3",
 
   // Manifest and Progress color
   themeColor: "#ec407a",

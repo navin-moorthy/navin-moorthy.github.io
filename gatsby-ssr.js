@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable react/no-danger */
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable import/prefer-default-export */
@@ -29,6 +30,11 @@ export const onRenderBody = ({ setPostBodyComponents }) => {
             }(document, 'script', 'facebook-jssdk'));
         `)
       }}
+    />,
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
     />
   ]);
 };

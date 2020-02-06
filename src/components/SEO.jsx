@@ -29,6 +29,11 @@ const SEO = ({ siteTitle }) => {
   // https://developers.google.com/search/docs/guides/intro-structured-data
   // You can fill out the 'author', 'creator' with more data or another type (e.g. 'Organization')
 
+  const authorTypeName = {
+    "@type": "Person",
+    name: config.author
+  };
+
   const schemaOrgWebPage = {
     "@context": "http://schema.org",
     "@type": "WebPage",
@@ -38,23 +43,11 @@ const SEO = ({ siteTitle }) => {
     mainEntityOfPage: homeURL,
     description: config.siteDescription,
     name: config.siteTitle,
-    author: {
-      "@type": "Person",
-      name: config.author
-    },
-    copyrightHolder: {
-      "@type": "Person",
-      name: config.author
-    },
-    copyrightYear: "2019",
-    creator: {
-      "@type": "Person",
-      name: config.author
-    },
-    publisher: {
-      "@type": "Person",
-      name: config.author
-    },
+    author: authorTypeName,
+    copyrightHolder: authorTypeName,
+    copyrightYear: "2020",
+    creator: authorTypeName,
+    publisher: authorTypeName,
     datePublished: "2019-01-17",
     dateModified: data.site.buildTime,
     image: {
@@ -135,12 +128,6 @@ const SEO = ({ siteTitle }) => {
         {JSON.stringify(schemaOrgWebPage)}
       </script>
       <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
-      {/* Twitter Widget */}
-      <script
-        async
-        src="https://platform.twitter.com/widgets.js"
-        charset="utf-8"
-      />
     </Helmet>
   );
 };

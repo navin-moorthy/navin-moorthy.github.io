@@ -92,9 +92,18 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: config.googleTagManagerID,
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "gatsby" }
+      }
+    },
+    {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: config.googleAnalyticsID
+        trackingId: config.googleAnalyticsID,
+        head: false
       }
     },
     {
