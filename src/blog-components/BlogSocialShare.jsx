@@ -26,7 +26,7 @@ const shareToTwitter = (href, text) => {
 };
 
 const BlogSocialShare = ({ title }) => {
-  const text = `Checkout this amazing article on "${title}" by @navin_navi19`;
+  const text = `Checkout this amazing article on "${title}" by @navin_moorthy`;
 
   const onClickTwitterIcon = e => {
     e.preventDefault();

@@ -28,7 +28,7 @@ Developed upon [Gatsby Starter Portfolio: Cara](https://github.com/LekoArts/gats
 
 [![Edit navin-moorthy.github.io](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/navin-moorthygithubio-egxzq?fontsize=14)
 
-[![Twitter: navin_navi19](https://img.shields.io/twitter/follow/navin_navi19.svg?style=social)](https://twitter.com/navin_navi19)
+[![Twitter: navin_moorthy](https://img.shields.io/twitter/follow/navin_moorthy.svg?style=social)](https://twitter.com/navin_moorthy)
 
 ---
 
