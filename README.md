@@ -295,9 +295,7 @@ Also, check out the other starters for _gatsby-starter-portfolio_:
 Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfolio.netlify.com/)!
 
 > Pagination based on [Nicky Starter Blog](https://github.com/NickyMeuleman/gatsby-paginated-blog)
-
 > Dark/Light Theme and more based on [JaeYeopHan's Starter Blog](https://github.com/JaeYeopHan/gatsby-starter-bee)
-
 > Thanks to [@bradlc](https://github.com/bradlc)’s work on [babel-plugin-tailwind-components](https://github.com/bradlc/babel-plugin-tailwind-components), we can easily get the power of Tailwind without the stylesheet bloat by passing Tailwind classes into styled-components with **Babel macros** 🎉.
 
 ## 🤔 If...
@@ -313,7 +311,5 @@ If you are currently writing in the Medium, consider migration with [medium-to-o
 [MIT](./LICENSE)
 
 <div align="center">
-
 <sub><sup>Project by <a href="https://github.com/navin-moorthy"> @Navin Moorthy</a></sup></sub><small>✌</small>
-
 </div>
