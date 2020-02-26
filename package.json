@@ -1,17 +1,25 @@
 {
   "name": "navin-moorthy.github.io",
-  "private": true,
   "version": "2.0.0",
-  "author": "Navin <navin007.a@gmail.com> (https://navin-moorthy.github.io)",
-  "license": "MIT",
+  "private": true,
   "description": "Personal Website by Navin - Powered by Gatsby",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navin-moorthy/navin-moorthy.github.io.git"
+  },
+  "author": "Navin <navin007.a@gmail.com> (https://navin-moorthy.github.io)",
+  "homepage": "https://github.com/navin-moorthy/navin-moorthy.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/navin-moorthy/navin-moorthy.github.io/issues"
+  },
   "scripts": {
-    "start": "npm run develop",
-    "develop": "gatsby develop -H '0.0.0.0' -p 8080",
     "build": "gatsby build",
-    "serve": "gatsby serve",
+    "deploy:github": "npm run build && node ./config/deploy-github",
+    "develop": "gatsby develop -H '0.0.0.0' -p 8080",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "deploy:github": "npm run build && node ./config/deploy-github"
+    "serve": "gatsby serve",
+    "start": "npm run develop"
   },
   "keywords": [
     "gatsby",
@@ -19,14 +27,6 @@
     "tailwind",
     "portfolio"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/navin-moorthy/navin-moorthy.github.io.git"
-  },
-  "bugs": {
-    "url": "https://github.com/navin-moorthy/navin-moorthy.github.io/issues"
-  },
-  "homepage": "https://github.com/navin-moorthy/navin-moorthy.github.io#readme",
   "dependencies": {
     "@weknow/gatsby-remark-codepen": "0.1.0",
     "common-tags": "^1.8.0",
@@ -73,13 +73,13 @@
   "devDependencies": {
     "eslint": "6.8.0",
     "eslint-config-airbnb": "18.0.1",
-    "eslint-config-prettier": "6.9.0",
-    "eslint-plugin-import": "2.19.1",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-import": "2.20.1",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-promise": "4.2.1",
-    "eslint-plugin-react": "7.17.0",
-    "eslint-plugin-react-hooks": "2.3.0",
+    "eslint-plugin-react": "7.18.3",
+    "eslint-plugin-react-hooks": "2.4.0",
     "prettier": "1.19.1",
     "babel-plugin-macros": "2.6.1",
     "babel-plugin-styled-components": "1.10.6"
